@@ -8,9 +8,10 @@ import { HeroVideo } from '@/components/HeroVideo'
  * Brett, 2026-09-18: the homepage footage runs full bleed behind the
  * eyebrow, the H1 and the intro paragraph on Buyers, Sellers, Stories and
  * Areas, with a darker overlay and white type for a cinematic effect. The
- * band is one fixed height on all four pages so the headlines' different
- * lengths never change it; a headline that would overflow gets shortened,
- * the band never grows. Everything below the band is text on white.
+ * band's height comes from its aspect ratio (INTRO_BAND below), so the four
+ * pages match at every width; a headline that would overflow gets
+ * shortened, the band never grows. Everything below the band is text on
+ * white.
  *
  * THE SCRIM IS DIRECTIONAL, NOT A FLAT WASH. It is densest where the type
  * sits and opens up across the rest of the frame so the footage still
@@ -28,8 +29,16 @@ import { HeroVideo } from '@/components/HeroVideo'
  * Reduced motion removes the video and leaves the poster.
  */
 
-/** One height for the four pages. Change it here and nowhere else. */
-export const INTRO_BAND = 'h-[40rem]'
+/**
+ * THE BAND IS 16:9 FROM md, AND 3:4 BELOW IT. Brett, 2026-09-18: a
+ * standard 16 by 9 video header with the type over it. The aspect ratio
+ * gives the four pages identical heights at any viewport width. At phone
+ * widths 16:9 is about 210 pixels tall and cannot hold a headline and a
+ * paragraph, so below md the band is 3:4 (500 pixels tall at 375) and the
+ * vertical padding drops so the longest intro fits with room. Change the
+ * ratio here and nowhere else.
+ */
+export const INTRO_BAND = 'aspect-[3/4] md:aspect-video'
 
 export function PageIntro({ eyebrow, title, children }: { eyebrow?: string; title: string; children?: React.ReactNode }) {
   return (
@@ -62,7 +71,7 @@ export function PageIntro({ eyebrow, title, children }: { eyebrow?: string; titl
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/85 via-black/82 via-70% to-black/55 lg:hidden" />
       <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-linear-to-r from-black/82 via-black/80 via-70% to-black/30 lg:block" />
 
-      <div className="mx-auto flex h-full max-w-7xl flex-col justify-center px-6 py-16 lg:px-8">
+      <div className="mx-auto flex h-full max-w-7xl flex-col justify-center px-6 py-8 sm:py-12 lg:px-8 lg:py-16">
         <div className="max-w-2xl">
           {eyebrow ? <p className="text-base/7 font-semibold text-rose-soft/90">{eyebrow}</p> : null}
           <h1 className="mt-2 font-display text-[2.5rem]/[1.05] tracking-[-0.01em] text-pretty text-cream sm:text-6xl/[1.04] lg:text-[3.75rem]/[1.03]">

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Dialog, DialogPanel } from '@headlessui/react'
@@ -17,23 +17,45 @@ import { nav, business } from '@/lib/site'
  * underline, the "Log in" slot carries the phone number. The mobile Dialog
  * is the component's own.
  */
-const linkClass = 'nav-link text-sm/6 tracking-[0.04em] uppercase text-ink-soft hover:text-ink'
+const linkClass = 'nav-link text-sm/6 tracking-[0.04em] uppercase opacity-80 hover:opacity-100'
 const actionClass =
   'btn-shine inline-flex min-h-11 items-center justify-center border border-rose bg-rose px-4 text-[12px] font-semibold tracking-[0.16em] text-cream uppercase hover:border-rose-hover hover:bg-rose-hover sm:px-6'
 
+/**
+ * ON THE HOMEPAGE THE HEADER OVERLAYS THE HERO. Brett, 2026-09-18: the
+ * hero fills the screen, so the bar is fixed and transparent over the
+ * footage with the wordmark and links in white, and it gains its white
+ * background and ink type once the page has scrolled past the top. On
+ * every other page it is the solid sticky bar in the document flow.
+ */
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
+  const overlay = pathname === '/'
   const close = () => setMobileMenuOpen(false)
   const current = (href: string) => (pathname === href || pathname.startsWith(href) ? 'page' : undefined)
 
+  useEffect(() => {
+    if (!overlay) return
+    const onScroll = () => setScrolled(window.scrollY > 24)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [overlay])
+
+  const transparent = overlay && !scrolled
+  const headerClass = overlay
+    ? `fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${transparent ? 'border-b border-transparent bg-transparent text-cream' : 'border-b border-rule bg-field text-ink'}`
+    : 'sticky top-0 z-40 border-b border-rule bg-field text-ink'
+
   return (
-    <header className="sticky top-0 z-40 border-b border-rule bg-field">
+    <header className={headerClass}>
       <nav aria-label="Global" className="mx-auto flex h-[var(--nav-h)] max-w-7xl items-center justify-between gap-x-6 px-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 flex min-h-11 items-center p-1.5 hover:opacity-70">
             <span className="sr-only">{business.name}</span>
-            <Logo />
+            <Logo tone={transparent ? 'dark' : 'ink'} />
           </Link>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
@@ -44,7 +66,7 @@ export function Navbar() {
           ))}
         </div>
         <div className="flex flex-1 items-center justify-end gap-x-6">
-          <a href={`tel:${business.phoneE164}`} className="tap hidden text-sm/6 whitespace-nowrap text-ink-soft hover:text-ink lg:block figure">
+          <a href={`tel:${business.phoneE164}`} className="tap hidden text-sm/6 whitespace-nowrap opacity-80 hover:opacity-100 lg:block figure">
             {business.phone}
           </a>
           <Link href={nav.action.href} className={actionClass}>
@@ -55,7 +77,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center p-2.5 text-ink"
+            className="-m-2.5 inline-flex items-center justify-center p-2.5"
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="size-6" />

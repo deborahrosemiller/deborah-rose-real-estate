@@ -21,6 +21,12 @@ import { business, areaSentence } from '@/lib/site'
  * background image" (React, v4.3): full-bleed media, a scrim, copy on
  * top. Rethemed: left aligned, Playfair, the rose button.
  *
+ * THE BAND IS THE WHOLE SCREEN. Brett, 2026-09-18: the video takes up the
+ * entire hero on desktop and on phones. `.hero-full` is 100dvh with a
+ * 100vh fallback. The header overlays it (see Navbar) so no white band
+ * eats the top of the screen. The copy sits at the foot, and the bottom
+ * padding is what gives at short laptop heights, never the type.
+ *
  * The footage is Deborah's own listing video of a one story estate on
  * nearly two acres in Porter, Montgomery County. The title card that
  * showed the street address was cut on 2026-09-18 at Brett's request.
@@ -29,7 +35,7 @@ import { business, areaSentence } from '@/lib/site'
 export function Hero() {
   return (
     <section aria-label="Introduction" className="relative isolate overflow-hidden bg-night">
-      <div className="relative flex min-h-[calc(100svh-var(--nav-h))] flex-col justify-end sm:min-h-[640px]">
+      <div className="hero-full relative flex flex-col justify-end">
         <div className="absolute inset-0 -z-20">
           <HeroVideo />
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -43,11 +49,19 @@ export function Hero() {
             decoding="async"
           />
         </div>
-        {/* The scrim: dark at the foot, darker toward the copy, open at the top right so the footage still breathes. */}
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/85 via-black/50 to-black/20" />
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-r from-black/50 via-black/10 to-transparent" />
+        {/*
+         * The scrim, directional. Bottom to top: 85 percent at the foot where
+         * the paragraph and button sit, 70 held to the 45 percent mark where
+         * the headline sits, 25 at the top. Left to right: 50 at the edge to
+         * clear at the right. A short top band of 55 sits under the overlaid
+         * white nav. Measured 2026-09-18 against the brightest graded frame:
+         * paragraph 7.1:1, headline 5.7:1 at the combined stops they occupy.
+         */}
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/85 via-black/70 via-45% to-black/25" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-r from-black/50 via-black/15 to-transparent" />
+        <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-40 bg-linear-to-b from-black/55 to-transparent" />
 
-        <div className="mx-auto w-full max-w-7xl px-6 pt-24 pb-14 sm:pb-20 lg:px-8 lg:pb-28">
+        <div className="mx-auto w-full max-w-7xl px-6 pt-32 pb-12 sm:pb-16 lg:px-8 lg:pb-20">
           <div className="max-w-2xl">
             <p className="text-[13px] font-semibold tracking-[0.1em] uppercase text-rose-soft/90">{areaSentence}</p>
             <h1 className="mt-5 font-display text-[2.5rem]/[1.05] tracking-[-0.01em] text-pretty text-cream sm:text-6xl/[1.03] lg:text-7xl/[1.02]">

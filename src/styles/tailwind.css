@@ -305,6 +305,16 @@
 }
 
 /*
+ * THE HOMEPAGE HERO FILLS THE SCREEN. 100vh is the fallback; 100dvh wins
+ * where supported, so on a phone the band is the visible viewport and it
+ * does not jump when the address bar retracts. Brett, 2026-09-18.
+ */
+.hero-full {
+  height: 100vh;
+  height: 100dvh;
+}
+
+/*
  * THE HERO VIDEO. Reduced motion shows the poster still. The video is
  * muted and loops; it carries the section while the copy sits on its own
  * white surface, so no word is ever read over moving footage.
