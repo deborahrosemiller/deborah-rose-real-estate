@@ -12,14 +12,14 @@ import { nav, business } from '@/lib/site'
 /**
  * Tailwind Plus, Marketing, Elements, Headers, "With call-to-action"
  * (React, v4.3), from Brett's account 2026-09-17. Rethemed: the indigo
- * rounded button is the site's ink button with no radius, the mark is the
+ * rounded button is the site's rose button with no radius, the mark is the
  * type wordmark, the nav links are uppercase letterspaced with the rose
  * underline, the "Log in" slot carries the phone number. The mobile Dialog
  * is the component's own.
  */
 const linkClass = 'nav-link text-sm/6 tracking-[0.04em] uppercase text-ink-soft hover:text-ink'
 const actionClass =
-  'btn-shine inline-flex min-h-11 items-center justify-center border border-night bg-night px-4 text-[12px] font-semibold tracking-[0.16em] text-cream uppercase hover:bg-ink-hover sm:px-6'
+  'btn-shine inline-flex min-h-11 items-center justify-center border border-rose bg-rose px-4 text-[12px] font-semibold tracking-[0.16em] text-cream uppercase hover:border-rose-hover hover:bg-rose-hover sm:px-6'
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

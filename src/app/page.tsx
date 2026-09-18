@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { BanknotesIcon, BuildingLibraryIcon, UsersIcon } from '@heroicons/react/20/solid'
 
 import { Container } from '@/components/Container'
@@ -14,7 +13,6 @@ import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
 import { faqNode, videoNode } from '@/lib/schema'
 import { homeFaq } from '@/content/faq'
-import { agent } from '@/lib/site'
 import { getStories } from '@/lib/stories'
 
 export const metadata: Metadata = {
@@ -100,47 +98,40 @@ export default async function Home() {
 
       <AreaGrid />
 
-      {/* Tailwind Plus, Content sections, "Split with image": the compact form, headshot beside the introduction. */}
-      <section aria-labelledby="about-heading" className="relative bg-paper">
-        <div className="mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end">
-          <div className="lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2">
-            <div className="relative h-96 lg:-ml-8 lg:h-auto lg:max-h-[48rem] lg:w-full lg:grow xl:ml-0">
-              <Image
-                src={agent.headshot}
-                alt={agent.headshotAlt}
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="bg-paper object-cover object-[50%_25%] grayscale"
-              />
-            </div>
-          </div>
-          <div className="px-6 lg:contents">
-            <div className="mx-auto max-w-2xl pt-16 pb-24 sm:pt-20 sm:pb-32 lg:mr-0 lg:ml-8 lg:w-full lg:max-w-lg lg:flex-none lg:pt-32 xl:w-1/2">
-              <p id="about-heading" className="text-base/7 font-semibold text-rose">
-                About
+      {/*
+       * Tailwind Plus, Content sections, "Centered" (React, v4.3): a single
+       * column on the plate width. Brett, 2026-09-18: the portrait here was
+       * the upscaled Google profile photo and it read soft, so the photo is
+       * gone and the type carries the band, the way bestknownbrand.com does.
+       */}
+      <section aria-labelledby="about-heading" className="bg-paper py-24 sm:py-32">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <p id="about-heading" className="text-base/7 font-semibold text-rose">
+              About
+            </p>
+            <h2 className="mt-2 font-display text-[2.5rem]/[1.05] text-pretty text-ink sm:text-5xl/[1.05] lg:text-6xl/[1.04]">
+              I am Deborah Rose Miller.
+            </h2>
+            <p className="mt-8 text-xl/8 text-ink sm:text-2xl/9">
+              Rose is my maiden name and it has been on the door of every business I have run. Community is my
+              business. Relevance is my mission.
+            </p>
+            <div className="mt-10 max-w-2xl space-y-6 text-lg/8 text-ink-soft">
+              <p>
+                I sold my financial planning firm in 2008 after twenty-five years, spent two years helping the City of
+                Magnolia plan its next twenty, and then went into residential real estate because I had bought and sold
+                enough of my own homes to know I could do the job well. I co-founded the Magnolia Education Foundation
+                in 2001 and serve on the board of the Humble ISD Education Foundation today, where I am a past chair.
               </p>
-              <h2 className="mt-2 font-display text-[2.25rem]/[1.1] text-pretty text-ink sm:text-5xl/[1.05]">I am Deborah Rose Miller.</h2>
-              <p className="mt-6 text-xl/8 text-ink">
-                Rose is my maiden name and it has been on the door of every business I have run. Community is my
-                business. Relevance is my mission.
-              </p>
-              <div className="mt-10 max-w-xl text-base/7 text-ink-soft lg:max-w-none">
-                <p>
-                  I sold my financial planning firm in 2008 after twenty-five years, spent two years helping the City
-                  of Magnolia plan its next twenty, and then went into residential real estate because I had bought and
-                  sold enough of my own homes to know I could do the job well. I co-founded the Magnolia Education
-                  Foundation in 2001 and serve on the board of the Humble ISD Education Foundation today, where I am a
-                  past chair.
-                </p>
-                <p className="mt-8">
-                  <Button variant="quiet" href="/about/">
-                    More about me
-                  </Button>
-                </p>
-              </div>
             </div>
+            <p className="mt-10">
+              <Button variant="quiet" href="/about/">
+                More about me
+              </Button>
+            </p>
           </div>
-        </div>
+        </Container>
       </section>
 
       <GoogleProfile />

@@ -2,17 +2,23 @@ import Link from 'next/link'
 import { clsx } from 'clsx'
 
 /**
- * Two controls. `primary` is ink on white with the pressed-object shine;
- * `quiet` is a letterspaced text link with a hairline. A second bordered
- * button beside the first makes both ordinary, so there is no outline
- * variant. Without an href this renders a real <button>.
+ * Two controls. `primary` is the rose with white type and the
+ * pressed-object shine (Brett, 2026-09-18: primary actions in the rose,
+ * not black); `quiet` is a letterspaced text link with a hairline. A
+ * second bordered button beside the first makes both ordinary, so there
+ * is no outline variant. Without an href this renders a real <button>.
+ *
+ * Focus: the ring draws outside the fill with an offset, so on the white
+ * page it is ink on white. On the dark hero the caller passes
+ * `focus-visible:outline-cream`.
  */
 const variants = {
   primary: clsx(
     'inline-flex items-center justify-center px-7 py-[17px]',
-    'border border-night bg-night text-cream btn-shine',
+    'border border-rose bg-rose text-cream btn-shine',
     'text-[13px] font-semibold tracking-[0.14em] uppercase',
-    'hover:bg-ink-hover',
+    'hover:border-rose-hover hover:bg-rose-hover',
+    'focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink',
     'disabled:opacity-40',
   ),
   quiet: clsx(

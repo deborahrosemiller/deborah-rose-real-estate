@@ -37,8 +37,13 @@
   --color-night: #111111;
   --color-cream: #ffffff;
 
-  /* The one accent. 9.6:1 on white. */
+  /*
+   * The one accent. 9.86:1 with white type, so it fills the primary
+   * buttons (Brett, 2026-09-18: "the rose colored red instead of black").
+   * `rose-hover` is the same hue a step darker, 12.22:1 with white.
+   */
   --color-rose: #7a2434;
+  --color-rose-hover: #621c2a;
   --color-rose-soft: #f7ecee;
 }
 

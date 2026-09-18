@@ -32,7 +32,7 @@ pnpm build          # production build
 | Design tokens and the few CSS rules utilities cannot carry | `src/styles/tailwind.css` |
 | Hero video and poster | `public/hero/` |
 | One hero photo per story, 1600px WebP | `public/stories/` |
-| Headshot | `public/about/` |
+| Headshot, used only at 40px on story bylines and in the schema | `public/about/` |
 | Tailwind Plus Marketing UI Blocks, the source for every section component | `vendor/tailwind-plus/` |
 
 ## Components
@@ -54,7 +54,7 @@ Every section is built from a Tailwind Plus Marketing block, rethemed to the tok
 | `ClosingAsk` | CTA sections, Simple justified |
 | `Footer` | Footers, 4-column with company mission |
 | Contact page | Contact sections, Split with pattern |
-| About page | Content sections, Split with image |
+| About page | Content sections, Centered (left aligned) |
 | 404 | Feedback, 404 pages, Simple |
 
 What was stripped from every block, on purpose: rounded corners on photos and panels, drop shadows, the indigo accent, announcement pills, arrow glyphs on links, and any container that reads as a button without being one.

@@ -19,7 +19,7 @@ import { business, areaSentence } from '@/lib/site'
  *
  * Built from Tailwind Plus, Marketing, Heroes, "Simple centered with
  * background image" (React, v4.3): full-bleed media, a scrim, copy on
- * top. Rethemed: left aligned, Playfair, the white button.
+ * top. Rethemed: left aligned, Playfair, the rose button.
  *
  * The footage is Deborah's own listing video of a one story estate on
  * nearly two acres in Porter, Montgomery County. The title card that
@@ -57,7 +57,7 @@ export function Hero() {
               days to three weeks when the lender is right.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-              <Button variant="onDark" href="/contact/">
+              <Button href="/contact/" className="focus-visible:outline-cream">
                 Talk with Deborah
               </Button>
               <a href={`tel:${business.phoneE164}`} className="tap text-sm/6 text-cream/80 hover:text-cream figure">
