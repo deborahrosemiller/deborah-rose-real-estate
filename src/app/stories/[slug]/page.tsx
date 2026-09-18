@@ -101,7 +101,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
       <article>
         {/* The dark band. */}
         <header className="bg-night text-cream">
-          <Container className="pt-10 pb-28 sm:pt-14 sm:pb-44 lg:pb-60">
+          <Container className="pt-10 pb-28 sm:pt-14 sm:pb-48 lg:pb-72">
             <div className="mx-auto max-w-3xl">
               <p className="flex flex-wrap items-center gap-x-3 text-sm/6">
                 <Link href="/stories/" className={metaLink}>
@@ -132,7 +132,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
 
         {/* The photo, straddling the seam. */}
         <Container>
-          <figure className="mx-auto -mt-20 max-w-4xl overflow-hidden rounded-2xl bg-paper shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)] sm:-mt-32 lg:-mt-44">
+          <figure className="mx-auto -mt-20 max-w-4xl overflow-hidden rounded-2xl bg-paper shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)] sm:-mt-36 lg:-mt-56">
             <Image
               src={story.image ?? '/hero/porter-estate-poster.webp'}
               alt={story.alt ?? story.title}
