@@ -307,19 +307,24 @@
 .hero-video {
   position: absolute;
   inset: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+/*
+ * The still sits under the video at all times. If a device blocks
+ * autoplay (iOS Low Power Mode, a data saver, a paused background tab)
+ * the frame behind the words is the poster rather than black. Reduced
+ * motion removes the video and leaves the still.
+ */
 .hero-still {
-  display: none;
+  display: block;
+  z-index: 0;
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-video {
     display: none;
-  }
-  .hero-still {
-    display: block;
   }
 }
 
