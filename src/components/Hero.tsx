@@ -42,7 +42,7 @@ export function Hero() {
           />
         </div>
         {/* The scrim: dark at the foot, darker toward the copy, open at the top right so the footage still breathes. */}
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/80 via-black/45 to-black/15" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/85 via-black/50 to-black/20" />
         <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-r from-black/50 via-black/10 to-transparent" />
 
         <div className="mx-auto w-full max-w-7xl px-6 pt-24 pb-14 sm:pb-20 lg:px-8 lg:pb-28">
