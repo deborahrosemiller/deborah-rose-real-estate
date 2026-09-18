@@ -1,126 +1,164 @@
 import Link from 'next/link'
 
-import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
-import { Button } from '@/components/Button'
 import { EqualHousing } from '@/components/EqualHousing'
-import { areas, business, gbp, legal, nav } from '@/lib/site'
+import { areas, business, gbp, legal, nav, profiles } from '@/lib/site'
 
-const heading = 'text-sm font-medium text-ink'
-const link = 'tap inline-block text-sm/6 text-ink-soft hover:text-ink'
+/**
+ * Tailwind Plus, Marketing, Footers, "4-column with company mission"
+ * (React, v4.3), from Brett's account 2026-09-17. Rethemed to the tokens;
+ * the social icons are the component's own for the two profiles she
+ * actually has, plus a Google Maps mark for the business profile. The
+ * bottom row carries the Texas disclosures and the Equal Housing statement,
+ * which the component does not have and a Texas broker's site must.
+ */
+const social = [
+  {
+    name: 'Facebook',
+    href: profiles.facebook,
+    icon: (props: React.SVGProps<SVGSVGElement>) => (
+      <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+        <path
+          fillRule="evenodd"
+          d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+  },
+  {
+    name: 'LinkedIn',
+    href: profiles.linkedin,
+    icon: (props: React.SVGProps<SVGSVGElement>) => (
+      <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Google Business Profile',
+    href: gbp.mapsUrl,
+    icon: (props: React.SVGProps<SVGSVGElement>) => (
+      <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+      </svg>
+    ),
+  },
+]
+
+const columnHeading = 'text-sm/6 font-semibold text-ink'
+const columnLink = 'tap text-sm/6 text-ink-soft hover:text-ink'
 
 export function Footer() {
   const year = new Date().getFullYear()
   return (
-    <footer className="bg-paper text-ink">
-      <Container className="pt-10 pb-8 sm:pt-14">
-        <div className="bg-night px-6 py-12 text-center text-cream sm:px-10 sm:py-14">
-          <h2 className="font-display text-3xl sm:text-4xl">Tell me about your move.</h2>
-          <p className="mx-auto mt-4 max-w-xl text-base/7 text-cream/75">
-            Buying, selling, or both at once. A first conversation costs nothing and comes with no obligation.
-          </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
-            <Button variant="onDark" href="/contact/">
-              Contact Deborah
-            </Button>
-            <a href={`tel:${business.phoneE164}`} className="tap text-sm text-cream/80 hover:text-cream figure">
-              Call or text {business.phone}
-            </a>
-          </div>
-        </div>
-
-        <div className="mt-16 grid grid-cols-2 gap-8 lg:grid-cols-6">
-          <div className="col-span-2">
+    <footer className="bg-paper">
+      <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8 lg:pt-32">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+          <div className="space-y-8">
             <Logo />
-            <p className="mt-4 max-w-xs text-sm/6 text-ink-soft">
-              Residential real estate in the Lake Houston area and Montgomery County, Texas.
+            <p className="text-sm/6 text-balance text-ink-soft">
+              Residential real estate across the Lake Houston area and Montgomery County, Texas. Kingwood, Humble,
+              Porter, Conroe, Magnolia and Tomball.
             </p>
+            <div className="flex gap-x-6">
+              {social.map((item) => (
+                <a key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="text-ink-faint hover:text-ink">
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon aria-hidden="true" className="size-6" />
+                </a>
+              ))}
+            </div>
           </div>
-          <nav aria-label="Pages">
-            <h3 className={heading}>Pages</h3>
-            <ul role="list" className="mt-4 space-y-3">
-              {[...nav.header, nav.action].map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href} className={link}>
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <nav aria-label="Areas">
-            <h3 className={heading}>Areas</h3>
-            <ul role="list" className="mt-4 space-y-3">
-              {areas.map((a) => (
-                <li key={a.slug}>
-                  <Link href={`/areas/${a.slug}/`} className={link}>
-                    {a.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <div className="col-span-2">
-            <h3 className={heading}>Contact</h3>
-            <ul role="list" className="mt-4 space-y-3">
-              <li>
-                <a href={`tel:${business.phoneE164}`} className={`${link} figure`}>
-                  {business.phone}
-                </a>
-              </li>
-              <li>
-                <a href={`mailto:${business.email}`} className={link}>
-                  {business.email}
-                </a>
-              </li>
-              <li>
-                <a href={gbp.mapsUrl} target="_blank" rel="noopener noreferrer" className={link}>
-                  Find Deborah on Google
-                </a>
-              </li>
-              <li>
-                <a href={gbp.reviewUrl} target="_blank" rel="noopener noreferrer" className={link}>
-                  Leave a Google review
-                </a>
-              </li>
-            </ul>
-            <dl className="mt-6 space-y-1 text-sm/6 text-ink-soft">
-              {gbp.hours.map((h) => (
-                <div key={h.label} className="flex gap-x-3">
-                  <dt className="w-32 shrink-0">{h.label}</dt>
-                  <dd>{h.display}</dd>
-                </div>
-              ))}
-            </dl>
+          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 className={columnHeading}>Pages</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {[...nav.header, nav.action].map((item) => (
+                    <li key={item.href}>
+                      <Link href={item.href} className={columnLink}>
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-10 md:mt-0">
+                <h3 className={columnHeading}>Areas</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {areas.map((a) => (
+                    <li key={a.slug}>
+                      <Link href={`/areas/${a.slug}/`} className={columnLink}>
+                        {a.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 className={columnHeading}>Contact</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  <li>
+                    <a href={`tel:${business.phoneE164}`} className={`${columnLink} figure`}>
+                      {business.phone}
+                    </a>
+                  </li>
+                  <li>
+                    <a href={`mailto:${business.email}`} className={columnLink}>
+                      {business.email}
+                    </a>
+                  </li>
+                  <li>
+                    <a href={profiles.harListings} target="_blank" rel="noopener noreferrer" className={columnLink}>
+                      Current listings on HAR
+                    </a>
+                  </li>
+                  <li>
+                    <a href={gbp.reviewUrl} target="_blank" rel="noopener noreferrer" className={columnLink}>
+                      Leave a Google review
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-10 md:mt-0">
+                <h3 className={columnHeading}>Hours</h3>
+                <ul role="list" className="mt-6 space-y-4 text-sm/6 text-ink-soft">
+                  {gbp.hours.map((h) => (
+                    <li key={h.label}>
+                      {h.label}
+                      <span className="block figure">{h.display}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div className="mt-16 border-t border-rule pt-8 text-sm/6 text-ink-soft">
-          <div className="flex flex-col gap-y-4 sm:flex-row sm:items-start sm:justify-between sm:gap-x-8">
-            <div className="max-w-2xl space-y-2">
+        <div className="mt-16 border-t border-rule pt-8 sm:mt-20 lg:mt-24">
+          <div className="flex flex-col gap-y-6 lg:flex-row lg:items-start lg:justify-between lg:gap-x-12">
+            <div className="max-w-3xl space-y-3 text-sm/6 text-ink-soft">
               <p>
                 {year} {business.name}. Deborah Rose Miller, Texas Real Estate Commission license {business.license}.{' '}
                 {business.legalNote}, {business.brokerage.address}.
               </p>
-              <p>
+              <p className="flex flex-wrap gap-x-4 gap-y-1">
+                {legal.iabsUrl ? (
+                  <a href={legal.iabsUrl} target="_blank" rel="noopener noreferrer" className="tap underline decoration-ink/25 underline-offset-4 hover:decoration-ink">
+                    Texas Real Estate Commission Information About Brokerage Services
+                  </a>
+                ) : null}
                 <a href={legal.trecConsumerProtectionNotice} target="_blank" rel="noopener noreferrer" className="tap underline decoration-ink/25 underline-offset-4 hover:decoration-ink">
                   Texas Real Estate Commission Consumer Protection Notice
                 </a>
-                {legal.iabsUrl ? (
-                  <>
-                    {' '}
-                    <span aria-hidden="true">&middot;</span>{' '}
-                    <a href={legal.iabsUrl} target="_blank" rel="noopener noreferrer" className="tap underline decoration-ink/25 underline-offset-4 hover:decoration-ink">
-                      Information About Brokerage Services
-                    </a>
-                  </>
-                ) : null}
               </p>
             </div>
             <EqualHousing />
           </div>
         </div>
-      </Container>
+      </div>
     </footer>
   )
 }

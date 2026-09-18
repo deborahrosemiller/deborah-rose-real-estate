@@ -33,6 +33,31 @@ pnpm build          # production build
 | Hero video and poster | `public/hero/` |
 | One hero photo per story, 1600px WebP | `public/stories/` |
 | Headshot | `public/about/` |
+| Tailwind Plus Marketing UI Blocks, the source for every section component | `vendor/tailwind-plus/` |
+
+## Components
+
+Every section is built from a Tailwind Plus Marketing block, rethemed to the tokens in `src/styles/tailwind.css`. Each component's header comment names its block. The mapping:
+
+| Site component | Tailwind Plus block |
+|---|---|
+| `Navbar` | Elements, Headers, With call-to-action |
+| `Hero` | Heroes, Split with image (the image slot carries the video) |
+| `FeatureThree` | Feature sections, Simple three column with small icons |
+| `FeatureSplit` | Feature sections, With product screenshot on left |
+| `Timeline` | Stats sections, Timeline (used for a process) |
+| `AreaGrid` | Feature sections, Simple 3x2 grid |
+| `StoryCard` | Blog sections, Three-column with images |
+| `Credentials` | Stats sections, Two-column description (the list only, as type) |
+| `PageIntro` | Header sections, Simple with eyebrow |
+| `FAQList` | FAQ sections, Two columns |
+| `ClosingAsk` | CTA sections, Simple justified |
+| `Footer` | Footers, 4-column with company mission |
+| Contact page | Contact sections, Split with pattern |
+| About page | Content sections, Split with image |
+| 404 | Feedback, 404 pages, Simple |
+
+What was stripped from every block, on purpose: rounded corners on photos and panels, drop shadows, the indigo accent, announcement pills, arrow glyphs on links, and any container that reads as a button without being one.
 
 ## Routes
 

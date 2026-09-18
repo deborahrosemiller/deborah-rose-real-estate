@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import { ClockIcon, DocumentMagnifyingGlassIcon, HomeModernIcon, ScaleIcon } from '@heroicons/react/20/solid'
 
 import { Container } from '@/components/Container'
 import { PageIntro } from '@/components/PageIntro'
-import { Heading, Eyebrow } from '@/components/Text'
-import { Steps } from '@/components/Steps'
+import { Timeline } from '@/components/Timeline'
+import { FeatureSplit } from '@/components/FeatureSplit'
 import { StoryCard } from '@/components/StoryCard'
 import { FAQList } from '@/components/FAQList'
 import { ClosingAsk } from '@/components/ClosingAsk'
@@ -21,24 +22,61 @@ export const metadata: Metadata = {
 
 const STEPS = [
   {
+    label: 'Step one',
     name: 'The first call',
-    body: 'Twenty minutes on the phone. What you are trying to do, when, and what you can comfortably spend. I will tell you what is realistic in the part of the market you want and what I would do first.',
+    description:
+      'Twenty minutes on the phone. What you are trying to do, when, and what you can comfortably spend. I tell you what is realistic in the part of the market you want and what I would do first.',
   },
   {
+    label: 'Step two',
     name: 'Financing before showings',
-    body: 'Your lender decides how fast you can close and how your offer reads to a seller. I introduce you to lenders who close in ten days to three weeks, and who know how to underwrite a self-employed borrower, and we get you fully approved before we open a door.',
+    description:
+      'Your lender decides how fast you can close and how your offer reads to a seller. I introduce you to lenders who close in ten days to three weeks and know how to underwrite a self-employed borrower, and we get you fully approved before we open a door.',
   },
   {
+    label: 'Step three',
     name: 'The search',
-    body: 'I do not show you homes that do not fit. When you want one neighborhood and one floor plan, we watch that neighborhood, including what is about to list, and we move the day the right one appears.',
+    description:
+      'I do not show you homes that do not fit. When you want one neighborhood and one floor plan, we watch that neighborhood, including what is about to list, and we move the day the right one appears.',
   },
   {
+    label: 'Step four',
     name: 'The offer',
-    body: 'Price is one lever. Close date, contingencies, earnest money and a lender the listing agent trusts are the others. I have won a bidding war by adjusting my own fee, and I will tell you every option before we write.',
+    description:
+      'Price is one lever. Close date, contingencies, earnest money and a lender the listing agent trusts are the others. I have won a bidding war by adjusting my own fee, and I will tell you every option before we write.',
   },
   {
+    label: 'Step five',
     name: 'Inspection to closing',
-    body: 'I attend the inspection, including on new construction, and report to you the same day with photos. Then I stay on the lender and the title company daily until the keys are in your hand.',
+    description:
+      'I attend the inspection, including on new construction, and report to you the same day with photos. Then I stay on the lender and the title company daily until the keys are in your hand.',
+  },
+]
+
+const BUILT_FOR = [
+  {
+    name: 'Self-employed and business owners.',
+    description:
+      'A tax return that shows every deduction you are entitled to can look thin to the wrong underwriter. I know which lenders read it correctly, because for twenty-five years I was the one preparing my clients for that conversation.',
+    icon: ScaleIcon,
+  },
+  {
+    name: 'Relocating from out of state.',
+    description:
+      'Video walkthroughs of what the listing photos leave out, same-day answers across time zones, and an inspection I attend in person and report room by room. I have closed homes in Kingwood and Magnolia for buyers who first walked in on closing day.',
+    icon: ClockIcon,
+  },
+  {
+    name: 'Corporate relocation and new construction.',
+    description:
+      'I work with relocation companies and with builders, and I treat a new build the way I treat a resale: a full inspection before closing, a punch list the builder fixes, and a price checked against what the same plan sold for nearby.',
+    icon: DocumentMagnifyingGlassIcon,
+  },
+  {
+    name: 'Buying and selling at the same time.',
+    description:
+      'One project with two closings, sequenced so you are never between homes. If you owe more than your current home is worth, we talk about that first. I have brought in an investor so a client could break even and still buy the home they wanted.',
+    icon: HomeModernIcon,
   },
 ]
 
@@ -54,64 +92,25 @@ export default async function BuyersPage() {
         </p>
       </PageIntro>
 
-      <section className="pb-20 lg:pb-28">
-        <Container>
-          <Eyebrow>How it goes</Eyebrow>
-          <Heading className="mt-6 max-w-2xl">Five steps, in the order they happen.</Heading>
-          <Steps items={STEPS} className="mt-12" />
-        </Container>
-      </section>
+      <Timeline items={STEPS} />
 
-      <section className="band py-20 lg:py-28">
-        <Container>
-          <div className="lg:grid lg:grid-cols-12 lg:gap-x-12">
-            <div className="lg:col-span-5">
-              <Eyebrow>What is different</Eyebrow>
-              <Heading className="mt-6">Buyers I am built for.</Heading>
-            </div>
-            <dl className="mt-10 space-y-10 lg:col-span-7 lg:mt-0">
-              <div>
-                <dt className="font-display text-2xl text-ink">Self-employed and business owners</dt>
-                <dd className="mt-3 text-base/7 text-ink-soft">
-                  A tax return that shows every deduction you are entitled to can look thin to the wrong underwriter. I
-                  know which lenders read it correctly and how to present it, because for twenty-five years I was the
-                  one preparing my clients for that conversation.
-                </dd>
-              </div>
-              <div>
-                <dt className="font-display text-2xl text-ink">Relocating from out of state</dt>
-                <dd className="mt-3 text-base/7 text-ink-soft">
-                  Video walkthroughs of what the listing photos leave out, same-day answers across time zones, and an
-                  inspection I attend in person and report room by room. I have closed homes in Kingwood and Magnolia for
-                  buyers who first walked in on closing day.
-                </dd>
-              </div>
-              <div>
-                <dt className="font-display text-2xl text-ink">Corporate relocation and new construction</dt>
-                <dd className="mt-3 text-base/7 text-ink-soft">
-                  I work with relocation companies and with builders, and I treat a new build the way I treat a resale:
-                  a full inspection before closing, a punch list the builder fixes, and a price checked against what the
-                  same plan sold for nearby.
-                </dd>
-              </div>
-              <div>
-                <dt className="font-display text-2xl text-ink">Buying and selling at the same time</dt>
-                <dd className="mt-3 text-base/7 text-ink-soft">
-                  One project with two closings, sequenced so you are never between homes. If you owe more than your
-                  current home is worth, we talk about that first, and there are more answers than waiting it out.
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </Container>
-      </section>
+      <FeatureSplit
+        eyebrow="Buyers I am built for"
+        heading="Four situations where the financial background does the work."
+        intro="Most agents can open a door. The purchases below turned on the loan, the timing or the structure, and that is where I earn my fee."
+        items={BUILT_FOR}
+        image={{ src: '/stories/kingwood-dream-home-sellers-market.webp', alt: 'Aerial view of a backyard pool and spa behind a French style home in Royal Brook at Kingwood, Texas' }}
+        imageSide="left"
+      />
 
       {stories.length ? (
-        <section className="py-20 lg:py-28">
+        <section className="bg-field py-24 sm:py-32">
           <Container>
-            <Eyebrow>Buyer stories</Eyebrow>
-            <Heading className="mt-6 max-w-2xl">How it went for other buyers.</Heading>
-            <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto max-w-2xl lg:mx-0">
+              <h2 className="text-base/7 font-semibold text-rose">Buyer stories</h2>
+              <p className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">How it went for other buyers.</p>
+            </div>
+            <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {stories.map((story) => (
                 <StoryCard key={story.slug} story={story} />
               ))}
@@ -120,11 +119,10 @@ export default async function BuyersPage() {
         </section>
       ) : null}
 
-      <section className="border-t border-rule py-20 lg:py-28">
-        <Container>
-          <Eyebrow>Questions</Eyebrow>
-          <Heading className="mt-6 max-w-2xl">What buyers ask first.</Heading>
-          <div className="mt-12">
+      <section className="border-t border-rule bg-field">
+        <Container className="py-24 sm:py-32">
+          <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">What buyers ask first.</h2>
+          <div className="mt-10">
             <FAQList items={buyersFaq} />
           </div>
         </Container>

@@ -8,6 +8,17 @@ role: "Buyer story"
 summary: "A first-time buyer relocating for a new job wanted new construction in Magnolia and could not be here to see it. I attended the inspection in his place, got the builder's punch list fixed, and negotiated below what comparable new builds were bringing."
 image: "/stories/magnolia-new-construction-from-out-of-state.webp"
 alt: "Living room open to the kitchen in a new one story home in the NorthGrove community, Magnolia, Texas"
+facts:
+  - label: "List price"
+    value: "$400,505"
+  - label: "Result"
+    value: "Negotiated below comparable new builds"
+  - label: "Home"
+    value: "4 bed, 3 bath, 1,944 sq ft, one story, built 2023"
+  - label: "Neighborhood"
+    value: "NorthGrove, Magnolia"
+  - label: "Closed"
+    value: "2023"
 featured: false
 ---
 

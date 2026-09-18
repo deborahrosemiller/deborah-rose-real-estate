@@ -1,32 +1,41 @@
 # Claude instructions for this repo
 
-Read `README.md` first. It says where everything lives.
+The code says how the site works. This file carries the decisions the code cannot express on its own. Read `README.md` for where things live.
 
-## Facts
+## Constraints that a future session would otherwise break in good faith
 
-`src/lib/site.ts` is the only place a phone number, email, license number, brokerage name, hour, city or Google profile ID is typed. If a fact changes, it changes there.
+**No star ratings, review widgets, or review markup anywhere.** Her Google Business Profile sits at 3.0 from 2 reviews. Surfacing that hurts her. Do not add `aggregateRating`, `review`, or a testimonials section with placeholder quotes. Her trust signals are her record: forty-five years in business, twenty-five owning Rose Financial Group, two Houston mayors, Fellow Rotarian, past chair of the Humble ISD Education Foundation, RENE, HAR Platinum. Set those as type.
 
-Two facts are still open as of 2026-09-17 and are marked in that file: which brokerage line is correct for public display (TREC shows Rose Realty LLC as her own broker company; HAR and her chamber press say "powered by eXp Realty LLC"), and the URL of her completed Information About Brokerage Services form. Do not resolve either by guessing.
+**No em dashes in site copy.** Brett's standing rule. Rewrite into two sentences. Never an en dash or a double hyphen instead. Deborah said on 2026-09-09 that she likes them; the rule held and she should hear that from Brett, not from a session quietly reversing it.
 
-## Copy
+**No client names and no street addresses in published body copy.** Agreed with Deborah on 2026-09-04. Everything else from a transaction is fair to use: neighborhood, city, county, prices, days on market, timelines, obstacles, structure, outcome. Street addresses ARE permitted in image filenames, alt text and metadata (Brett, 2026-09-17), though the story photos leave them out so the body rule is not undone by a screen reader. Names of third-party professionals (other agents, escrow officers, lenders) are left out by default pending Deborah's review.
 
-- No em dashes. Rewrite into two sentences. Never an en dash or a double hyphen instead.
-- American spelling.
-- No "it's not X, it's Y." No comma reframes. No triads for rhythm. No sentence that could be cut.
-- Stories are in Deborah's first person. Plainspoken, numbers over adjectives, "we were able to," "checked all their boxes," "win-win," "smooth transaction."
-- No client names, no street addresses, anywhere public. The internal interview brief in Drive has names; it never leaves Drive.
-- Fair housing: describe the property and the place, never the people who live there or who would fit. Name the district; never rate the schools. No "safe." No "family-friendly."
-- Run `pnpm check:copy` before committing.
+**Fair housing.** Describe the property and the place, never the people who live there or who would fit. Name a school district as a fact; never rate it or make it a reason to buy. Nothing about "safe," "family-friendly," "quiet," "exclusive," "young professionals," "retirees," or a religious institution as an amenity. In alt text, never describe people. The copy gate blocks the common phrases; judgment covers the rest.
 
-## Design
+**Nothing unclickable may look clickable.** No decorative pills, badges or cards that read as buttons. Eyebrows and metadata are set as type. Stats blocks are set as type with a hairline, never as bordered cards.
 
-- White ground, ink type, one accent (`--color-rose`) on labels only. Playfair Display for display, Geist for everything else.
-- No radius on photos. No shadows on containers. No pills. A container that cannot be clicked must not look like a card that can.
-- The hero video carries the section; the words sit on their own white panel. Never put type over moving footage.
-- Every primary action goes to `/contact/`. There is one primary button per section.
+**One accent, on labels only.** The garnet rose (`--color-rose`) marks eyebrows, icons, the header underline and selection. It never fills a button. Photos take no radius.
 
-## Do not
+## Where her voice comes from
 
-- Do not publish. `HIDE_FROM_SEARCH_ENGINES` stays `true` until Brett flips it.
-- Do not add a star rating or review markup. The Google profile has two reviews at three stars; nothing about that goes on the site.
-- Do not add a stats row to the homepage.
+Every sentence in her first person is derived from her own dictated case study articles, which she spoke into Claude through Wispr Flow in September 2026. They are the seventeen files in `content/stories/`. Read three of them before writing anything in her voice. The rhythm: open with a principle, earn it with a story, name the county alongside the town, quantify the outcome, close with the lesson addressed to the reader. Plainspoken. "We were able to." "Checked all their boxes." "Win-win." "Smooth transaction."
+
+## Canonical facts, one place
+
+`src/lib/site.ts` is the only file that types the business name, phone, email, license number, brokerage, hours, service area, coordinates, profile URLs or Google Business Profile IDs. Change a fact there and every page, the footer and the schema follow.
+
+- Business name: Deborah Rose Real Estate. Descriptive form: Deborah Rose Real Estate powered by eXp Realty LLC.
+- Phone: (281) 380-0332. Email: deborahroserealtor@gmail.com.
+- Service area: Kingwood, Humble, Porter, Conroe, Magnolia, Tomball. Six area pages, one each.
+- Texas Real Estate Commission license 622917.
+
+## The Tailwind Plus components
+
+`vendor/tailwind-plus/` holds the Marketing UI Blocks download from Brett's Tailwind Plus account (2026-09-17). Each site component names the block it came from in its header comment. When a new section is needed, start from a block there rather than hand-rolling one. The repo is private, which is what keeps the license clean.
+
+## Launch checklist, not yet done
+
+- The Google Business Profile's website field still points at har.com. At launch it changes to deborahroserealestate.com. That is a direct Map Pack signal currently handed to HAR.
+- `HIDE_FROM_SEARCH_ENGINES` in `src/lib/site.ts` is `true`. Flip it to `false` at launch.
+- `CONTACT_WEBHOOK_URL` must be set on Vercel before the contact form delivers anything.
+- Deploy is push to `main`; Vercel builds. Nothing else.

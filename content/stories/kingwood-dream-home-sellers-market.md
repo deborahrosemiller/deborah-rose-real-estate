@@ -8,6 +8,19 @@ role: "Buyer story"
 summary: "Repeat clients whose previous home I had just sold wanted one specific Kingwood neighborhood, a pool, real upgrades and a price that fit. In a heavy seller's market we had it under contract in under a month."
 image: "/stories/kingwood-dream-home-sellers-market.webp"
 alt: "Aerial view of a backyard pool and spa behind a French style home in Royal Brook at Kingwood, Texas"
+facts:
+  - label: "List price"
+    value: "$779,000"
+  - label: "Sold price"
+    value: "$767,000"
+  - label: "Days on market"
+    value: "30"
+  - label: "Home"
+    value: "5 bed, 5.5 bath, 5,057 sq ft with a pool, spa and wine room, built 2017"
+  - label: "Neighborhood"
+    value: "Royal Brook at Kingwood"
+  - label: "Closed"
+    value: "October 2021"
 featured: false
 ---
 

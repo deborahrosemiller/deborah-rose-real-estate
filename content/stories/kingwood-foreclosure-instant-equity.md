@@ -8,6 +8,17 @@ role: "Buyer story"
 summary: "A buyer who knew exactly which Kingwood neighborhood and floor plan he wanted. We waited for a foreclosure to list, watched the price come down, moved the day it hit his range, and won the bid with roughly $100,000 of equity on closing day."
 image: "/stories/kingwood-foreclosure-instant-equity.webp"
 alt: "Aerial view of a two story brick home on a tree lined street in Kingwood, Texas"
+facts:
+  - label: "List price"
+    value: "$435,000, bank owned"
+  - label: "Built-in equity at closing"
+    value: "About $100,000"
+  - label: "Home"
+    value: "3 bed, 3.5 bath, 3,233 sq ft"
+  - label: "Neighborhood"
+    value: "Kingwood, 77345"
+  - label: "Closed"
+    value: "August 2026"
 featured: true
 ---
 

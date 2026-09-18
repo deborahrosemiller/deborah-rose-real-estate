@@ -8,6 +8,19 @@ role: "Both sides"
 summary: "First-time investors who overspent on a rehab. Buyers with VA eligibility and a qualification gap. A conventional sale worked for neither, so we built a lease-to-purchase agreement over nine months and got everyone to even."
 image: "/stories/stagecoach-lease-to-purchase.webp"
 alt: "Aerial view of a one story brick home on an acreage lot in Stagecoach Farms, Stagecoach, Texas"
+facts:
+  - label: "List price"
+    value: "$328,000"
+  - label: "Days on market"
+    value: "41"
+  - label: "Structure"
+    value: "Lease to purchase, VA financing at closing"
+  - label: "Home"
+    value: "3 bed, 2 bath, 1,866 sq ft on 0.82 acre, built 1976"
+  - label: "Neighborhood"
+    value: "Stagecoach Farms, Stagecoach"
+  - label: "Funded"
+    value: "September 2024"
 featured: false
 ---
 

@@ -18,6 +18,7 @@ export type Story = {
   image: string | null
   alt: string | null
   featured: boolean
+  facts: { label: string; value: string }[]
   readMinutes: number
   body: string
   html: string
@@ -46,6 +47,7 @@ async function parse(file: string): Promise<Story> {
     image: data.image ?? null,
     alt: data.alt ?? null,
     featured: Boolean(data.featured),
+    facts: Array.isArray(data.facts) ? data.facts : [],
     readMinutes: readingTime(content),
     body: content,
     html: String(rendered),

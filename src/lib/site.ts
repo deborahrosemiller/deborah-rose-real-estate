@@ -56,7 +56,7 @@ export const business = {
 export const agent = {
   name: 'Deborah Rose Miller',
   firstName: 'Deborah',
-  jobTitle: 'Real Estate Broker, Deborah Rose Real Estate',
+  jobTitle: 'Owner and Broker, Deborah Rose Real Estate',
   headshot: '/about/deborah-rose-miller.webp',
   headshotAlt: 'Deborah Rose Miller, real estate broker serving Kingwood, Humble, Porter, Conroe, Magnolia and Tomball, Texas',
   designations: ['CLHMS', 'RENE'],
@@ -78,10 +78,31 @@ export const gbp = {
   ],
 } as const
 
+/** Her public profiles, each read from her own HAR page on 2026-09-17. */
 export const profiles = {
   har: 'https://www.har.com/deborah-rose-miller/agent_drmiller',
-  linkedin: 'https://www.linkedin.com/in/roserealty',
+  harListings: 'https://www.har.com/realestatepro/forsale-by-agent/drmiller',
+  linkedin: 'https://www.linkedin.com/in/roserealty/',
+  facebook: 'https://www.facebook.com/deborahrose.miller.9',
   googleMaps: gbp.mapsUrl,
+} as const
+
+/**
+ * Her own line, from her HAR profile. Used once, on the About page.
+ */
+export const tagline = 'Real estate pro. Connector. Lifelong learner. Community is my business. Relevance is my mission.'
+
+/**
+ * Production, from her HAR profile on 2026-09-17. Set as type, in context,
+ * on the About page. Never as a card, a pill or a homepage stat row.
+ */
+export const production = {
+  sold: 38,
+  leased: 9,
+  yearsRealEstate: '10+',
+  yearsBusiness: '45+',
+  yearsRoseFinancial: 25,
+  harTier: 'HAR Platinum agent',
 } as const
 
 export type Area = {
@@ -123,6 +144,12 @@ export const nav = {
 
 export const legal = {
   trecConsumerProtectionNotice: 'https://www.trec.texas.gov/forms/consumer-protection-notice',
-  /** The broker's completed Information About Brokerage Services form. Null until Deborah supplies it. */
-  iabsUrl: null as string | null,
+  /**
+   * Her Information About Brokerage Services form, as HAR generates it for
+   * license 622917 (the link her own HAR profile carries). TREC Rule
+   * 531.20(b) requires this link on the homepage; the footer is on every
+   * page. A PDF hosted on this domain would be sturdier than a HAR page;
+   * flagged in docs/open-items.
+   */
+  iabsUrl: 'https://www.har.com/mhf/terms/dispBrokerInfo?sitetype=aws&cid=622917' as string | null,
 }

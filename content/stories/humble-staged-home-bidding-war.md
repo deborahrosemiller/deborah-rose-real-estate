@@ -8,6 +8,19 @@ role: "Seller story"
 summary: "A move-in ready home in Eagle Springs, Humble, priced a touch under market on purpose. Three buyers, under contract in a week, closed in three weeks at $20,000 over the list price."
 image: "/stories/humble-staged-home-bidding-war.webp"
 alt: "Backyard pool at dusk at a two story home in Eagle Springs, Humble, Texas"
+facts:
+  - label: "List price"
+    value: "$510,000"
+  - label: "Sold price"
+    value: "$530,000"
+  - label: "Days on market"
+    value: "7"
+  - label: "Home"
+    value: "4 bed, 3.5 bath, 3,696 sq ft, built 2014"
+  - label: "Neighborhood"
+    value: "Eagle Springs, Humble"
+  - label: "Closed"
+    value: "August 2026"
 featured: true
 ---
 

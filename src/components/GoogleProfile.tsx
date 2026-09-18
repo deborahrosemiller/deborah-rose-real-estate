@@ -12,7 +12,7 @@ import { business, gbp, areaSentence } from '@/lib/site'
  */
 export function GoogleProfile() {
   return (
-    <section aria-labelledby="gbp-heading" className="band py-20 lg:py-28">
+    <section aria-labelledby="gbp-heading" className="bg-field py-24 sm:py-32">
       <Container>
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-16">
           <div className="max-w-xl">

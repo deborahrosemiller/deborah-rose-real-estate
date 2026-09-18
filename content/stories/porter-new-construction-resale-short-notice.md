@@ -8,6 +8,19 @@ role: "Seller story"
 summary: "A couple in Porter had to sell a nearly new home because of a health situation, with almost no equity built up and the builder still selling the same plan nearby. Priced with precision, sold quickly, and the sellers came out even."
 image: "/stories/porter-new-construction-resale-short-notice.webp"
 alt: "Backyard with a pergola and outdoor kitchen behind a two story home in Royal Brook, Porter, Texas"
+facts:
+  - label: "List price"
+    value: "$374,000"
+  - label: "Sold price"
+    value: "$374,000"
+  - label: "Days on market"
+    value: "34"
+  - label: "Home"
+    value: "4 bed, 3.5 bath, 2,480 sq ft, built 2022"
+  - label: "Neighborhood"
+    value: "Royal Brook, Porter"
+  - label: "Closed"
+    value: "June 2025"
 featured: false
 ---
 

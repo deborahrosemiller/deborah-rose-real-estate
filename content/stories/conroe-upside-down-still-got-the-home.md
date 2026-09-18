@@ -8,6 +8,15 @@ role: "Sale and purchase"
 summary: "A young couple with three children found their home on acreage in the Conroe area but owed more on their current house than it was worth. An investor purchase got them out even, and with family help they closed on the home they wanted."
 image: "/stories/conroe-upside-down-still-got-the-home.webp"
 alt: "Aerial view of a one story home with a carport and shed on a wooded acreage lot in southeast Conroe, Texas"
+facts:
+  - label: "Sold price"
+    value: "$455,000"
+  - label: "Home"
+    value: "3 bed, 2 bath, 1,644 sq ft on acreage"
+  - label: "Area"
+    value: "Southeast Conroe, 77302"
+  - label: "Closed"
+    value: "April 2026"
 featured: false
 ---
 

@@ -5,9 +5,10 @@ import { useState } from 'react'
 import { Button } from '@/components/Button'
 import { business } from '@/lib/site'
 
+/* The component's field styles, squared: outline-1 on rule, outline-2 on ink when focused. */
 const field =
-  'mt-2 block w-full border border-rule bg-field px-4 py-3 text-base text-ink placeholder:text-ink-faint focus:border-ink focus:outline-none'
-const label = 'block text-sm font-medium text-ink'
+  'mt-2.5 block w-full bg-field px-3.5 py-2 text-base text-ink outline-1 -outline-offset-1 outline-rule placeholder:text-ink-faint focus:outline-2 focus:-outline-offset-2 focus:outline-ink'
+const label = 'block text-sm/6 font-semibold text-ink'
 
 type State = { status: 'idle' | 'sending' | 'sent' | 'not-connected' | 'error'; message?: string }
 
@@ -45,7 +46,7 @@ export function ContactForm() {
 
   if (state.status === 'sent') {
     return (
-      <div className="panel p-8 sm:p-10">
+      <div className="border-t border-rule pt-8">
         <p className="font-display text-2xl text-ink">Sent. I will be in touch.</p>
         <p className="mt-3 text-base/7 text-ink-soft">
           If it is urgent, call or text{' '}
@@ -59,8 +60,8 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="panel p-8 sm:p-10" noValidate>
-      <div className="grid gap-6 sm:grid-cols-2">
+    <form onSubmit={onSubmit} noValidate>
+      <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
         <div className="sm:col-span-2">
           <label htmlFor="name" className={label}>
             Name

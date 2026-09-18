@@ -8,6 +8,21 @@ role: "Sale and purchase"
 summary: "Two transactions stitched together for the same clients: a sale in a Lake Houston community with an air conditioning issue mid-contract, and a purchase in Eagle Springs, Atascocita, in a heavily seller-dominated market, closed three weeks apart."
 image: "/stories/humble-sell-then-buy-forever-home.webp"
 alt: "Front exterior with a masonry porch and porte-cochere at a one and a half story home in Eagle Springs, Humble, Texas"
+facts:
+  - label: "Sale"
+    value: "Listed at $355,000 in Waters Edge on Lake Houston, closed May 2022"
+  - label: "Purchase list price"
+    value: "$389,500"
+  - label: "Purchase price"
+    value: "$398,500"
+  - label: "Days on market, purchase"
+    value: "5"
+  - label: "Home purchased"
+    value: "4 bed, 4 bath, 3,362 sq ft, built 2006"
+  - label: "Neighborhood"
+    value: "Eagle Springs, Humble"
+  - label: "Gap between closings"
+    value: "About three weeks"
 featured: false
 ---
 

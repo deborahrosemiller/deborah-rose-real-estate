@@ -8,6 +8,17 @@ role: "Seller story"
 summary: "A couple already owned the home they would retire to, out of state, and were not ready to move yet. The plan was to sell in Spring while the market favored sellers, lease locally, and wait. My part was the sale, at their exact price, on time."
 image: "/stories/spring-sell-high-lease-and-wait.webp"
 alt: "Front exterior of a two story brick home in Spring, Montgomery County, Texas"
+facts:
+  - label: "List price"
+    value: "$449,999"
+  - label: "Result"
+    value: "Sold at the price the sellers wanted"
+  - label: "Home"
+    value: "4 bed, 3.5 bath, 2,836 sq ft"
+  - label: "Area"
+    value: "Spring, Montgomery County, 77386"
+  - label: "Funded"
+    value: "September 2025"
 featured: false
 ---
 

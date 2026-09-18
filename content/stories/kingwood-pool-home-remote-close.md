@@ -8,6 +8,17 @@ role: "Buyer story"
 summary: "A newly married couple, referred by a past client, bought a pool home in Kingwood's Elm Grove Village without being here for most of it. Video walkthroughs, candid descriptions and daily coordination made it a smooth transaction."
 image: "/stories/kingwood-pool-home-remote-close.webp"
 alt: "Backyard pool and patio with a pergola behind a two story home in Elm Grove Village, Kingwood, Texas"
+facts:
+  - label: "List price"
+    value: "$349,900"
+  - label: "Days on market"
+    value: "10"
+  - label: "Home"
+    value: "3 bed, 2.5 bath, 2,226 sq ft with a gunite pool and spa, built 1988"
+  - label: "Neighborhood"
+    value: "Elm Grove Village, Kingwood"
+  - label: "Closed"
+    value: "March 2023"
 featured: false
 ---
 

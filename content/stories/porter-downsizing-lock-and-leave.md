@@ -8,6 +8,17 @@ role: "Buyer story"
 summary: "A couple who had already sold their previous home wanted a low-maintenance place in a community their grandchildren would ask to visit. A brand-new development in Porter with a lazy river turned out to be a strategy, and we closed on the right lot before the phase sold out."
 image: "/stories/porter-downsizing-lock-and-leave.webp"
 alt: "Extended covered back patio of a new townhome in The Highlands community, Porter, Texas"
+facts:
+  - label: "List price"
+    value: "$359,885"
+  - label: "Sold price"
+    value: "$353,000"
+  - label: "Home"
+    value: "3 bed, 3 bath, 1,979 sq ft townhome, built 2023"
+  - label: "Neighborhood"
+    value: "The Highlands, Porter"
+  - label: "Closed"
+    value: "May 2023"
 featured: false
 ---
 

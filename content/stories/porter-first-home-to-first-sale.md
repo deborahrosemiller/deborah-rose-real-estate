@@ -8,6 +8,19 @@ role: "Sale and purchase"
 summary: "A young couple bought their first home in a riverside community in Porter, Texas. A year later a baby, a job move and a pull toward family changed everything. In a heavy buyer's market we went under contract in a week and they broke even."
 image: "/stories/porter-first-home-to-first-sale.webp"
 alt: "Aerial view of a one story home on a wooded acreage lot in the Riverwalk community, Porter, Texas"
+facts:
+  - label: "List price"
+    value: "$785,000"
+  - label: "Sold price"
+    value: "$772,500"
+  - label: "Days on market"
+    value: "6"
+  - label: "Home"
+    value: "4 bed, 3.5 bath, 3,221 sq ft on 1.88 acres, built 2020"
+  - label: "Neighborhood"
+    value: "Riverwalk, Porter"
+  - label: "Closed"
+    value: "August 2026"
 featured: true
 ---
 

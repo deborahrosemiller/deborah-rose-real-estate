@@ -147,3 +147,39 @@ export function faqNode(items: { question: string; answer: string }[]): SchemaNo
 export function graph(nodes: SchemaNode[]) {
   return { '@context': 'https://schema.org', '@graph': nodes }
 }
+
+/**
+ * The hero video, as a VideoObject. Deborah's own listing footage, muted
+ * and cut to forty seconds, with no speech, so there is no transcript to
+ * attach. The poster is a frame from it.
+ */
+export function videoNode(): SchemaNode {
+  return {
+    '@type': 'VideoObject',
+    '@id': `${siteUrl}/#hero-video`,
+    name: 'A one story estate on nearly two acres in Riverwalk, Porter, Texas',
+    description:
+      'Listing video of a Mediterranean style one story home on 1.88 acres in the Riverwalk community of Porter, Montgomery County, Texas, sold by Deborah Rose Miller in August 2026.',
+    thumbnailUrl: [absolute('/hero/porter-estate-poster.webp')],
+    contentUrl: absolute('/hero/porter-estate-1080.mp4'),
+    uploadDate: '2026-09-17',
+    duration: 'PT40S',
+    publisher: { '@id': AGENT_ID },
+    contentLocation: { '@type': 'Place', name: 'Porter, Texas', address: { '@type': 'PostalAddress', addressLocality: 'Porter', addressRegion: 'TX', addressCountry: 'US' } },
+  }
+}
+
+/** A property photograph, with where it was taken. */
+export function imageNode(opts: { path: string; caption: string; city: string; id: string }): SchemaNode {
+  return {
+    '@type': 'ImageObject',
+    '@id': opts.id,
+    contentUrl: absolute(opts.path),
+    url: absolute(opts.path),
+    caption: opts.caption,
+    description: opts.caption,
+    contentLocation: { '@type': 'Place', name: `${opts.city}, Texas`, address: { '@type': 'PostalAddress', addressLocality: opts.city, addressRegion: 'TX', addressCountry: 'US' } },
+    creditText: business.name,
+    copyrightNotice: business.name,
+  }
+}

@@ -1,21 +1,22 @@
 import { Container } from '@/components/Container'
-import { Heading, Eyebrow } from '@/components/Text'
 
 /**
- * Interior pages open with a title in the white below the header. No
- * band, no photo behind the title. The intro paragraph, when there is one,
- * holds a reading measure under the heading.
+ * Tailwind Plus, Marketing, Header sections, "Simple with eyebrow"
+ * (React, v4.3), from Brett's account 2026-09-17. The eyebrow is the rose,
+ * the heading is Playfair, the supporting paragraph holds a reading measure.
  */
 export function PageIntro({ eyebrow, title, children }: { eyebrow?: string; title: string; children?: React.ReactNode }) {
   return (
-    <section className="pt-14 pb-10 sm:pt-20 sm:pb-14">
+    <div className="bg-field py-16 sm:py-24">
       <Container>
-        {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
-        <Heading as="h1" className={eyebrow ? 'mt-4 max-w-4xl' : 'max-w-4xl'}>
-          {title}
-        </Heading>
-        {children ? <div className="mt-8 max-w-2xl space-y-6 text-lg/8 text-ink-soft">{children}</div> : null}
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          {eyebrow ? <p className="text-base/7 font-semibold text-rose">{eyebrow}</p> : null}
+          <h1 className="mt-2 font-display text-[2.75rem]/[1.05] tracking-[-0.01em] text-ink sm:text-6xl/[1.04] lg:text-7xl/[1.02]">
+            {title}
+          </h1>
+          {children ? <div className="mt-8 space-y-6 text-lg font-medium text-pretty text-ink-soft sm:text-xl/8">{children}</div> : null}
+        </div>
       </Container>
-    </section>
+    </div>
   )
 }

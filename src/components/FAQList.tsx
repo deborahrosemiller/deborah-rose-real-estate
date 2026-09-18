@@ -3,8 +3,10 @@ import { business } from '@/lib/site'
 export type FaqItem = { question: string; answer: string }
 
 /**
- * Every answer visible in the initial HTML, so a reader, a crawler and
- * the FAQPage schema all read the same text with nothing to click first.
+ * Tailwind Plus, Marketing, FAQ sections, "Two columns" (React, v4.3),
+ * from Brett's account 2026-09-17. Every answer is visible in the initial
+ * HTML, so a reader, a crawler and the FAQPage schema read the same text.
+ * The heading belongs to the page; this is the supporting line and the list.
  */
 export function FAQList({ items }: { items: FaqItem[] }) {
   return (
@@ -16,14 +18,16 @@ export function FAQList({ items }: { items: FaqItem[] }) {
         </a>{' '}
         and I will answer it.
       </p>
-      <dl className="mt-14 space-y-12 sm:grid sm:grid-cols-2 sm:space-y-0 sm:gap-x-8 sm:gap-y-14 lg:gap-x-12">
-        {items.map((item) => (
-          <div key={item.question}>
-            <dt className="font-display text-xl text-ink">{item.question}</dt>
-            <dd className="mt-3 text-base/7 text-ink-soft">{item.answer}</dd>
-          </div>
-        ))}
-      </dl>
+      <div className="mt-20">
+        <dl className="space-y-16 sm:grid sm:grid-cols-2 sm:space-y-0 sm:gap-x-6 sm:gap-y-16 lg:gap-x-10">
+          {items.map((item) => (
+            <div key={item.question}>
+              <dt className="font-display text-xl text-ink">{item.question}</dt>
+              <dd className="mt-2 text-base/7 text-ink-soft">{item.answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
     </div>
   )
 }

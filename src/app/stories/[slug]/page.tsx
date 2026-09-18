@@ -8,7 +8,7 @@ import { StoryCard } from '@/components/StoryCard'
 import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
 import { Heading, Eyebrow } from '@/components/Text'
-import { absolute, AGENT_ID, PERSON_ID, breadcrumb } from '@/lib/schema'
+import { absolute, AGENT_ID, PERSON_ID, breadcrumb, imageNode } from '@/lib/schema'
 import { agent, areas, business, siteUrl } from '@/lib/site'
 import { formatDate, getStories, getStory } from '@/lib/stories'
 
@@ -48,6 +48,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
   ].slice(0, 3)
   const area = areas.find((a) => a.slug === story.area)
   const path = `/stories/${story.slug}/`
+  const imageId = `${siteUrl}${path}#image`
 
   return (
     <>
@@ -58,7 +59,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
             '@id': `${siteUrl}${path}#article`,
             headline: story.title,
             description: story.summary,
-            image: story.image ? [absolute(story.image)] : undefined,
+            image: story.image ? { '@id': imageId } : undefined,
             datePublished: story.date,
             dateModified: story.date,
             author: { '@id': PERSON_ID },
@@ -70,6 +71,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
             contentLocation: { '@type': 'Place', name: `${story.city}, Texas` },
             wordCount: story.body.trim().split(/\s+/).length,
           },
+          ...(story.image ? [imageNode({ path: story.image, caption: story.alt ?? story.title, city: story.city, id: imageId })] : []),
           breadcrumb([
             { name: 'Home', path: '/' },
             { name: 'Stories', path: '/stories/' },
@@ -106,6 +108,19 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
         ) : null}
 
         <Container className="mt-12 sm:mt-16">
+          {story.facts.length ? (
+            <div className="mx-auto mb-14 max-w-[40rem]">
+              <h2 className="text-[13px] font-semibold tracking-[0.08em] uppercase text-rose">The numbers</h2>
+              <dl className="mt-4 divide-y divide-rule border-y border-rule text-base/7">
+                {story.facts.map((f) => (
+                  <div key={f.label} className="grid gap-x-6 py-3 sm:grid-cols-3">
+                    <dt className="text-ink-soft">{f.label}</dt>
+                    <dd className="text-ink figure sm:col-span-2">{f.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          ) : null}
           <div className="prose-story mx-auto max-w-[40rem]" dangerouslySetInnerHTML={{ __html: story.html }} />
           <footer className="mx-auto mt-14 max-w-[40rem] border-t border-rule pt-8">
             <p className="font-display text-xl text-ink">{agent.name}</p>
