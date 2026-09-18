@@ -10,6 +10,8 @@ Updated after the second build on 2026-09-17. What the site currently says, wher
 - Two markets confirmed: Lake Houston area and Montgomery County. Six towns per the brand brief: Kingwood, Humble, Porter, Conroe, Magnolia, Tomball.
 - Facebook (facebook.com/deborahrose.miller.9) and LinkedIn (linkedin.com/in/roserealty) from her HAR profile, in the footer and the schema.
 - Information About Brokerage Services: linked in the footer, on every page including the homepage, using the IABS page HAR generates for license 622917 (the same link her HAR profile carries). Consumer Protection Notice linked to TREC. Brokerage displayed. Equal Housing statement and mark in the footer.
+- TREC license number 622917: from the TREC license holder record, and her own HAR profile uses it as her agent key in the showings and IABS links. It is in the footer legal block and the schema.
+- Footer rebuilt to the yournextstepteam.com pattern (another eXp agent): service area in prose, three link columns, a trust row set as type, and the legal block with agent identification, brokerage identification, both TREC links, the REALTOR mark sentence, the opinions line and Equal Housing.
 - All seventeen case study articles exist as finished pieces and are on the site. The brief's "18" counted her own home, which is one of the seventeen.
 - Photo folders: 22 property folders exist in the archive. Every story has a hero photo except one (below).
 
@@ -36,6 +38,12 @@ Updated after the second build on 2026-09-17. What the site currently says, wher
 13. **Em dashes.** On September 9 she said she likes them. Brett's rule for every site is none, and this build follows it. The copy gate fails on any em dash.
 14. **Her own home as a client story.** The Humble "timing beat waiting" story is her own sale told in third person, as she chose. A reader who learns it was her home could read it as misleading. Her husband is going to leave the Google review for it.
 15. **Fair housing.** Stories describe past clients' circumstances (a couple with children, newlyweds, grandparents, a medical move, a VA-eligible couple) as narrative, and the two-week-close story reports the client's school priority in the client's frame and names Humble ISD as a fact. The copy gate blocks the phrases that describe who a home is for. Local ordinances beyond the federal seven were not checked. A pass by eXp's compliance desk before launch is the right move.
+
+## Footer wording to confirm with eXp
+
+- "Brokered by eXp Realty LLC", "eXp Realty LLC is a licensed Texas real estate brokerage," and "Opinions expressed are my own and not the views of eXp Realty" follow the pattern on another eXp agent's live footer. They are an observed example, not eXp's published brand policy. Deborah should confirm the required wording and any logo lockup against eXp's agent portal guidelines before launch.
+- The REALTOR® mark and the NAR Code of Ethics sentence apply because she is a HAR member. Usage rules come from NAR; confirm the mark is set the way NAR asks.
+- **Mailing address.** The footer's Get in touch column has a slot for a mailing address and it is empty. An agent without a storefront usually uses a PMB rather than a home address. The eXp corporate address is the brokerage's and is not used as hers. This is the one blocking gap in the footer.
 
 ## Technical, before launch
 

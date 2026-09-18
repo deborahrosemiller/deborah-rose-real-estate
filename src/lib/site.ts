@@ -47,8 +47,20 @@ export const business = {
   phone: '(281) 380-0332',
   phoneE164: '+12813800332',
   email: 'deborahroserealtor@gmail.com',
+  /**
+   * TREC license number. From the TREC license holder record (public
+   * research summary, 2026-09-04) and confirmed by her own HAR profile,
+   * which uses it as her agent key in the showings and IABS links.
+   */
   license: '622917',
   licenseState: 'TX',
+  /**
+   * A mailing address for the footer. Null until Deborah supplies one. An
+   * agent without a storefront usually uses a PMB rather than a home
+   * address. The eXp corporate address is the brokerage's, not hers, and
+   * is never used in this slot.
+   */
+  mailingAddress: null as string | null,
   description:
     'Deborah Rose Miller helps buyers and sellers across the Lake Houston area and Montgomery County: Kingwood, Humble, Porter, Conroe, Magnolia and Tomball. Twenty-five years running a financial planning firm, two years inside Magnolia city hall, and every deal handled with the numbers in front of you.',
 } as const
@@ -142,7 +154,22 @@ export const nav = {
   action: { title: 'Contact', href: '/contact/' },
 } as const
 
+/**
+ * The footer's compliance copy. The IABS and CPN links are TREC rules.
+ * The "Brokered by" lockup, the "opinions are my own" line and the REALTOR
+ * mark sentence follow the pattern on another eXp agent's live site
+ * (yournextstepteam.com) and NAR's mark usage; Deborah should confirm the
+ * exact wording against eXp's own agent guidelines before launch.
+ */
 export const legal = {
+  brokeredBy: 'Brokered by eXp Realty LLC',
+  brokerageSentence: 'eXp Realty LLC is a licensed Texas real estate brokerage.',
+  opinions: 'Opinions expressed are my own and not the views of eXp Realty.',
+  realtorMark:
+    'REALTOR\u00ae is a registered collective membership mark that identifies real estate professionals who are members of the National Association of REALTORS\u00ae and subscribe to its Code of Ethics.',
+  membership: 'Member, Houston Association of REALTORS\u00ae',
+  serviceAreaSentence:
+    'Serving the Lake Houston area of Kingwood and Humble, and Montgomery County including Porter, Conroe, Magnolia and Tomball, and the surrounding communities.',
   trecConsumerProtectionNotice: 'https://www.trec.texas.gov/forms/consumer-protection-notice',
   /**
    * Her Information About Brokerage Services form, as HAR generates it for

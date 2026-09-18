@@ -2,15 +2,21 @@ import Link from 'next/link'
 
 import { Logo } from '@/components/Logo'
 import { EqualHousing } from '@/components/EqualHousing'
-import { areas, business, gbp, legal, nav, profiles } from '@/lib/site'
+import { agent, areas, business, gbp, legal, profiles } from '@/lib/site'
 
 /**
  * Tailwind Plus, Marketing, Footers, "4-column with company mission"
- * (React, v4.3), from Brett's account 2026-09-17. Rethemed to the tokens;
- * the social icons are the component's own for the two profiles she
- * actually has, plus a Google Maps mark for the business profile. The
- * bottom row carries the Texas disclosures and the Equal Housing statement,
- * which the component does not have and a Texas broker's site must.
+ * (React, v4.3), from Brett's account 2026-09-17, carrying the Texas
+ * compliance block modeled on yournextstepteam.com, another eXp agent's
+ * live footer (Brett, 2026-09-17).
+ *
+ * Top: wordmark, the service area in prose, social. Three link columns:
+ * Working with Deborah, Learn more, Get in touch. Then a trust row set as
+ * type with hairlines (never badges), and the legal block: agent
+ * identification with license, brokerage identification, the TREC IABS
+ * and CPN links, the REALTOR mark sentence, the opinions line, Equal
+ * Housing. The wording of the eXp lines follows an observed example and
+ * is flagged for confirmation in docs/open-items.
  */
 const social = [
   {
@@ -44,10 +50,40 @@ const social = [
       </svg>
     ),
   },
+  {
+    name: 'HAR.com profile',
+    href: profiles.har,
+    icon: (props: React.SVGProps<SVGSVGElement>) => (
+      <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+        <path d="M12 3 2 12h3v8h5v-5h4v5h5v-8h3L12 3z" />
+      </svg>
+    ),
+  },
+]
+
+const columns = [
+  {
+    title: 'Working with Deborah',
+    items: [
+      { title: 'Buying a home', href: '/buyers/' },
+      { title: 'Selling a home', href: '/sellers/' },
+      { title: 'Stories from the field', href: '/stories/' },
+      { title: 'Areas served', href: '/areas/' },
+    ],
+  },
+  {
+    title: 'Learn more',
+    items: [
+      { title: 'About Deborah', href: '/about/' },
+      { title: 'Questions people ask', href: '/#questions' },
+      ...areas.map((a) => ({ title: a.name, href: `/areas/${a.slug}/` })),
+    ],
+  },
 ]
 
 const columnHeading = 'text-sm/6 font-semibold text-ink'
 const columnLink = 'tap text-sm/6 text-ink-soft hover:text-ink'
+const legalLink = 'tap underline decoration-ink/25 underline-offset-4 hover:decoration-ink'
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -58,8 +94,8 @@ export function Footer() {
           <div className="space-y-8">
             <Logo />
             <p className="text-sm/6 text-balance text-ink-soft">
-              Residential real estate across the Lake Houston area and Montgomery County, Texas. Kingwood, Humble,
-              Porter, Conroe, Magnolia and Tomball.
+              {legal.serviceAreaSentence} Buyers, sellers, relocations, new construction, acreage and lakefront, and
+              the sale and purchase handled together.
             </p>
             <div className="flex gap-x-6">
               {social.map((item) => (
@@ -72,38 +108,28 @@ export function Footer() {
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className={columnHeading}>Pages</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {[...nav.header, nav.action].map((item) => (
-                    <li key={item.href}>
-                      <Link href={item.href} className={columnLink}>
-                        {item.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className={columnHeading}>Areas</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {areas.map((a) => (
-                    <li key={a.slug}>
-                      <Link href={`/areas/${a.slug}/`} className={columnLink}>
-                        {a.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {columns.map((column) => (
+                <div key={column.title} className="first:mt-0 md:mt-0 [&:not(:first-child)]:mt-10 md:[&:not(:first-child)]:mt-0">
+                  <h3 className={columnHeading}>{column.title}</h3>
+                  <ul role="list" className="mt-6 space-y-4">
+                    {column.items.map((item) => (
+                      <li key={item.href}>
+                        <Link href={item.href} className={columnLink}>
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className={columnHeading}>Contact</h3>
+                <h3 className={columnHeading}>Get in touch</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
                     <a href={`tel:${business.phoneE164}`} className={`${columnLink} figure`}>
-                      {business.phone}
+                      Call or text {business.phone}
                     </a>
                   </li>
                   <li>
@@ -111,6 +137,17 @@ export function Footer() {
                       {business.email}
                     </a>
                   </li>
+                  <li>
+                    <Link href="/contact/" className={columnLink}>
+                      Send a note
+                    </Link>
+                  </li>
+                  {business.mailingAddress ? (
+                    <li className="text-sm/6 text-ink-soft">
+                      <span className="block">{agent.name}</span>
+                      <span className="block whitespace-pre-line">{business.mailingAddress}</span>
+                    </li>
+                  ) : null}
                   <li>
                     <a href={profiles.harListings} target="_blank" rel="noopener noreferrer" className={columnLink}>
                       Current listings on HAR
@@ -137,22 +174,44 @@ export function Footer() {
             </div>
           </div>
         </div>
+
+        {/* The trust row. Set as type with hairlines, never as badges. */}
         <div className="mt-16 border-t border-rule pt-8 sm:mt-20 lg:mt-24">
-          <div className="flex flex-col gap-y-6 lg:flex-row lg:items-start lg:justify-between lg:gap-x-12">
-            <div className="max-w-3xl space-y-3 text-sm/6 text-ink-soft">
-              <p>
-                {year} {business.name}. Deborah Rose Miller, Texas Real Estate Commission license {business.license}.{' '}
-                {business.legalNote}, {business.brokerage.address}.
+          <ul role="list" className="flex flex-wrap gap-x-8 gap-y-3 text-[12px] font-semibold tracking-[0.12em] uppercase text-ink-soft">
+            <li>{legal.brokeredBy}</li>
+            <li>REALTOR&reg;</li>
+            <li>{legal.membership}</li>
+            <li>Equal Housing Opportunity</li>
+          </ul>
+        </div>
+
+        {/* The legal block. */}
+        <div className="mt-8 border-t border-rule pt-8">
+          <div className="flex flex-col gap-y-8 lg:flex-row lg:items-start lg:justify-between lg:gap-x-12">
+            <div className="max-w-3xl space-y-4 text-sm/6 text-ink-soft">
+              <p className="text-ink">
+                {agent.name}, REALTOR&reg;, RENE. Texas real estate license #{business.license}.
               </p>
-              <p className="flex flex-wrap gap-x-4 gap-y-1">
+              <p>
+                {agent.name} is a licensed real estate broker in the State of Texas, affiliated with eXp Realty LLC.{' '}
+                {legal.brokerageSentence} {business.brokerage.name}, {business.brokerage.address}. {legal.membership}.
+                Equal Housing Opportunity.
+              </p>
+              <p className="flex flex-wrap gap-x-4 gap-y-1 text-[13px]/6">
                 {legal.iabsUrl ? (
-                  <a href={legal.iabsUrl} target="_blank" rel="noopener noreferrer" className="tap underline decoration-ink/25 underline-offset-4 hover:decoration-ink">
+                  <a href={legal.iabsUrl} target="_blank" rel="noopener noreferrer" className={legalLink}>
                     Texas Real Estate Commission Information About Brokerage Services
                   </a>
                 ) : null}
-                <a href={legal.trecConsumerProtectionNotice} target="_blank" rel="noopener noreferrer" className="tap underline decoration-ink/25 underline-offset-4 hover:decoration-ink">
+                <a href={legal.trecConsumerProtectionNotice} target="_blank" rel="noopener noreferrer" className={legalLink}>
                   Texas Real Estate Commission Consumer Protection Notice
                 </a>
+              </p>
+              <p>{legal.opinions}</p>
+              <p>{legal.realtorMark}</p>
+              <p>{legal.serviceAreaSentence}</p>
+              <p>
+                {year} {business.name}. All rights reserved.
               </p>
             </div>
             <EqualHousing />
