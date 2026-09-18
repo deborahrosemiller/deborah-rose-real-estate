@@ -7,11 +7,9 @@ import { HeroVideo } from '@/components/HeroVideo'
  *
  * Brett, 2026-09-18: the homepage footage runs full bleed behind the
  * eyebrow, the H1 and the intro paragraph on Buyers, Sellers, Stories and
- * Areas, with white type. The band's height comes from its aspect ratio
- * (INTRO_BAND below), so the four pages match at every width, and the copy
- * is top aligned at a fixed offset so the eyebrow lands at the same height
- * on every page. A headline that would overflow gets shortened; the band
- * never grows. Everything below the band is text on white.
+ * Areas, with white type. The band's height is the shared token
+ * INTRO_BAND below (a secondary page header, not a hero, since the live
+ * review). Everything below the band is text on white.
  *
  * THE OVERLAY IS TWO LAYERS, SAME AS THE HOMEPAGE HERO. On the live review
  * of 2026-09-18 Brett cut the overlay by half: "we really want to see the
@@ -33,16 +31,17 @@ import { HeroVideo } from '@/components/HeroVideo'
  */
 
 /**
- * THE BAND IS 16:9 FROM md, AND AT LEAST 3:4 BELOW IT. Brett, 2026-09-18:
- * a standard 16 by 9 video header with the type over it. The aspect ratio
- * gives the four pages identical heights at any viewport width. At phone
- * widths 16:9 is about 210 pixels tall and cannot hold a headline and a
- * paragraph, so below md the band is 3:4 (500 pixels tall at 375) as a
- * minimum and grows with the copy if an intro runs long, rather than
- * clipping it (the Buyers intro did, once the towns moved into it on
- * 2026-09-18). Change the ratio here and nowhere else.
+ * THE BAND IS A HEADER, NOT A HERO. Brett, live review 2026-09-18: "we need
+ * to decrease the amount of vertical height on the background video so
+ * that it actually feels like a header on a secondary page... very likely
+ * less than half of the size." This supersedes the 16:9 band. The token is
+ * a minimum height, shared by Buyers, Sellers, Stories, Areas and About so
+ * the five pages match: 25rem from lg (was about 810px at 1440, now 400),
+ * 22rem from md, 18rem on phones. The copy is top aligned at a fixed
+ * offset so the eyebrow lands at the same height on every page. If a page
+ * ever needs more room, tighten the type here; do not grow the band.
  */
-export const INTRO_BAND = 'min-h-[133.34vw] md:min-h-0 md:aspect-video'
+export const INTRO_BAND = 'min-h-[18rem] md:min-h-[22rem] lg:min-h-[25rem]'
 
 export function PageIntro({ eyebrow, title, children }: { eyebrow?: string; title: string; children?: React.ReactNode }) {
   return (
@@ -83,13 +82,13 @@ export function PageIntro({ eyebrow, title, children }: { eyebrow?: string; titl
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-b from-black/15 via-black/55 via-10% to-black/55 lg:hidden" />
       <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-linear-to-r from-black/55 via-black/55 via-55% to-transparent to-75% lg:block" />
 
-      <div className="mx-auto flex min-h-[133.34vw] max-w-7xl flex-col justify-start px-6 pt-[13%] pb-10 sm:pt-[11%] md:h-full md:min-h-0 md:pt-[9%] md:pb-8 lg:px-8 lg:pt-[9%]">
+      <div className={`mx-auto flex max-w-7xl flex-col justify-start px-6 pt-10 pb-10 lg:px-8 ${INTRO_BAND}`}>
         <div className="hero-copy max-w-2xl">
-          {eyebrow ? <p className="text-base/7 font-semibold text-rose-soft/90">{eyebrow}</p> : null}
-          <h1 className="mt-2 font-display text-[2.5rem]/[1.05] tracking-[-0.01em] text-pretty text-cream sm:text-6xl/[1.04] lg:text-[3.75rem]/[1.03]">
+          {eyebrow ? <p className="text-sm/6 font-semibold text-rose-soft/90">{eyebrow}</p> : null}
+          <h1 className="mt-2 font-display text-[2rem]/[1.1] tracking-[-0.01em] text-pretty text-cream sm:text-[2.5rem]/[1.08] lg:text-[2.75rem]/[1.06]">
             {title}
           </h1>
-          {children ? <div className="mt-8 space-y-6 text-lg/8 text-pretty text-cream sm:text-xl/8">{children}</div> : null}
+          {children ? <div className="mt-5 max-w-xl space-y-4 text-base/7 text-pretty text-cream sm:text-lg/8 lg:max-w-2xl">{children}</div> : null}
         </div>
       </div>
     </div>

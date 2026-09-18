@@ -11,9 +11,9 @@ import { areas } from '@/lib/site'
  * name is a link to its area page; the description is the first sentence
  * of that page. The icon is the same pin on every item, in the rose.
  */
-export function AreaGrid({ className = 'py-24 sm:py-32' }: { className?: string }) {
+export function AreaGrid({ tone = 'field', className = 'py-24 sm:py-32' }: { tone?: 'field' | 'paper'; className?: string }) {
   return (
-    <section aria-labelledby="areas-heading" className={`bg-field ${className}`}>
+    <section aria-labelledby="areas-heading" className={`${tone === 'paper' ? 'bg-paper' : 'bg-field'} ${className}`}>
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 id="areas-heading" className="text-base/7 font-semibold text-rose">

@@ -64,13 +64,13 @@ export default async function Home() {
 
       <FeatureThree
         eyebrow="How I work"
-        heading="What thirty-six years in the financial industry taught me about buying a house."
+        heading="What fifty plus years in finance and municipal government taught me about buying a house."
         items={HOW}
-        className="border-t border-rule py-24 sm:py-32"
+        tone="paper"
       />
 
       {/* Tailwind Plus, Blog sections, "Three-column with images": the section around three StoryCards. */}
-      <section aria-labelledby="stories-heading" className="bg-paper py-24 sm:py-32">
+      <section aria-labelledby="stories-heading" className="bg-field py-24 sm:py-32">
         <Container>
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 id="stories-heading" className="text-base/7 font-semibold text-rose">
@@ -80,8 +80,7 @@ export default async function Home() {
               Real deals in real neighborhoods.
             </p>
             <p className="mt-6 text-lg/8 text-ink-soft">
-              Each one is a transaction I handled, told without the client&rsquo;s name or the street address, with the
-              numbers that mattered and what I would do again.
+              Each one is a transaction I handled, with the numbers that mattered and what I would do again.
             </p>
           </div>
           <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -97,7 +96,7 @@ export default async function Home() {
         </Container>
       </section>
 
-      <AreaGrid />
+      <AreaGrid tone="paper" />
 
       {/*
        * Tailwind Plus, Content sections, "With image" (React, v4.3): a
@@ -114,7 +113,7 @@ export default async function Home() {
        * The heading now says the one thing the section exists to say, the
        * maiden name, the way she would say it out loud.
        */}
-      <section aria-labelledby="about-heading" className="bg-paper py-24 sm:py-32">
+      <section aria-labelledby="about-heading" className="bg-field py-24 sm:py-32">
         <Container>
           <div className="mx-auto max-w-4xl lg:mx-0 lg:flex lg:items-start lg:gap-x-16">
             <Image
@@ -164,7 +163,7 @@ export default async function Home() {
        * the footer keeps the phone, email, hours and the Google link.
        */}
 
-      <section id="questions" className="bg-field">
+      <section id="questions" className="bg-paper">
         <Container className="py-24 sm:py-32">
           <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Questions my clients ask.</h2>
           <div className="mt-10">

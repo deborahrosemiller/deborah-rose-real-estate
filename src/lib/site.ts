@@ -69,7 +69,7 @@ export const business = {
    */
   mailingAddress: null as string | null,
   description:
-    'Deborah Rose Miller helps buyers and sellers across the Lake Houston area and Montgomery County: Kingwood, Humble, Porter, Conroe and Magnolia. Thirty-six years in the financial industry, two years inside Magnolia city hall, and every deal handled with the numbers in front of you.',
+    'Deborah Rose Miller helps buyers and sellers across the Lake Houston area and Montgomery County: Kingwood, Humble, Porter, Conroe and Magnolia. Fifty plus years across the financial industry, school trustee and municipal government, and every deal handled with the numbers in front of you.',
 } as const
 
 export const agent = {
@@ -121,7 +121,14 @@ export const production = {
   sold: 38,
   leased: 9,
   yearsRealEstate: '10+',
-  yearsBusiness: '45+',
+  /**
+   * Her total career, in her own framing (live review 2026-09-18): "fifty
+   * plus years across the financial industry, which incorporates financial
+   * planning, school trustee, and municipal government." 1972 to today is
+   * fifty-four, so "fifty plus" is conservative and never needs a January
+   * update. Replaces the HAR profile's "45+ years business leadership."
+   */
+  yearsCareer: '50+',
   /**
    * Her whole career in the financial industry, 1972 to 2008, a banker
    * first and then a financial planner. Deborah confirmed both years on

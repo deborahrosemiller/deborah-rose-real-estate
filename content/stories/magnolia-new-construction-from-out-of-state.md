@@ -44,8 +44,6 @@ That inspection turned up a handful of items that needed the builder's attention
 
 The other piece of this deal I was proud of: we negotiated below market. That is not always possible with new construction, where builders tend to hold firm on price and lean on incentives instead. Because we had done our homework on comparable sales in the area and were patient about timing, we got my client into this home for less than similar new builds in the neighborhood were commanding. For a first-time buyer starting a new chapter in a new city, that meant a lower monthly payment from day one and equity built in before he had unpacked his first box.
 
-Since the move came through a corporate relocation company, part of my commission went to that company, which is how those arrangements work. It did not change what my client got.
-
 By the time he flew in for closing in July, the house was ready, the punch-list items were resolved, and the only thing left was to sign and get the keys.
 
 ## Distance is a reason to raise your standards

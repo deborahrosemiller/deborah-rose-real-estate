@@ -29,7 +29,7 @@ export default async function AreasPage() {
           in and the stories from there.
         </p>
       </PageIntro>
-      <section className="pb-20 lg:pb-28">
+      <section className="bg-paper py-16 lg:py-24">
         <Container>
           <ul role="list" className="divide-y divide-rule border-y border-rule">
             {areas.map((a) => {

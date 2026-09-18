@@ -36,6 +36,8 @@
   --color-rule: #e5e5e5;
   --color-night: #111111;
   --color-cream: #ffffff;
+  /* The one corner radius on the site: step cards, story photos, the story page hero photo (Brett, 2026-09-18). */
+  --radius-card: 1rem;
 
   /*
    * The one accent. 9.86:1 with white type, so it fills the primary
@@ -441,4 +443,28 @@
   text-shadow:
     0 1px 2px rgb(0 0 0 / 0.6),
     0 0 28px rgb(0 0 0 / 0.5);
+}
+
+
+/*
+ * The card. Brett, live review 2026-09-18: the five process steps sit in
+ * boxes with rounded edges and a slight shadow, all the same size. The
+ * shadow is faint on purpose so the box reads as a surface, not a button:
+ * no hover, no lift, no cursor change. Same radius as the story photos.
+ */
+.card {
+  border-radius: var(--radius-card);
+  background: var(--color-field);
+  border: 1px solid color-mix(in oklab, var(--color-rule) 75%, transparent);
+  box-shadow:
+    0 1px 2px rgb(17 17 17 / 0.04),
+    0 12px 32px -16px rgb(17 17 17 / 0.16);
+}
+
+/* A photo above an article: the same radius as the card and a shadow soft enough to lift it off the page. */
+.photo-card {
+  border-radius: var(--radius-card);
+  box-shadow:
+    0 1px 2px rgb(17 17 17 / 0.05),
+    0 16px 40px -20px rgb(17 17 17 / 0.25);
 }

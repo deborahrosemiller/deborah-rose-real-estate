@@ -38,7 +38,7 @@ That changes how you search. You are looking for the house they will not want to
 
 We started on the sell side, a 2014 two-story with real wood floors downstairs, a large covered porch, a firepit out back and no rear neighbors. The market there was moving, and "moving" does not mean every home sells itself. We priced it from the recent comparable sales, prepared it to show well, and had it under contract at the price point my clients wanted. In a fast market that is not something to take for granted. Plenty of sellers get a quick offer and concede on price to get there. We did not have to make that trade.
 
-Then, partway through, we hit a snag: an air conditioning issue came up during the buyer's inspection period. In a Texas summer that is the kind of thing that can stall or sink a deal if it is not handled quickly and honestly. I worked through the repair with a licensed contractor and negotiated the resolution with the buyer's side so the issue was fixed properly and the timeline stayed intact. The sale closed on schedule in May, at the number my clients wanted.
+Then, partway through, we hit a snag: an air conditioning issue came up during the buyer's inspection period. In a Texas summer that is the kind of thing that can stall or sink a deal if it is not handled quickly and openly. I worked through the repair with a licensed contractor and negotiated the resolution with the buyer's side so the issue was fixed properly and the timeline stayed intact. The sale closed on schedule in May, at the number my clients wanted.
 
 ## The purchase, in a seller's market
 

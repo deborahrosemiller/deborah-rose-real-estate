@@ -30,7 +30,7 @@ One of the hardest parts of my job is telling a client something they do not wan
 
 They were getting ready to downsize. The husband was approaching retirement, and like a lot of people in that position he had a plan already set in his mind: retire first, get used to the idea of not working, and then list the house in December once things had calmed down. It is an understandable instinct. Nobody wants to juggle a home sale on top of a major life transition.
 
-When they brought me in to talk through the timeline, I had to be honest about what I was seeing in the Humble and greater Harris County market at that moment.
+When they brought me in to talk through the timeline, I told them what I was seeing in the Humble and greater Harris County market at that moment.
 
 ## What I told them
 
@@ -56,4 +56,4 @@ I share this story because it captures something that does not get talked about 
 
 Markets in the Humble and greater Harris County area shift, sometimes faster than people expect, and the difference between a spring listing and a winter listing can be measured in real dollars. That is no reason to panic about the timing of every decision. It is a reason to have someone in your corner who is watching those shifts closely and is willing to say so.
 
-If you are thinking about downsizing, retiring, or wondering whether now is the right time to sell in the Humble or Harris County market, do not lock in a date without first getting a real read on where the market stands. Timing is a lot more than most people give it credit for. I am always glad to talk through your situation and give you an honest assessment, whatever season you are planning around.
+If you are thinking about downsizing, retiring, or wondering whether now is the right time to sell in the Humble or Harris County market, do not lock in a date without first getting a read on where the market stands. Timing is a lot more than most people give it credit for. I am always glad to talk through your situation and give you an honest assessment, whatever season you are planning around.

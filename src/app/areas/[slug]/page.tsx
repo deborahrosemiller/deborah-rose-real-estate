@@ -149,7 +149,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         </Container>
       </section>
 
-      <section className="border-t border-rule py-12">
+      <section className="bg-paper py-12 lg:py-16">
         <Container>
           <p className="text-sm text-ink-soft">
             Nearby:{' '}

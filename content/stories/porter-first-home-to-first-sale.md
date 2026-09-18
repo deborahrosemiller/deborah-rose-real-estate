@@ -52,6 +52,6 @@ For them, breaking even was more than a line on a settlement statement. It meant
 
 ## What made it work
 
-Three things, looking back. Pricing the home honestly for what the Porter market would bear at that moment, instead of chasing a number that would have left it sitting. Having a real relationship with my clients going in, so that when their circumstances changed fast, they trusted me enough to move fast with me. And knowing this specific corner of Montgomery County, the river communities, the commute patterns, and who is typically shopping in that price range, well enough to find the right buyer before the market had a chance to work against us.
+Three things, looking back. Pricing the home for what the Porter market would bear at that moment, instead of chasing a number that would have left it sitting. Having a real relationship with my clients going in, so that when their circumstances changed fast, they trusted me enough to move fast with me. And knowing this specific corner of Montgomery County, the river communities, the commute patterns, and who is typically shopping in that price range, well enough to find the right buyer before the market had a chance to work against us.
 
 If you are facing a similar crossroads in Porter or the Kingwood area, whether you are buying your first home, growing out of your current one, or not sure what the next step should look like, I would like to help you think it through. Real estate decisions are rarely just about the house. They are about where your life is headed next.

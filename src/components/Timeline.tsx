@@ -3,31 +3,33 @@ import { Container } from '@/components/Container'
 export type TimelineItem = { label: string; name: string; description: string }
 
 /**
- * Tailwind Plus, Marketing, Stats sections, "Timeline" (React, v4.3), from
- * Brett's account 2026-09-17. Used for a process rather than dates: the
- * time slot carries the step number, because the steps happen in this
- * order and the order is the information. The rule between steps is the
- * component's own hairline. No cards, no numbers as decoration.
+ * Started as Tailwind Plus, Marketing, Stats sections, "Timeline" (React,
+ * v4.3). On the live review of 2026-09-18 Brett asked for each step,
+ * heading and paragraph together, in a box with rounded edges and a slight
+ * shadow, all five the same size. That cuts against the site's rule that
+ * nothing unclickable may look clickable; it is his rule and his call, so
+ * the shadow is kept faint enough to read as a surface, there is no hover
+ * lift and no other affordance. `.card` in tailwind.css is the one card
+ * treatment on the site; the radius is `--radius-card`, shared with the
+ * story photos so the page has one radius.
+ *
+ * Equal size means equal height: the grid stretches every cell and each
+ * card fills its cell. The paragraphs are written to the same number of
+ * lines at desktop width so no card ends on an orphan line.
  */
 export function Timeline({ items }: { items: TimelineItem[] }) {
   return (
     <div className="bg-field py-16 sm:py-24">
       <Container>
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-5">
+        <ol className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
           {items.map((item) => (
-            <div key={item.name}>
-              <p className="flex items-center text-sm/6 font-semibold text-rose">
-                <svg viewBox="0 0 4 4" aria-hidden="true" className="mr-4 size-1 flex-none">
-                  <circle r={2} cx={2} cy={2} fill="currentColor" />
-                </svg>
-                {item.label}
-                <span aria-hidden="true" className="absolute -ml-2 h-px w-screen -translate-x-full bg-rule sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0" />
-              </p>
-              <p className="mt-6 font-display text-xl/8 text-ink">{item.name}</p>
-              <p className="mt-1 text-base/7 text-ink-soft">{item.description}</p>
-            </div>
+            <li key={item.name} className="card flex h-full flex-col p-6">
+              <p className="text-sm/6 font-semibold text-rose">{item.label}</p>
+              <p className="mt-4 font-display text-xl/7 text-ink">{item.name}</p>
+              <p className="mt-3 text-base/7 text-ink-soft">{item.description}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </Container>
     </div>
   )

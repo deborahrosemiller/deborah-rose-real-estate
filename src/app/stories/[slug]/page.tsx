@@ -177,7 +177,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
       </article>
 
       {related.length ? (
-        <section className="mt-20 border-t border-rule py-20 lg:py-28">
+        <section className="mt-20 bg-paper py-20 lg:py-28">
           <Container>
             <p className="text-base/7 font-semibold text-rose">More stories</p>
             <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">

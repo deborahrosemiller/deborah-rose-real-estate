@@ -42,7 +42,7 @@ That cooperation is what turned a transaction with real complications into what 
 
 ## What actually gets a deal done under pressure
 
-Speed mattered here, without question. Price it right, market it fast, get an offer quickly. Speed alone does not get you through a buyer's financing hurdles in the final weeks before closing. That takes a working relationship with the agent across the table, honest communication about problems as they come up instead of after they become crises, and a shared commitment to finding the solution rather than assigning blame.
+Speed mattered here, without question. Price it right, market it fast, get an offer quickly. Speed alone does not get you through a buyer's financing hurdles in the final weeks before closing. That takes a working relationship with the agent across the table, communication about problems as they come up instead of after they become crises, and a shared commitment to finding the solution rather than assigning blame.
 
 For sellers facing a tight, personal timeline, whether it is a family need, a job change, or anything else that means "eventually" is not good enough, my advice is the same every time. Get your pricing right from day one, because you have no room for a slow correction. And choose an agent who will fight for your timeline while understanding that a good outcome usually requires the other side to feel like they won something too.
 

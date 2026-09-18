@@ -21,36 +21,43 @@ export const metadata: Metadata = {
   alternates: { canonical: '/sellers/' },
 }
 
+/**
+ * The five steps, in Deborah's words from the live review of 2026-09-18.
+ * Step one: "The number we choose is a strategy, and I will explain that
+ * strategy." Step three: buyers decide to see your home off the website,
+ * so photography is key. Step four covers a multiple offer situation and a
+ * single buyer alike. Step five landed on the verb "coordinate."
+ */
 const STEPS = [
   {
     label: 'Step one',
     name: 'The price',
     description:
-      'I pull the closed sales in your immediate area the day we talk, and what is competing with you that week, including the builder if there is one. The number we choose is a strategy, and I will explain the strategy.',
+      'The number we choose is a strategy, and I will explain that strategy. Closed sales and current market activity in your area are just the beginning of that conversation.',
   },
   {
     label: 'Step two',
     name: 'The preparation',
     description:
-      'Some homes need a stager and some need a weekend of decluttering. I tell you which, and I do not spend your money on work that will not show up in the offer.',
+      'Some homes need a stager and some need a weekend of decluttering. I tell you which, and I do not spend your money on work that will not show up in the offer. The goal is the offer, and only the offer.',
   },
   {
     label: 'Step three',
     name: 'The presentation',
     description:
-      'Professional photography, video where it earns its keep, and a listing written to stop a buyer scrolling past forty similar homes. The estate in the video on my homepage was one of those listings.',
+      'Buyers make their initial decision to see your home off the website, so professional photography is key to the whole process. Video where it earns its keep, and a listing written to match.',
   },
   {
     label: 'Step four',
     name: 'The offers',
     description:
-      'When more than one buyer wants the house, I run the competition so it works for you. When one buyer wants it, I negotiate the terms that matter most to you, which are not always price.',
+      'Whether it is a multiple offer situation or a single buyer, I focus on negotiating the terms that matter most to you. Price is one of them. The close date and the contingencies are others.',
   },
   {
     label: 'Step five',
     name: 'Inspection to closing',
     description:
-      'Repairs confirmed in person, the buyer’s lender watched daily, the title company kept on schedule. If you have already moved out of state, I am your eyes on the ground until the wire clears.',
+      'Repairs, negotiation and communication, whether you are local or out of state. Those are the areas I coordinate, every day, with the buyer\u2019s side, the lender and the title company.',
   },
 ]
 
@@ -58,13 +65,13 @@ const SOLD_THROUGH = [
   {
     name: 'Selling from another state.',
     description:
-      'I have listed and closed homes in Humble for owners who were hundreds of miles away for the entire transaction, in a heavy buyer’s market, under contract in under a week at their asking price.',
+      'I have listed and closed homes for owners who were hundreds of miles away for the entire transaction, in a heavy buyer’s market, under contract in under a week at their asking price.',
     icon: GlobeAmericasIcon,
   },
   {
     name: 'Downsizing and retirement timing.',
     description:
-      'When to list matters more than most people expect. I told one couple to list in spring instead of December. They cleared their goal by five thousand dollars, and by December the market had turned.',
+      'Timing is everything. One couple wanted to wait until December to list. I told them to list in the spring instead, and it put five thousand dollars more in their pocket. By December the market had turned.',
     icon: CalendarDaysIcon,
   },
   {
@@ -74,9 +81,9 @@ const SOLD_THROUGH = [
     icon: HomeIcon,
   },
   {
-    name: 'Selling to buy the next one.',
+    name: 'Selling and buying at the same time.',
     description:
-      'Two contracts, closing dates within days of each other, and a backup plan we hopefully never use. I have run both sides for the same clients more than once.',
+      'Two contracts, one closing date. I have run both sides for the same clients more than once, and the sequencing is the whole job: the sale funds the purchase, and nobody spends a night between homes.',
     icon: ArrowsRightLeftIcon,
   },
 ]
@@ -88,8 +95,8 @@ export default async function SellersPage() {
       <SchemaGraph nodes={[faqNode(sellersFaq), breadcrumb([{ name: 'Home', path: '/' }, { name: 'Sellers', path: '/sellers/' }])]} />
       <PageIntro eyebrow={regionSentence} title="Selling a home in the Lake Houston area or Montgomery County.">
         <p>
-          Kingwood, Humble, Porter, Conroe and Magnolia. A sale is a pricing decision, a timing decision and a
-          presentation decision, made in that order. Get the first one right and the other two get easier.
+          Kingwood, Humble, Porter, Conroe and Magnolia. A sale is a pricing decision, a timing decision, and a
+          presentation decision. Coordination and negotiation are where I excel.
         </p>
       </PageIntro>
 
@@ -97,8 +104,8 @@ export default async function SellersPage() {
 
       <FeatureSplit
         eyebrow="Situations I have sold through"
-        heading="Four sales where the plan mattered more than the market."
-        intro="Every one of these is a real transaction on this site. The market was working against the seller in most of them, and the outcome came from the plan."
+        heading="Four sales where our plan mattered more than the market."
+        intro="Every one of these is a real transaction on this site. The market was working against the seller in most of them, and the outcome came from our plan."
         items={SOLD_THROUGH}
       />
 
@@ -107,7 +114,7 @@ export default async function SellersPage() {
           <Container>
             <div className="mx-auto max-w-2xl lg:mx-0">
               <h2 className="text-base/7 font-semibold text-rose">Seller stories</h2>
-              <p className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">How it went for other sellers.</p>
+              <p className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Successful seller stories.</p>
             </div>
             <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {stories.map((story) => (
@@ -118,17 +125,17 @@ export default async function SellersPage() {
         </section>
       ) : null}
 
-      <section className="border-t border-rule bg-field">
+      <section className="bg-paper">
         <Container className="py-24 sm:py-32">
-          <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">What sellers ask first.</h2>
+          <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Questions sellers ask.</h2>
           <div className="mt-10">
             <FAQList items={sellersFaq} />
           </div>
         </Container>
       </section>
 
-      <ClosingAsk heading="Find out what your home would bring this month.">
-        An honest read on price, timing and preparation, from the closed sales in your immediate area.
+      <ClosingAsk heading="Let&rsquo;s talk about pricing, timing and preparation.">
+        Starting from the closed sales in your immediate area and what is on the market this month.
       </ClosingAsk>
     </>
   )

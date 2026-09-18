@@ -7,6 +7,11 @@ import { Button } from '@/components/Button'
  * footer. Heading centered, the optional sentence under it, the primary
  * and the quiet link beneath. Brett, 2026-09-18: centered, with the call
  * to action under the header, replacing the justified version.
+ *
+ * No hairline on top. Brett, 2026-09-18: never a grey line with the same
+ * color on both sides. This section is the white tone and every page puts
+ * a paper-toned section directly above it, so the change of tone is the
+ * divide. The footer below is paper again.
  */
 export function ClosingAsk({
   heading = 'Tell me what you are trying to do.',
@@ -20,7 +25,7 @@ export function ClosingAsk({
   secondaryLabel?: string
 }) {
   return (
-    <section aria-label="Next step" className="border-t border-rule bg-field">
+    <section aria-label="Next step" className="bg-field">
       <Container className="py-24 sm:py-32">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-[2rem]/[1.1] text-balance text-ink sm:text-5xl/[1.05]">{heading}</h2>

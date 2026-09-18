@@ -36,7 +36,7 @@ Handled properly, representing both sides can smooth out a complicated deal, bec
 
 The sellers were first-time real estate investors. They had bought the property, a 1976 one-story on most of an acre with a detached garage and an RV carport, intending to rehab it and sell for a profit. That is a reasonable plan on paper. They ended up putting more into the renovation than the numbers could support. By the time the work was done, their total investment was higher than the finished home could realistically bring on the open market at a price that would move quickly.
 
-My job on their side was to be honest about that reality, even though it was not what they wanted to hear, and to find a path that let them recover their investment rather than take a loss on their first deal.
+My job on their side was to lay out that reality, even though it was not what they wanted to hear, and to find a path that let them recover their investment rather than take a loss on their first deal.
 
 ## The buyers
 

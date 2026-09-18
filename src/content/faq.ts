@@ -52,17 +52,17 @@ export const buyersFaq: FaqItem[] = [
   {
     question: 'I am buying from out of state. How does that work?',
     answer:
-      'I have closed purchases in Kingwood and Magnolia for buyers who never walked the house before contract. You get video walkthroughs, same-day photos of anything you ask about, and I attend the inspection in person and report room by room.',
+      'I have closed purchases for buyers who never walked the house before contract. You get video walkthroughs, same-day photos of anything you ask about, and I attend the inspection in person and report room by room.',
   },
   {
     question: 'Do I need an inspection on new construction?',
     answer:
-      'I insist on one. A builder finishes homes on a schedule, and the punch list an inspector finds before closing is the builder’s to fix. After closing it is yours.',
+      'It is in your best interest, and I highly recommend it. A builder finishes homes on a schedule, and the punch list an inspector finds before closing is the builder’s to fix. After closing it is yours.',
   },
   {
     question: 'What if I owe more on my current home than it is worth?',
     answer:
-      'It rules out the standard playbook. It does not rule out the move. I have brought in an investor so a client could break even on the old house and still buy the one they wanted. The first step is an honest look at the numbers on both sides.',
+      'It rules out the standard playbook. It does not rule out the move. I have brought in an investor so a client could break even on the old house and still buy the one they wanted. The first step is a look at the numbers on both sides.',
   },
 ]
 
@@ -70,17 +70,17 @@ export const sellersFaq: FaqItem[] = [
   {
     question: 'How do you decide on a list price?',
     answer:
-      'From closed sales near you, pulled the day we talk, and what is competing with you that week. Sometimes the right number sits a little under market to draw more than one buyer. Sometimes it holds firm because the home earns it.',
+      'The number we choose is a strategy, and I will explain that strategy. Closed sales and current market activity in your area are the beginning of the conversation, and the strategy is where we go from there.',
   },
   {
     question: 'Should I wait for a better season to list?',
     answer:
-      'The calendar matters less than the market. I told one couple in Humble to list in spring instead of waiting for December, and by December the market had turned. Ask me what I am seeing now before you lock in a date.',
+      'The calendar matters less than the market. I told one couple to list in spring instead of waiting for December, and by December the market had turned. Ask me what I am seeing now before you lock in a date.',
   },
   {
     question: 'Can you sell my home if I have already moved out of state?',
     answer:
-      'Yes. I have sold homes in Humble for owners who were hundreds of miles away for the whole transaction. I confirm repairs in person, walk rooms on video, and keep your questions answered the same day across time zones.',
+      'Yes. I have sold homes for owners who were hundreds of miles away for the whole transaction. I confirm repairs in person, walk rooms on video, and keep your questions answered the same day across time zones.',
   },
   {
     question: 'I bought new construction recently and need to sell. Will I lose money?',

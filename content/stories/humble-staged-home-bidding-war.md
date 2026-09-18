@@ -60,4 +60,4 @@ The other piece that mattered was the home itself. A home that is already declut
 
 How your home shows and how it is priced work together. A well-presented home gives you room to make a bold pricing decision, and a bold pricing decision, when it is the right call, can turn a normal sale into a bidding war that works entirely in your favor.
 
-If you are getting ready to sell in the Humble area and want an honest opinion on pricing, staging, or what your home could realistically bring this month, I would like to walk through it with you.
+If you are getting ready to sell in the Humble area and want an opinion on pricing, staging, or what your home could bring this month, I would like to walk through it with you.

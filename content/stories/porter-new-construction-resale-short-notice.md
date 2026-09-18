@@ -40,7 +40,7 @@ Price a home like this too aggressively and you risk a loss. Price it too high i
 
 ## Faster than expected
 
-It worked faster than I expected, honestly. We found a buyer quickly, which was a relief for everyone involved. A fast offer does not mean a simple transaction, though. Because the home was so new, there were details specific to recently built properties that needed attention: builder warranty transfers, and making sure any remaining punch-list items or paperwork were accounted for so nothing came back to bite either side after closing.
+It worked faster than I expected. We found a buyer quickly, which was a relief for everyone involved. A fast offer does not mean a simple transaction, though. Because the home was so new, there were details specific to recently built properties that needed attention: builder warranty transfers, and making sure any remaining punch-list items or paperwork were accounted for so nothing came back to bite either side after closing.
 
 I stayed in close contact with the buyer's agent throughout to keep expectations aligned and avoid surprises. Closing happened right after a storm came through, so we confirmed there was no damage before proceeding. Then the buyers and the sellers signed together, the same day, at the property.
 
@@ -52,6 +52,6 @@ The sellers **came out even**. Given the short ownership window and the circumst
 
 I think about this transaction whenever someone tells me they are worried that a health situation or another life event means they made a bad decision by buying and then having to sell sooner than planned. That is rarely true if it is handled correctly. This couple had not made a mistake buying new construction. Their circumstances changed faster than anyone could have predicted, and the job in front of us was to adapt.
 
-The broader lesson is about pricing a new-construction resale with real precision. Comparing against what the builder is actively offering, understanding exactly what has gone into the home since purchase, and being honest about the limited equity window are what protect a seller in this specific situation from taking a loss they do not need to take. When life forces a move, the goal is to protect my clients financially while getting them through the process with as little added stress as possible.
+The broader lesson is about pricing a new-construction resale with real precision. Comparing against what the builder is actively offering, understanding exactly what has gone into the home since purchase, and being clear about the limited equity window are what protect a seller in this specific situation from taking a loss they do not need to take. When life forces a move, the goal is to protect my clients financially while getting them through the process with as little added stress as possible.
 
 If you are facing a sale driven by health, family or any other circumstance that is forcing your hand, especially in a newer home with limited equity, I would be glad to walk through your options with you. These situations require a different kind of care, and I take that seriously.

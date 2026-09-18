@@ -5,7 +5,7 @@ city: "Kingwood"
 county: "Harris County"
 area: "kingwood"
 role: "Buyer story"
-summary: "A newly married couple, referred by a past client, bought a pool home in Kingwood's Elm Grove Village without being here for most of it. Video walkthroughs, candid descriptions and daily coordination made it a smooth transaction."
+summary: "A newly married couple, referred by a past client, bought a pool home in Kingwood's Elm Grove Village without being here for most of it. Video walkthroughs, detailed descriptions and daily coordination made it a smooth transaction."
 image: "/stories/kingwood-pool-home-remote-close.webp"
 alt: "Backyard pool and patio with a pergola behind a two story home in Elm Grove Village, Kingwood, Texas"
 facts:
@@ -26,9 +26,9 @@ Referrals mean something to me. When an existing client trusts me enough to hand
 
 ## Mostly remote
 
-What made this one distinct from the start was the format. We did the vast majority of this transaction remotely. That is not unusual anymore, and it does change how I have to work. When a buyer cannot walk through a property in person before deciding, my eyes, my descriptions and my honesty about a home's condition and layout become their primary source of information.
+What made this one distinct from the start was the format. We did the vast majority of this transaction remotely. That is not unusual anymore, and it does change how I have to work. When a buyer cannot walk through a property in person before deciding, my eyes and my descriptions of a home's condition and layout become their primary source of information.
 
-I spent a lot of time on video walkthroughs, detailed photos of the specific features that mattered to them, and candid conversations about what the listing photos did not show. The small things that only come across when you are standing in a room rather than looking at a screen.
+I spent a lot of time on video walkthroughs, detailed photos of the specific features that mattered to them, and plain conversations about what the listing photos did not show. The small things that only come across when you are standing in a room rather than looking at a screen.
 
 ## The pool, and the rest of the list
 
@@ -50,6 +50,6 @@ In the end it was a genuinely smooth transaction, which for a remote purchase is
 
 ## Over-communicate
 
-Remote transactions succeed or fail on how much a buyer can trust the person representing their interests on the ground. That trust is not automatic just because someone was referred to you. It is built through the small, consistent things: answering questions thoroughly, flagging concerns honestly even when it complicates a deal, and treating every walkthrough as if the buyer were standing right there with you. In every way that matters, they are.
+Remote transactions succeed or fail on how much a buyer can trust the person representing their interests on the ground. That trust is not automatic just because someone was referred to you. It is built through the small, consistent things: answering questions thoroughly, flagging concerns even when it complicates a deal, and treating every walkthrough as if the buyer were standing right there with you. In every way that matters, they are.
 
 If you are considering a purchase in the Kingwood area from out of town, or you were sent my way by someone I have worked with before, I would like to talk through how I can make the process feel just as thorough and personal as if you were here in person.

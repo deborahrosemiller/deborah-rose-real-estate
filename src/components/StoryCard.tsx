@@ -11,7 +11,9 @@ import { formatDate, type Story } from '@/lib/stories'
  * is kept, so the whole card is the link. Rethemed: the photo takes no
  * radius and no inset ring, the category is set as type rather than the
  * rounded-full pill, the title is Playfair, and the author row shows the
- * one author this site has.
+ * one author this site has. The photo takes the site's one radius and a
+ * soft shadow (Brett, live review 2026-09-18: "I just think that would look
+ * fancier"), matching the step cards.
  */
 export function StoryCard({ story, priority = false }: { story: Story; priority?: boolean }) {
   const href = `/stories/${story.slug}/`
@@ -26,10 +28,10 @@ export function StoryCard({ story, priority = false }: { story: Story; priority?
             height={1067}
             sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
             priority={priority}
-            className="aspect-video w-full bg-paper object-cover sm:aspect-2/1 lg:aspect-3/2"
+            className="photo-card aspect-video w-full bg-paper object-cover sm:aspect-2/1 lg:aspect-3/2"
           />
         ) : (
-          <div className="flex aspect-video w-full items-end bg-paper p-6 sm:aspect-2/1 lg:aspect-3/2">
+          <div className="photo-card flex aspect-video w-full items-end bg-paper p-6 sm:aspect-2/1 lg:aspect-3/2">
             <span className="font-display text-2xl text-ink-faint">{story.city}, Texas</span>
           </div>
         )}

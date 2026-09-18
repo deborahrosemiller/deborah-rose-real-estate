@@ -21,6 +21,16 @@ export const metadata: Metadata = {
   alternates: { canonical: '/buyers/' },
 }
 
+/**
+ * The five steps. Brett, 2026-09-18: every paragraph runs the same number
+ * of lines at desktop width, no orphan line. Step two is "Financing first"
+ * so the name fits on one line. Step four carries no fee language
+ * (Deborah: "I don't want to make it where my fee is the first thing we
+ * talk about"); she has won bidding wars on how tight the contract was.
+ * Step five is in communication with the lender and title company, never
+ * "on" them (Deborah: "They would never talk to me if I did that.
+ * Communication is the key.").
+ */
 const STEPS = [
   {
     label: 'Step one',
@@ -30,27 +40,27 @@ const STEPS = [
   },
   {
     label: 'Step two',
-    name: 'Financing before showings',
+    name: 'Financing first',
     description:
-      'Your lender decides how fast you can close and how your offer reads to a seller. I introduce you to lenders who can close in ten days to three weeks, and you are fully approved before we open a door.',
+      'Your lender decides how fast you can close and how your offer reads to a seller. I introduce you to lenders who can close in ten days to three weeks, so you are approved before we open a door.',
   },
   {
     label: 'Step three',
     name: 'The search',
     description:
-      'I do not show you homes that do not fit. When you want one neighborhood and one floor plan, we watch that neighborhood, including what is about to list, and we move the day the right one appears.',
+      'I will not waste your time on homes that do not fit. When you want one neighborhood and one floor plan, we watch that neighborhood, including what is about to list, and move the day it appears.',
   },
   {
     label: 'Step four',
     name: 'The offer',
     description:
-      'Price is one lever. Close date, contingencies, earnest money and a lender the listing agent trusts are the others. I have won a bidding war by adjusting my own fee, and I will tell you every option before we write.',
+      'Price is one lever. The close date, the contingencies, the earnest money and a lender the listing agent trusts are the others. I have won bidding wars on how tight the contract was.',
   },
   {
     label: 'Step five',
     name: 'Inspection to closing',
     description:
-      'I attend the inspection, including on new construction, and report to you the same day with photos. Then I stay on the lender and the title company daily until the keys are in your hand.',
+      'I attend the inspection, even on new construction, and report the same day with photos. Then I am in communication with the lender and title company. Communication is the key.',
   },
 ]
 
@@ -89,8 +99,8 @@ export default async function BuyersPage() {
       <PageIntro eyebrow={regionSentence} title="Buying a home in the Lake Houston area or Montgomery County.">
         <p>
           Kingwood, Humble, Porter, Conroe and Magnolia. The house is the easy part. The loan, the timeline and the
-          offer are where a purchase is won or lost, and those are the parts I spent thirty-six years in the financial
-          industry learning to read.
+          offer are where a purchase is won or lost, and those are parts of my fifty plus years in the financial
+          industry and municipal government.
         </p>
       </PageIntro>
 
@@ -99,7 +109,7 @@ export default async function BuyersPage() {
       <FeatureSplit
         eyebrow="Buyers I am built for"
         heading="Four situations where the financial background does the work."
-        intro="Most agents can open a door. The purchases below turned on the loan, the timing or the structure, and that is where I earn my fee."
+        intro="Some purchases are won on the numbers. A self-employed borrower. An appraisal that comes in short. A seller who needs certainty more than price. Those are the ones I am built for."
         items={BUILT_FOR}
       />
 
@@ -108,7 +118,7 @@ export default async function BuyersPage() {
           <Container>
             <div className="mx-auto max-w-2xl lg:mx-0">
               <h2 className="text-base/7 font-semibold text-rose">Buyer stories</h2>
-              <p className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">How it went for other buyers.</p>
+              <p className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Successful buyer stories.</p>
             </div>
             <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {stories.map((story) => (
@@ -119,17 +129,18 @@ export default async function BuyersPage() {
         </section>
       ) : null}
 
-      <section className="border-t border-rule bg-field">
+      <section className="bg-paper">
         <Container className="py-24 sm:py-32">
-          <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">What buyers ask first.</h2>
+          <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Questions buyers ask.</h2>
           <div className="mt-10">
             <FAQList items={buyersFaq} />
           </div>
         </Container>
       </section>
 
-      <ClosingAsk heading="Tell me what you are looking for and when you need it.">
-        The first call is twenty minutes and costs nothing. You will leave it knowing what is realistic.
+      {/* Her own line with clients, contractions and all (Deborah and Brett, live review 2026-09-18). */}
+      <ClosingAsk heading="In a perfect world, what are you wanting?">
+        Since we know the world&rsquo;s not perfect, then I&rsquo;ll know where the tradeoffs need to be.
       </ClosingAsk>
     </>
   )

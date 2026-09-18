@@ -23,16 +23,19 @@ export function FeatureThree({
   heading,
   intro,
   items,
+  tone = 'field',
   className = 'py-24 sm:py-32',
 }: {
   eyebrow: string
   heading: string
   intro?: string
   items: FeatureItem[]
+  /** Section background. Sections alternate tones so no hairline ever sits between two identical backgrounds (Brett, 2026-09-18). */
+  tone?: 'field' | 'paper'
   className?: string
 }) {
   return (
-    <section className={`bg-field ${className}`}>
+    <section className={`${tone === 'paper' ? 'bg-paper' : 'bg-field'} ${className}`}>
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-base/7 font-semibold text-rose">{eyebrow}</h2>

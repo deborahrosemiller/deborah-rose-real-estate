@@ -50,7 +50,7 @@ The transaction closed in late summer, and here is the number that makes this st
 
 None of that happens without the waiting. If he had gotten impatient three months earlier and bought something in a neighboring part of Kingwood or Harris County just to be done with the search, none of it comes together.
 
-There is also a piece of this that gets overlooked: a foreclosure purchase is not simple just because the price ends up attractive. It comes with its own paperwork, its own timelines and its own risks. The property still needs to be evaluated honestly. Financing still needs to be lined up and ready to move fast. The offer still needs to be structured so the bank takes it seriously against other bids. Part of what made this work was having everything prepared in advance, so that when the price hit the number we were waiting for, we were executing a plan that had already been thought through.
+There is also a piece of this that gets overlooked: a foreclosure purchase is not simple just because the price ends up attractive. It comes with its own paperwork, its own timelines and its own risks. The property still needs to be evaluated with clear eyes. Financing still needs to be lined up and ready to move fast. The offer still needs to be structured so the bank takes it seriously against other bids. Part of what made this work was having everything prepared in advance, so that when the price hit the number we were waiting for, we were executing a plan that had already been thought through.
 
 ## The lesson
 

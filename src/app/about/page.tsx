@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 
 import { Container } from '@/components/Container'
+import { INTRO_BAND } from '@/components/PageIntro'
 import { Credentials } from '@/components/Credentials'
 import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
@@ -28,7 +29,7 @@ const SERVICE = [
 ]
 
 const FIGURES = [
-  { label: 'years of business leadership', value: production.yearsBusiness },
+  { label: 'years across the financial industry, school trustee and municipal government', value: production.yearsCareer },
   { label: 'years in the financial industry, 1972 to 2008', value: String(production.yearsFinancialIndustry) },
   { label: 'years in residential real estate', value: production.yearsRealEstate },
   { label: 'homes sold as listing or buyer agent, per HAR', value: String(production.sold) },
@@ -77,7 +78,8 @@ export default function AboutPage() {
     <>
       <SchemaGraph nodes={[breadcrumb([{ name: 'Home', path: '/' }, { name: 'About', path: '/about/' }])]} />
 
-      <div className="bg-field py-16 sm:py-24">
+      {/* The same band height token as the video headers, so the five secondary pages match (Brett, 2026-09-18). */}
+      <div className={`flex flex-col justify-center bg-field py-10 ${INTRO_BAND}`}>
         <Container>
           <div className="max-w-3xl">
             <p className="text-base/7 font-semibold text-rose">About</p>
@@ -156,11 +158,11 @@ export default function AboutPage() {
         </Container>
       </div>
 
-      <section className="border-t border-rule bg-field py-24 sm:py-32">
+      <section className="bg-paper py-24 sm:py-32">
         <Container>
           <div className="max-w-2xl">
             <p className="text-base/7 font-semibold text-rose">In numbers</p>
-            <h2 className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Forty-five years of showing up.</h2>
+            <h2 className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Fifty plus years of showing up.</h2>
           </div>
           <div className="mt-16 sm:mt-20">
             <Credentials items={FIGURES} />
@@ -168,7 +170,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-paper py-24 sm:py-32">
+      <section className="bg-field py-24 sm:py-32">
         <Container>
           <div className="max-w-2xl">
             <p className="text-base/7 font-semibold text-rose">Community</p>
@@ -182,7 +184,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-field py-24 sm:py-32">
+      <section className="bg-paper py-24 sm:py-32">
         <Container>
           <div className="max-w-2xl">
             <p className="text-base/7 font-semibold text-rose">Credentials</p>
