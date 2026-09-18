@@ -305,13 +305,14 @@
 }
 
 /*
- * THE HOMEPAGE HERO FILLS THE SCREEN. 100vh is the fallback; 100dvh wins
- * where supported, so on a phone the band is the visible viewport and it
- * does not jump when the address bar retracts. Brett, 2026-09-18.
+ * THE HOMEPAGE HERO FILLS THE SCREEN BELOW THE WHITE HEADER. 100vh is the
+ * fallback; 100dvh wins where supported, so on a phone the band is the
+ * visible viewport and it does not jump when the address bar retracts.
+ * Brett, 2026-09-18, twice: full screen, and the header stays white.
  */
 .hero-full {
-  height: 100vh;
-  height: 100dvh;
+  height: calc(100vh - var(--nav-h));
+  height: calc(100dvh - var(--nav-h));
 }
 
 /*

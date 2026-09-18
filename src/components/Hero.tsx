@@ -21,11 +21,11 @@ import { business, areaSentence } from '@/lib/site'
  * background image" (React, v4.3): full-bleed media, a scrim, copy on
  * top. Rethemed: left aligned, Playfair, the rose button.
  *
- * THE BAND IS THE WHOLE SCREEN. Brett, 2026-09-18: the video takes up the
- * entire hero on desktop and on phones. `.hero-full` is 100dvh with a
- * 100vh fallback. The header overlays it (see Navbar) so no white band
- * eats the top of the screen. The copy sits at the foot, and the bottom
- * padding is what gives at short laptop heights, never the type.
+ * THE BAND IS THE WHOLE SCREEN BELOW THE HEADER. Brett, 2026-09-18: the
+ * video takes up the entire hero on desktop and on phones, the header
+ * stays white and in the flow, and the copy sits in the middle of the
+ * frame rather than at the foot. `.hero-full` is 100dvh minus the header
+ * with a 100vh fallback.
  *
  * The footage is Deborah's own listing video of a one story estate on
  * nearly two acres in Porter, Montgomery County. The title card that
@@ -35,7 +35,7 @@ import { business, areaSentence } from '@/lib/site'
 export function Hero() {
   return (
     <section aria-label="Introduction" className="relative isolate overflow-hidden bg-night">
-      <div className="hero-full relative flex flex-col justify-end">
+      <div className="hero-full relative flex flex-col justify-center">
         <div className="absolute inset-0 -z-20">
           <HeroVideo />
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -50,20 +50,18 @@ export function Hero() {
           />
         </div>
         {/*
-         * The scrim, directional. Bottom to top: 85 percent at the foot where
-         * the paragraph and button sit, 70 held to the 45 percent mark where
-         * the headline sits, 25 at the top. Left to right: 50 at the edge to
-         * clear at the right. A top band, 85 falling through 75 at its
-         * midpoint to clear over 12rem, sits under the overlaid white nav so
-         * the small links hold 4.5:1 over the sky. Measured 2026-09-18 against
-         * the brightest graded frame (90th percentile luminance 0.814):
-         * paragraph and button 8.96:1, headline 5.34:1, nav links 4.93:1.
+         * The scrim, directional. The copy is vertically centered, so bottom
+         * to top the overlay is 85 percent at the foot, 80 held to the 65
+         * percent mark (which covers the whole copy block), 30 at the top.
+         * Left to right: 60 at the edge, 30 at the 55 percent mark, clear at
+         * the right. Measured 2026-09-18 against the brightest graded frame
+         * (90th percentile luminance 0.814): everything in the copy block sits
+         * under at least 86 percent combined, 7.3:1 for white type.
          */}
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/85 via-black/70 via-45% to-black/25" />
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-r from-black/50 via-black/15 to-transparent" />
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-48 bg-linear-to-b from-black/85 via-black/75 via-50% to-transparent" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/85 via-black/80 via-65% to-black/30" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-r from-black/60 via-black/30 via-55% to-transparent" />
 
-        <div className="mx-auto w-full max-w-7xl px-6 pt-32 pb-12 sm:pb-16 lg:px-8 lg:pb-20">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-[13px] font-semibold tracking-[0.1em] uppercase text-rose-soft/90">{areaSentence}</p>
             <h1 className="mt-5 font-display text-[2.5rem]/[1.05] tracking-[-0.01em] text-pretty text-cream sm:text-6xl/[1.03] lg:text-7xl/[1.02]">
