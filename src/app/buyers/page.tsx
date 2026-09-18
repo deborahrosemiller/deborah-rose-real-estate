@@ -99,8 +99,6 @@ export default async function BuyersPage() {
         heading="Four situations where the financial background does the work."
         intro="Most agents can open a door. The purchases below turned on the loan, the timing or the structure, and that is where I earn my fee."
         items={BUILT_FOR}
-        image={{ src: '/stories/kingwood-dream-home-sellers-market.webp', alt: 'Aerial view of a backyard pool and spa behind a French style home in Royal Brook at Kingwood, Texas' }}
-        imageSide="left"
       />
 
       {stories.length ? (

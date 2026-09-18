@@ -78,32 +78,36 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           <Heading as="h1" className="mt-4 max-w-4xl">
             {c.title}
           </Heading>
-          <div className="mt-10 lg:grid lg:grid-cols-12 lg:gap-x-12">
-            <div className="max-w-2xl space-y-6 text-lg/8 text-ink-soft lg:col-span-7">
-              <p className="text-[22px]/[1.4] text-ink">{c.intro}</p>
-              {c.paragraphs.map((p) => (
-                <p key={p.slice(0, 40)}>{p}</p>
-              ))}
-            </div>
-            <aside className="mt-12 lg:col-span-4 lg:col-start-9 lg:mt-0">
-              <div className="panel p-8">
-                <h2 className="text-sm font-medium text-ink">Neighborhoods I have closed in</h2>
-                <ul role="list" className="mt-4 space-y-2 text-base/7 text-ink-soft">
+          <div className="mt-10 max-w-3xl space-y-6 text-lg/8 text-ink-soft">
+            <p className="text-[22px]/[1.4] text-ink">{c.intro}</p>
+            {c.paragraphs.map((p) => (
+              <p key={p.slice(0, 40)}>{p}</p>
+            ))}
+          </div>
+          <dl className="mt-12 grid gap-x-12 gap-y-8 border-t border-rule pt-8 sm:grid-cols-3">
+            <div>
+              <dt className="text-sm font-medium text-ink">Neighborhoods I have closed in</dt>
+              <dd>
+                <ul role="list" className="mt-3 space-y-1 text-base/7 text-ink-soft">
                   {c.neighborhoods.map((n) => (
                     <li key={n}>{n}</li>
                   ))}
                 </ul>
-                <h2 className="mt-8 text-sm font-medium text-ink">Zip codes</h2>
-                <p className="mt-2 text-base/7 text-ink-soft figure">{area.zip.join(', ')}</p>
-                <h2 className="mt-8 text-sm font-medium text-ink">Call or text</h2>
-                <p className="mt-2">
-                  <a href={`tel:${business.phoneE164}`} className="tap text-base/7 text-ink figure hover:underline hover:underline-offset-4">
-                    {business.phone}
-                  </a>
-                </p>
-              </div>
-            </aside>
-          </div>
+              </dd>
+            </div>
+            <div>
+              <dt className="text-sm font-medium text-ink">Zip codes</dt>
+              <dd className="mt-3 text-base/7 text-ink-soft figure">{area.zip.join(', ')}</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-medium text-ink">Call or text</dt>
+              <dd className="mt-3">
+                <a href={`tel:${business.phoneE164}`} className="tap text-base/7 text-ink figure hover:underline hover:underline-offset-4">
+                  {business.phone}
+                </a>
+              </dd>
+            </div>
+          </dl>
         </Container>
       </section>
 

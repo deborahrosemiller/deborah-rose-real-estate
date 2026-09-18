@@ -37,8 +37,8 @@ export default async function AreasPage() {
               const c = areaContent[a.slug]
               return (
                 <li key={a.slug}>
-                  <Link href={`/areas/${a.slug}/`} className="group grid gap-y-3 py-8 sm:grid-cols-12 sm:gap-x-8">
-                    <div className="sm:col-span-4">
+                  <Link href={`/areas/${a.slug}/`} className="group grid gap-y-3 py-8 sm:grid-cols-5 sm:gap-x-8">
+                    <div className="sm:col-span-2">
                       <span className="font-display text-3xl text-ink group-hover:underline group-hover:decoration-ink/30 group-hover:underline-offset-4">
                         {a.name}
                       </span>
@@ -46,7 +46,7 @@ export default async function AreasPage() {
                         {a.county} <span aria-hidden="true">&middot;</span> {count === 1 ? '1 story' : `${count} stories`}
                       </span>
                     </div>
-                    <p className="text-base/7 text-ink-soft sm:col-span-8">{c.intro}</p>
+                    <p className="text-base/7 text-ink-soft sm:col-span-3">{c.intro}</p>
                   </Link>
                 </li>
               )

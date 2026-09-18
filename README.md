@@ -44,17 +44,17 @@ Every section is built from a Tailwind Plus Marketing block, rethemed to the tok
 | `Navbar` | Elements, Headers, With call-to-action |
 | `Hero` | Heroes, Simple centered with background image (the video plays full bleed behind a white copy panel) |
 | `FeatureThree` | Feature sections, Simple three column with small icons |
-| `FeatureSplit` | Feature sections, With product screenshot on left |
+| `FeatureSplit` | Feature sections, Centered 2x2 grid (left aligned, header on top) |
 | `Timeline` | Stats sections, Timeline (used for a process) |
 | `AreaGrid` | Feature sections, Simple 3x2 grid |
 | `StoryCard` | Blog sections, Three-column with images |
 | `Credentials` | Stats sections, Two-column description (the list only, as type) |
-| `PageIntro` | Heroes, Split with image (type on white, the homepage footage bounded to the band) |
+| `PageIntro` | Heroes, Simple centered with background image (full-bleed graded footage, directional scrim, white type, fixed height) |
 | `FAQList` | FAQ sections, Two columns |
 | `ClosingAsk` | CTA sections, Simple justified |
 | `Footer` | Footers, 4-column with company mission |
-| Contact page | Contact sections, Split with pattern |
-| About page | Content sections, Centered (left aligned) |
+| Contact page | Contact sections, Side-by-side grid (header on top) |
+| About page | Header sections, Simple with eyebrow, with a circle portrait beside the H1 |
 | 404 | Feedback, 404 pages, Simple |
 
 What was stripped from every block, on purpose: rounded corners on photos and panels, drop shadows, the indigo accent, announcement pills, arrow glyphs on links, and any container that reads as a button without being one.

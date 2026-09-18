@@ -87,8 +87,8 @@ export default async function SellersPage() {
       <SchemaGraph nodes={[faqNode(sellersFaq), breadcrumb([{ name: 'Home', path: '/' }, { name: 'Sellers', path: '/sellers/' }])]} />
       <PageIntro eyebrow="Sellers" title="Selling a home in the Lake Houston area or Montgomery County.">
         <p>
-          A sale is a pricing decision, a timing decision and a presentation decision, made in that order. I have
-          priced a home a little under the market to draw three buyers and closed it twenty thousand dollars over list.
+          A sale is a pricing decision, a timing decision and a presentation decision, made in that order. Get the
+          first one right and the other two get easier.
         </p>
       </PageIntro>
 
@@ -99,8 +99,6 @@ export default async function SellersPage() {
         heading="Four sales where the plan mattered more than the market."
         intro="Every one of these is a real transaction on this site. The market was working against the seller in most of them, and the outcome came from the plan."
         items={SOLD_THROUGH}
-        image={{ src: '/stories/humble-staged-home-bidding-war.webp', alt: 'Backyard pool and covered patio at dusk behind a two story home in Eagle Springs, Humble, Texas' }}
-        imageSide="right"
       />
 
       {stories.length ? (
