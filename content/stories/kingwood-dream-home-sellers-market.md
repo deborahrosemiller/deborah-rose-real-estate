@@ -36,7 +36,7 @@ This couple had their list dialed in tight: a pool, quality upgrades throughout,
 
 The timing made it harder. We were in the middle of a heavy seller's market, the kind where well-priced, move-in ready homes in Kingwood's newer villages were getting snapped up within days of listing, often with multiple offers. Buyers in that environment usually have to make peace with compromise. Maybe the pool is there but the kitchen needs work. Maybe the upgrades are there but the price is a stretch.
 
-Finding a home that checked every box, in the exact neighborhood they wanted, at a price that worked, in a market moving that fast, is the kind of search that can drag on for months.
+Finding a home that checked all their boxes, in the exact neighborhood they wanted, at a price that worked, in a market moving that fast, is the kind of search that can drag on for months.
 
 ## Under contract in under a month
 
@@ -52,6 +52,6 @@ I also think this deal shows why staying focused on one neighborhood, rather tha
 
 ## For buyers in Kingwood
 
-In a fast-moving seller's market, having a clear, specific idea of what you want is an advantage, as long as you pair it with an agent who is watching that neighborhood closely and ready to move the moment the right listing appears. Waiting for something better to come along can cost you the home that already checks every box.
+In a fast-moving seller's market, having a clear, specific idea of what you want is an advantage, as long as you pair it with an agent who is watching that neighborhood closely and ready to move the moment the right listing appears. Waiting for something better to come along can cost you the home that already checks all your boxes.
 
 Whether you are searching for a specific Kingwood neighborhood, weighing whether now is the right time to buy, or just want a read on what is happening in Montgomery County right now, I am glad to talk it through. Every search is different, and the right strategy depends on what you are really looking for.

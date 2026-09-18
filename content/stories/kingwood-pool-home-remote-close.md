@@ -34,7 +34,7 @@ I spent a lot of time on video walkthroughs, detailed photos of the specific fea
 
 The couple had a clear list, and a pool was near the top of it. Kingwood's established villages, tucked under the pines on the north side of Lake Houston, have a lot of homes with mature landscaping and backyard space that lend themselves to that kind of outdoor living, and we found a 1988 two story in Elm Grove Village with a gunite pool, a rock waterfall feature and a spa.
 
-Beyond the pool, the home checked essentially every box on the wife's list: the layout, the finishes, the flow of the house. That mattered, because most home searches, and especially remote ones, involve trade-offs. This was one of the rare cases where the home delivered on nearly everything without much compromise.
+Beyond the pool, the home checked all the wife's boxes: the layout, the finishes, the flow of the house. That mattered, because most home searches, and especially remote ones, involve trade-offs. This was one of the rare cases where the home delivered on nearly everything without much compromise.
 
 One detail that stuck with me: the extra space gave her room for her adult children to visit comfortably. It factored into how she thought about the layout even though the pool came first. "Space" means different things to different buyers depending on where they are in life, and part of my job is listening closely enough to understand what a client actually means when they say a house needs to work for them.
 

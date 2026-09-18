@@ -30,7 +30,7 @@ I have been selling homes in and around Porter, Texas for a long time now, and e
 
 They came to me as newlyweds looking for their first home together. Like a lot of buyers in the Porter and greater Montgomery County area, they had a list: a layout that worked, room to grow into, and a neighborhood that felt settled while keeping easy access to US 59 and the Kingwood area for work.
 
-We found a home in a riverside acreage community in Porter that checked every one of those boxes. It had the space they wanted, the feel they were after, and a price that made sense for two people just starting out. They closed, moved in and started building their life together in that house.
+We found a home in a riverside acreage community in Porter that checked all their boxes. It had the space they wanted, the feel they were after, and a price that made sense for two people just starting out. They closed, moved in and started building their life together in that house.
 
 ## Then everything moved at once
 

@@ -42,7 +42,7 @@ Each time that happened we had to make a fast, clear-eyed decision: negotiate th
 
 ## The one that held
 
-The home that finally checked every box was a 1980 two-story in one of Kingwood's original villages, backing to the greenbelt. It fit the family's budget, it sat within the school boundaries they wanted, and the inspection came back clean enough that we could move forward with confidence instead of crossed fingers. The appraisal came in at full value with zero required repairs.
+The home that finally checked all their boxes was a 1980 two-story in one of Kingwood's original villages, backing to the greenbelt. It fit the family's budget, it sat within the school boundaries they wanted, and the inspection came back clean enough that we could move forward with confidence instead of crossed fingers. The appraisal came in at full value with zero required repairs.
 
 From there the real challenge became the calendar. A two-week close is aggressive under any circumstances. Lenders, title companies and inspectors all have their own timelines, and there is very little room for delay when every piece has to line up back to back instead of spreading across the usual thirty to forty-five days. I coordinated closely with the lender to keep underwriting moving, stayed on top of the title company daily, and made sure every document that could be prepared in advance was handled before it became a bottleneck.
 

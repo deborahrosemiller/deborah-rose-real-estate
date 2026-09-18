@@ -30,7 +30,7 @@ First-time buyer, relocation, and new construction is its own particular combina
 
 We started with the criteria. He wanted new construction: no deferred maintenance, no surprises, a home that was genuinely his from day one. He needed something that made sense for his commute, which narrowed the search to specific pockets of Montgomery County where the highway access worked in his favor. And he had a short list of must-haves inside the home: layout, garage space, a floor plan that would function for how he actually lives.
 
-We found a one story Highland Homes plan in the NorthGrove community off FM 1488 that checked every box. Right location for the commute, right builder, right price point.
+We found a one story Highland Homes plan in the NorthGrove community off FM 1488 that checked all his boxes. Right location for the commute, right builder, right price point.
 
 ## New construction still gets an inspection
 
