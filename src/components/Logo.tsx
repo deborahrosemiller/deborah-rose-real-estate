@@ -29,9 +29,10 @@ export function Logo({ className, variant = 'header' }: { className?: string; va
   return (
     <span className={clsx(className, 'inline-flex items-center gap-x-2.5 whitespace-nowrap')}>
       <Image src="/brand/deborah-rose-mark.png" alt="" width={512} height={512} sizes="40px" priority className="size-10 shrink-0" />
-      <span className="inline-flex items-baseline gap-x-2">
-        <span className="font-display text-[22px] leading-none tracking-[-0.01em] text-ink">Deborah Rose</span>
-        <span className="hidden text-[10px] font-semibold uppercase leading-none tracking-[0.22em] text-rose sm:inline">Real Estate</span>
+      {/* Stacked, Deborah's request on the live review 2026-09-18: REAL ESTATE under the name, left aligned. Two lines inside the same 44px row. */}
+      <span className="inline-flex flex-col items-start">
+        <span className="font-display text-[21px] leading-none tracking-[-0.01em] text-ink">Deborah Rose</span>
+        <span className="mt-1 text-[9px] font-semibold uppercase leading-none tracking-[0.24em] text-rose">Real Estate</span>
       </span>
     </span>
   )
