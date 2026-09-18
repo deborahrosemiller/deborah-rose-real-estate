@@ -49,7 +49,7 @@ Every section is built from a Tailwind Plus Marketing block, rethemed to the tok
 | `AreaGrid` | Feature sections, Simple 3x2 grid |
 | `StoryCard` | Blog sections, Three-column with images |
 | `Credentials` | Stats sections, Two-column description (the list only, as type) |
-| `PageIntro` | Header sections, Simple with eyebrow |
+| `PageIntro` | Heroes, Split with image (type on white, the homepage footage bounded to the band) |
 | `FAQList` | FAQ sections, Two columns |
 | `ClosingAsk` | CTA sections, Simple justified |
 | `Footer` | Footers, 4-column with company mission |

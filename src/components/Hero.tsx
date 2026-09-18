@@ -39,6 +39,8 @@ export function Hero() {
             alt="Mediterranean style one story home on a wooded lot with a wide lawn, Riverwalk, Porter, Texas"
             width={1600}
             height={843}
+            fetchPriority="high"
+            decoding="async"
           />
         </div>
         {/* The scrim: dark at the foot, darker toward the copy, open at the top right so the footage still breathes. */}
