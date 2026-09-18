@@ -44,7 +44,7 @@ export function Navbar() {
           ))}
         </div>
         <div className="flex flex-1 items-center justify-end gap-x-6">
-          <a href={`tel:${business.phoneE164}`} className="tap hidden text-sm/6 text-ink-soft hover:text-ink lg:block figure">
+          <a href={`tel:${business.phoneE164}`} className="tap hidden text-sm/6 whitespace-nowrap text-ink-soft hover:text-ink lg:block figure">
             {business.phone}
           </a>
           <Link href={nav.action.href} className={actionClass}>
