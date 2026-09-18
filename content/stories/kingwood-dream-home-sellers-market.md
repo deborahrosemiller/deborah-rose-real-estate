@@ -7,7 +7,7 @@ area: "kingwood"
 role: "Buyer story"
 summary: "Repeat clients whose previous home I had just sold wanted one specific Kingwood neighborhood, a pool, real upgrades and a price that fit. In a heavy seller's market we had it under contract in under a month."
 image: "/stories/kingwood-dream-home-sellers-market.webp"
-alt: "Aerial view of a backyard pool and spa behind a French style home in Royal Brook at Kingwood, Texas"
+alt: "Front exterior of a French style home in Royal Brook at Kingwood, Texas"
 facts:
   - label: "List price"
     value: "$779,000"

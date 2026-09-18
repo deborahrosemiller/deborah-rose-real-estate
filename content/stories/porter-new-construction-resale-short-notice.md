@@ -6,8 +6,6 @@ county: "Montgomery County"
 area: "porter"
 role: "Seller story"
 summary: "A couple in Porter had to sell a nearly new home because of a health situation, with almost no equity built up and the builder still selling the same plan nearby. Priced with precision, sold quickly, and the sellers came out even."
-image: "/stories/porter-new-construction-resale-short-notice.webp"
-alt: "Backyard with a pergola and outdoor kitchen behind a two story home in Royal Brook, Porter, Texas"
 facts:
   - label: "List price"
     value: "$374,000"

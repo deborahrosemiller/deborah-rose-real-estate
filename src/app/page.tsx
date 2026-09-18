@@ -90,7 +90,7 @@ export default async function Home() {
           </div>
           <p className="mt-16">
             <Button variant="quiet" href="/stories/">
-              All seventeen stories
+              Read more stories
             </Button>
           </p>
         </Container>

@@ -7,7 +7,7 @@ area: "kingwood"
 role: "Buyer story"
 summary: "A family moving from the Dallas area needed to be in Kingwood before school started. Several offers fell apart at inspection. The one that held closed in two weeks, at their price, with an appraisal at full value and zero repairs."
 image: "/stories/kingwood-two-week-close.webp"
-alt: "Backyard opening onto a wooded greenbelt behind a two story home in Bear Branch Village, Kingwood, Texas"
+alt: "Front exterior of a two story home in Bear Branch Village, Kingwood, Texas"
 facts:
   - label: "List price"
     value: "$372,000"

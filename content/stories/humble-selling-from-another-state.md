@@ -7,7 +7,7 @@ area: "humble"
 role: "Seller story"
 summary: "Experienced sellers relocating out of state, listing into one of the heaviest buyer's markets Humble had seen in years. Under contract in under seven days at exactly the price they asked, and they called it the smoothest closing of their lives."
 image: "/stories/humble-selling-from-another-state.webp"
-alt: "Aerial view of a backyard with a pool and covered patio behind a two story home in Eagle Springs, Humble, Texas"
+alt: "Front exterior of a two story home in Eagle Springs, Humble, Texas"
 facts:
   - label: "Sold price"
     value: "$479,900, the asking price"

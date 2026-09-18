@@ -56,7 +56,10 @@ export default async function StoriesPage() {
           </div>
         </Container>
       </section>
-      <ClosingAsk heading="Your move could be the next one." secondaryHref="/areas/" secondaryLabel="See the areas" />
+      {/* Her own line with clients (live review 2026-09-18); Brett cut "Your move could be the next one." */}
+      <ClosingAsk heading="In a perfect world, what are you wanting?" secondaryHref="/areas/" secondaryLabel="See the areas">
+        Since we know the world&rsquo;s not perfect, then I&rsquo;ll know where the tradeoffs need to be.
+      </ClosingAsk>
     </>
   )
 }

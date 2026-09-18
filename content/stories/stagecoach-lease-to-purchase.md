@@ -6,8 +6,6 @@ county: "Montgomery County"
 area: "magnolia"
 role: "Both sides"
 summary: "First-time investors who overspent on a rehab. Buyers with VA eligibility and a qualification gap. A conventional sale worked for neither, so we built a lease-to-purchase agreement over nine months and got everyone to even."
-image: "/stories/stagecoach-lease-to-purchase.webp"
-alt: "Aerial view of a one story brick home on an acreage lot in Stagecoach Farms, Stagecoach, Texas"
 facts:
   - label: "List price"
     value: "$328,000"

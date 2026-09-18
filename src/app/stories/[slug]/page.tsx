@@ -130,18 +130,29 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
           </Container>
         </header>
 
-        {/* The photo, straddling the seam. */}
+        {/*
+         * The photo, straddling the seam. A story with no acceptable photo
+         * (see docs/story-photos.md) gets the city set as type in the same
+         * frame, never a photo of a different property. The hero video's
+         * poster stood in here for a day on 2026-09-18 and that was wrong.
+         */}
         <Container>
           <figure className="mx-auto -mt-20 max-w-4xl overflow-hidden rounded-2xl bg-paper shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)] sm:-mt-36 lg:-mt-56">
-            <Image
-              src={story.image ?? '/hero/porter-estate-poster.webp'}
-              alt={story.alt ?? story.title}
-              width={1600}
-              height={800}
-              sizes="(min-width: 1024px) 896px, 100vw"
-              priority
-              className="aspect-2/1 w-full object-cover"
-            />
+            {story.image ? (
+              <Image
+                src={story.image}
+                alt={story.alt ?? story.title}
+                width={1600}
+                height={800}
+                sizes="(min-width: 1024px) 896px, 100vw"
+                priority
+                className="aspect-2/1 w-full object-cover"
+              />
+            ) : (
+              <div className="flex aspect-2/1 w-full items-end p-8 sm:p-10">
+                <span className="font-display text-3xl text-ink-faint sm:text-4xl">{story.city}, Texas</span>
+              </div>
+            )}
           </figure>
         </Container>
 

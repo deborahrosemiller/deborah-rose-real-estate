@@ -61,6 +61,10 @@ These override her Brand and Website Copywriting Brief and her HAR bio where the
 
 **FAQ answers run three lines or fewer on desktop.** Brett's layout rule. About 240 characters.
 
+**Never show a count that a reader could mistake for the size of her business.** Deborah, 2026-09-18: "if people see the count they may think that is all the sales she has." No "all seventeen stories," no "5 stories" beside an area. "Read more stories," "Read a few of the stories." Her HAR record is 38 sold and 9 leased; the site tells seventeen of them.
+
+**Story photos: hero exterior, native size, never a screenshot, never upscaled.** Brett, 2026-09-18. The Property Archive on Drive holds HAR thumbnails (296 to 958 pixels) and screenshot PNGs, which is why the first build's 1600-pixel exports were soft. Check native pixel size before selecting; a card needs about 800 pixels, an article hero about 1,800. Where no acceptable source exists the story runs without a photo and the gap is listed in docs/story-photos.md for Deborah to fill. A stand-in photo of a different property is never acceptable (the Scolty Reach story carried a Skene Bend photo for a day).
+
 ## The Tailwind Plus components
 
 `vendor/tailwind-plus/` holds the Marketing UI Blocks download from Brett's Tailwind Plus account (2026-09-17). Each site component names the block it came from in its header comment. When a new section is needed, start from a block there rather than hand-rolling one. The repo is private, which is what keeps the license clean.
