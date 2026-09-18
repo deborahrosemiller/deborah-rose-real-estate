@@ -7,13 +7,13 @@ import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
 import { breadcrumb } from '@/lib/schema'
 import { areaContent } from '@/content/areas'
-import { areas } from '@/lib/site'
+import { areas, regionSentence } from '@/lib/site'
 import { getStories } from '@/lib/stories'
 
 export const metadata: Metadata = {
-  title: 'Areas served: Kingwood, Humble, Porter, Conroe, Magnolia and Tomball',
+  title: 'Areas served: Kingwood, Humble, Porter, Conroe and Magnolia',
   description:
-    'The six towns Deborah Rose Miller serves across the Lake Houston area and Montgomery County, Texas, with the neighborhoods she has closed in and the stories from each.',
+    'The five towns Deborah Rose Miller serves across the Lake Houston area and Montgomery County, Texas, with the neighborhoods she has closed in and the stories from each.',
   alternates: { canonical: '/areas/' },
 }
 
@@ -22,11 +22,11 @@ export default async function AreasPage() {
   return (
     <>
       <SchemaGraph nodes={[breadcrumb([{ name: 'Home', path: '/' }, { name: 'Areas', path: '/areas/' }])]} />
-      <PageIntro eyebrow="Areas" title="Six towns across two counties.">
+      <PageIntro eyebrow={regionSentence} title="Five towns across two counties.">
         <p>
-          Kingwood and Humble on the Lake Houston side of Harris County. Porter, Conroe and Magnolia in Montgomery
-          County, and Tomball at the line between them. I have lived, worked or served in most of these places, and
-          each page carries the neighborhoods I have closed in and the stories from there.
+          Kingwood and Humble make up the Lake Houston area. Porter, Conroe and Magnolia are in Montgomery County. I
+          have lived, worked or served in most of these places, and each page carries the neighborhoods I have closed
+          in and the stories from there.
         </p>
       </PageIntro>
       <section className="pb-20 lg:pb-28">

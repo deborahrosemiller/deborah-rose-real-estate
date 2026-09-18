@@ -8,7 +8,7 @@ import { StoryCard } from '@/components/StoryCard'
 import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
 import { absolute, AGENT_ID, PERSON_ID, breadcrumb, imageNode } from '@/lib/schema'
-import { agent, areas, business, siteUrl } from '@/lib/site'
+import { agent, areas, areaSentence, business, siteUrl } from '@/lib/site'
 import { formatDate, getStories, getStory } from '@/lib/stories'
 
 export async function generateStaticParams() {
@@ -163,7 +163,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
           <footer className="mx-auto mt-14 max-w-[40rem] border-t border-rule pt-8">
             <p className="font-display text-xl text-ink">{agent.name}</p>
             <p className="mt-1 text-sm/6 text-ink-soft">
-              {business.name}. Serving Kingwood, Humble, Porter, Conroe, Magnolia and Tomball, Texas.{' '}
+              {business.name}. Serving {areaSentence}, Texas.{' '}
               <a href={`tel:${business.phoneE164}`} className="tap text-ink underline decoration-ink/25 underline-offset-4 hover:decoration-ink figure">
                 {business.phone}
               </a>

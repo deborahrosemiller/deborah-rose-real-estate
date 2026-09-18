@@ -49,11 +49,12 @@
 
 @layer base {
   :root {
-    --nav-h: 4.25rem;
+    /* Brett, live review 2026-09-18: the bar was vertically too thick. 56px on phones, 64px from sm. */
+    --nav-h: 3.5rem;
   }
   @media (min-width: 640px) {
     :root {
-      --nav-h: 5rem;
+      --nav-h: 4rem;
     }
   }
 
@@ -426,4 +427,18 @@
       margin-inline-start: round(down, (100% - min(100%, 80rem)) / 2, 1px);
     }
   }
+}
+
+/*
+ * Type over footage. A tight shadow lifts contrast at the glyph edge, a
+ * soft wide one settles the block. Together they are close to invisible
+ * and worth about a third of a stop at the edge of a stroke. Added on the
+ * live review of 2026-09-18 after the overlay was cut by half; the order
+ * of remedies is in Hero.tsx.
+ */
+.hero-copy h1,
+.hero-copy p {
+  text-shadow:
+    0 1px 2px rgb(0 0 0 / 0.6),
+    0 0 28px rgb(0 0 0 / 0.5);
 }

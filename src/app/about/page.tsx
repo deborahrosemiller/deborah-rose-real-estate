@@ -11,7 +11,7 @@ import { agent, business, production, tagline } from '@/lib/site'
 export const metadata: Metadata = {
   title: 'About Deborah Rose Miller',
   description:
-    'Deborah Rose Miller owned Rose Financial Group for twenty-five years, served nine years on the Magnolia ISD school board, helped write the City of Magnolia’s first comprehensive plan, and now sells homes across the Lake Houston area and Montgomery County.',
+    'Deborah Rose Miller spent thirty-six years in the financial industry, a banker and then the owner of Rose Financial Group, served nine years on the Magnolia ISD school board, helped write the City of Magnolia’s first comprehensive plan, and now sells homes across the Lake Houston area and Montgomery County.',
   alternates: { canonical: '/about/' },
 }
 
@@ -29,7 +29,7 @@ const SERVICE = [
 
 const FIGURES = [
   { label: 'years of business leadership', value: production.yearsBusiness },
-  { label: 'years owning Rose Financial Group', value: String(production.yearsRoseFinancial) },
+  { label: 'years in the financial industry, 1972 to 2008', value: String(production.yearsFinancialIndustry) },
   { label: 'years in residential real estate', value: production.yearsRealEstate },
   { label: 'homes sold as listing or buyer agent, per HAR', value: String(production.sold) },
 ]
@@ -60,8 +60,12 @@ function Rows({ rows }: { rows: { name: string; detail: string }[] }) {
 /**
  * The page about her. The hero is the same structure as the other pages
  * (eyebrow, H1, intro paragraph) without the video, and a small circular
- * portrait sits to the right of the H1. Brett, 2026-09-18: no photo
- * panel, no split; "if anything, a small circle photo of Deborah on the
+ * portrait sits to the right of the H1. The H1 is her name, plainly;
+ * "I am Deborah Rose Miller" read like a bot to Brett (2026-09-18).
+ * Career numbers: thirty-six years in the financial industry is stated
+ * (1972 to 2008, confirmed by her). How long she owned Rose Financial
+ * Group is not stated anywhere until she confirms it from her resume.
+ * Brett, 2026-09-18: no photo panel, no split; "if anything, a small circle photo of Deborah on the
  * right side of the H1." The portrait is a square crop of her profile
  * photo, rendered at 120px, which is well inside the source's resolution.
  *
@@ -79,7 +83,7 @@ export default function AboutPage() {
             <p className="text-base/7 font-semibold text-rose">About</p>
             <div className="mt-2 flex items-start justify-between gap-x-6 sm:gap-x-10">
               <h1 className="font-display text-[2.5rem]/[1.05] tracking-[-0.01em] text-pretty text-ink sm:text-6xl/[1.04] lg:text-[3.75rem]/[1.03]">
-                I am Deborah Rose Miller.
+                Deborah Rose Miller.
               </h1>
               <Image
                 src="/about/deborah-rose-miller-portrait.webp"
@@ -106,11 +110,11 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-x-16 gap-y-6 text-lg/8 text-ink-soft lg:grid-cols-2">
             <div className="space-y-6">
             <p>
-              Rose is my maiden name, and it has been on the door of every business I have run. It was the name of my
-              financial planning firm, Rose Financial Group, which I owned and ran for twenty-five years before I sold
-              it in 2008 while living in Magnolia, Texas. It is the name of this business too, because the way I work
-              has not changed. I look at the whole picture, I run the numbers before anyone signs, and I tell people
-              what I see even when it is not what they hoped to hear.
+              Rose is my maiden name, and it has been on the door of every business I have run. I started in banking
+              in 1972 and spent thirty-six years in the financial industry, the later years as the owner of Rose
+              Financial Group, my financial planning firm in Magnolia, Texas, which I sold in 2008. It is the name of
+              this business too, because the way I work has not changed. I look at the whole picture, I run the
+              numbers before anyone signs, and I tell people what I see even when it is not what they hoped to hear.
             </p>
             <p>
               After I sold the firm, the city manager of Magnolia took me to lunch and asked me to come work for him.
@@ -137,9 +141,9 @@ export default function AboutPage() {
             </div>
             <h2 className="pt-10 font-display text-3xl text-ink lg:col-span-2">Three careers, one client.</h2>
             <p>
-              I am not a lender, and I have spent a career reading loan products. I know which lenders close in ten
-              days to three weeks, which ones will think about a file instead of running it through a formula, and
-              which ones handle self-employed borrowers well. I am selective about who I send you to for exactly
+              I started out as a banker, and I have spent a career reading loan products. I know which lenders can
+              close in ten days to three weeks, which ones will think about a file instead of running it through a
+              formula, and which ones handle self-employed borrowers well. I am selective about who I send you to for exactly
               that reason.
             </p>
             <p>

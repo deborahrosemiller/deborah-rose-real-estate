@@ -12,9 +12,10 @@ import { SchemaGraph } from '@/components/SchemaGraph'
 import { breadcrumb, faqNode } from '@/lib/schema'
 import { sellersFaq } from '@/content/faq'
 import { getStories } from '@/lib/stories'
+import { regionSentence } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Selling a home in Kingwood, Humble, Porter, Conroe, Magnolia or Tomball',
+  title: 'Selling a home in Kingwood, Humble, Porter, Conroe or Magnolia',
   description:
     'How Deborah Rose Miller sells homes across the Lake Houston area and Montgomery County: pricing from this week’s closed sales, presentation that earns a bidding war, and a timeline you can count on.',
   alternates: { canonical: '/sellers/' },
@@ -85,10 +86,10 @@ export default async function SellersPage() {
   return (
     <>
       <SchemaGraph nodes={[faqNode(sellersFaq), breadcrumb([{ name: 'Home', path: '/' }, { name: 'Sellers', path: '/sellers/' }])]} />
-      <PageIntro eyebrow="Sellers" title="Selling a home in the Lake Houston area or Montgomery County.">
+      <PageIntro eyebrow={regionSentence} title="Selling a home in the Lake Houston area or Montgomery County.">
         <p>
-          A sale is a pricing decision, a timing decision and a presentation decision, made in that order. Get the
-          first one right and the other two get easier.
+          Kingwood, Humble, Porter, Conroe and Magnolia. A sale is a pricing decision, a timing decision and a
+          presentation decision, made in that order. Get the first one right and the other two get easier.
         </p>
       </PageIntro>
 

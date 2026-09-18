@@ -21,7 +21,14 @@
  *     designated broker for Rose Realty LLC. No eXp sponsorship on file.
  *   Brand brief, 2026-09-04: service area is the Lake Houston area
  *     (Kingwood, Humble) and Montgomery County (Porter, Conroe, Magnolia,
- *     Tomball).
+ *     Tomball). SUPERSEDED on Tomball: on the live review of 2026-09-18
+ *     Deborah removed it herself. Tomball is in Harris County, sits
+ *     between her two markets, and she no longer works it. Five towns.
+ *   Deborah, live review 2026-09-18: thirty-six years in the financial
+ *     industry, 1972 to 2008, a banker first and then a financial planner.
+ *     She confirmed 1972 (the year she finished high school and started
+ *     in banking). How long she owned Rose Financial Group is unconfirmed;
+ *     she is checking her resume, so the firm's duration is not stated.
  *
  * OPEN, marked [unknown] in the build report: which brokerage line is
  * correct for public display (eXp Realty LLC vs Rose Realty LLC), the
@@ -62,7 +69,7 @@ export const business = {
    */
   mailingAddress: null as string | null,
   description:
-    'Deborah Rose Miller helps buyers and sellers across the Lake Houston area and Montgomery County: Kingwood, Humble, Porter, Conroe, Magnolia and Tomball. Twenty-five years running a financial planning firm, two years inside Magnolia city hall, and every deal handled with the numbers in front of you.',
+    'Deborah Rose Miller helps buyers and sellers across the Lake Houston area and Montgomery County: Kingwood, Humble, Porter, Conroe and Magnolia. Thirty-six years in the financial industry, two years inside Magnolia city hall, and every deal handled with the numbers in front of you.',
 } as const
 
 export const agent = {
@@ -70,7 +77,7 @@ export const agent = {
   firstName: 'Deborah',
   jobTitle: 'Owner and Broker, Deborah Rose Real Estate',
   headshot: '/about/deborah-rose-miller.webp',
-  headshotAlt: 'Deborah Rose Miller, real estate broker serving Kingwood, Humble, Porter, Conroe, Magnolia and Tomball, Texas',
+  headshotAlt: 'Deborah Rose Miller, real estate broker serving Kingwood, Humble, Porter, Conroe and Magnolia, Texas',
   designations: ['CLHMS', 'RENE'],
   awards: ['Five Star Real Estate Agent, Houston, 2023'],
 } as const
@@ -100,9 +107,11 @@ export const profiles = {
 } as const
 
 /**
- * Her own line, from her HAR profile. Used once, on the About page.
+ * Her own line, from her HAR profile, minus its last sentence. Brett cut
+ * "Relevance is my mission" on the live review of 2026-09-18; it does not
+ * sit under her name as a subhead. Used once, on the About page.
  */
-export const tagline = 'Real estate pro. Connector. Lifelong learner. Community is my business. Relevance is my mission.'
+export const tagline = 'Real estate pro. Connector. Lifelong learner. Community is my business.'
 
 /**
  * Production, from her HAR profile on 2026-09-17. Set as type, in context,
@@ -113,7 +122,14 @@ export const production = {
   leased: 9,
   yearsRealEstate: '10+',
   yearsBusiness: '45+',
-  yearsRoseFinancial: 25,
+  /**
+   * Her whole career in the financial industry, 1972 to 2008, a banker
+   * first and then a financial planner. Deborah confirmed both years on
+   * the live review of 2026-09-18. This is NOT how long she owned Rose
+   * Financial Group; that number is unconfirmed and is not stated anywhere.
+   */
+  yearsFinancialIndustry: 36,
+  financialCareer: '1972 to 2008',
   harTier: 'HAR Platinum agent',
 } as const
 
@@ -128,8 +144,9 @@ export type Area = {
 /**
  * The service area, in the order Deborah names it. Kingwood is the master
  * planned community that straddles the Harris and Montgomery county line;
- * Humble is its neighbor on the Harris side. The four Montgomery County
- * towns follow. Each has a page at /areas/<slug>/.
+ * Humble is its neighbor on the Harris side. Together they are the Lake
+ * Houston area. The three Montgomery County towns follow. Each has a page
+ * at /areas/<slug>/. Tomball was removed by Deborah on 2026-09-18.
  */
 export const areas: Area[] = [
   { slug: 'kingwood', name: 'Kingwood', county: 'Harris County', region: 'Lake Houston area', zip: ['77339', '77345', '77346', '77365'] },
@@ -137,11 +154,17 @@ export const areas: Area[] = [
   { slug: 'porter', name: 'Porter', county: 'Montgomery County', region: 'Montgomery County', zip: ['77365'] },
   { slug: 'conroe', name: 'Conroe', county: 'Montgomery County', region: 'Montgomery County', zip: ['77301', '77302', '77303', '77304', '77384', '77385'] },
   { slug: 'magnolia', name: 'Magnolia', county: 'Montgomery County', region: 'Montgomery County', zip: ['77354', '77355'] },
-  { slug: 'tomball', name: 'Tomball', county: 'Harris County', region: 'Montgomery County', zip: ['77375', '77377'] },
 ]
 
 export const areaNames = areas.map((a) => a.name)
-export const areaSentence = 'Kingwood, Humble, Porter, Conroe, Magnolia and Tomball'
+export const areaSentence = 'Kingwood, Humble, Porter, Conroe and Magnolia'
+/**
+ * The two markets, big to specific. Brett, 2026-09-18: the eyebrow above a
+ * hero headline names the two larger areas; the towns move down into the
+ * paragraph beneath it, so a reader goes from the region to the detail and
+ * every town name still appears on the page.
+ */
+export const regionSentence = 'The Lake Houston area and Montgomery County'
 
 export const nav = {
   header: [
@@ -169,7 +192,7 @@ export const legal = {
     'REALTOR\u00ae is a registered collective membership mark that identifies real estate professionals who are members of the National Association of REALTORS\u00ae and subscribe to its Code of Ethics.',
   membership: 'Member, Houston Association of REALTORS\u00ae',
   serviceAreaSentence:
-    'Serving the Lake Houston area of Kingwood and Humble, and Montgomery County including Porter, Conroe, Magnolia and Tomball, and the surrounding communities.',
+    'Serving the Lake Houston area of Kingwood and Humble, and Montgomery County including Porter, Conroe and Magnolia, and the surrounding communities.',
   trecConsumerProtectionNotice: 'https://www.trec.texas.gov/forms/consumer-protection-notice',
   /**
    * Her Information About Brokerage Services form, as HAR generates it for

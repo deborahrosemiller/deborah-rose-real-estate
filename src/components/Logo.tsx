@@ -2,16 +2,24 @@ import Image from 'next/image'
 import { clsx } from 'clsx'
 
 /**
- * Her real mark. Brett, 2026-09-18: "let's find Deborah's real logo." The
- * only logo on record is the end card of her own listing videos: a red
- * rose with a grey stem and leaf over "DEBORAH ROSE, REAL ESTATE GROUP" in
- * a geometric sans. It was lifted from the 1080p end card, trimmed and
- * keyed to transparency; a vector original from her would replace
- * `public/brand/`.
+ * Her real logo. Deborah emailed `LOGO BLACK.png` on 2026-09-18 during the
+ * live review: the rose with a grey stem and leaf over "DEBORAH ROSE" and
+ * a rule with "REAL ESTATE GROUP", black type, on an opaque white square
+ * at 6400 by 6400. The white was keyed to transparency and the file was
+ * trimmed and split into the three assets in `public/brand/`:
  *
- * `header`: the rose beside the name set in the site's type, so the mark
- * is hers and the wordmark matches the rest of the page.
+ *   deborah-rose-mark.png       the rose alone, 512 square (also the icon)
+ *   deborah-rose-wordmark.png   the type block with its rule, 1600 by 299
+ *   deborah-rose-real-estate-group-logo.png   the whole lockup, 1200 wide
+ *
+ * `header`: the rose beside the wordmark, both hers, in a row that fits
+ * the tightened bar (56px on phones, 64px from sm). The stacked lockup at
+ * that height would be illegible, so the header is her logo re-set on one
+ * line, not re-drawn.
  * `full`: the complete stacked logo, for the footer and the schema.
+ *
+ * The type is black, so this only sits on light surfaces. A reversed
+ * version is on the open items list before it can go on anything dark.
  */
 export function Logo({ className, variant = 'header' }: { className?: string; variant?: 'header' | 'full' }) {
   if (variant === 'full') {
@@ -19,21 +27,25 @@ export function Logo({ className, variant = 'header' }: { className?: string; va
       <Image
         src="/brand/deborah-rose-real-estate-group-logo.png"
         alt="Deborah Rose Real Estate Group"
-        width={788}
-        height={721}
+        width={1200}
+        height={1087}
         sizes="160px"
         className={clsx(className, 'h-auto w-40')}
       />
     )
   }
   return (
-    <span className={clsx(className, 'inline-flex items-center gap-x-2.5 whitespace-nowrap')}>
-      <Image src="/brand/deborah-rose-mark.png" alt="" width={512} height={512} sizes="40px" priority className="size-10 shrink-0" />
-      {/* Stacked, Deborah's request on the live review 2026-09-18: REAL ESTATE under the name, left aligned. Two lines inside the same 44px row. */}
-      <span className="inline-flex flex-col items-start">
-        <span className="font-display text-[21px] leading-none tracking-[-0.01em] text-ink">Deborah Rose</span>
-        <span className="mt-1 text-[9px] font-semibold uppercase leading-none tracking-[0.24em] text-rose">Real Estate</span>
-      </span>
+    <span className={clsx(className, 'inline-flex items-center gap-x-2 whitespace-nowrap sm:gap-x-2.5')}>
+      <Image src="/brand/deborah-rose-mark.png" alt="" width={512} height={512} sizes="40px" priority className="size-9 shrink-0 sm:size-10" />
+      <Image
+        src="/brand/deborah-rose-wordmark.png"
+        alt="Deborah Rose Real Estate Group"
+        width={1600}
+        height={299}
+        sizes="(min-width: 640px) 160px, 139px"
+        priority
+        className="h-[26px] w-auto sm:h-[30px]"
+      />
     </span>
   )
 }

@@ -96,19 +96,4 @@ export const areaContent: Record<string, AreaContent> = {
     deborah:
       'Magnolia is the part of the map I know best. I was a founding member of the Magnolia Rotary Club, a past president of the Greater Magnolia Chamber of Commerce and a director of the Magnolia-Tomball YMCA. The people running the city today are people I served alongside.',
   },
-  tomball: {
-    slug: 'tomball',
-    title: 'Real estate in Tomball, Texas',
-    metaDescription:
-      'Deborah Rose Miller buys and sells homes in Tomball, Texas, in northwest Harris County on SH 249. Call (281) 380-0332.',
-    intro:
-      'Tomball is a city in northwest Harris County on State Highway 249, right at the Montgomery County line and a short drive from Magnolia. Old Town Tomball keeps a walkable main street of shops and restaurants along the railroad depot, and the city hosts the German Heritage Festival each year.',
-    paragraphs: [
-      'The Tomball market runs from older homes near downtown to large master planned communities to the south and west along 249 and the Grand Parkway, with acreage properties toward Magnolia and Pinehurst. Tomball ISD serves most of the city.',
-      'I have not published a story from a Tomball transaction yet. The earlier sales I closed here predate the records I keep digitally, and they will be added as I pull them together.',
-    ],
-    neighborhoods: ['Old Town Tomball', 'SH 249 corridor', 'Pinehurst and the Magnolia line'],
-    deborah:
-      'I served as a director and past chairman of the Magnolia-Tomball YMCA, and Tomball has been part of my working map since my financial planning days. If you are buying or selling here, the first call works the same way as everywhere else.',
-  },
 }

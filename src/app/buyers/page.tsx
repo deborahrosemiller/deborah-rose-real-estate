@@ -12,11 +12,12 @@ import { SchemaGraph } from '@/components/SchemaGraph'
 import { breadcrumb, faqNode } from '@/lib/schema'
 import { buyersFaq } from '@/content/faq'
 import { getStories } from '@/lib/stories'
+import { regionSentence } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Buying a home in Kingwood, Humble, Porter, Conroe, Magnolia or Tomball',
+  title: 'Buying a home in Kingwood, Humble, Porter, Conroe or Magnolia',
   description:
-    'How Deborah Rose Miller works with buyers across the Lake Houston area and Montgomery County: lenders who close in ten days to three weeks, inspections she attends in person, and offers built to win.',
+    'How Deborah Rose Miller works with buyers across the Lake Houston area and Montgomery County: lenders who can close in ten days to three weeks, inspections she attends in person, and offers built to win.',
   alternates: { canonical: '/buyers/' },
 }
 
@@ -31,7 +32,7 @@ const STEPS = [
     label: 'Step two',
     name: 'Financing before showings',
     description:
-      'Your lender decides how fast you can close and how your offer reads to a seller. I introduce you to lenders who close in ten days to three weeks, and you are fully approved before we open a door.',
+      'Your lender decides how fast you can close and how your offer reads to a seller. I introduce you to lenders who can close in ten days to three weeks, and you are fully approved before we open a door.',
   },
   {
     label: 'Step three',
@@ -57,7 +58,7 @@ const BUILT_FOR = [
   {
     name: 'Self-employed and business owners.',
     description:
-      'A tax return that shows every deduction you are entitled to can look thin to the wrong underwriter. I know which lenders read it correctly, because for twenty-five years I was the one preparing my clients for that conversation.',
+      'A tax return that shows every deduction you are entitled to can look thin to the wrong underwriter. I know which lenders read it correctly, because for thirty-six years in banking and financial planning I sat on the other side of that conversation.',
     icon: ScaleIcon,
   },
   {
@@ -85,10 +86,11 @@ export default async function BuyersPage() {
   return (
     <>
       <SchemaGraph nodes={[faqNode(buyersFaq), breadcrumb([{ name: 'Home', path: '/' }, { name: 'Buyers', path: '/buyers/' }])]} />
-      <PageIntro eyebrow="Buyers" title="Buying a home in the Lake Houston area or Montgomery County.">
+      <PageIntro eyebrow={regionSentence} title="Buying a home in the Lake Houston area or Montgomery County.">
         <p>
-          The house is the easy part. The loan, the timeline and the offer are where a purchase is won or lost, and
-          those are the parts I spent twenty-five years in financial planning learning to read.
+          Kingwood, Humble, Porter, Conroe and Magnolia. The house is the easy part. The loan, the timeline and the
+          offer are where a purchase is won or lost, and those are the parts I spent thirty-six years in the financial
+          industry learning to read.
         </p>
       </PageIntro>
 

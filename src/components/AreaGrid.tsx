@@ -7,7 +7,7 @@ import { areas } from '@/lib/site'
 
 /**
  * Tailwind Plus, Marketing, Feature sections, "Simple 3x2 grid" (React,
- * v4.3), from Brett's account 2026-09-17. Six features, six towns. Each
+ * v4.3), from Brett's account 2026-09-17. Five towns, one item each. Each
  * name is a link to its area page; the description is the first sentence
  * of that page. The icon is the same pin on every item, in the rose.
  */
@@ -23,7 +23,7 @@ export function AreaGrid({ className = 'py-24 sm:py-32' }: { className?: string 
             The Lake Houston area and Montgomery County.
           </p>
           <p className="mt-6 text-lg/8 text-ink-soft">
-            Six towns across two counties, and I have lived, worked or served in most of them. Each has its own page
+            Five towns across two counties, and I have lived, worked or served in most of them. Each has its own page
             with the neighborhoods I have closed in and the stories from there.
           </p>
         </div>

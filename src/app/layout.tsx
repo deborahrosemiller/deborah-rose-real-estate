@@ -7,7 +7,7 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { SchemaGraph } from '@/components/SchemaGraph'
 import { agentNode, brokerageNode, personNode, websiteNode } from '@/lib/schema'
-import { business, siteUrl, HIDE_FROM_SEARCH_ENGINES } from '@/lib/site'
+import { business, siteUrl, HIDE_FROM_SEARCH_ENGINES, areaSentence } from '@/lib/site'
 
 import '@/styles/tailwind.css'
 
@@ -28,7 +28,7 @@ const geist = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${business.name}. Kingwood, Humble, Porter, Conroe, Magnolia and Tomball.`,
+    default: `${business.name}. ${areaSentence}.`,
     template: `%s · ${business.name}`,
   },
   description: business.description,

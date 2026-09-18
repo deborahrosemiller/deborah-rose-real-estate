@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { BanknotesIcon, BuildingLibraryIcon, UsersIcon } from '@heroicons/react/20/solid'
 
 import { Container } from '@/components/Container'
@@ -7,13 +8,13 @@ import { Button } from '@/components/Button'
 import { FeatureThree } from '@/components/FeatureThree'
 import { AreaGrid } from '@/components/AreaGrid'
 import { StoryCard } from '@/components/StoryCard'
-import { GoogleProfile } from '@/components/GoogleProfile'
 import { FAQList } from '@/components/FAQList'
 import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
 import { faqNode, videoNode } from '@/lib/schema'
 import { homeFaq } from '@/content/faq'
 import { getStories } from '@/lib/stories'
+import { agent } from '@/lib/site'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
@@ -28,7 +29,7 @@ const HOW = [
   {
     name: 'The numbers first.',
     description:
-      'I owned Rose Financial Group for twenty-five years before I held a real estate license. I read loan products the way other people read listings. I know which lenders close in ten days to three weeks, and which ones understand a self-employed borrower, and that conversation happens before we look at a single house.',
+      'I spent thirty-six years in the financial industry, first as a banker and then as the owner of Rose Financial Group, before I held a real estate license. I read loan products the way other people read listings. I know which lenders can close in ten days to three weeks, and which ones understand a self-employed borrower, and that conversation happens before we look at a single house.',
     href: '/buyers/',
     linkLabel: 'How I work with buyers',
     icon: BanknotesIcon,
@@ -63,7 +64,7 @@ export default async function Home() {
 
       <FeatureThree
         eyebrow="How I work"
-        heading="What twenty-five years of financial planning taught me about buying a house."
+        heading="What thirty-six years in the financial industry taught me about buying a house."
         items={HOW}
         className="border-t border-rule py-24 sm:py-32"
       />
@@ -99,46 +100,73 @@ export default async function Home() {
       <AreaGrid />
 
       {/*
-       * Tailwind Plus, Content sections, "Centered" (React, v4.3): a single
-       * column on the plate width. Brett, 2026-09-18: the portrait here was
-       * the upscaled Google profile photo and it read soft, so the photo is
-       * gone and the type carries the band, the way bestknownbrand.com does.
+       * Tailwind Plus, Content sections, "With image" (React, v4.3): a
+       * portrait beside the copy. History, so it is not undone: the first
+       * build had her 400 by 500 Google profile photo upscaled to half the
+       * viewport and it read soft, so Brett had it removed. On the live
+       * review of 2026-09-18 he asked for her face back, in color: "we don't
+       * see her face, so we need a color photo of her headshot." So the
+       * portrait is here at 192 to 224 CSS pixels wide, which never exceeds
+       * the source's own pixels. A real headshot file is on its way; when
+       * it lands, replace `agent.headshot` and nothing here moves.
+       *
+       * The opening. Brett: "I am Deborah Rose Miller" sounds like a bot.
+       * The heading now says the one thing the section exists to say, the
+       * maiden name, the way she would say it out loud.
        */}
       <section aria-labelledby="about-heading" className="bg-paper py-24 sm:py-32">
         <Container>
-          <div className="mx-auto max-w-3xl">
-            <p id="about-heading" className="text-base/7 font-semibold text-rose">
-              About
-            </p>
-            <h2 className="mt-2 font-display text-[2.5rem]/[1.05] text-pretty text-ink sm:text-5xl/[1.05] lg:text-6xl/[1.04]">
-              I am Deborah Rose Miller.
-            </h2>
-            <p className="mt-8 text-xl/8 text-ink sm:text-2xl/9">
-              Rose is my maiden name and it has been on the door of every business I have run. Community is my
-              business. Relevance is my mission.
-            </p>
-            <div className="mt-10 max-w-2xl space-y-6 text-lg/8 text-ink-soft">
-              <p>
-                I sold my financial planning firm in 2008 after twenty-five years, spent two years helping the City of
-                Magnolia plan its next twenty, and then went into residential real estate because I had bought and sold
-                enough of my own homes to know I could do the job well. I co-founded the Magnolia Education Foundation
-                in 2001 and serve on the board of the Humble ISD Education Foundation today, where I am a past chair.
+          <div className="mx-auto max-w-4xl lg:mx-0 lg:flex lg:items-start lg:gap-x-16">
+            <Image
+              src={agent.headshot}
+              alt={agent.headshotAlt}
+              width={400}
+              height={500}
+              sizes="(min-width: 640px) 224px, 192px"
+              className="h-auto w-48 shrink-0 object-cover sm:w-56 lg:mt-2"
+            />
+            <div className="mt-10 max-w-3xl lg:mt-0">
+              <p id="about-heading" className="text-base/7 font-semibold text-rose">
+                About
+              </p>
+              <h2 className="mt-2 font-display text-[2.5rem]/[1.05] text-pretty text-ink sm:text-5xl/[1.05] lg:text-6xl/[1.04]">
+                Rose is my maiden name.
+              </h2>
+              <p className="mt-8 text-xl/8 text-ink sm:text-2xl/9">
+                It has been on the door of every business I have run, and it is on this one. Community is my business.
+              </p>
+              <div className="mt-10 max-w-2xl space-y-6 text-lg/8 text-ink-soft">
+                <p>
+                  I started in banking in 1972 and spent thirty-six years in the financial industry, the later years as
+                  the owner of Rose Financial Group, which I sold in 2008. I spent two years after that helping the City
+                  of Magnolia plan its next twenty, and then went into residential real estate because I had bought and
+                  sold enough of my own homes to know I could do the job well. I co-founded the Magnolia Education
+                  Foundation in 2001 and serve on the board of the Humble ISD Education Foundation today, where I am a
+                  past chair.
+                </p>
+              </div>
+              <p className="mt-10">
+                <Button variant="quiet" href="/about/">
+                  More about me
+                </Button>
               </p>
             </div>
-            <p className="mt-10">
-              <Button variant="quiet" href="/about/">
-                More about me
-              </Button>
-            </p>
           </div>
         </Container>
       </section>
 
-      <GoogleProfile />
+      {/*
+       * The "Find me on Google" section that sat here was removed on the
+       * live review of 2026-09-18. It duplicated the footer, and the local
+       * search value lives in the RealEstateAgent and LocalBusiness schema
+       * and in name, phone, hours and service area consistency, none of
+       * which needs a visible section. The schema is untouched (layout.tsx),
+       * the footer keeps the phone, email, hours and the Google link.
+       */}
 
       <section id="questions" className="bg-field">
         <Container className="py-24 sm:py-32">
-          <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Things people ask on the first call.</h2>
+          <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Questions my clients ask.</h2>
           <div className="mt-10">
             <FAQList items={homeFaq} />
           </div>

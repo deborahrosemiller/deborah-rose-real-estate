@@ -2,26 +2,28 @@ import { HeroVideo } from '@/components/HeroVideo'
 
 /**
  * ===================================================================
- *  THE INTERIOR HERO. FULL-BLEED FOOTAGE, A DIRECTIONAL SCRIM, WHITE TYPE.
+ *  THE INTERIOR HERO. FULL-BLEED FOOTAGE, A LIGHT WASH, A BAND BEHIND THE TYPE.
  * ===================================================================
  *
  * Brett, 2026-09-18: the homepage footage runs full bleed behind the
  * eyebrow, the H1 and the intro paragraph on Buyers, Sellers, Stories and
- * Areas, with a darker overlay and white type for a cinematic effect. The
- * band's height comes from its aspect ratio (INTRO_BAND below), so the four
- * pages match at every width, and the copy is top aligned at a fixed
- * offset so the eyebrow lands at the same height on every page (Brett,
- * 2026-09-18). A headline that would overflow gets shortened; the band
+ * Areas, with white type. The band's height comes from its aspect ratio
+ * (INTRO_BAND below), so the four pages match at every width, and the copy
+ * is top aligned at a fixed offset so the eyebrow lands at the same height
+ * on every page. A headline that would overflow gets shortened; the band
  * never grows. Everything below the band is text on white.
  *
- * THE SCRIM IS DIRECTIONAL, NOT A FLAT WASH. It is densest where the type
- * sits and opens up across the rest of the frame so the footage still
- * reads as footage. The values were set by measurement against the
- * brightest frame of the graded footage (ffmpeg signalstats, 90th
- * percentile luminance), so that white body text clears 4.5:1 and the
- * headline clears 3:1 in the region the type occupies. See the report in
- * docs/ for the numbers. Deepen the overlay to fix a ratio; never shrink
- * the video.
+ * THE OVERLAY IS TWO LAYERS, SAME AS THE HOMEPAGE HERO. On the live review
+ * of 2026-09-18 Brett cut the overlay by half: "we really want to see the
+ * background." Layer 1 is the ambient wash at half its former density.
+ * Layer 2 is a narrower band directly behind the copy. A soft text shadow
+ * (`.hero-copy`) does the rest. Measured against the brightest frame of
+ * the graded footage; see docs/hero-contrast.md. Never put the global
+ * darkness back to fix a ratio; tighten the band, then the shadow, then
+ * the weight, in that order.
+ *
+ * THE EYEBROW NAMES THE TWO MARKETS, THE PARAGRAPH NAMES THE TOWNS.
+ * Brett, 2026-09-18: big to specific. Every town still appears on the page.
  *
  * The footage is graded (slight desaturation, lifted blacks, slowed to
  * 0.8x) and the poster is a frame from the same graded file, under the
@@ -58,22 +60,25 @@ export function PageIntro({ eyebrow, title, children }: { eyebrow?: string; titl
         />
       </div>
       {/*
-       * The scrim. From lg the type occupies the left 70 percent at 1024
-       * and the left half at 1440, so the gradient runs left to right: 82
-       * percent black at the edge, 80 percent held to the 70 percent mark,
-       * then falling to 30 percent at the far edge. Below lg the type spans
-       * the frame, vertically centered, so the gradient runs bottom to top:
-       * 85 at the foot, 82 held to the 70 percent mark, 55 at the top.
-       * Measured 2026-09-18 against the graded footage's brightest frame
-       * (90th percentile luminance 0.814): white body text at 80 percent
-       * black is 4.93:1 and at 82 percent 5.34:1; the headline clears 3:1
-       * at every stop the type touches.
+       * Layer 1, the ambient wash, at half the density that shipped that
+       * morning. Below lg the copy spans the frame, top aligned, so the
+       * wash runs bottom to top: 42 at the foot, 41 held to the 70 percent
+       * mark, 28 at the top. From lg the copy sits in the left 55 to 70
+       * percent, so the wash runs left to right: 41, 40 held to 70 percent,
+       * 15 at the far edge.
        */}
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/85 via-black/82 via-70% to-black/55 lg:hidden" />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-linear-to-r from-black/82 via-black/80 via-70% to-black/30 lg:block" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/42 via-black/41 via-70% to-black/28 lg:hidden" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-linear-to-r from-black/41 via-black/40 via-70% to-black/15 lg:block" />
+      {/*
+       * Layer 2, the band behind the copy. Below lg the copy hangs from the
+       * top, so the band runs top to bottom and is gone by the foot. From lg
+       * it runs left to right and is gone by the 70 percent mark.
+       */}
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-b from-black/30 via-black/30 via-70% to-transparent lg:hidden" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-linear-to-r from-black/30 via-black/30 via-45% to-transparent to-70% lg:block" />
 
       <div className="mx-auto flex h-full max-w-7xl flex-col justify-start px-6 pt-[13%] pb-8 sm:pt-[11%] md:pt-[9%] lg:px-8 lg:pt-[9%]">
-        <div className="max-w-2xl">
+        <div className="hero-copy max-w-2xl">
           {eyebrow ? <p className="text-base/7 font-semibold text-rose-soft/90">{eyebrow}</p> : null}
           <h1 className="mt-2 font-display text-[2.5rem]/[1.05] tracking-[-0.01em] text-pretty text-cream sm:text-6xl/[1.04] lg:text-[3.75rem]/[1.03]">
             {title}

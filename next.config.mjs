@@ -43,6 +43,9 @@ const nextConfig = {
       { source: '/blog/:slug*', destination: '/stories/:slug*', permanent: true },
       { source: '/case-studies', destination: '/stories/', permanent: true },
       { source: '/neighborhoods', destination: '/areas/', permanent: true },
+      /* Tomball was removed from the service area by Deborah on 2026-09-18. */
+      { source: '/areas/tomball', destination: '/areas/', permanent: true },
+      { source: '/areas/tomball/', destination: '/areas/', permanent: true },
       { source: '/neighborhoods/:slug*', destination: '/areas/:slug*', permanent: true },
     ]
   },

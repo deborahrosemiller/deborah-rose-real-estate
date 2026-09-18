@@ -1,6 +1,6 @@
 # Deborah Rose Real Estate
 
-The website for Deborah Rose Miller, deborahroserealestate.com. Residential real estate across the Lake Houston area and Montgomery County, Texas: Kingwood, Humble, Porter, Conroe, Magnolia and Tomball.
+The website for Deborah Rose Miller, deborahroserealestate.com. Residential real estate across the Lake Houston area and Montgomery County, Texas: Kingwood, Humble, Porter, Conroe and Magnolia.
 
 Built 2026-09-17 by Best Known Brand. Next.js 16, React 19, Tailwind CSS 4, deployed on Vercel.
 

@@ -4,7 +4,7 @@ The code says how the site works. This file carries the decisions the code canno
 
 ## Constraints that a future session would otherwise break in good faith
 
-**No star ratings, review widgets, or review markup anywhere.** Her Google Business Profile sits at 3.0 from 2 reviews. Surfacing that hurts her. Do not add `aggregateRating`, `review`, or a testimonials section with placeholder quotes. Her trust signals are her record: forty-five years in business, twenty-five owning Rose Financial Group, two Houston mayors, Fellow Rotarian, past chair of the Humble ISD Education Foundation, RENE, HAR Platinum. Set those as type.
+**No star ratings, review widgets, or review markup anywhere.** Her Google Business Profile sits at 3.0 from 2 reviews. Surfacing that hurts her. Do not add `aggregateRating`, `review`, or a testimonials section with placeholder quotes. Her trust signals are her record: forty-five years in business, thirty-six in the financial industry, two Houston mayors, Fellow Rotarian, past chair of the Humble ISD Education Foundation, RENE, HAR Platinum. Set those as type.
 
 **No em dashes in site copy.** Brett's standing rule. Rewrite into two sentences. Never an en dash or a double hyphen instead. Deborah said on 2026-09-09 that she likes them; the rule held and she should hear that from Brett, not from a session quietly reversing it.
 
@@ -26,8 +26,26 @@ Every sentence in her first person is derived from her own dictated case study a
 
 - Business name: Deborah Rose Real Estate. Descriptive form: Deborah Rose Real Estate powered by eXp Realty LLC.
 - Phone: (281) 380-0332. Email: deborahroserealtor@gmail.com.
-- Service area: Kingwood, Humble, Porter, Conroe, Magnolia, Tomball. Six area pages, one each.
-- Texas Real Estate Commission license 622917, sourced from the TREC record and her HAR agent key; awaiting Deborah's own confirmation as of 2026-09-18.
+- Service area: Kingwood and Humble (the Lake Houston area), Porter, Conroe and Magnolia (Montgomery County). Five area pages, one each.
+- Texas Real Estate Commission license 622917. Deborah confirmed it out loud on the live review of 2026-09-18.
+
+## Facts Deborah corrected in person, live review 2026-09-18
+
+These override her Brand and Website Copywriting Brief and her HAR bio where they disagree. She is the source of truth.
+
+**Tomball is out.** The brief lists Tomball under Montgomery County. Deborah: "Technically Tomball is in Harris County, not Montgomery County. Let's remove Tomball from this list because I'm so out of touch with it and it doesn't fit within the Lake Houston and Montgomery County." Do not put it back from the brief. The only "Tomball" left on the site is inside the proper name of an organization she served, the Magnolia-Tomball YMCA. `/areas/tomball/` redirects to `/areas/`.
+
+**Thirty-six years in the financial industry, 1972 to 2008.** A banker first, then a financial planner. Both years confirmed by her. This is her career figure and it is the one the site states. It is NOT how long she owned Rose Financial Group. Her HAR bio says twenty-five years as owner; she herself was unsure ("probably 20 years at least") and is checking her resume. Until she confirms, the firm's duration is not stated anywhere: say she owned and ran it and sold it in 2008. Never write "ran a financial planning firm for thirty-six years." Read what each sentence is claiming before touching a number.
+
+**Closing speed is a possibility, never a promise.** "A close can come in ten days to three weeks." "And part of that can include fast closes." Deborah: "it says it CAN, it doesn't guarantee that it will." Brett said "two days to three weeks" on the call; her brief says ten days to three weeks and that is what the site says until she confirms otherwise.
+
+**The geography reads big to specific.** A hero eyebrow names the two markets (the Lake Houston area and Montgomery County); the paragraph under the headline names the five towns. Every town still appears on the page.
+
+**No "Find me on Google" section.** Removed by Brett. The schema and the footer carry the local search signals.
+
+**Her introduction is not "I am Deborah Rose Miller."** Brett: no human introduces themselves that way. The homepage About band opens on the maiden name. "Relevance is my mission" (her HAR tagline) does not sit under her name as a subhead.
+
+**FAQ answers run three lines or fewer on desktop.** Brett's layout rule. About 240 characters.
 
 ## The Tailwind Plus components
 

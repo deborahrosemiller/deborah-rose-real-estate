@@ -100,8 +100,9 @@ export function personNode(): SchemaNode {
     },
     award: agent.awards,
     knowsAbout: [
-      'Residential real estate in Kingwood, Humble, Porter, Conroe, Magnolia and Tomball, Texas',
+      'Residential real estate in Kingwood, Humble, Porter, Conroe and Magnolia, Texas',
       'Financial planning',
+      'Banking and mortgage lending',
       'Municipal planning and zoning',
       'School district governance',
     ],
