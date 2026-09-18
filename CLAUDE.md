@@ -27,7 +27,7 @@ Every sentence in her first person is derived from her own dictated case study a
 - Business name: Deborah Rose Real Estate. Descriptive form: Deborah Rose Real Estate powered by eXp Realty LLC.
 - Phone: (281) 380-0332. Email: deborahroserealtor@gmail.com.
 - Service area: Kingwood, Humble, Porter, Conroe, Magnolia, Tomball. Six area pages, one each.
-- Texas Real Estate Commission license 622917.
+- Texas Real Estate Commission license 622917, sourced from the TREC record and her HAR agent key; awaiting Deborah's own confirmation as of 2026-09-18.
 
 ## The Tailwind Plus components
 
@@ -37,5 +37,6 @@ Every sentence in her first person is derived from her own dictated case study a
 
 - The Google Business Profile's website field still points at har.com. At launch it changes to deborahroserealestate.com. That is a direct Map Pack signal currently handed to HAR.
 - `HIDE_FROM_SEARCH_ENGINES` in `src/lib/site.ts` is `true`. Flip it to `false` at launch.
+- Every host except deborahroserealestate.com answers `X-Robots-Tag: noindex, nofollow` (next.config.mjs, keyed on the request host). Review links on *.vercel.app stay out of Google without anything to undo at launch.
 - `CONTACT_WEBHOOK_URL` must be set on Vercel before the contact form delivers anything.
 - Deploy is push to `main`; Vercel builds. Nothing else.

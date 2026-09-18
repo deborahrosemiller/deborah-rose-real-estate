@@ -10,13 +10,14 @@ Updated after the second build on 2026-09-17. What the site currently says, wher
 - Two markets confirmed: Lake Houston area and Montgomery County. Six towns per the brand brief: Kingwood, Humble, Porter, Conroe, Magnolia, Tomball.
 - Facebook (facebook.com/deborahrose.miller.9) and LinkedIn (linkedin.com/in/roserealty) from her HAR profile, in the footer and the schema.
 - Information About Brokerage Services: linked in the footer, on every page including the homepage, using the IABS page HAR generates for license 622917 (the same link her HAR profile carries). Consumer Protection Notice linked to TREC. Brokerage displayed. Equal Housing statement and mark in the footer.
-- TREC license number 622917: from the TREC license holder record, and her own HAR profile uses it as her agent key in the showings and IABS links. It is in the footer legal block and the schema.
+- TREC license number 622917 is on the site (footer legal block, About credentials, schema). Source: the TREC license holder record in the public research summary, corroborated by her HAR profile, which uses the same number as her agent key. **Deborah confirms it on the call.** It is a compliance-bearing number and it has not yet been read back to her.
 - Footer rebuilt to the yournextstepteam.com pattern (another eXp agent): service area in prose, three link columns, a trust row set as type, and the legal block with agent identification, brokerage identification, both TREC links, the REALTOR mark sentence, the opinions line and Equal Housing.
 - All seventeen case study articles exist as finished pieces and are on the site. The brief's "18" counted her own home, which is one of the seventeen.
 - Photo folders: 22 property folders exist in the archive. Every story has a hero photo except one (below).
 
 ## Facts for Deborah to confirm
 
+0. **TREC license number 622917.** Read it back to her. See above.
 1. **Years at Rose Financial Group.** Site says twenty-five (her HAR bio). Her Five Star bio says three decades; the September brief said two. One number, everywhere.
 2. **Community titles on the About page.** Past president of the Greater Magnolia Chamber (Houston Chronicle, 2016; her own bio says past board member). Nine years on the Magnolia ISD board, two as president. Past chair, Humble ISD Education Foundation. Founding member, Magnolia Rotary Club. Member, Summer Creek Rotary Club. Director, Lake Houston Area Chamber. Director and past chairman, Magnolia-Tomball YMCA. "Served two Houston mayors" is her HAR bio's phrase and is on the About page as written.
 3. **The Porter/New Caney community foundation** from the addendum could not be verified and is not on the site.
