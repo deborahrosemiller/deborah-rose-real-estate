@@ -60,7 +60,7 @@ const STEPS = [
     label: 'Step five',
     name: 'Inspection to closing',
     description:
-      'I attend the inspection, even on new construction, and report the same day with photos. Then I am in communication with the lender and title company. Communication is the key.',
+      'I attend the inspection, even on new construction, and report the same day with photos. Then I am in communication with the lender and the title company daily. Communication is the key.',
   },
 ]
 
