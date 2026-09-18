@@ -4,30 +4,33 @@ import { business, areaSentence } from '@/lib/site'
 
 /**
  * ===================================================================
- *  THE HERO. THE VIDEO PLAYS BEHIND THE WORDS ON EVERY SCREEN.
+ *  THE HERO. FULL-SCREEN FOOTAGE, A DARK GRADIENT, WHITE TYPE.
  * ===================================================================
  *
- * Brett, 2026-09-18, on the phone review: "I prefer if the video was
- * actually playing behind the text in the hero section, not below." So
- * the split hero is gone. The footage runs full bleed for the whole first
- * screen, phones included, and the headline, one sentence and one action
- * sit on a white panel over it. The panel is what keeps the earlier rule
- * intact: no word is ever read against moving pixels.
+ * Brett, 2026-09-18: "On the desktop version, I want the video playing
+ * full screen, and I want the text in front of it. Let's do a darker,
+ * semi-transparent, blacker gradient over the video, and then we can put
+ * the text in white so it'll have more of a cinematic effect." So the
+ * white panel is gone. The footage fills the first screen on every
+ * device, a black gradient sits over it, heaviest at the foot and the
+ * left where the words are, and the copy is set in white directly on it.
+ * The gradient is what keeps the words legible; it is tuned so the
+ * lightest frames in the footage still clear 4.5:1 behind the paragraph.
  *
  * Built from Tailwind Plus, Marketing, Heroes, "Simple centered with
- * background image" (React, v4.3): full-bleed media, a copy block on top.
- * Rethemed: the copy block is a white panel rather than white type on a
- * dark scrim, left aligned, Playfair, the ink button.
+ * background image" (React, v4.3): full-bleed media, a scrim, copy on
+ * top. Rethemed: left aligned, Playfair, the white button.
  *
  * The footage is Deborah's own listing video of a one story estate on
- * nearly two acres in Porter, Montgomery County, cut to forty seconds,
- * muted, at 720 and 1080. Reduced motion shows the poster still.
+ * nearly two acres in Porter, Montgomery County. The title card that
+ * showed the street address was cut on 2026-09-18 at Brett's request.
+ * Muted, forty seconds, 720 and 1080. Reduced motion shows the poster.
  */
 export function Hero() {
   return (
-    <section aria-label="Introduction" className="relative isolate overflow-hidden bg-paper">
-      <div className="relative flex min-h-[calc(100svh-var(--nav-h))] flex-col justify-end sm:min-h-[640px] lg:max-h-[960px]">
-        <div className="absolute inset-0 -z-10">
+    <section aria-label="Introduction" className="relative isolate overflow-hidden bg-night">
+      <div className="relative flex min-h-[calc(100svh-var(--nav-h))] flex-col justify-end sm:min-h-[640px]">
+        <div className="absolute inset-0 -z-20">
           <HeroVideo />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -37,24 +40,27 @@ export function Hero() {
             width={1600}
             height={843}
           />
-          {/* A light foot gradient so the panel's edge reads against bright footage. */}
-          <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/25 to-transparent" />
         </div>
+        {/* The scrim: dark at the foot, darker toward the copy, open at the top right so the footage still breathes. */}
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/80 via-black/45 to-black/15" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-r from-black/50 via-black/10 to-transparent" />
 
-        <div className="mx-auto w-full max-w-7xl px-4 pb-4 sm:px-6 sm:pb-10 lg:px-8">
-          <div className="max-w-xl border border-rule bg-field/95 px-6 py-8 backdrop-blur-sm sm:px-10 sm:py-10">
-            <p className="text-[13px] font-semibold tracking-[0.08em] uppercase text-rose">{areaSentence}</p>
-            <h1 className="mt-4 font-display text-[2.25rem]/[1.05] tracking-[-0.01em] text-pretty text-ink sm:text-[2.75rem]/[1.04] lg:text-[3.25rem]/[1.04]">
+        <div className="mx-auto w-full max-w-7xl px-6 pt-24 pb-14 sm:pb-20 lg:px-8 lg:pb-28">
+          <div className="max-w-2xl">
+            <p className="text-[13px] font-semibold tracking-[0.1em] uppercase text-rose-soft/90">{areaSentence}</p>
+            <h1 className="mt-5 font-display text-[2.5rem]/[1.05] tracking-[-0.01em] text-pretty text-cream sm:text-6xl/[1.03] lg:text-7xl/[1.02]">
               A real estate agent who thinks like a financial planner.
             </h1>
-            <p className="mt-5 text-lg/7 text-ink-soft">
+            <p className="mt-6 max-w-xl text-lg/8 text-cream/85 sm:text-xl/8">
               I ran a financial planning firm for twenty-five years before I sold a single home. Every deal I handle in
               the Lake Houston area and Montgomery County starts with the numbers in front of you, and closes in ten
               days to three weeks when the lender is right.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
-              <Button href="/contact/">Talk with Deborah</Button>
-              <a href={`tel:${business.phoneE164}`} className="tap text-sm/6 text-ink-soft hover:text-ink figure">
+            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <Button variant="onDark" href="/contact/">
+                Talk with Deborah
+              </Button>
+              <a href={`tel:${business.phoneE164}`} className="tap text-sm/6 text-cream/80 hover:text-cream figure">
                 Call or text {business.phone}
               </a>
             </div>
