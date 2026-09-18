@@ -33,6 +33,7 @@ pnpm build          # production build
 | Hero video and poster | `public/hero/` |
 | One hero photo per story, 1600px WebP | `public/stories/` |
 | Headshot, used only at 40px on story bylines and in the schema | `public/about/` |
+| Her logo (from her listing video end card) and the rose mark | `public/brand/` |
 | Tailwind Plus Marketing UI Blocks, the source for every section component | `vendor/tailwind-plus/` |
 
 ## Components
@@ -51,7 +52,7 @@ Every section is built from a Tailwind Plus Marketing block, rethemed to the tok
 | `Credentials` | Stats sections, Two-column description (the list only, as type) |
 | `PageIntro` | Heroes, Simple centered with background image (full-bleed graded footage, directional scrim, white type, fixed height) |
 | `FAQList` | FAQ sections, Two columns |
-| `ClosingAsk` | CTA sections, Simple justified |
+| `ClosingAsk` | CTA sections, Simple centered |
 | `Footer` | Footers, 4-column with company mission |
 | Contact page | Contact sections, Side-by-side grid (header on top) |
 | About page | Header sections, Simple with eyebrow, with a circle portrait beside the H1 |

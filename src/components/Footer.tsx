@@ -92,7 +92,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <Logo />
+            <Logo variant="full" />
             <p className="text-sm/6 text-balance text-ink-soft">
               {legal.serviceAreaSentence} Buyers, sellers, relocations, new construction, acreage and lakefront, and
               the sale and purchase handled together.

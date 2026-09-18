@@ -28,6 +28,8 @@ Updated after the second build on 2026-09-17. What the site currently says, wher
 
 ## Assets still needed
 
+7a. **Logo source file.** The logo on the site was lifted from the 1080p end card of her Riverwalk listing video, trimmed and keyed to transparency. It is clean at header and footer sizes. A vector or high resolution original from whoever designed it (the video editor may have it) would replace the two files in `public/brand/`.
+
 8. **Headshot.** The only photo of Deborah in Drive is her 400 by 500 Google profile photo. On 2026-09-18 Brett had it removed from the homepage About band and the About page, where it was upscaled and read soft; those sections are type only now and are no longer waiting on a photo. It survives at 40 pixels on the story bylines, where it is downscaled and sharp, and as the `image` in the Person and agent schema and Open Graph. A high resolution original is still wanted for those three uses and would replace `public/about/deborah-rose-miller.webp`.
 9. **A photo for the Humble "under contract in a week" story.** There is no archive folder for that property. The card and page render without an image.
 10. **The Magnolia new construction story** uses a builder representative photo from the HAR listing rather than the actual home.

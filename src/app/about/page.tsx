@@ -88,7 +88,7 @@ export default function AboutPage() {
                 height={240}
                 sizes="120px"
                 priority
-                className="size-24 shrink-0 rounded-full object-cover grayscale sm:size-[7.5rem]"
+                className="size-24 shrink-0 rounded-full object-cover sm:size-[7.5rem]"
               />
             </div>
             <p className="mt-8 max-w-2xl text-lg font-medium text-pretty text-ink-soft sm:text-xl/8">{tagline}</p>
@@ -96,9 +96,15 @@ export default function AboutPage() {
         </Container>
       </div>
 
+      {/*
+       * The biography in two columns from lg, so the page uses its width
+       * (Brett, 2026-09-18: too much blank space on the right). Tailwind
+       * Plus, Stats sections, "Two-column description": the paragraph grid.
+       */}
       <div className="bg-field pb-24 sm:pb-32">
         <Container>
-          <div className="max-w-3xl space-y-6 text-lg/8 text-ink-soft">
+          <div className="grid grid-cols-1 gap-x-16 gap-y-6 text-lg/8 text-ink-soft lg:grid-cols-2">
+            <div className="space-y-6">
             <p>
               Rose is my maiden name, and it has been on the door of every business I have run. It was the name of my
               financial planning firm, Rose Financial Group, which I owned and ran for twenty-five years before I sold
@@ -114,6 +120,8 @@ export default function AboutPage() {
               that I had served nine years on the Magnolia ISD school board, two of them as president, and over the
               years I have served two Houston mayors.
             </p>
+            </div>
+            <div className="space-y-6">
             <p>
               The natural next step from city work with developers would have been commercial real estate. I wanted
               residential. I had bought and sold enough of my own homes by then to know what a good agent does and
@@ -126,7 +134,8 @@ export default function AboutPage() {
               Most of the people I work with came through someone I already know, and the clients I enjoy most are
               the ones who let me use what I know on their behalf.
             </p>
-            <h2 className="pt-10 font-display text-3xl text-ink">Three careers, one client.</h2>
+            </div>
+            <h2 className="pt-10 font-display text-3xl text-ink lg:col-span-2">Three careers, one client.</h2>
             <p>
               I am not a lender, and I have spent a career reading loan products. I know which lenders close in ten
               days to three weeks, which ones will think about a file instead of running it through a formula, and

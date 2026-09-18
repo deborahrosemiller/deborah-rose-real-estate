@@ -62,7 +62,7 @@ export function agentNode(): SchemaNode {
     telephone: business.phoneE164,
     email: business.email,
     image: absolute(agent.headshot),
-    logo: absolute('/icon.svg'),
+    logo: absolute('/brand/deborah-rose-real-estate-group-logo.png'),
     description: business.description,
     priceRange: '$$',
     areaServed: areas.map((a) => cityNode(a.name, a.county)),

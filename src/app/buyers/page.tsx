@@ -31,7 +31,7 @@ const STEPS = [
     label: 'Step two',
     name: 'Financing before showings',
     description:
-      'Your lender decides how fast you can close and how your offer reads to a seller. I introduce you to lenders who close in ten days to three weeks and know how to underwrite a self-employed borrower, and we get you fully approved before we open a door.',
+      'Your lender decides how fast you can close and how your offer reads to a seller. I introduce you to lenders who close in ten days to three weeks, and you are fully approved before we open a door.',
   },
   {
     label: 'Step three',

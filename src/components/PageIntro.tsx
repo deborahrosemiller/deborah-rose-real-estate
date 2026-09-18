@@ -9,9 +9,10 @@ import { HeroVideo } from '@/components/HeroVideo'
  * eyebrow, the H1 and the intro paragraph on Buyers, Sellers, Stories and
  * Areas, with a darker overlay and white type for a cinematic effect. The
  * band's height comes from its aspect ratio (INTRO_BAND below), so the four
- * pages match at every width; a headline that would overflow gets
- * shortened, the band never grows. Everything below the band is text on
- * white.
+ * pages match at every width, and the copy is top aligned at a fixed
+ * offset so the eyebrow lands at the same height on every page (Brett,
+ * 2026-09-18). A headline that would overflow gets shortened; the band
+ * never grows. Everything below the band is text on white.
  *
  * THE SCRIM IS DIRECTIONAL, NOT A FLAT WASH. It is densest where the type
  * sits and opens up across the rest of the frame so the footage still
@@ -71,7 +72,7 @@ export function PageIntro({ eyebrow, title, children }: { eyebrow?: string; titl
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/85 via-black/82 via-70% to-black/55 lg:hidden" />
       <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-linear-to-r from-black/82 via-black/80 via-70% to-black/30 lg:block" />
 
-      <div className="mx-auto flex h-full max-w-7xl flex-col justify-center px-6 py-8 sm:py-12 lg:px-8 lg:py-16">
+      <div className="mx-auto flex h-full max-w-7xl flex-col justify-start px-6 pt-[13%] pb-8 sm:pt-[11%] md:pt-[9%] lg:px-8 lg:pt-[9%]">
         <div className="max-w-2xl">
           {eyebrow ? <p className="text-base/7 font-semibold text-rose-soft/90">{eyebrow}</p> : null}
           <h1 className="mt-2 font-display text-[2.5rem]/[1.05] tracking-[-0.01em] text-pretty text-cream sm:text-6xl/[1.04] lg:text-[3.75rem]/[1.03]">

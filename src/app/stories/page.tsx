@@ -24,15 +24,15 @@ export default async function StoriesPage() {
       <SchemaGraph nodes={[breadcrumb([{ name: 'Home', path: '/' }, { name: 'Stories', path: '/stories/' }])]} />
       <PageIntro eyebrow="Stories" title="Real deals in real neighborhoods, one at a time.">
         <p>
-          Every story here is a transaction I handled. I leave out the client&rsquo;s name and the street address and
-          keep everything else: the market that week, the problem, what I did, and the number at the end.
+          Every story here is a transaction I handled, without the client&rsquo;s name or the street address. The
+          market that week, the problem, what I did, and the number at the end.
         </p>
         <p className="text-base/7">
           By area:{' '}
           {areas.map((a, i) => (
             <span key={a.slug}>
               {i > 0 ? ', ' : ''}
-              <Link href={`/areas/${a.slug}/`} className="tap text-ink underline decoration-ink/25 underline-offset-4 hover:decoration-ink">
+              <Link href={`/areas/${a.slug}/`} className="tap text-cream underline decoration-cream/40 underline-offset-4 hover:decoration-cream">
                 {a.name}
               </Link>
             </span>
@@ -40,7 +40,7 @@ export default async function StoriesPage() {
           .
         </p>
       </PageIntro>
-      <section className="pb-20 lg:pb-28">
+      <section className="pt-16 pb-20 sm:pt-24 lg:pb-28">
         <Container>
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {stories.map((story, i) => (
