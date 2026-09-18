@@ -53,13 +53,15 @@ export function Hero() {
          * The scrim, directional. Bottom to top: 85 percent at the foot where
          * the paragraph and button sit, 70 held to the 45 percent mark where
          * the headline sits, 25 at the top. Left to right: 50 at the edge to
-         * clear at the right. A short top band of 55 sits under the overlaid
-         * white nav. Measured 2026-09-18 against the brightest graded frame:
-         * paragraph 7.1:1, headline 5.7:1 at the combined stops they occupy.
+         * clear at the right. A top band, 85 falling through 75 at its
+         * midpoint to clear over 12rem, sits under the overlaid white nav so
+         * the small links hold 4.5:1 over the sky. Measured 2026-09-18 against
+         * the brightest graded frame (90th percentile luminance 0.814):
+         * paragraph and button 8.96:1, headline 5.34:1, nav links 4.93:1.
          */}
         <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/85 via-black/70 via-45% to-black/25" />
         <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-r from-black/50 via-black/15 to-transparent" />
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-40 bg-linear-to-b from-black/55 to-transparent" />
+        <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-48 bg-linear-to-b from-black/85 via-black/75 via-50% to-transparent" />
 
         <div className="mx-auto w-full max-w-7xl px-6 pt-32 pb-12 sm:pb-16 lg:px-8 lg:pb-20">
           <div className="max-w-2xl">
