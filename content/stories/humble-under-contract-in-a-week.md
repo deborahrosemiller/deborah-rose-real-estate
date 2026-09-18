@@ -6,8 +6,8 @@ county: "Harris County"
 area: "humble"
 role: "Seller story"
 summary: "Sellers in Humble needed to get to family who needed them, and every week on the market was a week away. Priced from that day's closed sales, under contract in a week, then worked through the buyer's hurdles with the other agent instead of against them."
-image: null
-alt: null
+image: "/stories/humble-under-contract-in-a-week.webp"
+alt: "Front exterior of a two story brick home with a rotunda entry in Balmoral, Humble, Texas"
 facts:
   - label: "Under contract"
     value: "Within one week of listing"

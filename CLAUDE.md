@@ -14,7 +14,7 @@ The code says how the site works. This file carries the decisions the code canno
 
 **Nothing unclickable may look clickable.** No decorative pills, badges or cards that read as buttons. Eyebrows and metadata are set as type. Stats blocks are set as type with a hairline, never as bordered cards.
 
-**One accent, on labels only.** The garnet rose (`--color-rose`) marks eyebrows, icons, the header underline and selection. It never fills a button. Photos take no radius.
+**One accent, on labels only.** The garnet rose (`--color-rose`) marks eyebrows, icons, the header underline and selection. It never fills a button. Photos take no radius, with one exception: the story page hero photo, which follows buddybuck.com's article layout at Brett's request (2026-09-18), sits in a rounded, shadowed frame straddling the dark band and the white body.
 
 ## Where her voice comes from
 
