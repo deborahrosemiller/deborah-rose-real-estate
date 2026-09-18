@@ -42,7 +42,7 @@ Every section is built from a Tailwind Plus Marketing block, rethemed to the tok
 | Site component | Tailwind Plus block |
 |---|---|
 | `Navbar` | Elements, Headers, With call-to-action |
-| `Hero` | Heroes, Split with image (the image slot carries the video) |
+| `Hero` | Heroes, Simple centered with background image (the video plays full bleed behind a white copy panel) |
 | `FeatureThree` | Feature sections, Simple three column with small icons |
 | `FeatureSplit` | Feature sections, With product screenshot on left |
 | `Timeline` | Stats sections, Timeline (used for a process) |
