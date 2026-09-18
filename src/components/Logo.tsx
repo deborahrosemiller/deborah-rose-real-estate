@@ -36,15 +36,16 @@ export function Logo({ className, variant = 'header' }: { className?: string; va
   }
   return (
     <span className={clsx(className, 'inline-flex items-center gap-x-2 whitespace-nowrap sm:gap-x-2.5')}>
-      <Image src="/brand/deborah-rose-mark.png" alt="" width={512} height={512} sizes="40px" priority className="size-9 shrink-0 sm:size-10" />
+      <Image src="/brand/deborah-rose-mark.png" alt="" width={512} height={512} sizes="40px" priority className="size-8 shrink-0 sm:size-10" />
+      {/* 22px tall on phones so the row clears the Contact button at 375; 30px from sm. */}
       <Image
         src="/brand/deborah-rose-wordmark.png"
         alt="Deborah Rose Real Estate Group"
         width={1600}
         height={299}
-        sizes="(min-width: 640px) 160px, 139px"
+        sizes="(min-width: 640px) 160px, 118px"
         priority
-        className="h-[26px] w-auto sm:h-[30px]"
+        className="h-[22px] w-auto sm:h-[30px]"
       />
     </span>
   )

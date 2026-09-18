@@ -74,12 +74,16 @@ export function Hero() {
         <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-r from-black/30 via-black/15 via-55% to-transparent" />
         {/*
          * Layer 2, the band behind the copy. From lg the copy sits in the
-         * left 55 percent, so the band runs left to right and is gone by
-         * the 65 percent mark. Below lg the copy spans the frame and sits in
-         * the middle, so the band runs bottom to top and is gone at the top.
+         * left 53 percent of the frame, so the band is 50 percent black held
+         * to the halfway mark and gone by 72 percent; the house on the right
+         * sits under the wash alone. Below lg the copy spans the frame from
+         * about 15 percent down, so the band runs top to bottom: clear at
+         * the very top, 50 percent from the 12 percent mark to the foot.
+         * 50 is the measured minimum for the paragraph at 4.5:1 on the
+         * brightest frame (docs/hero-contrast.md); 30 left it at 3.5:1.
          */}
-        <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-linear-to-r from-black/30 via-black/30 via-40% to-transparent to-65% lg:block" />
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/30 via-black/30 via-80% to-transparent lg:hidden" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-linear-to-r from-black/50 via-black/50 via-50% to-transparent to-72% lg:block" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-b from-black/15 via-black/50 via-12% to-black/50 lg:hidden" />
 
         <div className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8">
           <div className="hero-copy max-w-2xl">
@@ -87,7 +91,7 @@ export function Hero() {
             <h1 className="mt-5 font-display text-[2.5rem]/[1.05] tracking-[-0.01em] text-pretty text-cream sm:text-6xl/[1.03] lg:text-7xl/[1.02]">
               I spent thirty-six years in finance. Now I sell real estate.
             </h1>
-            <p className="mt-6 max-w-xl text-lg/8 text-cream/90 sm:text-xl/8">
+            <p className="mt-6 max-w-xl text-lg/8 text-cream sm:text-xl/8">
               I was a banker first and a financial planner after that, and I sold my firm in 2008 before I ever sold a
               house. Every deal I handle in {areaSentence} starts by making sure the numbers work for you. And part of
               that can include fast closes.

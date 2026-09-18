@@ -33,15 +33,16 @@ import { HeroVideo } from '@/components/HeroVideo'
  */
 
 /**
- * THE BAND IS 16:9 FROM md, AND 3:4 BELOW IT. Brett, 2026-09-18: a
- * standard 16 by 9 video header with the type over it. The aspect ratio
+ * THE BAND IS 16:9 FROM md, AND AT LEAST 3:4 BELOW IT. Brett, 2026-09-18:
+ * a standard 16 by 9 video header with the type over it. The aspect ratio
  * gives the four pages identical heights at any viewport width. At phone
  * widths 16:9 is about 210 pixels tall and cannot hold a headline and a
- * paragraph, so below md the band is 3:4 (500 pixels tall at 375) and the
- * vertical padding drops so the longest intro fits with room. Change the
- * ratio here and nowhere else.
+ * paragraph, so below md the band is 3:4 (500 pixels tall at 375) as a
+ * minimum and grows with the copy if an intro runs long, rather than
+ * clipping it (the Buyers intro did, once the towns moved into it on
+ * 2026-09-18). Change the ratio here and nowhere else.
  */
-export const INTRO_BAND = 'aspect-[3/4] md:aspect-video'
+export const INTRO_BAND = 'min-h-[133.34vw] md:min-h-0 md:aspect-video'
 
 export function PageIntro({ eyebrow, title, children }: { eyebrow?: string; title: string; children?: React.ReactNode }) {
   return (
@@ -70,20 +71,25 @@ export function PageIntro({ eyebrow, title, children }: { eyebrow?: string; titl
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-black/42 via-black/41 via-70% to-black/28 lg:hidden" />
       <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-linear-to-r from-black/41 via-black/40 via-70% to-black/15 lg:block" />
       {/*
-       * Layer 2, the band behind the copy. Below lg the copy hangs from the
-       * top, so the band runs top to bottom and is gone by the foot. From lg
-       * it runs left to right and is gone by the 70 percent mark.
+       * Layer 2, the band behind the copy. From lg the copy runs to the 53
+       * percent mark at 2054 wide and to 70 percent at 1024, so the band is
+       * 55 percent black held to 55 percent and gone by 75. Below lg the copy
+       * hangs from the top and can reach the foot, so the band runs top to
+       * bottom: clear at the very top, 55 from the 10 percent mark down.
+       * 55 is the measured minimum for the intro paragraph at 4.5:1 on the
+       * brightest frame with only the horizontal wash under it
+       * (docs/hero-contrast.md).
        */}
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-b from-black/30 via-black/30 via-70% to-transparent lg:hidden" />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-linear-to-r from-black/30 via-black/30 via-45% to-transparent to-70% lg:block" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-b from-black/15 via-black/55 via-10% to-black/55 lg:hidden" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-linear-to-r from-black/55 via-black/55 via-55% to-transparent to-75% lg:block" />
 
-      <div className="mx-auto flex h-full max-w-7xl flex-col justify-start px-6 pt-[13%] pb-8 sm:pt-[11%] md:pt-[9%] lg:px-8 lg:pt-[9%]">
+      <div className="mx-auto flex min-h-[133.34vw] max-w-7xl flex-col justify-start px-6 pt-[13%] pb-10 sm:pt-[11%] md:h-full md:min-h-0 md:pt-[9%] md:pb-8 lg:px-8 lg:pt-[9%]">
         <div className="hero-copy max-w-2xl">
           {eyebrow ? <p className="text-base/7 font-semibold text-rose-soft/90">{eyebrow}</p> : null}
           <h1 className="mt-2 font-display text-[2.5rem]/[1.05] tracking-[-0.01em] text-pretty text-cream sm:text-6xl/[1.04] lg:text-[3.75rem]/[1.03]">
             {title}
           </h1>
-          {children ? <div className="mt-8 space-y-6 text-lg/8 text-pretty text-cream/90 sm:text-xl/8">{children}</div> : null}
+          {children ? <div className="mt-8 space-y-6 text-lg/8 text-pretty text-cream sm:text-xl/8">{children}</div> : null}
         </div>
       </div>
     </div>

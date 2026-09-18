@@ -19,7 +19,7 @@ import { nav, business } from '@/lib/site'
  */
 const linkClass = 'nav-link text-sm/6 tracking-[0.04em] uppercase text-ink-soft hover:text-ink'
 const actionClass =
-  'btn-shine inline-flex min-h-11 items-center justify-center border border-rose bg-rose px-4 text-[12px] font-semibold tracking-[0.16em] text-cream uppercase hover:border-rose-hover hover:bg-rose-hover sm:px-6'
+  'btn-shine inline-flex min-h-11 items-center justify-center border border-rose bg-rose px-3.5 text-[12px] font-semibold tracking-[0.16em] text-cream uppercase hover:border-rose-hover hover:bg-rose-hover sm:px-6'
 
 /**
  * The solid white bar, sticky, on every page. A transparent overlay
@@ -34,7 +34,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-rule bg-field text-ink">
-      <nav aria-label="Global" className="mx-auto flex h-[var(--nav-h)] max-w-7xl items-center justify-between gap-x-6 px-6 lg:px-8">
+      <nav aria-label="Global" className="mx-auto flex h-[var(--nav-h)] max-w-7xl items-center justify-between gap-x-4 px-6 sm:gap-x-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 flex min-h-11 items-center p-1.5 hover:opacity-70">
             <span className="sr-only">{business.name}</span>
@@ -48,7 +48,7 @@ export function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="flex flex-1 items-center justify-end gap-x-6">
+        <div className="flex flex-1 items-center justify-end gap-x-4 sm:gap-x-6">
           <a href={`tel:${business.phoneE164}`} className="tap hidden text-sm/6 whitespace-nowrap text-ink-soft hover:text-ink lg:block figure">
             {business.phone}
           </a>
