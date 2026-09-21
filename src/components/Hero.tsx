@@ -38,8 +38,13 @@ import { business, areaSentence, regionSentence } from '@/lib/site'
  * minus the header with a 100vh fallback. The header stays white and in
  * the flow.
  *
- * THE COPY. Deborah on the live review: "That's because I WAS a financial
- * planner." The headline states the fact, not a simile. The eyebrow names
+ * THE COPY. The headline is Deborah's own intro line, sent in her content
+ * revision of 2026-09-21; it replaced "I spent thirty-six years in finance.
+ * Now I sell real estate." Her introduction that goes with it runs in the
+ * section directly under the hero (page.tsx), because this band is a
+ * fixed full-screen height and would clip three paragraphs. Her line runs
+ * one line longer on a phone, so the phone size of the headline dropped
+ * from 2.5rem to 2.25rem (tighten the type before growing the band). The eyebrow names
  * the two markets, the paragraph names the five towns (big to specific,
  * Brett). Closing speed is a possibility, never a promise: "can include."
  *
@@ -88,8 +93,8 @@ export function Hero() {
         <div className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8">
           <div className="hero-copy max-w-2xl">
             <p className="text-[13px] font-semibold tracking-[0.1em] uppercase text-rose-soft/90">{regionSentence}</p>
-            <h1 className="mt-5 font-display text-[2.5rem]/[1.05] tracking-[-0.01em] text-pretty text-cream sm:text-6xl/[1.03] lg:text-7xl/[1.02]">
-              I spent thirty-six years in finance. Now I sell real estate.
+            <h1 className="mt-5 font-display text-[2.25rem]/[1.05] tracking-[-0.01em] text-pretty text-cream sm:text-6xl/[1.03] lg:text-7xl/[1.02]">
+              Real Estate Experience Backed by 36+ Years of Financial Expertise
             </h1>
             <p className="mt-6 max-w-xl text-lg/8 text-cream sm:text-xl/8">
               I was a banker first and a financial planner after that, and I sold my firm in 2008 before I ever sold a

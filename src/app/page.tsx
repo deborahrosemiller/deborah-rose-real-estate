@@ -62,6 +62,36 @@ export default async function Home() {
       <SchemaGraph nodes={[faqNode(homeFaq), videoNode()]} />
       <Hero />
 
+      {/*
+       * Her own introduction, sent by Deborah on 2026-09-21 with the intro
+       * line that heads the hero. Her words as she wrote them, except the em
+       * dash in the second sentence, split into two sentences per the site's
+       * standing rule. The mission sentence is bold, as she set it. White
+       * tone, so the paper "How I work" band below still alternates.
+       */}
+      <section aria-label="Introduction from Deborah" className="bg-field py-24 sm:py-32">
+        <Container>
+          <div className="max-w-3xl space-y-6 text-lg/8 text-ink-soft">
+            <p className="text-xl/8 text-ink sm:text-2xl/9">
+              Buying or selling a home is more than a real estate transaction. It&rsquo;s one of the most important
+              financial decisions you&rsquo;ll make. Before building my real estate business, I spent more than 36
+              years in the financial services industry, helping individuals and families make informed decisions about
+              their financial futures.
+            </p>
+            <p>
+              Today, I bring that experience to every real estate transaction, combining financial insight, market
+              knowledge, strong negotiation skills, and a genuine commitment to serving my clients.
+            </p>
+            <p>
+              My mission is simple:{' '}
+              <strong className="font-semibold text-ink">
+                to serve, connect, and deliver a real estate experience built on trust, knowledge, and heart.
+              </strong>
+            </p>
+          </div>
+        </Container>
+      </section>
+
       <FeatureThree
         eyebrow="How I work"
         heading="What fifty plus years in finance and municipal government taught me about buying a house."
