@@ -68,8 +68,17 @@ export const business = {
    * is never used in this slot.
    */
   mailingAddress: null as string | null,
+  /**
+   * Other names the same business goes by in public, for schema
+   * alternateName only. "Deborah Rose Real Estate Group" is what her logo
+   * says. "Rose Realty" (her Facebook Page name, her LinkedIn slug, and the
+   * LLC TREC lists her as designated broker for) is deliberately NOT here:
+   * whether that name may be advertised alongside eXp is a brokerage
+   * compliance question for Deborah, not a markup decision.
+   */
+  alternateNames: ['Deborah Rose Real Estate Group'],
   description:
-    'Deborah Rose Miller helps buyers and sellers across the Lake Houston area and Montgomery County: Kingwood, Humble, Porter, Conroe and Magnolia. Fifty plus years across the financial industry, school trustee and municipal government, and every deal handled with the numbers in front of you.',
+    'Deborah Rose Miller is a Texas real estate broker who helps buyers and sellers across the Lake Houston area and Montgomery County: Kingwood, Humble, Porter, Conroe and Magnolia. Fifty plus years across the financial industry, school trustee and municipal government, and every deal handled with the numbers in front of you.',
 } as const
 
 export const agent = {
@@ -87,6 +96,8 @@ export const gbp = {
   placeId: 'ChIJ4bMfCd4dPiQRh-vX6v6e4vU',
   cid: '17717898701727853447',
   mapsUrl: 'https://www.google.com/maps/place/?q=place_id:ChIJ4bMfCd4dPiQRh-vX6v6e4vU',
+  /** The CID form of the same profile, the URL Google itself uses for the entity. Built from the cid above. */
+  cidUrl: 'https://maps.google.com/?cid=17717898701727853447',
   reviewUrl: 'https://g.page/r/CYfr1-r-nuL1EBM/review',
   reviewsUrl: 'https://search.google.com/local/reviews?placeid=ChIJ4bMfCd4dPiQRh-vX6v6e4vU',
   geo: { latitude: 30.2655718, longitude: -95.4617644 },
@@ -97,14 +108,40 @@ export const gbp = {
   ],
 } as const
 
-/** Her public profiles, each read from her own HAR page on 2026-09-17. */
+/**
+ * Her public profiles. The first four were read from her own HAR page on
+ * 2026-09-17. A null is a profile known to exist (or likely) whose URL has
+ * not been confirmed; it stays out of the footer and the schema until a
+ * real URL replaces it. Never fill one in by guessing a handle.
+ */
 export const profiles = {
   har: 'https://www.har.com/deborah-rose-miller/agent_drmiller',
   harListings: 'https://www.har.com/realestatepro/forsale-by-agent/drmiller',
+  /** Her personal LinkedIn profile (the slug is "roserealty", the profile is hers). */
   linkedin: 'https://www.linkedin.com/in/roserealty/',
+  /** Her personal Facebook profile, as HAR links it. */
   facebook: 'https://www.facebook.com/deborahrose.miller.9',
+  /**
+   * TODO(Deborah): the business Facebook Page, "Rose Realty - Deborah Rose
+   * Miller". The Page URL (facebook.com/<page-handle> or
+   * facebook.com/profile.php?id=<number>) is not on file.
+   */
+  facebookPage: null as string | null,
+  /** TODO(Deborah): her YouTube channel URL, if she has one (youtube.com/@<handle>). */
+  youtube: null as string | null,
+  /** TODO(Deborah): her Zillow agent profile URL, if claimed. */
+  zillow: null as string | null,
+  /** TODO(Deborah): her Realtor.com agent profile URL, if claimed. */
+  realtorDotCom: null as string | null,
+  /** TODO(Deborah): her eXp Realty agent page URL, if eXp publishes one. */
+  expAgentPage: null as string | null,
   googleMaps: gbp.mapsUrl,
-} as const
+}
+
+/** Drops the unconfirmed (null) profiles, so a TODO never reaches the markup. */
+export function confirmed(urls: (string | null | undefined)[]): string[] {
+  return urls.filter((u): u is string => Boolean(u))
+}
 
 /**
  * Her own line, from her HAR profile, minus its last sentence. Brett cut

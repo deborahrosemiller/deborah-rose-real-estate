@@ -1,4 +1,4 @@
-import { agent, areas, business, gbp, profiles, siteUrl } from '@/lib/site'
+import { agent, areas, areaSentence, business, confirmed, gbp, profiles, siteUrl } from '@/lib/site'
 
 export type SchemaNode = Record<string, unknown>
 
@@ -52,12 +52,24 @@ export function brokerageNode(): SchemaNode {
  * Business Profile is attached through hasMap and sameAs so the profile
  * and the site describe one business.
  */
+/**
+ * The two markets as places, alongside the five towns. A reader (or an
+ * answer engine) asking about "Montgomery County" or "Lake Houston" should
+ * find the entity without having to know which towns sit inside them.
+ */
+export function regionNodes(): SchemaNode[] {
+  return [
+    { '@type': 'AdministrativeArea', name: 'Montgomery County, Texas' },
+    { '@type': 'Place', name: 'Lake Houston area, Texas' },
+  ]
+}
+
 export function agentNode(): SchemaNode {
   return {
     '@type': ['RealEstateAgent', 'LocalBusiness'],
     '@id': AGENT_ID,
     name: business.name,
-    alternateName: 'Deborah Rose Miller Real Estate Group',
+    alternateName: business.alternateNames,
     url: siteUrl,
     telephone: business.phoneE164,
     email: business.email,
@@ -65,14 +77,35 @@ export function agentNode(): SchemaNode {
     logo: absolute('/brand/deborah-rose-real-estate-group-logo.png'),
     description: business.description,
     priceRange: '$$',
-    areaServed: areas.map((a) => cityNode(a.name, a.county)),
+    areaServed: [...areas.map((a) => cityNode(a.name, a.county)), ...regionNodes()],
     geo: { '@type': 'GeoCoordinates', latitude: gbp.geo.latitude, longitude: gbp.geo.longitude },
     hasMap: gbp.mapsUrl,
     openingHoursSpecification: openingHours(),
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'sales',
+      telephone: business.phoneE164,
+      email: business.email,
+      areaServed: 'US-TX',
+      availableLanguage: 'English',
+    },
+    knowsAbout: [
+      'Residential real estate',
+      'Buying a home',
+      'Selling a home',
+      'New construction',
+      'Relocation',
+      'Mortgage financing for self-employed buyers',
+    ],
     founder: { '@id': PERSON_ID },
     employee: { '@id': PERSON_ID },
     parentOrganization: { '@id': BROKERAGE_ID },
-    sameAs: [gbp.mapsUrl, profiles.har],
+    /*
+     * The business's own profiles: the Google Business Profile (both URL
+     * forms), HAR, and the business Facebook Page once its URL is on file.
+     * Her personal profiles belong to the Person node below.
+     */
+    sameAs: confirmed([gbp.cidUrl, gbp.mapsUrl, profiles.har, profiles.facebookPage, profiles.zillow, profiles.realtorDotCom]),
     knowsLanguage: ['en-US'],
   }
 }
@@ -85,19 +118,40 @@ export function personNode(): SchemaNode {
     givenName: 'Deborah',
     familyName: 'Miller',
     jobTitle: agent.jobTitle,
+    description: `${agent.name} is a Texas real estate broker (TREC license ${business.license}) serving ${areaSentence}, Texas, with ${business.name} powered by ${business.brokerage.name}.`,
     image: absolute(agent.headshot),
     url: `${siteUrl}/about/`,
     telephone: business.phoneE164,
     email: business.email,
     worksFor: { '@id': AGENT_ID },
-    memberOf: { '@id': BROKERAGE_ID },
-    hasCredential: {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'license',
-      name: 'Texas Real Estate Broker License',
-      identifier: business.license,
-      recognizedBy: { '@type': 'Organization', name: 'Texas Real Estate Commission' },
+    memberOf: [
+      { '@id': BROKERAGE_ID },
+      { '@type': 'Organization', name: 'Houston Association of REALTORS', url: 'https://www.har.com' },
+    ],
+    hasOccupation: {
+      '@type': 'Occupation',
+      name: 'Real estate broker',
+      occupationLocation: [...areas.map((a) => cityNode(a.name, a.county)), ...regionNodes()],
     },
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'license',
+        name: 'Texas Real Estate Broker License',
+        identifier: business.license,
+        recognizedBy: { '@type': 'Organization', name: 'Texas Real Estate Commission', url: 'https://www.trec.texas.gov' },
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'designation',
+        name: 'Real Estate Negotiation Expert (RENE)',
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'designation',
+        name: 'Certified Luxury Home Marketing Specialist (CLHMS)',
+      },
+    ],
     award: agent.awards,
     knowsAbout: [
       'Residential real estate in Kingwood, Humble, Porter, Conroe and Magnolia, Texas',
@@ -106,8 +160,26 @@ export function personNode(): SchemaNode {
       'Municipal planning and zoning',
       'School district governance',
     ],
-    sameAs: [profiles.har, profiles.linkedin],
+    sameAs: confirmed([profiles.har, profiles.linkedin, profiles.facebook, profiles.youtube, profiles.expAgentPage]),
     mainEntityOfPage: `${siteUrl}/about/`,
+  }
+}
+
+/**
+ * The About page as a ProfilePage whose main entity is her. This is the
+ * page type Google reads for "who is this person" and it ties the Person
+ * node to one canonical URL.
+ */
+export function profilePageNode(): SchemaNode {
+  return {
+    '@type': 'ProfilePage',
+    '@id': `${siteUrl}/about/#webpage`,
+    url: `${siteUrl}/about/`,
+    name: `About ${agent.name}`,
+    isPartOf: { '@id': WEBSITE_ID },
+    mainEntity: { '@id': PERSON_ID },
+    about: { '@id': PERSON_ID },
+    inLanguage: 'en-US',
   }
 }
 
@@ -117,7 +189,10 @@ export function websiteNode(): SchemaNode {
     '@id': WEBSITE_ID,
     url: siteUrl,
     name: business.name,
+    alternateName: business.alternateNames,
+    description: business.description,
     publisher: { '@id': AGENT_ID },
+    about: { '@id': AGENT_ID },
     inLanguage: 'en-US',
   }
 }
