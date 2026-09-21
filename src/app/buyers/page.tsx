@@ -79,7 +79,7 @@ const BUILT_FOR = [
   {
     name: 'Relocating from out of state.',
     description:
-      'Video walkthroughs of what the listing photos leave out, same-day answers across time zones, and an inspection I attend in person and report room by room. I have closed homes in Kingwood and Magnolia for buyers who first walked in on closing day.',
+      'Video walkthroughs of what the listing photos leave out, same-day answers across time zones, and an inspection I attend in person and report room by room. I have closed homes for buyers who first walked in on closing day.',
     icon: ClockIcon,
   },
   {
