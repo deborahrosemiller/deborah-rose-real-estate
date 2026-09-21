@@ -6,6 +6,8 @@ county: "Harris County"
 area: "kingwood"
 role: "Buyer story"
 summary: "A newly married couple, referred by a past client, bought a pool home in Kingwood's Elm Grove Village without being here for most of it. Video walkthroughs, detailed descriptions and daily coordination made it a smooth transaction."
+image: "/stories/kingwood-pool-home-remote-close.webp"
+alt: "Pool, spa and covered pergola patio behind a brick pool home in Elm Grove Village, Kingwood, Texas"
 facts:
   - label: "List price"
     value: "$349,900"

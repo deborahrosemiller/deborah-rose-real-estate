@@ -27,7 +27,7 @@ Rights note for the deep dive: on the buyer-side stories (Lockridge Harbor, Rega
 | Jul 9 | Humble, selling from another state | Front exterior | 17406 Ebeys Landing Ln, Humble / front-exterior-ebeys-landing-ln-humble-tx.webp | 480 x 319 | Confirmed (brief #7, HAR: $479,900, April 2024) | Was the backyard pool aerial ("not ideal"). Full-size wanted. |
 | Jul 2 | Magnolia, new construction from 1,200 miles away | **None (removed)** | 27287 Lombard Wood Dr, Magnolia. Folder holds the builder's representative photos of the floor plan, not this home; no exterior at all. | | Confirmed property (brief #12, HAR: Highland Homes, $400,505 list) | The "blurry" living room was a builder stock image. A photo of the actual home is needed. |
 | Jun 25 | Porter, downsizing, lock and leave | **None, by decision** | Address not recorded in this repo (brief #17) | | Confirmed (brief #17) | Photo and numbers table removed 2026-09-21 by decision of Brett and Deborah. Runs without a photo permanently; do not add one. |
-| Jun 18 | Kingwood, pool home closed remotely | **None (removed)** | 5329 Shady Maple Dr, Kingwood. Folder holds 16 screenshots (PNG). | | Confirmed (brief #21, HAR: 2,226 sq ft, pool, closed March 2023) | Deborah was right that it was a screenshot. Every file in the folder is one. Real photos needed. |
+| Jun 18 | Kingwood, pool home closed remotely | Pool, spa and pergola patio | Photographer original sent by Deborah 2026-09-21 (Canon, 3000 x 2000), exported 2000 x 1333 WebP, metadata stripped | 3000 x 2000 | Confirmed (brief #21, HAR: 2,226 sq ft, pool, closed March 2023) | Resolved 2026-09-21. The story is about a pool home, so the pool is the right feature shot. |
 | Jun 11 | Humble, timing beat waiting | Front exterior and walkway | Address not recorded in this repo (brief #4) | 296 x 197 | Confirmed (brief #4, her own home; HAR: $560,000 list, $550,000, 19 days) | Was the backyard. Deborah says a better photo exists; the whole folder is 296 pixels wide. Full-size wanted. |
 | Jun 4 | Humble, sell one and buy the next | Front exterior of the home purchased | 12611 Blackstone River Dr, Humble / front-exterior-blackstone-river-humble-tx.jpg | 958 x 797 | Confirmed (brief #13 and #16; HAR: $398,500, May 2022) | Unchanged. The sale side (16706 Lake Prince Ln) has a 958px front exterior too if she prefers the home sold. |
 | May 28 | Kingwood, the right house in a seller's market, Royal Brook | Front exterior | 3330 Lockridge Harbor Ln, Kingwood / front-exterior-lockridge-kingwood-tx.webp | 296 x 197 | **See below** | Was the aerial of the pool (296 x 221). |
@@ -47,11 +47,10 @@ So one of two things is true. Either the May 28 story is right and she was looki
 Full resolution exteriors, ideally the photographer's originals or HAR's full-size gallery:
 
 1. 15639 Scolty Reach Ln, Humble (no archive folder at all).
-2. 5329 Shady Maple Dr, Kingwood (screenshots only).
-3. 6043 Windward Falls Way, Porter (screenshots only).
-4. 16903 Boothill Rd, Stagecoach (screenshots and a 200px aerial).
-5. 27287 Lombard Wood Dr, Magnolia (builder stock only; a photo of the actual home).
-6. Every other property, because the largest file on hand is 958 pixels and most are under 500: Pebble Farms, Riverwalk, Regal Landing, Maple Park, Ehlers Rd, Liberty Knoll, Chinese Fir, Ebeys Landing, the Humble timing story, Blackstone River, Lockridge Harbor.
+2. 6043 Windward Falls Way, Porter (screenshots only).
+3. 16903 Boothill Rd, Stagecoach (screenshots and a 200px aerial).
+4. 27287 Lombard Wood Dr, Magnolia (builder stock only; a photo of the actual home).
+5. Every other property, because the largest file on hand is 958 pixels and most are under 500: Pebble Farms, Riverwalk, Regal Landing, Maple Park, Ehlers Rd, Liberty Knoll, Chinese Fir, Ebeys Landing, the Humble timing story, Blackstone River, Lockridge Harbor.
 
 ## The selection rule going forward (Brett, 2026-09-18)
 
