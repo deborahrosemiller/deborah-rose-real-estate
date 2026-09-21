@@ -44,8 +44,14 @@ export const siteUrl = 'https://deborahroserealestate.com'
 export const HIDE_FROM_SEARCH_ENGINES = true
 
 export const business = {
-  name: 'Deborah Rose Real Estate',
-  legalNote: 'Deborah Rose Real Estate powered by eXp Realty LLC',
+  /**
+   * The official name, everywhere. Brett and Deborah, 2026-09-21: "that's
+   * our official name that we want to use everywhere: Deborah Rose Real
+   * Estate Group." It is what her logo says. The Google Business Profile,
+   * the Facebook Page and the YouTube channel are being renamed to match.
+   */
+  name: 'Deborah Rose Real Estate Group',
+  legalNote: 'Deborah Rose Real Estate Group powered by eXp Realty LLC',
   brokerage: {
     name: 'eXp Realty LLC',
     url: 'https://www.exprealty.com',
@@ -69,12 +75,9 @@ export const business = {
    */
   mailingAddress: null as string | null,
   /**
-   * Her name in the marketplace, in her words (2026-09-21): "What I am in
-   * the marketplace is Deborah Rose Real Estate Group." It is what her logo
-   * says and it is the `name` of the business in the schema. The shorter
-   * `name` above is what the Google Business Profile read as on 2026-09-17
-   * and stays the visible name on the pages until Brett says otherwise; it
-   * is listed as an alternateName so the schema still matches the profile.
+   * The name the Google Business Profile, HAR and the first build used.
+   * Kept as a schema alternateName so every listing still carrying it
+   * resolves to the same business while the renames catch up.
    *
    * NEVER PUBLIC: Rose Realty LLC. Deborah, 2026-09-21: it is her LLC's
    * legal name from when she was her own broker, kept for tax purposes, and
@@ -82,7 +85,6 @@ export const business = {
    * that eXp is her broker. It goes in no page, no alternateName and no
    * legalName.
    */
-  brandName: 'Deborah Rose Real Estate Group',
   alternateNames: ['Deborah Rose Real Estate'],
   description:
     'Deborah Rose Miller is a Texas real estate broker who helps buyers and sellers across the Lake Houston area and Montgomery County: Kingwood, Humble, Porter, Conroe and Magnolia. Fifty plus years across the financial industry, school trustee and municipal government, and every deal handled with the numbers in front of you.',
@@ -91,7 +93,7 @@ export const business = {
 export const agent = {
   name: 'Deborah Rose Miller',
   firstName: 'Deborah',
-  jobTitle: 'Owner and Broker, Deborah Rose Real Estate',
+  jobTitle: 'Owner and Broker, Deborah Rose Real Estate Group',
   headshot: '/about/deborah-rose-miller.webp',
   headshotAlt: 'Deborah Rose Miller, real estate broker serving Kingwood, Humble, Porter, Conroe and Magnolia, Texas',
   designations: ['CLHMS', 'RENE'],
@@ -107,7 +109,6 @@ export const gbp = {
   cidUrl: 'https://maps.google.com/?cid=17717898701727853447',
   reviewUrl: 'https://g.page/r/CYfr1-r-nuL1EBM/review',
   reviewsUrl: 'https://search.google.com/local/reviews?placeid=ChIJ4bMfCd4dPiQRh-vX6v6e4vU',
-  geo: { latitude: 30.2655718, longitude: -95.4617644 },
   hours: [
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], label: 'Monday to Friday', opens: '08:00', closes: '20:00', display: '8 a.m. to 8 p.m.' },
     { days: ['Saturday'], label: 'Saturday', opens: '10:00', closes: '18:00', display: '10 a.m. to 6 p.m.' },
@@ -134,8 +135,15 @@ export const profiles = {
    * facebook.com/profile.php?id=<number>) is not on file.
    */
   facebookPage: null as string | null,
-  /** TODO(Deborah): her YouTube channel URL, if she has one (youtube.com/@<handle>). */
-  youtube: null as string | null,
+  /**
+   * Her canonical YouTube channel, @Deborahroserealtor (9 videos), named by
+   * Deborah on 2026-09-21. Linked by channel ID so a handle or name change
+   * never breaks it. A second channel, @DEBORAHROSEMILLER (two Shorts,
+   * channel UCdFTVD4Kxeo3pyVCBN5WZ4A), was made by accident and is never
+   * linked. When this channel is renamed to the business name, move it from
+   * the Person sameAs to the business sameAs in schema.ts.
+   */
+  youtube: 'https://www.youtube.com/channel/UCRtq39RkmqcwJykYrvg2xcw' as string | null,
   /** TODO(Deborah): her Zillow agent profile URL, if claimed. */
   zillow: null as string | null,
   /** TODO(Deborah): her Realtor.com agent profile URL, if claimed. */

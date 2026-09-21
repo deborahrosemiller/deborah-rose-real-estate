@@ -46,13 +46,6 @@ export function brokerageNode(): SchemaNode {
 }
 
 /**
- * The sitewide entity. One node typed as both RealEstateAgent and
- * LocalBusiness: the first says what the practice is, the second carries
- * hours, geo and the map in the form local search consumes. The Google
- * Business Profile is attached through hasMap and sameAs so the profile
- * and the site describe one business.
- */
-/**
  * The two markets as places, alongside the five towns. A reader (or an
  * answer engine) asking about "Montgomery County" or "Lake Houston" should
  * find the entity without having to know which towns sit inside them.
@@ -64,11 +57,23 @@ export function regionNodes(): SchemaNode[] {
   ]
 }
 
+/**
+ * The sitewide entity. One node typed as both RealEstateAgent and
+ * LocalBusiness: the first says what the practice is, the second carries
+ * hours and the map in the form local search consumes. The Google
+ * Business Profile is attached through hasMap and sameAs so the profile
+ * and the site describe one business.
+ *
+ * No address and no geo coordinates, on purpose. The profile is a service
+ * area business whose hidden address is Deborah's home (Brett,
+ * 2026-09-21); the coordinates a scraper returns for it point at that
+ * home, so they are never published. areaServed carries the location.
+ */
 export function agentNode(): SchemaNode {
   return {
     '@type': ['RealEstateAgent', 'LocalBusiness'],
     '@id': AGENT_ID,
-    name: business.brandName,
+    name: business.name,
     alternateName: business.alternateNames,
     url: siteUrl,
     telephone: business.phoneE164,
@@ -78,7 +83,6 @@ export function agentNode(): SchemaNode {
     description: business.description,
     priceRange: '$$',
     areaServed: [...areas.map((a) => cityNode(a.name, a.county)), ...regionNodes()],
-    geo: { '@type': 'GeoCoordinates', latitude: gbp.geo.latitude, longitude: gbp.geo.longitude },
     hasMap: gbp.mapsUrl,
     openingHoursSpecification: openingHours(),
     contactPoint: {
@@ -118,7 +122,7 @@ export function personNode(): SchemaNode {
     givenName: 'Deborah',
     familyName: 'Miller',
     jobTitle: agent.jobTitle,
-    description: `${agent.name} is a Texas real estate broker (TREC license ${business.license}) serving ${areaSentence}, Texas, with ${business.brandName}, powered by ${business.brokerage.name}.`,
+    description: `${agent.name} is a Texas real estate broker (TREC license ${business.license}) serving ${areaSentence}, Texas, with ${business.name}, powered by ${business.brokerage.name}.`,
     image: absolute(agent.headshot),
     url: `${siteUrl}/about/`,
     telephone: business.phoneE164,
@@ -188,7 +192,7 @@ export function websiteNode(): SchemaNode {
     '@type': 'WebSite',
     '@id': WEBSITE_ID,
     url: siteUrl,
-    name: business.brandName,
+    name: business.name,
     alternateName: business.alternateNames,
     description: business.description,
     publisher: { '@id': AGENT_ID },

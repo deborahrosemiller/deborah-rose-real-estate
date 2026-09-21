@@ -8,7 +8,7 @@ import { Footer } from '@/components/Footer'
 import { SchemaGraph } from '@/components/SchemaGraph'
 import { agentNode, brokerageNode, personNode, websiteNode } from '@/lib/schema'
 import { DEFAULT_OG_IMAGE } from '@/lib/metadata'
-import { agent, business, siteUrl, HIDE_FROM_SEARCH_ENGINES, areaSentence } from '@/lib/site'
+import { agent, business, siteUrl, HIDE_FROM_SEARCH_ENGINES } from '@/lib/site'
 
 import '@/styles/tailwind.css'
 
@@ -29,9 +29,11 @@ const geist = Geist({
 /**
  * The homepage title says who, what and where in one line, because it is
  * the line an answer engine quotes: the business, the person, the job and
- * the towns. Interior pages get "<page> · Deborah Rose Real Estate".
+ * the two markets, Lake Houston first because it is her main market
+ * (Deborah, 2026-09-21). The five towns are in the description. Interior
+ * pages get "<page> · Deborah Rose Real Estate Group".
  */
-const homeTitle = `${business.name} · ${agent.name}, Real Estate Broker in ${areaSentence}, Texas`
+const homeTitle = `${business.name} · ${agent.name}, Real Estate Broker, Lake Houston Area and Montgomery County, Texas`
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

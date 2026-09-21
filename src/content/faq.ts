@@ -39,7 +39,7 @@ export const homeFaq: FaqItem[] = [
   {
     question: 'Who is your broker?',
     answer:
-      'I hold a Texas real estate broker license, number 622917. Deborah Rose Real Estate is powered by eXp Realty LLC, and every transaction runs through that brokerage.',
+      'I hold a Texas real estate broker license, number 622917. Deborah Rose Real Estate Group is powered by eXp Realty LLC, and every transaction runs through that brokerage.',
   },
 ]
 
