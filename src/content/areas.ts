@@ -6,6 +6,8 @@
  * Neighborhood names come from Deborah's own closed transactions in the
  * property archive. If a name is not in the archive it is not listed.
  */
+import { business } from '@/lib/site'
+
 export type AreaContent = {
   slug: string
   title: string
@@ -21,7 +23,7 @@ export const areaContent: Record<string, AreaContent> = {
     slug: 'kingwood',
     title: 'Real estate in Kingwood, Texas',
     metaDescription:
-      'Deborah Rose Miller buys and sells homes in Kingwood, Texas: Royal Brook, Bear Branch Village, Elm Grove Village and the villages along Lake Houston. Call (281) 380-0332.',
+      `Deborah Rose Miller buys and sells homes in Kingwood, Texas: Royal Brook, Bear Branch Village, Elm Grove Village and the villages along Lake Houston. Call ${business.phone}.`,
     intro:
       'Kingwood is a master planned community on the north shore of Lake Houston, about twenty-five miles from downtown Houston along US 59. It has been called the Livable Forest since it opened in the early 1970s, and the name still fits: the villages are laid out under mature pines with a greenbelt trail system running between them.',
     paragraphs: [
@@ -37,7 +39,7 @@ export const areaContent: Record<string, AreaContent> = {
     slug: 'humble',
     title: 'Real estate in Humble, Texas',
     metaDescription:
-      'Deborah Rose Miller buys and sells homes in Humble and Atascocita, Texas: Eagle Springs, Balmoral and the Lake Houston communities. Call (281) 380-0332.',
+      `Deborah Rose Miller buys and sells homes in Humble and Atascocita, Texas: Eagle Springs, Balmoral and the Lake Houston communities. Call ${business.phone}.`,
     intro:
       'Humble sits in northeast Harris County where US 59 meets Beltway 8, next to Bush Intercontinental Airport and a short drive from the west shore of Lake Houston. The city itself is small. The Humble mailing address reaches much further, across Atascocita and the master planned communities along West Lake Houston Parkway.',
     paragraphs: [
@@ -53,7 +55,7 @@ export const areaContent: Record<string, AreaContent> = {
     slug: 'porter',
     title: 'Real estate in Porter, Texas',
     metaDescription:
-      'Deborah Rose Miller buys and sells homes in Porter, Texas: Riverwalk acreage, The Highlands, Azalea District and Royal Brook. Call (281) 380-0332.',
+      `Deborah Rose Miller buys and sells homes in Porter, Texas: Riverwalk acreage, The Highlands, Azalea District and Royal Brook. Call ${business.phone}.`,
     intro:
       'Porter is an unincorporated community in southeast Montgomery County, on US 59 between Kingwood and New Caney. Valley Ranch Town Center anchors the retail at the Grand Parkway interchange, and the 77365 zip code it shares with the north end of Kingwood covers everything from one acre lots to new master planned sections.',
     paragraphs: [
@@ -69,7 +71,7 @@ export const areaContent: Record<string, AreaContent> = {
     slug: 'conroe',
     title: 'Real estate in Conroe, Texas',
     metaDescription:
-      'Deborah Rose Miller buys and sells homes in Conroe, Texas, the Montgomery County seat on I-45 and Lake Conroe. Call (281) 380-0332.',
+      `Deborah Rose Miller buys and sells homes in Conroe, Texas, the Montgomery County seat on I-45 and Lake Conroe. Call ${business.phone}.`,
     intro:
       'Conroe is the county seat of Montgomery County, forty miles north of downtown Houston on I-45. Lake Conroe lies to its west, Sam Houston National Forest to its north, and the city has grown quickly in the last decade as the corridor between The Woodlands and Willis filled in.',
     paragraphs: [
@@ -84,7 +86,7 @@ export const areaContent: Record<string, AreaContent> = {
     slug: 'magnolia',
     title: 'Real estate in Magnolia, Texas',
     metaDescription:
-      'Deborah Rose Miller buys and sells homes in Magnolia, Texas, where she helped write the city’s first comprehensive plan and co-founded the Magnolia Education Foundation. Call (281) 380-0332.',
+      `Deborah Rose Miller buys and sells homes in Magnolia, Texas, where she helped write the city’s first comprehensive plan and co-founded the Magnolia Education Foundation. Call ${business.phone}.`,
     intro:
       'Magnolia sits in western Montgomery County where FM 1488 meets FM 1774, about fifteen miles west of The Woodlands. The city is small and the Magnolia address is large, covering acreage along the farm roads, new master planned communities like NorthGrove, and the Stagecoach area to the south.',
     paragraphs: [
