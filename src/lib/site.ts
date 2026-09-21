@@ -14,8 +14,8 @@
  *     service-area business with no street address shown, phone
  *     +1 281-380-0332, hours below, place ID and CID below, verified.
  *   HAR.com About Me page, read 2026-09-17:
- *     "Deborah Rose Real Estate powered by eXp", office eXp Realty LLC,
- *     One Riverway Ste 1700, Houston TX 77056; designations CLHMS, RENE.
+ *     "Deborah Rose Real Estate powered by eXp", office eXp Realty LLC;
+ *     designations CLHMS, RENE.
  *   TREC license search, per the public research summary of 2026-09-04:
  *     Deborah Rose Miller, license 622917, Broker (Individual), active,
  *     designated broker for Rose Realty LLC. No eXp sponsorship on file.

@@ -4,7 +4,7 @@ Updated after the second build on 2026-09-17. What the site currently says, wher
 
 ## Settled since the first build
 
-- Brokerage line: **Deborah Rose Real Estate powered by eXp Realty LLC**, One Riverway Ste 1700, Houston 77056. From her own HAR profile. TREC's record still lists her as designated broker for Rose Realty LLC; that is now a footnote for her, not a build question.
+- Brokerage line: **Deborah Rose Real Estate powered by eXp Realty LLC**. From her own HAR profile. TREC's record still lists her as designated broker for Rose Realty LLC; that is now a footnote for her, not a build question.
 - Phone (281) 380-0332, confirmed on her Google Business Profile and HAR.
 - Google Business Profile located and wired in: name, phone, hours, coordinates, place ID, Maps link, review link.
 - Two markets confirmed: Lake Houston area and Montgomery County. **Five towns as of the live review on 2026-09-18**: Kingwood and Humble (Lake Houston area), Porter, Conroe and Magnolia (Montgomery County). Deborah removed Tomball herself: it is in Harris County, between her two markets, and she no longer works it. The brief's Tomball entry is superseded; recorded in CLAUDE.md. The Tomball page is deleted and its URL redirects to the areas index.

@@ -6,19 +6,6 @@ county: "Montgomery County"
 area: "porter"
 role: "Buyer story"
 summary: "A couple who had already sold their previous home wanted a low-maintenance place in a community their grandchildren would ask to visit. A brand-new development in Porter with a lazy river turned out to be a strategy, and we closed on the right lot before the phase sold out."
-image: "/stories/porter-downsizing-lock-and-leave.webp"
-alt: "Extended covered back patio of a new townhome in The Highlands community, Porter, Texas"
-facts:
-  - label: "List price"
-    value: "$359,885"
-  - label: "Sold price"
-    value: "$353,000"
-  - label: "Home"
-    value: "3 bed, 3 bath, 1,979 sq ft townhome, built 2023"
-  - label: "Neighborhood"
-    value: "The Highlands, Porter"
-  - label: "Closed"
-    value: "May 2023"
 featured: false
 ---
 
@@ -38,7 +25,7 @@ Beyond the amenity package, the home itself was a true lock-and-leave: a new two
 
 New construction in a freshly opened Montgomery County community comes with its own logistics, and this was very much a get-it-right-the-first-time purchase. Because they had already sold their previous home, we did not have the luxury of a long search-and-reconsider period.
 
-I walked them through the builder's floor plans, compared lot premiums against what they would actually use day to day, and made sure we were not paying for upgrades that would not matter to how they planned to live. Porter has grown quickly over the past several years as buyers look beyond the closer-in Houston suburbs, and new developments here move fast, with some phases selling out within weeks of release. Timing the purchase against builder incentives and lot availability took coordination, and we locked in a lot and finish package that fit both their budget and their vision without the drawn-out back and forth that new construction can involve. We closed in May.
+I walked them through the builder's floor plans, compared lot premiums against what they would actually use day to day, and made sure we were not paying for upgrades that would not matter to how they planned to live. Porter has grown quickly over the past several years as buyers look beyond the closer-in Houston suburbs, and new developments here move fast, with some phases selling out within weeks of release. Timing the purchase against builder incentives and lot availability took coordination, and we locked in a lot and finish package that fit both their budget and their vision without the drawn-out back and forth that new construction can involve.
 
 ## What "home" means at this stage
 
