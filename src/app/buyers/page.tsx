@@ -60,8 +60,12 @@ const STEPS = [
   {
     label: 'Step five',
     name: 'Inspection to closing',
+    // Deborah's rewrite, 2026-09-21. Her em dashes: the aside around "even on new
+    // construction" is set in commas, and the closing line is split into two
+    // sentences (site rule). The closing line is bold, as she set it.
     description:
-      'I attend the inspection, even on new construction, and report the same day with photos. Then I am in communication with the lender and the title company daily. Communication is the key.',
+      'I stay personally involved from inspection through closing. I attend the inspection, even on new construction, and provide a same-day update with photos. From there, I stay in close communication with the lender and title company, keeping the transaction moving and my clients informed every step of the way.',
+    closing: 'Because in real estate, communication isn’t just important. It’s essential.',
   },
 ]
 

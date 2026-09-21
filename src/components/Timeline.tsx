@@ -1,6 +1,7 @@
 import { Container } from '@/components/Container'
 
-export type TimelineItem = { label: string; name: string; description: string }
+/** `closing` is an optional last line set in bold, for a step that ends on one (Buyers step five). */
+export type TimelineItem = { label: string; name: string; description: string; closing?: string }
 
 /**
  * Started as Tailwind Plus, Marketing, Stats sections, "Timeline" (React,
@@ -27,6 +28,7 @@ export function Timeline({ items }: { items: TimelineItem[] }) {
               <p className="text-sm/6 font-semibold text-rose">{item.label}</p>
               <p className="mt-4 font-display text-xl/7 text-ink">{item.name}</p>
               <p className="mt-3 text-base/7 text-ink-soft">{item.description}</p>
+              {item.closing ? <p className="mt-3 text-base/7 font-semibold text-ink">{item.closing}</p> : null}
             </li>
           ))}
         </ol>
