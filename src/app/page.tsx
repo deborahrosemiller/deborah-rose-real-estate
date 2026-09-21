@@ -45,7 +45,8 @@ const HOW = [
   {
     name: 'Built through the community.',
     description:
-      'I built my financial planning firm through the Chamber of Commerce and Rotary, and I built this business the same way. Most of the people I work with arrive through someone I already know, and several of the stories on this site started as a referral from an existing client.',
+      // Deborah's rewrite, 2026-09-21. The em dash after "served" is split into two sentences (site rule).
+      'Community involvement has always been at the heart of how I do business. I built my financial planning firm through relationships formed in the Chamber of Commerce, Rotary and the communities I served. And I’ve built my real estate business the same way. Today, much of my business comes from referrals and long-standing relationships. In fact, many of the stories shared on this site began with something very simple: someone I had served introducing me to someone they cared about.',
     href: '/stories/',
     linkLabel: 'Read the stories',
     icon: UsersIcon,
@@ -106,11 +107,13 @@ export default async function Home() {
             <h2 id="stories-heading" className="text-base/7 font-semibold text-rose">
               Stories from the field
             </h2>
+            {/* Deborah's heading and subtext, 2026-09-21. The subtext's em dash is split into two sentences (site rule). */}
             <p className="mt-2 font-display text-[2.25rem]/[1.1] text-balance text-ink sm:text-5xl/[1.05]">
-              Real deals in real neighborhoods.
+              Real deals. Real neighborhoods. Real results.
             </p>
             <p className="mt-6 text-lg/8 text-ink-soft">
-              Each one is a transaction I handled, with the numbers that mattered and what I would do again.
+              A look inside actual transactions I&rsquo;ve handled. The challenges, the decisions, and what made the
+              difference.
             </p>
           </div>
           <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
