@@ -55,7 +55,7 @@ const STEPS = [
     label: 'Step four',
     name: 'The offer',
     description:
-      'Price is one lever. The close date, the contingencies, the earnest money and a lender the listing agent trusts are the others. I have won bidding wars on how tight the contract was.',
+      'Price is one lever. The close date, the contingencies, the earnest money and a lender the listing agent trusts are the others. I have won bidding wars on how tight the contract was written.',
   },
   {
     label: 'Step five',
