@@ -6,15 +6,17 @@ import { INTRO_BAND } from '@/components/PageIntro'
 import { Credentials } from '@/components/Credentials'
 import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
-import { breadcrumb } from '@/lib/schema'
+import { pageMetadata } from '@/lib/metadata'
+import { breadcrumb, profilePageNode } from '@/lib/schema'
 import { agent, business, production, tagline } from '@/lib/site'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'About Deborah Rose Miller',
   description:
     'Deborah Rose Miller spent thirty-six years in the financial industry, a banker and then the owner of Rose Financial Group, served nine years on the Magnolia ISD school board, helped write the City of Magnolia’s first comprehensive plan, and now sells homes across the Lake Houston area and Montgomery County.',
-  alternates: { canonical: '/about/' },
-}
+  path: '/about/',
+  openGraph: { type: 'profile', firstName: 'Deborah', lastName: 'Miller' },
+})
 
 const SERVICE = [
   { name: 'Magnolia Education Foundation', detail: 'Co-founder and founding president, 2001' },
@@ -76,7 +78,7 @@ function Rows({ rows }: { rows: { name: string; detail: string }[] }) {
 export default function AboutPage() {
   return (
     <>
-      <SchemaGraph nodes={[breadcrumb([{ name: 'Home', path: '/' }, { name: 'About', path: '/about/' }])]} />
+      <SchemaGraph nodes={[profilePageNode(), breadcrumb([{ name: 'Home', path: '/' }, { name: 'About', path: '/about/' }])]} />
 
       {/* The same band height token as the video headers, so the five secondary pages match (Brett, 2026-09-18). */}
       <div className={`flex flex-col justify-center bg-field py-10 ${INTRO_BAND}`}>

@@ -4,14 +4,15 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon, BuildingOffice2Icon } f
 import { Container } from '@/components/Container'
 import { ContactForm } from '@/components/ContactForm'
 import { SchemaGraph } from '@/components/SchemaGraph'
+import { pageMetadata } from '@/lib/metadata'
 import { breadcrumb } from '@/lib/schema'
 import { business, gbp, areaSentence } from '@/lib/site'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Contact Deborah Rose Miller',
   description: `Call or text ${business.phone}, email ${business.email}, or send a note. Serving ${areaSentence}, Texas.`,
-  alternates: { canonical: '/contact/' },
-}
+  path: '/contact/',
+})
 
 /**
  * Tailwind Plus, Marketing, Contact sections, "Side-by-side grid" (React,

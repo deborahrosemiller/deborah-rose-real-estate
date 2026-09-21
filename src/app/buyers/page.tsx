@@ -9,17 +9,18 @@ import { StoryCard } from '@/components/StoryCard'
 import { FAQList } from '@/components/FAQList'
 import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
+import { pageMetadata } from '@/lib/metadata'
 import { breadcrumb, faqNode } from '@/lib/schema'
 import { buyersFaq } from '@/content/faq'
 import { getStories } from '@/lib/stories'
 import { regionSentence } from '@/lib/site'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Buying a home in Kingwood, Humble, Porter, Conroe or Magnolia',
   description:
     'How Deborah Rose Miller works with buyers across the Lake Houston area and Montgomery County: lenders who can close in ten days to three weeks, inspections she attends in person, and offers built to win.',
-  alternates: { canonical: '/buyers/' },
-}
+  path: '/buyers/',
+})
 
 /**
  * The five steps. Brett, 2026-09-18: every paragraph runs the same number

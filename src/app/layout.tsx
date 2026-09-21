@@ -7,7 +7,8 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { SchemaGraph } from '@/components/SchemaGraph'
 import { agentNode, brokerageNode, personNode, websiteNode } from '@/lib/schema'
-import { business, siteUrl, HIDE_FROM_SEARCH_ENGINES, areaSentence } from '@/lib/site'
+import { DEFAULT_OG_IMAGE } from '@/lib/metadata'
+import { agent, business, siteUrl, HIDE_FROM_SEARCH_ENGINES, areaSentence } from '@/lib/site'
 
 import '@/styles/tailwind.css'
 
@@ -25,22 +26,34 @@ const geist = Geist({
   display: 'swap',
 })
 
+/**
+ * The homepage title says who, what and where in one line, because it is
+ * the line an answer engine quotes: the business, the person, the job and
+ * the towns. Interior pages get "<page> · Deborah Rose Real Estate".
+ */
+const homeTitle = `${business.name} · ${agent.name}, Real Estate Broker in ${areaSentence}, Texas`
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${business.name}. ${areaSentence}.`,
+    default: homeTitle,
     template: `%s · ${business.name}`,
   },
   description: business.description,
+  applicationName: business.name,
+  authors: [{ name: agent.name, url: `${siteUrl}/about/` }],
+  creator: agent.name,
+  publisher: business.name,
   openGraph: {
     type: 'website',
-    url: siteUrl,
+    url: '/',
     siteName: business.name,
-    title: business.name,
+    locale: 'en_US',
+    title: homeTitle,
     description: business.description,
-    images: [{ url: '/hero/porter-estate-poster.webp', width: 1600, height: 843 }],
+    images: [DEFAULT_OG_IMAGE],
   },
-  twitter: { card: 'summary_large_image' },
+  twitter: { card: 'summary_large_image', title: homeTitle, description: business.description },
   robots: HIDE_FROM_SEARCH_ENGINES ? { index: false, follow: false } : { index: true, follow: true },
 }
 

@@ -9,17 +9,18 @@ import { StoryCard } from '@/components/StoryCard'
 import { FAQList } from '@/components/FAQList'
 import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
+import { pageMetadata } from '@/lib/metadata'
 import { breadcrumb, faqNode } from '@/lib/schema'
 import { sellersFaq } from '@/content/faq'
 import { getStories } from '@/lib/stories'
 import { regionSentence } from '@/lib/site'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Selling a home in Kingwood, Humble, Porter, Conroe or Magnolia',
   description:
     'How Deborah Rose Miller sells homes across the Lake Houston area and Montgomery County: pricing from this week’s closed sales, presentation that earns a bidding war, and a timeline you can count on.',
-  alternates: { canonical: '/sellers/' },
-}
+  path: '/sellers/',
+})
 
 /**
  * The five steps, in Deborah's words from the live review of 2026-09-18.

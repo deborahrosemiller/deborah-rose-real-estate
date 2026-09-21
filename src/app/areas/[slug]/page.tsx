@@ -8,6 +8,7 @@ import { Heading, Eyebrow } from '@/components/Text'
 import { StoryCard } from '@/components/StoryCard'
 import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
+import { pageMetadata } from '@/lib/metadata'
 import { absolute, AGENT_ID, BROKERAGE_ID, breadcrumb, cityNode } from '@/lib/schema'
 import { areaContent } from '@/content/areas'
 import { agent, areas, business } from '@/lib/site'
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const c = areaContent[slug]
   if (!c) return {}
-  return { title: c.title, description: c.metaDescription, alternates: { canonical: `/areas/${slug}/` } }
+  return pageMetadata({ title: c.title, description: c.metaDescription, path: `/areas/${slug}/` })
 }
 
 export default async function AreaPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -41,7 +42,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           /*
            * A narrower RealEstateAgent node for this one city, identified by
            * this page's URL and tied back to the sitewide entity. The
-           * sitewide node says "serves these six towns"; this one says
+           * sitewide node says "serves these five towns"; this one says
            * "serves this town, and here is the page about it."
            */
           {

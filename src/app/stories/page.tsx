@@ -6,16 +6,17 @@ import { PageIntro } from '@/components/PageIntro'
 import { StoryCard } from '@/components/StoryCard'
 import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
+import { pageMetadata } from '@/lib/metadata'
 import { breadcrumb } from '@/lib/schema'
 import { areas } from '@/lib/site'
 import { getStories } from '@/lib/stories'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Every transaction has a story',
   description:
     'Real transactions across the Lake Houston area and Montgomery County, in Kingwood, Humble, Porter, Conroe and Magnolia, told by Deborah Rose Miller with the numbers that mattered.',
-  alternates: { canonical: '/stories/' },
-}
+  path: '/stories/',
+})
 
 /**
  * The headline is Deborah's line, the subhead is Brett's (live review

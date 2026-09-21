@@ -7,6 +7,7 @@ import { Container } from '@/components/Container'
 import { StoryCard } from '@/components/StoryCard'
 import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
+import { pageMetadata } from '@/lib/metadata'
 import { absolute, AGENT_ID, PERSON_ID, breadcrumb, imageNode } from '@/lib/schema'
 import { agent, areas, areaSentence, business, siteUrl } from '@/lib/site'
 import { formatDate, getStories, getStory } from '@/lib/stories'
@@ -20,19 +21,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const story = await getStory(slug)
   if (!story) return {}
-  return {
+  return pageMetadata({
     title: story.title,
     description: story.summary,
-    alternates: { canonical: `/stories/${story.slug}/` },
-    openGraph: {
-      type: 'article',
-      title: story.title,
-      description: story.summary,
-      publishedTime: story.date,
-      authors: [agent.name],
-      images: story.image ? [{ url: story.image, width: 1600, height: 1067 }] : undefined,
-    },
-  }
+    path: `/stories/${story.slug}/`,
+    image: story.image ? { url: story.image, width: 1600, height: 1067 } : undefined,
+    openGraph: { type: 'article', publishedTime: story.date, authors: [agent.name] },
+  })
 }
 
 /**
