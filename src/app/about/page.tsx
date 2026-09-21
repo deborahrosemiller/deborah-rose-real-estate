@@ -124,9 +124,9 @@ export default function AboutPage() {
               After I sold the firm, the city manager of Magnolia took me to lunch and asked me to come work for him.
               I spent two years as the city&rsquo;s Economic Development Coordinator and stayed a second year as an
               independent contractor. I helped write Magnolia&rsquo;s first comprehensive plan, worked directly with
-              developers, and sat in the meetings where zoning and the city&rsquo;s boundaries were decided. Before
-              that I had served nine years on the Magnolia ISD school board, two of them as president, and over the
-              years I have served two Houston mayors.
+              developers, and sat in the meetings where zoning and the city&rsquo;s boundaries were decided. I did
+              that while serving as a Magnolia ISD school trustee, a seat I held for nine years, two of them as
+              president. Over the years I have also served two Houston mayors.
             </p>
             </div>
             <div className="space-y-6">
