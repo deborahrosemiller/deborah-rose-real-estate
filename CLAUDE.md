@@ -39,6 +39,8 @@ Every sentence in her first person is derived from her own dictated case study a
 `src/lib/site.ts` is the only file that types the business name, phone, email, license number, brokerage, hours, service area, coordinates, profile URLs or Google Business Profile IDs. Change a fact there and every page, the footer and the schema follow.
 
 - Business name: Deborah Rose Real Estate. Descriptive form: Deborah Rose Real Estate powered by eXp Realty LLC.
+- Marketplace name, Deborah, 2026-09-21: **Deborah Rose Real Estate Group** (what her logo says). It is the business `name` in the schema (`business.brandName`), with "Deborah Rose Real Estate" as the alternateName to match the Google Business Profile. Not "Deborah Rose Miller Real Estate Group." Her business card reads Deborah Rose Miller, her full name.
+- **Rose Realty LLC is never public.** It is her LLC's legal name from when she was her own broker, kept for tax purposes. She does not use it publicly because it conflicts with eXp's rules now that eXp is her broker. No page, no alternateName, no legalName, even though TREC and her old Facebook Page name carry it.
 - Phone: (281) 380-0332. Email: deborahroserealtor@gmail.com.
 - Service area: Kingwood and Humble (the Lake Houston area), Porter, Conroe and Magnolia (Montgomery County). Five area pages, one each.
 - Texas Real Estate Commission license 622917. Deborah confirmed it out loud on the live review of 2026-09-18.

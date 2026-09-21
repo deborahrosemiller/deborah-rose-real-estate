@@ -13,7 +13,7 @@ export const dynamic = 'force-static'
 export async function GET() {
   const stories = await getStories()
   const lines = [
-    `# ${business.name}`,
+    `# ${business.brandName}`,
     '',
     `> ${business.description}`,
     '',

@@ -69,14 +69,21 @@ export const business = {
    */
   mailingAddress: null as string | null,
   /**
-   * Other names the same business goes by in public, for schema
-   * alternateName only. "Deborah Rose Real Estate Group" is what her logo
-   * says. "Rose Realty" (her Facebook Page name, her LinkedIn slug, and the
-   * LLC TREC lists her as designated broker for) is deliberately NOT here:
-   * whether that name may be advertised alongside eXp is a brokerage
-   * compliance question for Deborah, not a markup decision.
+   * Her name in the marketplace, in her words (2026-09-21): "What I am in
+   * the marketplace is Deborah Rose Real Estate Group." It is what her logo
+   * says and it is the `name` of the business in the schema. The shorter
+   * `name` above is what the Google Business Profile read as on 2026-09-17
+   * and stays the visible name on the pages until Brett says otherwise; it
+   * is listed as an alternateName so the schema still matches the profile.
+   *
+   * NEVER PUBLIC: Rose Realty LLC. Deborah, 2026-09-21: it is her LLC's
+   * legal name from when she was her own broker, kept for tax purposes, and
+   * she does not use it publicly because it conflicts with eXp's rules now
+   * that eXp is her broker. It goes in no page, no alternateName and no
+   * legalName.
    */
-  alternateNames: ['Deborah Rose Real Estate Group'],
+  brandName: 'Deborah Rose Real Estate Group',
+  alternateNames: ['Deborah Rose Real Estate'],
   description:
     'Deborah Rose Miller is a Texas real estate broker who helps buyers and sellers across the Lake Houston area and Montgomery County: Kingwood, Humble, Porter, Conroe and Magnolia. Fifty plus years across the financial industry, school trustee and municipal government, and every deal handled with the numbers in front of you.',
 } as const
