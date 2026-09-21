@@ -33,7 +33,7 @@ export const areaContent: Record<string, AreaContent> = {
     ],
     neighborhoods: ['Royal Brook at Kingwood', 'Bear Branch Village', 'Elm Grove Village', 'Kingwood Village pool homes'],
     deborah:
-      'I have represented buyers and sellers across Kingwood, from 1980s homes backing to the greenbelt in Bear Branch Village to new construction in Royal Brook. I am a director of the Lake Houston Area Chamber of Commerce and a member of the Summer Creek Rotary Club, which keeps me in the same rooms as the people who live and work here.',
+      'I have represented buyers and sellers across Kingwood, from 1980s homes backing to the greenbelt in Bear Branch Village to new construction in Royal Brook. I am a past director of the Lake Houston Partnership and serve on the Humble ISD Education Foundation Board of Directors, which keeps me in the same rooms as the people who live and work here.',
   },
   humble: {
     slug: 'humble',
