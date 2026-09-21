@@ -28,20 +28,13 @@ export function openingHours() {
   }))
 }
 
+/** The brokerage, by name and URL only; see business.brokerage in site.ts for why there is no address. */
 export function brokerageNode(): SchemaNode {
   return {
     '@type': 'Organization',
     '@id': BROKERAGE_ID,
     name: business.brokerage.name,
     url: business.brokerage.url,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'One Riverway, Ste. 1700',
-      addressLocality: 'Houston',
-      addressRegion: 'TX',
-      postalCode: '77056',
-      addressCountry: 'US',
-    },
   }
 }
 

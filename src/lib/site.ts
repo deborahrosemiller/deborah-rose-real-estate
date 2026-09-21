@@ -52,10 +52,16 @@ export const business = {
    */
   name: 'Deborah Rose Real Estate Group',
   legalNote: 'Deborah Rose Real Estate Group powered by eXp Realty LLC',
+  /**
+   * No address, on purpose. Deborah, 2026-09-21: eXp's Houston office
+   * address (One Riverway, in the Galleria area) is not to be shown; she
+   * does not want the business tied to that part of Houston, which is
+   * outside her markets. The brokerage is named wherever the rules require
+   * it; its address appears nowhere on the site or in the schema.
+   */
   brokerage: {
     name: 'eXp Realty LLC',
     url: 'https://www.exprealty.com',
-    address: 'One Riverway, Ste. 1700, Houston, TX 77056',
   },
   phone: '(281) 380-0332',
   phoneE164: '+12813800332',

@@ -97,8 +97,6 @@ export default function ContactPage() {
                 </dt>
                 <dd>
                   {business.legalNote}
-                  <br />
-                  {business.brokerage.address}
                 </dd>
               </div>
             </dl>

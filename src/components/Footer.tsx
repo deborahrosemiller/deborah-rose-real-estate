@@ -194,7 +194,7 @@ export function Footer() {
               </p>
               <p>
                 {agent.name} is a licensed real estate broker in the State of Texas, affiliated with eXp Realty LLC.{' '}
-                {legal.brokerageSentence} {business.brokerage.name}, {business.brokerage.address}. {legal.membership}.
+                {legal.brokerageSentence} {legal.membership}.
                 Equal Housing Opportunity.
               </p>
               <p className="flex flex-wrap gap-x-4 gap-y-1 text-[13px]/6">
