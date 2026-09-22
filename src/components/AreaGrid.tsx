@@ -23,7 +23,7 @@ export function AreaGrid({ tone = 'field', className = 'py-24 sm:py-32' }: { ton
             The Lake Houston area and Montgomery County
           </p>
           <p className="mt-6 text-lg/8 text-ink-soft">
-            Five towns across two counties, and I have lived, worked or served in most of them. Each has its own page
+            I have lived, worked or served in most of these places. Each has its own page
             with the neighborhoods I have closed in and the stories from there.
           </p>
         </div>

@@ -98,8 +98,8 @@ export default async function SellersPage() {
       <SchemaGraph nodes={[faqNode(sellersFaq), breadcrumb([{ name: 'Home', path: '/' }, { name: 'Sellers', path: '/sellers/' }])]} />
       <PageIntro eyebrow={regionSentence} title="Selling a home in the Lake Houston area or Montgomery County">
         <p>
-          Kingwood, Humble, Porter, Conroe and Magnolia. A sale is a pricing decision, a timing decision, and a
-          presentation decision. Coordination and negotiation are where I excel.
+          A sale is a pricing decision, a timing decision, and a presentation decision. Coordination and negotiation
+          are where I excel. I work across Kingwood, Humble, Porter, Conroe and Magnolia.
         </p>
       </PageIntro>
 
@@ -138,7 +138,7 @@ export default async function SellersPage() {
       </section>
 
       <ClosingAsk heading="Let&rsquo;s talk about pricing, timing and preparation">
-        Starting from the closed sales in your immediate area and what is on the market this month.
+        We start from the closed sales in your immediate area and what is on the market this month.
       </ClosingAsk>
     </>
   )

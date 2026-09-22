@@ -103,9 +103,9 @@ export default async function BuyersPage() {
       <SchemaGraph nodes={[faqNode(buyersFaq), breadcrumb([{ name: 'Home', path: '/' }, { name: 'Buyers', path: '/buyers/' }])]} />
       <PageIntro eyebrow={regionSentence} title="Buying a home in the Lake Houston area or Montgomery County">
         <p>
-          Kingwood, Humble, Porter, Conroe and Magnolia. The house is the easy part. The loan, the timeline and the
-          offer are where a purchase is won or lost, and those are parts of my fifty plus years in the financial
-          industry and municipal government.
+          The house is the easy part. The loan, the timeline and the offer are where a purchase is won or lost, and
+          those are parts of my fifty plus years in the financial industry and municipal government. I work across
+          Kingwood, Humble, Porter, Conroe and Magnolia.
         </p>
       </PageIntro>
 
