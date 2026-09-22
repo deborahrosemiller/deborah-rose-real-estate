@@ -74,11 +74,18 @@ export async function getStoriesForArea(area: string): Promise<Story[]> {
   return stories.filter((s) => s.area === area)
 }
 
+/**
+ * A story date is either a day (YYYY-MM-DD) or, when the record only gives
+ * the month, a month (YYYY-MM), which shows as "April 2024" with no day
+ * invented. Deborah, 2026-09-22: the Humble "selling from another state"
+ * story is dated to its April 2024 closing.
+ */
 export function formatDate(iso: string) {
-  return new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US', {
+  const monthOnly = /^\d{4}-\d{2}$/.test(iso)
+  return new Date(`${monthOnly ? `${iso}-01` : iso}T12:00:00Z`).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric',
+    ...(monthOnly ? {} : { day: 'numeric' as const }),
     timeZone: 'UTC',
   })
 }

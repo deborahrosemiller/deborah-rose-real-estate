@@ -1,6 +1,6 @@
 ---
 title: "Selling from another state in a heavy buyer's market: under contract in under a week at the asking price in Humble"
-date: "2026-07-09"
+date: "2024-04"
 city: "Humble"
 county: "Harris County"
 area: "humble"
