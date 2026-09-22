@@ -20,7 +20,8 @@ export const metadata: Metadata = pageMetadata({
 
 const SERVICE = [
   { name: 'Magnolia Education Foundation', detail: 'Co-founder and founding president, 2001' },
-  { name: 'Humble ISD Education Foundation', detail: 'Board of directors, past chair' },
+  // Deborah, 2026-09-22: past chair, and a director today.
+  { name: 'Humble ISD Education Foundation', detail: 'Past chair and current director' },
   { name: 'Magnolia ISD Board of Trustees', detail: 'Nine years, two as president' },
   { name: 'City of Magnolia', detail: 'Economic Development Coordinator, two years' },
   { name: 'Lake Houston Area Chamber of Commerce', detail: 'Director' },
