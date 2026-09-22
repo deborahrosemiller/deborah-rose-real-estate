@@ -79,7 +79,7 @@ export function PageIntro({ eyebrow, title, children }: { eyebrow?: string; titl
        * brightest frame with only the horizontal wash under it
        * (docs/hero-contrast.md).
        */}
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-b from-black/15 via-black/55 via-10% to-black/55 lg:hidden" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-b from-black/15 via-black/52 via-10% to-black/52 lg:hidden" />
       <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-linear-to-r from-black/55 via-black/55 via-55% to-transparent to-75% lg:block" />
 
       <div className={`mx-auto flex max-w-7xl flex-col justify-start px-6 pt-10 pb-10 lg:px-8 ${INTRO_BAND}`}>

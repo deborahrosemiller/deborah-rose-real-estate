@@ -20,9 +20,9 @@ The overlay is two layers on every hero (homepage and the four interior heroes o
 | Hero | Band |
 | --- | --- |
 | Homepage, from lg, left to right | 50 held to the 50% mark, gone by 72% |
-| Homepage, below lg, top to bottom | 15 at the top, 50 from the 12% mark to the foot |
+| Homepage, below lg, top to bottom | 15 at the top, 50 from the 12% mark, held to 80%, 18 at the foot (2026-09-22) |
 | Interior, from lg, left to right | 55 held to the 55% mark, gone by 75% |
-| Interior, below lg, top to bottom | 15 at the top, 55 from the 10% mark to the foot |
+| Interior, below lg, top to bottom | 15 at the top, 52 from the 10% mark to the foot (2026-09-22) |
 
 **Text shadow** on the headline and paragraph (`.hero-copy` in `src/styles/tailwind.css`): `0 1px 2px rgb(0 0 0 / 0.6), 0 0 28px rgb(0 0 0 / 0.5)`. The paragraphs went from 90 percent white to solid white.
 
@@ -62,3 +62,13 @@ Set on the live review of 2026-09-18. Never put the global darkness back.
 2. Strengthen the text shadow.
 3. Increase the type weight.
 4. Only then add overlay density, and say so out loud, with the tradeoff.
+
+## Lightened for phones, 2026-09-22
+
+Deborah, reviewing on her phone: the photos were too dark to make out. Measured against the same brightest frame and the same shadow alphas, with the text boxes read off the live page at 375 wide.
+
+**Homepage.** The copy block ends at 79 percent of the band, so the band now holds 50 percent to the 80 percent mark and lifts to 18 by the foot. No type sits over the lighter part, so no ratio moves: the headline stays 4.12:1 and the paragraph 4.57:1. Below the buttons the footage goes from 29 percent showing to 48.
+
+**Interior headers.** The type fills 17 to 91 percent of a 434px band, so there is no empty region to lift. The band came down from 55 to 52, which is what the 4.5:1 paragraph target allows: the paragraph moves from 4.87:1 to 4.64:1 and the headline from 5.03:1 to 4.79:1 by the formula in this note. 52 lets 6 percent more of the footage through; 50 would put the paragraph at 4.49:1 and fail.
+
+If she needs the interior headers brighter than this, the overlay is not the lever any more. The options are a brighter passage of footage behind those bands, or type large or bold enough to take the 3:1 large-text target instead of 4.5:1. Both are Brett's calls.

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { BanknotesIcon, BuildingLibraryIcon, UsersIcon } from '@heroicons/react/20/solid'
 
 import { Container } from '@/components/Container'
+import { Eyebrow } from '@/components/Text'
 import { Hero } from '@/components/Hero'
 import { Button } from '@/components/Button'
 import { FeatureThree } from '@/components/FeatureThree'
@@ -74,21 +75,25 @@ export default async function Home() {
        * on the mission. The mission sentence is bold, as she set it. White
        * tone, so the paper "How I work" band below still alternates.
        */}
-      <section aria-label="Introduction from Deborah" className="bg-field py-24 sm:py-32">
+      <section aria-label="Introduction from Deborah" className="band py-20 sm:py-28">
         <Container>
-          <div className="max-w-3xl space-y-6 text-lg/8 text-ink-soft">
-            <p className="text-xl/8 text-ink sm:text-2xl/9">
+          <div className="max-w-3xl">
+            <Eyebrow>My approach</Eyebrow>
+            <p className="mt-6 text-xl/8 text-ink sm:text-2xl/9">
               Buying or selling a home is more than a real estate transaction. It&rsquo;s one of the most important
               financial decisions you&rsquo;ll make. Before building my real estate business, I spent more than 36
               years in the financial services industry, first in banking and later as the owner of a financial
               planning firm. That experience gives me a unique perspective in real estate: I understand not only the
               value of a home, but how the decisions you make today can impact your financial future.
             </p>
-            <p>
-              My mission is simple:{' '}
-              <strong className="font-semibold text-ink">
-                to serve, connect, and deliver a real estate experience built on trust, knowledge, innovation, and heart.
-              </strong>
+            <p className="mt-10 font-display text-2xl/[1.35] text-ink sm:text-[1.75rem]/[1.35]">
+              My mission is simple: to serve, connect, and deliver a real estate experience built on trust, knowledge,
+              innovation, and heart.
+            </p>
+            <p className="mt-6 max-w-2xl text-lg/8 text-ink-soft">
+              Whether you&rsquo;re buying your first home, selling a longtime family property, relocating, or expanding
+              your investment portfolio, I am committed to providing the strategy, guidance, and advocacy you need to
+              make confident real estate decisions.
             </p>
           </div>
         </Container>

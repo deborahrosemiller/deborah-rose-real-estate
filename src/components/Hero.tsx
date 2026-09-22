@@ -89,9 +89,18 @@ export function Hero() {
          * the very top, 50 percent from the 12 percent mark to the foot.
          * 50 is the measured minimum for the paragraph at 4.5:1 on the
          * brightest frame (docs/hero-contrast.md); 30 left it at 3.5:1.
+         *
+         * Deborah, 2026-09-22: the photo was too dark to read on a phone.
+         * The copy ends at 79 percent of the band, so the density is held
+         * to 80 percent and then lifts to 18 by the foot. Nothing sits over
+         * the lighter part, so no ratio moves; the frame below the buttons
+         * goes from 29 percent of the footage showing to 48.
          */}
         <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-linear-to-r from-black/50 via-black/50 via-50% to-transparent to-72% lg:block" />
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-b from-black/15 via-black/50 via-12% to-black/50 lg:hidden" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,rgb(0_0_0/0.15)_0%,rgb(0_0_0/0.5)_12%,rgb(0_0_0/0.5)_80%,rgb(0_0_0/0.18)_100%)] lg:hidden"
+        />
 
         <div className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8">
           <div className="hero-copy max-w-2xl">
