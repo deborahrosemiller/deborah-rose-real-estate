@@ -1,6 +1,6 @@
 ---
 title: "Downsizing in Porter: a lock-and-leave home with a lazy river, chosen for the grandchildren"
-date: "2026-06-25"
+date: "2023-05"
 city: "Porter"
 county: "Montgomery County"
 area: "porter"
