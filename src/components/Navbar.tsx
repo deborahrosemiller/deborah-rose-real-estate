@@ -86,6 +86,10 @@ export function Navbar() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-rule">
               <div className="space-y-2 py-6">
+                {/* Deborah, 2026-09-22: on a phone the logo was the only way home, and it did not read as a link. */}
+                <Link href="/" onClick={close} className="-mx-3 block px-3 py-2 font-display text-2xl text-ink hover:bg-paper" aria-current={pathname === '/' ? 'page' : undefined}>
+                  Home
+                </Link>
                 {nav.header.map((item) => (
                   <Link key={item.href} href={item.href} onClick={close} className="-mx-3 block px-3 py-2 font-display text-2xl text-ink hover:bg-paper">
                     {item.title}

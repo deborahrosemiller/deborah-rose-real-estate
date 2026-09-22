@@ -133,7 +133,8 @@ export function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a href={`mailto:${business.email}`} className={columnLink}>
+                    {/* break-all: the address is one long word and at 375px it made every page scroll sideways. */}
+                    <a href={`mailto:${business.email}`} className={`${columnLink} break-all`}>
                       {business.email}
                     </a>
                   </li>
