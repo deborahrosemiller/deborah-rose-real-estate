@@ -1,6 +1,6 @@
 ---
 title: "Selling new construction on short notice: a medical-driven move in Porter"
-date: "2026-07-30"
+date: "2025-06"
 city: "Porter"
 county: "Montgomery County"
 area: "porter"
