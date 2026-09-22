@@ -7,7 +7,7 @@ area: "humble"
 role: "Seller story"
 summary: "A couple downsizing ahead of retirement planned to list in December. I told them the Humble market had a bubble in it and to list in spring. They sold $5,000 above their goal, and by December the market had turned."
 image: "/stories/humble-downsizing-timing-beat-waiting.webp"
-alt: "Front exterior and walkway of a two story home in Eagle Springs, Humble, Texas"
+alt: "Two story family room with a loft above, open to the kitchen, in a home in Eagle Springs, Humble, Texas"
 facts:
   - label: "List price"
     value: "$560,000"

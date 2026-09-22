@@ -49,7 +49,7 @@ Updated after the second build on 2026-09-17. What the site currently says, wher
 ## Decisions to raise
 
 13. **Em dashes.** On September 9 she said she likes them. Brett's rule for every site is none, and this build follows it. The copy gate fails on any em dash.
-14. **Her own home as a client story.** The Humble "timing beat waiting" story is her own sale told in third person, as she chose. A reader who learns it was her home could read it as misleading. Her husband is going to leave the Google review for it.
+14. **The Humble "timing beat waiting" story. Settled 2026-09-22:** Deborah approved its photo. The story stays in the third person, as she chose.
 15. **Fair housing.** Stories describe past clients' circumstances (a couple with children, newlyweds, grandparents, a medical move, a VA-eligible couple) as narrative, and the two-week-close story reports the client's school priority in the client's frame and names Humble ISD as a fact. The copy gate blocks the phrases that describe who a home is for. Local ordinances beyond the federal seven were not checked. A pass by eXp's compliance desk before launch is the right move.
 
 ## Footer wording to confirm with eXp
