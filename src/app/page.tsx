@@ -69,7 +69,9 @@ export default async function Home() {
        * paragraph now runs through banking, the planning firm and what that
        * perspective gives a client). Her words as she wrote them, except the
        * em dash in the second sentence, split into two sentences per the
-       * site's standing rule. The mission sentence is bold, as she set it. White
+       * site's standing rule. She cut the "Today, I bring that experience"
+       * paragraph on 2026-09-22, so the section is two paragraphs and closes
+       * on the mission. The mission sentence is bold, as she set it. White
        * tone, so the paper "How I work" band below still alternates.
        */}
       <section aria-label="Introduction from Deborah" className="bg-field py-24 sm:py-32">
@@ -81,10 +83,6 @@ export default async function Home() {
               years in the financial services industry, first in banking and later as the owner of a financial
               planning firm. That experience gives me a unique perspective in real estate: I understand not only the
               value of a home, but how the decisions you make today can impact your financial future.
-            </p>
-            <p>
-              Today, I bring that experience to every real estate transaction, combining financial insight, market
-              knowledge, strong negotiation skills, and a genuine commitment to serving my clients.
             </p>
             <p>
               My mission is simple:{' '}
