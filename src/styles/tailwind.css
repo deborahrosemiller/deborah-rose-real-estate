@@ -11,7 +11,7 @@
  * a clean sans, sections separated by space and hairlines rather than
  * cards, and nothing that cannot be clicked dressed as a control.
  *
- * WHAT IS SPECIFIC TO THIS SITE. The accent is a garnet rose, #7a2434.
+ * WHAT IS SPECIFIC TO THIS SITE. The accent is her logo red, #c4252c.
  * Deborah's brand grew out of her maiden name, Rose; her Google Business
  * Profile mark is a red rose on black. The rose is used on eyebrows,
  * the header underline, small labels and text selection. It never fills
@@ -40,13 +40,17 @@
   --radius-card: 1rem;
 
   /*
-   * The one accent. 9.86:1 with white type, so it fills the primary
-   * buttons (Brett, 2026-09-18: "the rose colored red instead of black").
-   * `rose-hover` is the same hue a step darker, 12.22:1 with white.
+   * The one accent, sampled from her logo: #c4252c is the red of the rose
+   * in public/brand/deborah-rose-real-estate-group-logo-on-white.png and
+   * deborah-rose-mark.png, the dominant red pixel in both (Deborah,
+   * 2026-09-22, "pull the red from my logo"). It replaced the garnet
+   * #7a2434 the first build chose. 5.76:1 with white type and 5.28:1 on
+   * the paper tone, so it still clears AA wherever it carries text or
+   * fills a button. `rose-hover` is the same hue a step darker, 7.33:1.
    */
-  --color-rose: #7a2434;
-  --color-rose-hover: #621c2a;
-  --color-rose-soft: #f7ecee;
+  --color-rose: #c4252c;
+  --color-rose-hover: #a71f25;
+  --color-rose-soft: #faeeee;
 }
 
 @layer base {

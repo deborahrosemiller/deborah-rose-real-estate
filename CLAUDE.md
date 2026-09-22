@@ -14,7 +14,7 @@ The code says how the site works. This file carries the decisions the code canno
 
 **Nothing unclickable may look clickable.** No decorative pills, badges or cards that read as buttons. Eyebrows and metadata are set as type. Stats blocks are set as type with a hairline, never as bordered cards. One standing exception, Brett's own call on the live review of 2026-09-18: the five process steps on Buyers and Sellers sit in rounded boxes with a faint shadow (`.card`), all the same height, with no hover or other affordance. Do not extend the card treatment to anything else without him asking.
 
-**One accent, on labels only.** The garnet rose (`--color-rose`) marks eyebrows, icons, the header underline and selection. It never fills a button.
+**One accent, on labels only.** The rose red (`--color-rose`, #c4252c) marks eyebrows, icons, the header underline and selection. Deborah, 2026-09-22: it is sampled from the rose in her logo, not chosen; if it ever changes, sample the logo again rather than picking a red. It never fills a button, with the standing exception of the primary buttons Brett asked for.
 
 **One corner radius, `--radius-card`.** Brett, live review 2026-09-18: story photos above articles take rounded corners and a soft shadow (`.photo-card`), the step boxes take the same radius (`.card`), and the story page hero photo already had it. Nothing else is rounded. Every aesthetic change given for one page applies to Buyers, Sellers, Stories, Areas and About without being asked again; the system is the system.
 
