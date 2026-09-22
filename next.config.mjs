@@ -47,6 +47,9 @@ const nextConfig = {
       { source: '/areas/tomball', destination: '/areas/', permanent: true },
       { source: '/areas/tomball/', destination: '/areas/', permanent: true },
       { source: '/neighborhoods/:slug*', destination: '/areas/:slug*', permanent: true },
+      // Deborah, 2026-09-22: this sale went under contract after a price adjustment, not in a week.
+      { source: '/stories/humble-under-contract-in-a-week', destination: '/stories/humble-under-contract-after-price-adjustment/', permanent: true },
+      { source: '/stories/humble-under-contract-in-a-week/', destination: '/stories/humble-under-contract-after-price-adjustment/', permanent: true },
     ]
   },
 }
