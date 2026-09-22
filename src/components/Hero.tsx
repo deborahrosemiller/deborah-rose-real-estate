@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button'
 import { HeroVideo } from '@/components/HeroVideo'
-import { business, areaSentence, regionSentence } from '@/lib/site'
+import { business, regionSentence } from '@/lib/site'
 
 /**
  * ===================================================================
@@ -44,9 +44,12 @@ import { business, areaSentence, regionSentence } from '@/lib/site'
  * section directly under the hero (page.tsx), because this band is a
  * fixed full-screen height and would clip three paragraphs. Her line runs
  * one line longer on a phone, so the phone size of the headline dropped
- * from 2.5rem to 2.25rem (tighten the type before growing the band). The eyebrow names
- * the two markets, the paragraph names the five towns (big to specific,
- * Brett). Closing speed is a possibility, never a promise: "can include."
+ * from 2.5rem to 2.25rem (tighten the type before growing the band).
+ *
+ * The paragraph is one sentence, cut back by Deborah on 2026-09-22. The
+ * eyebrow still names the two markets; the five towns now appear further
+ * down the page (the areas grid, the story cards, the FAQ) rather than
+ * here. The closing-speed line went with the cut; it still runs on Buyers.
  *
  * The footage is Deborah's own listing video of a one story estate on
  * nearly two acres in Porter, Montgomery County. The title card that
@@ -97,9 +100,7 @@ export function Hero() {
               Real Estate Experience Backed by 36+ Years of Financial Expertise
             </h1>
             <p className="mt-6 max-w-xl text-lg/8 text-cream sm:text-xl/8">
-              I was a banker first and a financial planner after that, and I sold my firm in 2008 before I ever sold a
-              house. Every deal I handle in {areaSentence} starts by making sure the numbers work for you. And part of
-              that can include fast closes.
+              Every deal I handle starts by making sure the numbers work for you.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
               <Button href="/contact/" className="focus-visible:outline-cream">
