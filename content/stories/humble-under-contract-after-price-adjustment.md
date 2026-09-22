@@ -6,6 +6,8 @@ county: "Harris County"
 area: "humble"
 role: "Seller story"
 summary: "Sellers in Humble needed to get to family who needed them, and every week on the market was a week away. Priced from that day's closed sales, under contract after a price adjustment, then worked through the buyer's hurdles with the other agent instead of against them."
+image: "/stories/humble-under-contract-after-price-adjustment.webp"
+alt: "Front exterior of a two story brick and stone home with landscaped beds in Humble, Texas"
 facts:
   - label: "Under contract"
     value: "After a price adjustment"

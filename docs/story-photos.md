@@ -19,7 +19,7 @@ Rights note for the deep dive: on the buyer-side stories (Lockridge Harbor, Rega
 | Sep 3 | Kingwood, $100,000 foreclosure | Front exterior | 5511 Regal Landing Dr, Kingwood / front-exterior-regal-landing-dr-kingwood-tx.webp | 400 x 268 | Confirmed (brief #10, HAR: foreclosure tag, $435,000 list) | Was the 400x225 aerial. Both tiny; will read soft. Full-size wanted. |
 | Aug 27 | Kingwood, two-week close from Dallas | Front exterior | 3514 Maple Park Dr, Kingwood / Front-Exterior-3514-Maple-Park-Dr-Kingwood-TX.webp | 420 x 280 | Confirmed (brief #18, HAR: $372,000 list, $350,000, 15 days to close) | Was the greenbelt backyard. Full-size wanted. |
 | Aug 20 | Conroe, upside down and still got the home | Front exterior | 10412 Ehlers Rd, Conroe / photo sent by Deborah 2026-09-21 (HAR GetMedia, listing photographer, January 2026) | 296 x 197 | Confirmed (brief #8, HAR: $455,000, April 2026); same house as the aerial it replaced | Deborah chose this front view over the 480 x 320 aerial. Exported at native size. Full-size wanted: it renders soft at article width. |
-| Aug 13 | Humble, under contract after a price adjustment (slug humble-under-contract-after-price-adjustment; corrected 2026-09-22, it was not a week) | **None (removed)** | Property is 15639 Scolty Reach Ln, Humble (brief #14). **No archive folder exists.** | | **Mismatch found.** The photo that was on this card was the front of 12335 Skene Bend Dr (Balmoral), a different property, placed as a stand-in on 2026-09-18 when every story was given a photo. Removed. | Photos of Scolty Reach needed. |
+| Apr 2026 (closing) | Humble, under contract after a price adjustment (slug humble-under-contract-after-price-adjustment) | Front exterior | 15639 Scolty Reach Ln, Humble (brief #14). Photo sent by Deborah 2026-09-22 (listing photographer, 2048 x 1365), exported 2000 x 1333 | 2048 x 1365 | Confirmed: the house number on the photo matches brief #14; not the Balmoral house that stood in on 2026-09-18 | House number blurred, metadata stripped. Resolved. |
 | Aug 6 | Spring, sell high, lease and wait | Front exterior | 31284 Liberty Knoll Ln, Spring / photo-01-liberty-knoll-ln-spring-tx.webp | 400 x 266 | Confirmed (brief #11, HAR: $449,999 list, funded Sep 2025) | Unchanged. Full-size wanted. |
 | Jun 2025 | Porter, new construction resale on short notice | Front exterior at twilight | Photo sent by Deborah 2026-09-22 (DJI drone, 2700 x 1802), exported 2000 x 1335 | 2700 x 1802 | Confirmed: house number on the photo and EXIF GPS match the property (brief #20, Royal Brook) | House number blurred and GPS stripped before publishing. Resolved. |
 | Jul 23 | Stagecoach, lease to purchase | **None (removed)** | 16903 Boothill Rd, Stagecoach. One 200 x 170 aerial plus 21 screenshots. | | Confirmed (brief #22, HAR: $328,000 list, 0.82 acre, 1976) | The "fuzzy" aerial was 200 pixels wide. Real photos needed. |
@@ -46,10 +46,9 @@ So one of two things is true. Either the May 28 story is right and she was looki
 
 Full resolution exteriors, ideally the photographer's originals or HAR's full-size gallery:
 
-1. 15639 Scolty Reach Ln, Humble (no archive folder at all).
-2. 16903 Boothill Rd, Stagecoach (screenshots and a 200px aerial).
-3. 27287 Lombard Wood Dr, Magnolia (builder stock only; a photo of the actual home).
-4. Every other property, because the largest file on hand is 958 pixels and most are under 500: Pebble Farms, Riverwalk, Regal Landing, Maple Park, Ehlers Rd, Liberty Knoll, Chinese Fir, Ebeys Landing, the Humble timing story, Blackstone River, Lockridge Harbor.
+1. 16903 Boothill Rd, Stagecoach (screenshots and a 200px aerial).
+2. 27287 Lombard Wood Dr, Magnolia (builder stock only; a photo of the actual home).
+3. Every other property, because the largest file on hand is 958 pixels and most are under 500: Pebble Farms, Riverwalk, Regal Landing, Maple Park, Ehlers Rd, Liberty Knoll, Chinese Fir, Ebeys Landing, the Humble timing story, Blackstone River, Lockridge Harbor.
 
 ## The selection rule going forward (Brett, 2026-09-18)
 
