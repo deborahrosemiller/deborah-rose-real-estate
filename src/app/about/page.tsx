@@ -25,7 +25,8 @@ const SERVICE = [
   { name: 'City of Magnolia', detail: 'Economic Development Coordinator, two years' },
   { name: 'Lake Houston Area Chamber of Commerce', detail: 'Director' },
   { name: 'Greater East Montgomery County Chamber of Commerce', detail: 'Member' },
-  { name: 'Greater Magnolia Chamber of Commerce', detail: 'Past president' },
+  // Deborah, 2026-09-21: never president of this chamber; she was a board member.
+  { name: 'Greater Magnolia Chamber of Commerce', detail: 'Board member' },
   { name: 'Rotary', detail: 'Fellow Rotarian. Founding member of the Magnolia Rotary Club, member of the Summer Creek Rotary Club' },
   { name: 'Magnolia-Tomball YMCA', detail: 'Director and past chairman' },
 ]
@@ -34,7 +35,7 @@ const FIGURES = [
   { label: 'years across the financial industry, school trustee and municipal government', value: production.yearsCareer },
   { label: 'years in the financial industry, 1972 to 2008', value: String(production.yearsFinancialIndustry) },
   { label: 'years in residential real estate', value: production.yearsRealEstate },
-  { label: 'homes sold as listing or buyer agent, per HAR', value: String(production.sold) },
+  { label: 'in total career sales volume', value: production.careerVolume },
 ]
 
 const CREDENTIALS = [
@@ -43,7 +44,7 @@ const CREDENTIALS = [
   { name: 'Houston Association of REALTORS', detail: production.harTier },
   { name: 'Real Estate Negotiation Expert', detail: 'RENE' },
   { name: 'Certified Luxury Home Marketing Specialist', detail: 'CLHMS' },
-  { name: 'Five Star Real Estate Agent', detail: 'Houston, 2023' },
+  { name: 'Five Star Professional award', detail: 'Eleven consecutive years' },
 ]
 
 /** A definition list on the full plate width, 40/60, hairlines between rows. */
@@ -134,7 +135,7 @@ export default function AboutPage() {
               The natural next step from city work with developers would have been commercial real estate. I wanted
               residential. I had bought and sold enough of my own homes by then to know what a good agent does and
               what a careless one costs you, and I was confident I could do the job well. I have been doing it for
-              more than a decade now, and thirty-eight of those closings are on my HAR record.
+              more than a decade now, with $15 million+ in total career sales volume.
             </p>
             <p>
               I built the financial planning firm through the Chamber of Commerce, Rotary and the nonprofits I gave

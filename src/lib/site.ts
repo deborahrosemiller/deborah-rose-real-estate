@@ -103,7 +103,8 @@ export const agent = {
   headshot: '/about/deborah-rose-miller.webp',
   headshotAlt: 'Deborah Rose Miller, real estate broker serving Kingwood, Humble, Porter, Conroe and Magnolia, Texas',
   designations: ['CLHMS', 'RENE'],
-  awards: ['Five Star Real Estate Agent, Houston, 2023'],
+  /** Deborah, 2026-09-21: an eleven-year consecutive winner. Replaced the single-year "Houston, 2023" entry. */
+  awards: ['Five Star Professional award, eleven consecutive years'],
 } as const
 
 /** Google Business Profile. Everything here was read from the live profile. */
@@ -176,6 +177,13 @@ export const tagline = 'Real estate pro. Connector. Lifelong learner. Community 
  * on the About page. Never as a card, a pill or a homepage stat row.
  */
 export const production = {
+  /**
+   * Her total career sales volume, confirmed by Deborah on 2026-09-21. It
+   * replaced the HAR closing count on the About page: she wants the dollar
+   * figure shown, never a transaction count.
+   */
+  careerVolume: '$15 Million+',
+  /** HAR counts, 2026-09-17. Not shown anywhere since 2026-09-21; see careerVolume. */
   sold: 38,
   leased: 9,
   yearsRealEstate: '10+',

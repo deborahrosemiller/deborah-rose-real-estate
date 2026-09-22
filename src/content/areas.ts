@@ -96,6 +96,6 @@ export const areaContent: Record<string, AreaContent> = {
     ],
     neighborhoods: ['NorthGrove', 'Stagecoach Farms', 'FM 1488 corridor'],
     deborah:
-      'Magnolia is the part of the map I know best. I was a founding member of the Magnolia Rotary Club, a past president of the Greater Magnolia Chamber of Commerce and a director of the Magnolia-Tomball YMCA. The people running the city today are people I served alongside.',
+      'Magnolia is the part of the map I know best. I was a founding member of the Magnolia Rotary Club, a board member of the Greater Magnolia Chamber of Commerce and a director of the Magnolia-Tomball YMCA. The people running the city today are people I served alongside.',
   },
 }
