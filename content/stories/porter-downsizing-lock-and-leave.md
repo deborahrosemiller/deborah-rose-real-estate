@@ -6,6 +6,8 @@ county: "Montgomery County"
 area: "porter"
 role: "Buyer story"
 summary: "A couple who had already sold their previous home wanted a low-maintenance place in a community their grandchildren would ask to visit. A brand-new development in Porter with a lazy river turned out to be a strategy, and we closed on the right lot before the phase sold out."
+image: "/stories/porter-downsizing-lock-and-leave.webp"
+alt: "Front exterior of a light gray craftsman style new construction home with a covered porch in Porter, Texas"
 featured: false
 ---
 

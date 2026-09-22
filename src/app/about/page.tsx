@@ -135,7 +135,7 @@ export default function AboutPage() {
               The natural next step from city work with developers would have been commercial real estate. I wanted
               residential. I had bought and sold enough of my own homes by then to know what a good agent does and
               what a careless one costs you, and I was confident I could do the job well. I have been doing it for
-              more than a decade now, with $15 million+ in total career sales volume.
+              more than a decade now, with $41 million+ in total career sales volume.
             </p>
             <p>
               I built the financial planning firm through the Chamber of Commerce, Rotary and the nonprofits I gave

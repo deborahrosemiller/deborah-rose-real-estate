@@ -64,7 +64,7 @@ These override her Brand and Website Copywriting Brief and her HAR bio where the
 
 **FAQ answers run three lines or fewer on desktop.** Brett's layout rule. About 240 characters.
 
-**Never show a count that a reader could mistake for the size of her business.** Deborah, 2026-09-18: "if people see the count they may think that is all the sales she has." No "all seventeen stories," no "5 stories" beside an area. "Read more stories," "Read a few of the stories." Her HAR record is 38 sold and 9 leased; the site tells seventeen of them. Since 2026-09-21 the site states her total career sales volume ($15 Million+, `production.careerVolume`) and no transaction count at all.
+**Never show a count that a reader could mistake for the size of her business.** Deborah, 2026-09-18: "if people see the count they may think that is all the sales she has." No "all seventeen stories," no "5 stories" beside an area. "Read more stories," "Read a few of the stories." Her HAR record is 38 sold and 9 leased; the site tells seventeen of them. Since 2026-09-21 the site states her total career sales volume ($41 Million+, her total HAR production since 2012, `production.careerVolume`) and no transaction count at all.
 
 **A story's date is its closing month, never a publication date.** Deborah, 2026-09-22, after the first build's placeholder dates (one a week, May to September 2026) read as when the sales happened. `date: "YYYY-MM"` from the closing or funding month on the HAR record, shown as "April 2024". A new story takes the same.
 

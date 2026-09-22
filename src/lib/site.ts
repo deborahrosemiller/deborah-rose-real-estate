@@ -178,11 +178,13 @@ export const tagline = 'Real estate pro. Connector. Lifelong learner. Community 
  */
 export const production = {
   /**
-   * Her total career sales volume, confirmed by Deborah on 2026-09-21. It
+   * Her total career sales volume. Deborah, 2026-09-22: $41 million+, her
+   * total HAR production since she started in 2012 (the $15 million+ of
+   * 2026-09-21 was from a sample of about forty transactions). It
    * replaced the HAR closing count on the About page: she wants the dollar
    * figure shown, never a transaction count.
    */
-  careerVolume: '$15 Million+',
+  careerVolume: '$41 Million+',
   /** HAR counts, 2026-09-17. Not shown anywhere since 2026-09-21; see careerVolume. */
   sold: 38,
   leased: 9,
