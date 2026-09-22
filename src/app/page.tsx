@@ -46,7 +46,7 @@ const HOW = [
     name: 'Built through the community.',
     description:
       // Deborah's rewrite, 2026-09-21. The em dash after "served" is split into two sentences (site rule).
-      'Community involvement has always been at the heart of how I do business. I built my financial planning firm through relationships formed in the Chamber of Commerce, Rotary and the communities I served. And I’ve built my real estate business the same way. Today, much of my business comes from referrals and long-standing relationships. In fact, many of the stories shared on this site began with something very simple: someone I had served introducing me to someone they cared about.',
+      'Community involvement has always been at the heart of how I do business. I built my financial planning firm through relationships formed in the Chamber of Commerce and the communities I served. And I’ve built my real estate business the same way. Today, much of my business comes from referrals and long-standing relationships. In fact, many of the stories shared on this site began with something very simple: someone I had served introducing me to someone they cared about.',
     href: '/stories/',
     linkLabel: 'Read the stories',
     icon: UsersIcon,

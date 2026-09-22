@@ -105,6 +105,6 @@ export const areaContent: Record<string, AreaContent> = {
     // Indigo Lake Estates, High Meadow and Clear Creek Forest added by Deborah, 2026-09-22.
     neighborhoods: ['NorthGrove', 'Stagecoach Farms', 'Indigo Lake Estates', 'High Meadow', 'Clear Creek Forest', 'FM 1488 corridor'],
     deborah:
-      'Magnolia is the part of the map I know best. I was a founding member of the Magnolia Rotary Club, a board member of the Greater Magnolia Chamber of Commerce and a director of the Magnolia-Tomball YMCA. The people running the city today are people I served alongside.',
+      'Magnolia is the part of the map I know best. I was a board member of the Greater Magnolia Chamber of Commerce and a director of the Magnolia-Tomball YMCA. The people running the city today are people I served alongside.',
   },
 }

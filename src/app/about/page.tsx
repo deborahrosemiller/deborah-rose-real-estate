@@ -27,7 +27,8 @@ const SERVICE = [
   { name: 'Greater East Montgomery County Chamber of Commerce', detail: 'Member' },
   // Deborah, 2026-09-21: never president of this chamber; she was a board member.
   { name: 'Greater Magnolia Chamber of Commerce', detail: 'Board member' },
-  { name: 'Rotary', detail: 'Fellow Rotarian. Founding member of the Magnolia Rotary Club, member of the Summer Creek Rotary Club' },
+  // Deborah, 2026-09-22: Rotary stays in this list only, and without "Fellow Rotarian".
+  { name: 'Rotary', detail: 'Founding member of the Magnolia Rotary Club, member of the Summer Creek Rotary Club' },
   { name: 'Magnolia-Tomball YMCA', detail: 'Director and past chairman' },
 ]
 
@@ -138,8 +139,8 @@ export default function AboutPage() {
               more than a decade now, with $41 million+ in total career sales volume.
             </p>
             <p>
-              I built the financial planning firm through the Chamber of Commerce, Rotary and the nonprofits I gave
-              my time to. I built this business the same way, with the same Rotarians and the same Chamber network.
+              I built the financial planning firm through the Chamber of Commerce and the nonprofits I gave my time
+              to. I built this business the same way, with the same Chamber network.
               Most of the people I work with came through someone I already know, and the clients I enjoy most are
               the ones who let me use what I know on their behalf.
             </p>

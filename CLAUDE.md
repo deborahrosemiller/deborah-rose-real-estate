@@ -4,7 +4,7 @@ The code says how the site works. This file carries the decisions the code canno
 
 ## Constraints that a future session would otherwise break in good faith
 
-**No star ratings, review widgets, or review markup anywhere.** Her Google Business Profile sits at 3.0 from 2 reviews. Surfacing that hurts her. Do not add `aggregateRating`, `review`, or a testimonials section with placeholder quotes. Her trust signals are her record: forty-five years in business, thirty-six in the financial industry, two Houston mayors, Fellow Rotarian, past chair of the Humble ISD Education Foundation, RENE, HAR Platinum. Set those as type.
+**No star ratings, review widgets, or review markup anywhere.** Her Google Business Profile sits at 3.0 from 2 reviews. Surfacing that hurts her. Do not add `aggregateRating`, `review`, or a testimonials section with placeholder quotes. Her trust signals are her record: forty-five years in business, thirty-six in the financial industry, two Houston mayors, past chair of the Humble ISD Education Foundation, RENE, HAR Platinum. Set those as type.
 
 **No em dashes in site copy.** Brett's standing rule. Rewrite into two sentences. Never an en dash or a double hyphen instead. Deborah said on 2026-09-09 that she likes them; the rule held and she should hear that from Brett, not from a session quietly reversing it.
 
@@ -67,6 +67,8 @@ These override her Brand and Website Copywriting Brief and her HAR bio where the
 **Never show a count that a reader could mistake for the size of her business.** Deborah, 2026-09-18: "if people see the count they may think that is all the sales she has." No "all seventeen stories," no "5 stories" beside an area. "Read more stories," "Read a few of the stories." Her HAR record is 38 sold and 9 leased; the site tells seventeen of them. Since 2026-09-21 the site states her total career sales volume ($41 Million+, her total HAR production since 2012, `production.careerVolume`) and no transaction count at all.
 
 **A story's date is its closing month, never a publication date.** Deborah, 2026-09-22, after the first build's placeholder dates (one a week, May to September 2026) read as when the sales happened. `date: "YYYY-MM"` from the closing or funding month on the HAR record, shown as "April 2024". A new story takes the same.
+
+**Rotary appears in one place only.** Deborah, 2026-09-22: the Rotary row in the About page's "Where I have served" list, and nowhere else on the site. Not in the biography, not on the homepage, not on the Magnolia area page. "Fellow Rotarian" is not used at all.
 
 **Story photos: hero exterior, native size, never a screenshot, never upscaled.** Brett, 2026-09-18. The Property Archive on Drive holds HAR thumbnails (296 to 958 pixels) and screenshot PNGs, which is why the first build's 1600-pixel exports were soft. Check native pixel size before selecting; a card needs about 800 pixels, an article hero about 1,800. Where no acceptable source exists the story runs without a photo and the gap is listed in docs/story-photos.md for Deborah to fill. A stand-in photo of a different property is never acceptable (the Scolty Reach story carried a Skene Bend photo for a day).
 
