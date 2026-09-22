@@ -39,8 +39,10 @@ const STEPS = [
   {
     label: 'Step two',
     name: 'The preparation',
+    // Deborah's rewrite, 2026-09-22, two paragraphs. Her em dashes around "and
+    // what won't" are set in commas (site rule).
     description:
-      'Some homes need a stager and some need a weekend of decluttering. I tell you which, and I do not spend your money on work that will not show up in the offer. The goal is the offer, and only the offer.',
+      'Every home needs a different level of preparation. Some benefit from professional staging; others simply need thoughtful editing, decluttering, and a few finishing touches. I help you determine what will make a difference, and what won’t, so you’re not spending money where buyers won’t see the value.\n\nThe goal is simple: prepare your home to show its best and position it for the strongest possible offer.',
   },
   {
     label: 'Step three',

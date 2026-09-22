@@ -1,6 +1,10 @@
 import { Container } from '@/components/Container'
 
-/** `closing` is an optional last line set in bold, for a step that ends on one (Buyers step five). */
+/**
+ * `description` breaks into paragraphs at a blank line (Sellers step two).
+ * `closing` is an optional last line set in bold, for a step that ends on
+ * one (Buyers step five).
+ */
 export type TimelineItem = { label: string; name: string; description: string; closing?: string }
 
 /**
@@ -27,7 +31,11 @@ export function Timeline({ items }: { items: TimelineItem[] }) {
             <li key={item.name} className="card flex h-full flex-col p-6">
               <p className="text-sm/6 font-semibold text-rose">{item.label}</p>
               <p className="mt-4 font-display text-xl/7 text-ink">{item.name}</p>
-              <p className="mt-3 text-base/7 text-ink-soft">{item.description}</p>
+              {item.description.split('\n\n').map((para) => (
+                <p key={para.slice(0, 24)} className="mt-3 text-base/7 text-ink-soft">
+                  {para}
+                </p>
+              ))}
               {item.closing ? <p className="mt-3 text-base/7 font-semibold text-ink">{item.closing}</p> : null}
             </li>
           ))}
