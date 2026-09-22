@@ -65,9 +65,11 @@ export default async function Home() {
 
       {/*
        * Her own introduction, sent by Deborah on 2026-09-21 with the intro
-       * line that heads the hero. Her words as she wrote them, except the em
-       * dash in the second sentence, split into two sentences per the site's
-       * standing rule. The mission sentence is bold, as she set it. White
+       * line that heads the hero and revised by her on 2026-09-22 (the first
+       * paragraph now runs through banking, the planning firm and what that
+       * perspective gives a client). Her words as she wrote them, except the
+       * em dash in the second sentence, split into two sentences per the
+       * site's standing rule. The mission sentence is bold, as she set it. White
        * tone, so the paper "How I work" band below still alternates.
        */}
       <section aria-label="Introduction from Deborah" className="bg-field py-24 sm:py-32">
@@ -76,8 +78,9 @@ export default async function Home() {
             <p className="text-xl/8 text-ink sm:text-2xl/9">
               Buying or selling a home is more than a real estate transaction. It&rsquo;s one of the most important
               financial decisions you&rsquo;ll make. Before building my real estate business, I spent more than 36
-              years in the financial services industry, helping individuals and families make informed decisions about
-              their financial futures.
+              years in the financial services industry, first in banking and later as the owner of a financial
+              planning firm. That experience gives me a unique perspective in real estate: I understand not only the
+              value of a home, but how the decisions you make today can impact your financial future.
             </p>
             <p>
               Today, I bring that experience to every real estate transaction, combining financial insight, market
