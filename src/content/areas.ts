@@ -4,7 +4,8 @@
  * it would suit; that is the fair housing line and it is held on purpose.
  *
  * Neighborhood names come from Deborah's own closed transactions in the
- * property archive. If a name is not in the archive it is not listed.
+ * property archive, or from Deborah herself (the Magnolia additions of
+ * 2026-09-22). A name from neither source is not listed.
  */
 import { business } from '@/lib/site'
 
@@ -94,7 +95,8 @@ export const areaContent: Record<string, AreaContent> = {
       'I lived in Magnolia for years. I ran my financial planning firm here, served nine years on the Magnolia ISD school board, two as president, and spent two years as the city’s Economic Development Coordinator, where I helped write its first comprehensive plan and worked directly with developers on zoning and the city’s extraterritorial jurisdiction.',
       'I also co-founded the Magnolia Education Foundation in 2001. When a client asks what a piece of Magnolia is likely to become, I answer from having sat in the meetings.',
     ],
-    neighborhoods: ['NorthGrove', 'Stagecoach Farms', 'FM 1488 corridor'],
+    // Indigo Lake Estates, High Meadow and Clear Creek Forest added by Deborah, 2026-09-22.
+    neighborhoods: ['NorthGrove', 'Stagecoach Farms', 'Indigo Lake Estates', 'High Meadow', 'Clear Creek Forest', 'FM 1488 corridor'],
     deborah:
       'Magnolia is the part of the map I know best. I was a founding member of the Magnolia Rotary Club, a board member of the Greater Magnolia Chamber of Commerce and a director of the Magnolia-Tomball YMCA. The people running the city today are people I served alongside.',
   },
