@@ -144,8 +144,11 @@ export default async function Home() {
        * it lands, replace `agent.headshot` and nothing here moves.
        *
        * The opening. Brett: "I am Deborah Rose Miller" sounds like a bot.
-       * The heading now says the one thing the section exists to say, the
-       * maiden name, the way she would say it out loud.
+       * The heading is Deborah's own line, sent 2026-09-22, and it keeps her
+       * exclamation mark: headings carry no ending punctuation on this site,
+       * but hers is a full sentence, the same exception the question-mark
+       * headings take. The line that used to sit under it ("It has been on
+       * the door of every business I have run") is gone; the heading says it.
        */}
       <section aria-labelledby="about-heading" className="bg-field py-24 sm:py-32">
         <Container>
@@ -163,11 +166,8 @@ export default async function Home() {
                 About
               </p>
               <h2 className="mt-2 font-display text-[2.5rem]/[1.05] text-pretty text-ink sm:text-5xl/[1.05] lg:text-6xl/[1.04]">
-                Rose is my maiden name
+                Rose means family and strength to me. It has been on the door of every business I have owned!
               </h2>
-              <p className="mt-8 text-xl/8 text-ink sm:text-2xl/9">
-                It has been on the door of every business I have run, and it is on this one. Community is my business.
-              </p>
               <div className="mt-10 max-w-2xl space-y-6 text-lg/8 text-ink-soft">
                 <p>
                   I started in banking in 1972 and spent thirty-six years in the financial industry, the later years as
