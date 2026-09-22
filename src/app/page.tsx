@@ -87,7 +87,7 @@ export default async function Home() {
             <p>
               My mission is simple:{' '}
               <strong className="font-semibold text-ink">
-                to serve, connect, and deliver a real estate experience built on trust, knowledge, and heart.
+                to serve, connect, and deliver a real estate experience built on trust, knowledge, innovation, and heart.
               </strong>
             </p>
           </div>
