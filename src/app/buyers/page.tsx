@@ -64,7 +64,7 @@ const STEPS = [
     // construction" is set in commas, and the closing line is split into two
     // sentences (site rule). The closing line is bold, as she set it.
     description:
-      'I stay personally involved from inspection through closing. I attend the inspection, even on new construction, and provide a same-day update with photos. From there, I stay in close communication with the lender and title company, keeping the transaction moving and my clients informed every step of the way.',
+      'I stay personally involved from inspection through closing. I attend the inspection, even on new construction, and provide a same-day update with photos.',
     closing: 'Because in real estate, communication isn’t just important. It’s essential.',
   },
 ]

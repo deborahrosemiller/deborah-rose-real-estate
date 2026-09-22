@@ -139,8 +139,8 @@ export default function AboutPage() {
               A lifelong community leader, I have spent decades investing in the communities I serve. I was a board
               appointee under two Houston mayors, and I&rsquo;m a past school board trustee, past Chair and current
               Director of the Humble ISD Education Foundation. I remain actively involved with Partnership Lake
-              Houston (past director), the East Montgomery County Chamber of Commerce (member), and the Magnolia-area
-              chamber of commerce, believing that strong communities create stronger real estate markets and better
+              Houston (past director), the East Montgomery County Chamber of Commerce (member), and the Greater Magnolia
+              Chamber of Commerce (Board member), believing that strong communities create stronger real estate markets and better
               opportunities for families.
             </p>
             <p>
