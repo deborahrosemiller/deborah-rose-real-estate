@@ -7,7 +7,7 @@ import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
 import { pageMetadata } from '@/lib/metadata'
 import { breadcrumb } from '@/lib/schema'
-import { areaContent } from '@/content/areas'
+import { areaContent, neighborhoodNote } from '@/content/areas'
 import { areas, regionSentence } from '@/lib/site'
 
 export const metadata: Metadata = pageMetadata({
@@ -74,6 +74,7 @@ export default async function AreasPage() {
               )
             })}
           </ul>
+          <p className="mt-8 text-base/7 text-ink-soft">{neighborhoodNote}</p>
         </Container>
       </section>
       <ClosingAsk heading="Which flavor is right for you?" secondaryHref="/stories/" secondaryLabel="Read a few of the stories">

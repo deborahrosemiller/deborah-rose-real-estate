@@ -9,6 +9,13 @@
  */
 import { business } from '@/lib/site'
 
+/**
+ * Deborah, 2026-09-22: set under every list of places she has sold in, so
+ * a reader whose neighborhood is missing does not assume she will not work
+ * there. Set as type, never as a box or badge.
+ */
+export const neighborhoodNote = 'Don’t see your neighborhood? My services are not limited by a list.'
+
 export type AreaContent = {
   slug: string
   title: string

@@ -10,7 +10,7 @@ import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
 import { pageMetadata } from '@/lib/metadata'
 import { absolute, AGENT_ID, BROKERAGE_ID, breadcrumb, cityNode } from '@/lib/schema'
-import { areaContent } from '@/content/areas'
+import { areaContent, neighborhoodNote } from '@/content/areas'
 import { agent, areas, business } from '@/lib/site'
 import { getStoriesForArea } from '@/lib/stories'
 
@@ -94,6 +94,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     <li key={n}>{n}</li>
                   ))}
                 </ul>
+                <p className="mt-4 text-sm/6 text-ink-faint">{neighborhoodNote}</p>
               </dd>
             </div>
             <div>
