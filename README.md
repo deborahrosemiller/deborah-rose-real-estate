@@ -74,7 +74,7 @@ What was stripped from every block, on purpose: rounded corners on photos and pa
 
 ## Adding a story
 
-Copy any file in `content/stories/`, change the front matter, write the body in Markdown, run `pnpm check:copy`. The date decides the order. `area` must be one of the six slugs in `src/lib/site.ts` or `null`. The hero photo goes in `public/stories/<slug>.webp` at 1600px wide; the alt text follows the pattern feature, property, neighborhood, city, Texas, and never contains a street address.
+Copy any file in `content/stories/`, change the front matter, write the body in Markdown, run `pnpm check:copy`. The date is the closing month (`YYYY-MM`) and decides the order. `area` must be one of the six slugs in `src/lib/site.ts` or `null`. The hero photo goes in `public/stories/<slug>.webp` at 1600px wide; the alt text follows the pattern feature, property, neighborhood, city, Texas, and never contains a street address.
 
 ## The copy gate
 

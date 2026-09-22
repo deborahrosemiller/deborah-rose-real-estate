@@ -1,6 +1,6 @@
 ---
 title: "Closing on a Kingwood pool home almost entirely remotely, on a referral"
-date: "2026-06-18"
+date: "2023-03"
 city: "Kingwood"
 county: "Harris County"
 area: "kingwood"

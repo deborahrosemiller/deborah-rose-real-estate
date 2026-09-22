@@ -1,6 +1,6 @@
 ---
 title: "Selling one home and buying the next in a seller's market: a Lake Houston to Atascocita story"
-date: "2026-06-04"
+date: "2022-05"
 city: "Humble"
 county: "Harris County"
 area: "humble"

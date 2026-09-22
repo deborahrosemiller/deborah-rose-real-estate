@@ -1,6 +1,6 @@
 ---
 title: "When life changes fast: a first home in Porter, sold a year later, under contract in one week"
-date: "2026-09-10"
+date: "2026-08"
 city: "Porter"
 county: "Montgomery County"
 area: "porter"

@@ -1,6 +1,6 @@
 ---
 title: "Priced a little under the market on purpose: three buyers and $20,000 over list in Humble"
-date: "2026-09-17"
+date: "2026-08"
 city: "Humble"
 county: "Harris County"
 area: "humble"

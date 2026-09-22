@@ -1,6 +1,6 @@
 ---
 title: "Finding the right house in a heavy seller's market: a Royal Brook, Kingwood story for repeat clients"
-date: "2026-05-28"
+date: "2021-10"
 city: "Kingwood"
 county: "Montgomery County"
 area: "kingwood"

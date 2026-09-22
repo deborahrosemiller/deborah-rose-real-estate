@@ -60,7 +60,8 @@ export async function getStories(): Promise<Story[]> {
   if (cache) return cache
   const files = fs.readdirSync(DIR).filter((f) => f.endsWith('.md'))
   const stories = await Promise.all(files.map(parse))
-  cache = stories.sort((a, b) => (a.date < b.date ? 1 : -1))
+  // Newest closing first; stories that closed in the same month list by slug so the order never shifts.
+  cache = stories.sort((a, b) => b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug))
   return cache
 }
 
@@ -77,8 +78,7 @@ export async function getStoriesForArea(area: string): Promise<Story[]> {
 /**
  * A story date is either a day (YYYY-MM-DD) or, when the record only gives
  * the month, a month (YYYY-MM), which shows as "April 2024" with no day
- * invented. Deborah, 2026-09-22: the Humble "selling from another state"
- * story is dated to its April 2024 closing.
+ * invented. Deborah, 2026-09-22: every story is dated to its closing month.
  */
 export function formatDate(iso: string) {
   const monthOnly = /^\d{4}-\d{2}$/.test(iso)

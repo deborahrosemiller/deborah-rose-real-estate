@@ -1,6 +1,6 @@
 ---
 title: "A lease-to-purchase solution in Stagecoach: patience, creativity, and representing both sides fairly"
-date: "2026-07-23"
+date: "2024-09"
 city: "Stagecoach"
 county: "Montgomery County"
 area: "magnolia"

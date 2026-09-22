@@ -1,6 +1,6 @@
 ---
 title: "$100,000 in built-in equity: how patience won a foreclosure in Kingwood"
-date: "2026-09-03"
+date: "2026-08"
 city: "Kingwood"
 county: "Harris County"
 area: "kingwood"

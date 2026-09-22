@@ -1,6 +1,6 @@
 ---
 title: "Upside down on the old house and still getting the new one: a Conroe buyer story"
-date: "2026-08-20"
+date: "2026-04"
 city: "Conroe"
 county: "Montgomery County"
 area: "conroe"

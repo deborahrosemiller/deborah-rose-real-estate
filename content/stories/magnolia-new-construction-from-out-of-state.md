@@ -1,6 +1,6 @@
 ---
 title: "Buying new construction from 1,200 miles away: a Magnolia corporate relocation"
-date: "2026-07-02"
+date: "2023-07"
 city: "Magnolia"
 county: "Montgomery County"
 area: "magnolia"

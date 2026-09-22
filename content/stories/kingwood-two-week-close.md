@@ -1,6 +1,6 @@
 ---
 title: "A two-week close in Kingwood: relocating from Dallas on a school-year deadline"
-date: "2026-08-27"
+date: "2026-06"
 city: "Kingwood"
 county: "Harris County"
 area: "kingwood"

@@ -1,6 +1,6 @@
 ---
 title: "Sell high, lease, and wait: a bridge-to-retirement sale in Spring"
-date: "2026-08-06"
+date: "2025-09"
 city: "Spring"
 county: "Montgomery County"
 area: null

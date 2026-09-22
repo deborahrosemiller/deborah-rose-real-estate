@@ -1,6 +1,6 @@
 ---
 title: "Under contract after a price adjustment: why speed and cooperation both mattered on this Humble sale"
-date: "2026-08-13"
+date: "2026-04"
 city: "Humble"
 county: "Harris County"
 area: "humble"
