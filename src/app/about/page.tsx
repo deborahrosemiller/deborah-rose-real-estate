@@ -68,9 +68,12 @@ function Rows({ rows }: { rows: { name: string; detail: string }[] }) {
  * (eyebrow, H1, intro paragraph) without the video, and a small circular
  * portrait sits to the right of the H1. The H1 is her name, plainly;
  * "I am Deborah Rose Miller" read like a bot to Brett (2026-09-18).
- * Career numbers: thirty-six years in the financial industry is stated
- * (1972 to 2008, confirmed by her). How long she owned Rose Financial
- * Group is not stated anywhere until she confirms it from her resume.
+ * The biography is her own HAR bio, adapted and sent by Brett on
+ * 2026-09-22, in the first person. Two numbers in it are open: "more than
+ * 45 years of business leadership" (the site states fifty plus years in
+ * the figures below) and "25 years as owner of Rose Financial Group"
+ * (CLAUDE.md had the firm's duration unstated pending her resume). Both
+ * came from her, both are flagged for her confirmation.
  * Brett, 2026-09-18: no photo panel, no split; "if anything, a small circle photo of Deborah on the
  * right side of the H1." The portrait is a square crop of her profile
  * photo, rendered at 120px, which is well inside the source's resolution.
@@ -117,33 +120,34 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-x-16 gap-y-6 text-lg/8 text-ink-soft lg:grid-cols-2">
             <div className="space-y-6">
             <p>
-              Rose is my maiden name, and it has been on the door of every business I have run. I started in banking
-              in 1972 and spent thirty-six years in the financial industry, the later years as the owner of Rose
-              Financial Group, my financial planning firm in Magnolia, Texas, which I sold in 2008. It is the name of
-              this business too, because the way I work has not changed. I look at the whole picture, I run the
-              numbers before anyone signs, and I tell people what I see even when it is not what they hoped to hear.
+              With more than 45 years of business leadership and over a decade of real estate experience, including 25
+              years as owner of Rose Financial Group, I offer a rare combination of financial insight, strategic
+              negotiation, and personalized service. My clients benefit from thoughtful guidance, data-driven
+              decision-making, and a relationship-first approach that extends well beyond the closing table.
             </p>
             <p>
-              After I sold the firm, the city manager of Magnolia took me to lunch and asked me to come work for him.
-              I spent two years as the city&rsquo;s Economic Development Coordinator and stayed a second year as an
-              independent contractor. I helped write Magnolia&rsquo;s first comprehensive plan, worked directly with
-              developers, and sat in the meetings where zoning and the city&rsquo;s boundaries were decided. I did
-              that while serving as a Magnolia ISD school trustee, a seat I held for nine years, two of them as
-              president. Over the years I have also served two Houston mayors.
+              Known for blending innovative technology with genuine personal service, I utilize professional
+              marketing, AI-powered tools, data-driven pricing strategies, and deep local market knowledge to maximize
+              exposure for sellers and uncover opportunities for buyers. Whether assisting first-time homebuyers,
+              move-up buyers, relocation clients, luxury home sellers, or those searching for acreage, lakefront
+              properties, or investment opportunities, I am committed to delivering exceptional results with
+              integrity, professionalism, and clear communication.
             </p>
             </div>
             <div className="space-y-6">
             <p>
-              The natural next step from city work with developers would have been commercial real estate. I wanted
-              residential. I had bought and sold enough of my own homes by then to know what a good agent does and
-              what a careless one costs you, and I was confident I could do the job well. I have been doing it for
-              more than a decade now, with $41 million+ in total career sales volume.
+              A lifelong community leader, I have spent decades investing in the communities I serve. I was a board
+              appointee under two Houston mayors, and I&rsquo;m a past school board trustee, past Chair and current
+              Director of the Humble ISD Education Foundation. I remain actively involved with Partnership Lake
+              Houston (past director), the East Montgomery County Chamber of Commerce (member), and the Magnolia-area
+              chamber of commerce, believing that strong communities create stronger real estate markets and better
+              opportunities for families.
             </p>
             <p>
-              I built the financial planning firm through the Chamber of Commerce and the nonprofits I gave my time
-              to. I built this business the same way, with the same Chamber network.
-              Most of the people I work with came through someone I already know, and the clients I enjoy most are
-              the ones who let me use what I know on their behalf.
+              My mission is simple: to serve, connect, and deliver a real estate experience built on trust, knowledge,
+              innovation, and heart. Whether you&rsquo;re buying your first home, selling a longtime family property,
+              relocating, or expanding your investment portfolio, I am committed to providing the strategy, guidance,
+              and advocacy you need to make confident real estate decisions.
             </p>
             </div>
             <h2 className="pt-10 font-display text-3xl text-ink lg:col-span-2">Three careers, one client</h2>
