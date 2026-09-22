@@ -93,10 +93,7 @@ export function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <Logo variant="full" />
-            <p className="text-sm/6 text-balance text-ink-soft">
-              {legal.serviceAreaSentence} Buyers, sellers, relocations, new construction, acreage and lakefront, and
-              the sale and purchase handled together.
-            </p>
+            <p className="text-sm/6 text-balance text-ink-soft">{legal.footerIntro}</p>
             <div className="flex gap-x-6">
               {social.map((item) => (
                 <a key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="text-ink-faint hover:text-ink">

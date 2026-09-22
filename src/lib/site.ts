@@ -266,6 +266,15 @@ export const legal = {
   realtorMark:
     'REALTOR\u00ae is a registered collective membership mark that identifies real estate professionals who are members of the National Association of REALTORS\u00ae and subscribe to its Code of Ethics.',
   membership: 'Member, Houston Association of REALTORS\u00ae',
+  /**
+   * The paragraph under the wordmark in the footer, sent by Deborah on
+   * 2026-09-22. Her words, with the em dash before "and beyond" set as a
+   * comma (site rule). It replaced the build's own service-area line there;
+   * serviceAreaSentence still runs in the footer's legal block and in
+   * /llms.txt.
+   */
+  footerIntro:
+    'Serving Kingwood, Humble and the greater Lake Houston area, along with Montgomery County communities including Porter, Conroe and Magnolia, and beyond. I work with buyers and sellers across relocations, new construction, acreage and lakefront properties, and can seamlessly coordinate the sale of your current home with the purchase of your next.',
   serviceAreaSentence:
     'Serving the Lake Houston area of Kingwood and Humble, and Montgomery County including Porter, Conroe and Magnolia, and the surrounding communities.',
   trecConsumerProtectionNotice: 'https://www.trec.texas.gov/forms/consumer-protection-notice',
