@@ -32,7 +32,7 @@ export default async function StoriesPage() {
   return (
     <>
       <SchemaGraph nodes={[breadcrumb([{ name: 'Home', path: '/' }, { name: 'Stories', path: '/stories/' }])]} />
-      <PageIntro eyebrow="Stories" title="Every transaction has a story.">
+      <PageIntro eyebrow="Stories" title="Every transaction has a story">
         <p>Here, just a few I&rsquo;ll share.</p>
       </PageIntro>
       <section className="bg-paper pt-16 pb-20 sm:pt-20 lg:pb-28">

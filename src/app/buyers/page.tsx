@@ -101,7 +101,7 @@ export default async function BuyersPage() {
   return (
     <>
       <SchemaGraph nodes={[faqNode(buyersFaq), breadcrumb([{ name: 'Home', path: '/' }, { name: 'Buyers', path: '/buyers/' }])]} />
-      <PageIntro eyebrow={regionSentence} title="Buying a home in the Lake Houston area or Montgomery County.">
+      <PageIntro eyebrow={regionSentence} title="Buying a home in the Lake Houston area or Montgomery County">
         <p>
           Kingwood, Humble, Porter, Conroe and Magnolia. The house is the easy part. The loan, the timeline and the
           offer are where a purchase is won or lost, and those are parts of my fifty plus years in the financial
@@ -113,7 +113,7 @@ export default async function BuyersPage() {
 
       <FeatureSplit
         eyebrow="Buyers I am built for"
-        heading="Four situations where the financial background does the work."
+        heading="Four situations where the financial background does the work"
         intro="Some purchases are won on the numbers. A self-employed borrower. An appraisal that comes in short. A seller who needs certainty more than price. Those are the ones I am built for."
         items={BUILT_FOR}
       />
@@ -123,7 +123,7 @@ export default async function BuyersPage() {
           <Container>
             <div className="mx-auto max-w-2xl lg:mx-0">
               <h2 className="text-base/7 font-semibold text-rose">Buyer stories</h2>
-              <p className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Successful buyer stories.</p>
+              <p className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Successful buyer stories</p>
             </div>
             <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {stories.map((story) => (
@@ -136,7 +136,7 @@ export default async function BuyersPage() {
 
       <section className="bg-paper">
         <Container className="py-24 sm:py-32">
-          <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Questions buyers ask.</h2>
+          <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Questions buyers ask</h2>
           <div className="mt-10">
             <FAQList items={buyersFaq} />
           </div>

@@ -96,7 +96,7 @@ export default async function SellersPage() {
   return (
     <>
       <SchemaGraph nodes={[faqNode(sellersFaq), breadcrumb([{ name: 'Home', path: '/' }, { name: 'Sellers', path: '/sellers/' }])]} />
-      <PageIntro eyebrow={regionSentence} title="Selling a home in the Lake Houston area or Montgomery County.">
+      <PageIntro eyebrow={regionSentence} title="Selling a home in the Lake Houston area or Montgomery County">
         <p>
           Kingwood, Humble, Porter, Conroe and Magnolia. A sale is a pricing decision, a timing decision, and a
           presentation decision. Coordination and negotiation are where I excel.
@@ -107,7 +107,7 @@ export default async function SellersPage() {
 
       <FeatureSplit
         eyebrow="Situations I have sold through"
-        heading="Four sales where our plan mattered more than the market."
+        heading="Four sales where our plan mattered more than the market"
         intro="Every one of these is a real transaction on this site. The market was working against the seller in most of them, and the outcome came from our plan."
         items={SOLD_THROUGH}
       />
@@ -117,7 +117,7 @@ export default async function SellersPage() {
           <Container>
             <div className="mx-auto max-w-2xl lg:mx-0">
               <h2 className="text-base/7 font-semibold text-rose">Seller stories</h2>
-              <p className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Successful seller stories.</p>
+              <p className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Successful seller stories</p>
             </div>
             <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {stories.map((story) => (
@@ -130,14 +130,14 @@ export default async function SellersPage() {
 
       <section className="bg-paper">
         <Container className="py-24 sm:py-32">
-          <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Questions sellers ask.</h2>
+          <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Questions sellers ask</h2>
           <div className="mt-10">
             <FAQList items={sellersFaq} />
           </div>
         </Container>
       </section>
 
-      <ClosingAsk heading="Let&rsquo;s talk about pricing, timing and preparation.">
+      <ClosingAsk heading="Let&rsquo;s talk about pricing, timing and preparation">
         Starting from the closed sales in your immediate area and what is on the market this month.
       </ClosingAsk>
     </>

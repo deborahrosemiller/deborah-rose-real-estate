@@ -31,7 +31,7 @@ export default async function AreasPage() {
        * "Read a few of the stories." The closing heading is her word,
        * "flavor." Keep it.
        */}
-      <PageIntro eyebrow={regionSentence} title="Two areas, and a community for every kind of life in them.">
+      <PageIntro eyebrow={regionSentence} title="Two areas, and a community for every kind of life in them">
         <p>
           The Lake Houston area and Montgomery County hold several communities, and each one has its own feel, its own
           demographics and its own charm. The work is matching you to the right one.
@@ -42,7 +42,7 @@ export default async function AreasPage() {
           <div className="max-w-2xl">
             <p className="text-base/7 font-semibold text-rose">The communities</p>
             <h2 className="mt-2 font-display text-[2.25rem]/[1.1] text-pretty text-ink sm:text-5xl/[1.05]">
-              Kingwood and Humble in the Lake Houston area. Porter, Conroe and Magnolia in Montgomery County.
+              Kingwood and Humble in the Lake Houston area. Porter, Conroe and Magnolia in Montgomery County
             </h2>
             <p className="mt-6 text-lg/8 text-ink-soft">
               I have lived, worked or served in most of these places. Each page carries the neighborhoods I have closed

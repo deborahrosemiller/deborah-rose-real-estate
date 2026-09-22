@@ -20,7 +20,7 @@ export function AreaGrid({ tone = 'field', className = 'py-24 sm:py-32' }: { ton
             Where I work
           </h2>
           <p className="mt-2 font-display text-[2.25rem]/[1.1] text-pretty text-ink sm:text-5xl/[1.05]">
-            The Lake Houston area and Montgomery County.
+            The Lake Houston area and Montgomery County
           </p>
           <p className="mt-6 text-lg/8 text-ink-soft">
             Five towns across two counties, and I have lived, worked or served in most of them. Each has its own page

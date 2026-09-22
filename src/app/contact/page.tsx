@@ -30,7 +30,7 @@ export default function ContactPage() {
           <div className="max-w-2xl">
             <p className="text-base/7 font-semibold text-rose">Contact</p>
             <h1 className="mt-2 font-display text-[2.5rem]/[1.05] tracking-[-0.01em] text-pretty text-ink sm:text-6xl/[1.04] lg:text-[3.75rem]/[1.03]">
-              Call, text, or send a note.
+              Call, text, or send a note
             </h1>
             <p className="mt-8 text-lg font-medium text-pretty text-ink-soft sm:text-xl/8">
               The fastest way to reach me is my cell. If it is after hours, send a note here or by email and I will

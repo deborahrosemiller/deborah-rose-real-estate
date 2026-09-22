@@ -95,7 +95,7 @@ export default async function Home() {
 
       <FeatureThree
         eyebrow="How I work"
-        heading="What fifty plus years in finance and municipal government taught me about buying a house."
+        heading="What fifty plus years in finance and municipal government taught me about buying a house"
         items={HOW}
         tone="paper"
       />
@@ -109,7 +109,7 @@ export default async function Home() {
             </h2>
             {/* Deborah's heading and subtext, 2026-09-21. The subtext's em dash is split into two sentences (site rule). */}
             <p className="mt-2 font-display text-[2.25rem]/[1.1] text-balance text-ink sm:text-5xl/[1.05]">
-              Real deals. Real neighborhoods. Real results.
+              Real deals. Real neighborhoods. Real results
             </p>
             <p className="mt-6 text-lg/8 text-ink-soft">
               A look inside actual transactions I&rsquo;ve handled. The challenges, the decisions, and what made the
@@ -162,7 +162,7 @@ export default async function Home() {
                 About
               </p>
               <h2 className="mt-2 font-display text-[2.5rem]/[1.05] text-pretty text-ink sm:text-5xl/[1.05] lg:text-6xl/[1.04]">
-                Rose is my maiden name.
+                Rose is my maiden name
               </h2>
               <p className="mt-8 text-xl/8 text-ink sm:text-2xl/9">
                 It has been on the door of every business I have run, and it is on this one. Community is my business.
@@ -198,14 +198,14 @@ export default async function Home() {
 
       <section id="questions" className="bg-paper">
         <Container className="py-24 sm:py-32">
-          <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Questions my clients ask.</h2>
+          <h2 className="font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Questions my clients ask</h2>
           <div className="mt-10">
             <FAQList items={homeFaq} />
           </div>
         </Container>
       </section>
 
-      <ClosingAsk heading="Tell me what you are trying to do." secondaryHref="/about/" secondaryLabel="Read about me first">
+      <ClosingAsk heading="Tell me what you are trying to do" secondaryHref="/about/" secondaryLabel="Read about me first">
         Buying, selling, or both at once. The first call is twenty minutes and costs nothing.
       </ClosingAsk>
     </>

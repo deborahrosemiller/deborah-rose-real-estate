@@ -127,7 +127,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           <Eyebrow>Stories from {area.name}</Eyebrow>
           {stories.length ? (
             <>
-              <Heading className="mt-6 max-w-2xl">Transactions I have handled here.</Heading>
+              <Heading className="mt-6 max-w-2xl">Transactions I have handled here</Heading>
               <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
                 {stories.map((s) => (
                   <StoryCard key={s.slug} story={s} />
@@ -136,7 +136,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             </>
           ) : (
             <>
-              <Heading className="mt-6 max-w-2xl">No published story from {area.name} yet.</Heading>
+              <Heading className="mt-6 max-w-2xl">No published story from {area.name} yet</Heading>
               <p className="mt-6 max-w-2xl text-lg/8 text-ink-soft">
                 The transactions I closed here predate the records I keep digitally. They will be added as I pull them
                 together. In the meantime the stories from the neighboring towns show how I work.

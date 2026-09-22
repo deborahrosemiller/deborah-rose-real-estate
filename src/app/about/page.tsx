@@ -88,7 +88,7 @@ export default function AboutPage() {
             <p className="text-base/7 font-semibold text-rose">About</p>
             <div className="mt-2 flex items-start justify-between gap-x-6 sm:gap-x-10">
               <h1 className="font-display text-[2.5rem]/[1.05] tracking-[-0.01em] text-pretty text-ink sm:text-6xl/[1.04] lg:text-[3.75rem]/[1.03]">
-                Deborah Rose Miller.
+                Deborah Rose Miller
               </h1>
               <Image
                 src="/about/deborah-rose-miller-portrait.webp"
@@ -144,7 +144,7 @@ export default function AboutPage() {
               the ones who let me use what I know on their behalf.
             </p>
             </div>
-            <h2 className="pt-10 font-display text-3xl text-ink lg:col-span-2">Three careers, one client.</h2>
+            <h2 className="pt-10 font-display text-3xl text-ink lg:col-span-2">Three careers, one client</h2>
             <p>
               I started out as a banker, and I have spent a career reading loan products. I know which lenders can
               close in ten days to three weeks, which ones will think about a file instead of running it through a
@@ -165,7 +165,7 @@ export default function AboutPage() {
         <Container>
           <div className="max-w-2xl">
             <p className="text-base/7 font-semibold text-rose">In numbers</p>
-            <h2 className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Fifty plus years of showing up.</h2>
+            <h2 className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Fifty plus years of showing up</h2>
           </div>
           <div className="mt-16 sm:mt-20">
             <Credentials items={FIGURES} />
@@ -177,7 +177,7 @@ export default function AboutPage() {
         <Container>
           <div className="max-w-2xl">
             <p className="text-base/7 font-semibold text-rose">Community</p>
-            <h2 className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Where I have served.</h2>
+            <h2 className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Where I have served</h2>
             <p className="mt-6 text-lg/8 text-ink-soft">
               Education foundations are the cause I give my time to. The Magnolia Education Foundation, which I helped
               start in 2001, is in its twenty-fifth year.
@@ -191,13 +191,13 @@ export default function AboutPage() {
         <Container>
           <div className="max-w-2xl">
             <p className="text-base/7 font-semibold text-rose">Credentials</p>
-            <h2 className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">License, brokerage and designations.</h2>
+            <h2 className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">License, brokerage and designations</h2>
           </div>
           <Rows rows={CREDENTIALS} />
         </Container>
       </section>
 
-      <ClosingAsk heading="If any of that sounds like the help you need, call me." secondaryHref="/stories/" secondaryLabel="Read the stories first" />
+      <ClosingAsk heading="If any of that sounds like the help you need, call me" secondaryHref="/stories/" secondaryLabel="Read the stories first" />
     </>
   )
 }
