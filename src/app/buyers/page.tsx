@@ -114,7 +114,7 @@ export default async function BuyersPage() {
       <FeatureSplit
         eyebrow="Buyers I am built for"
         heading="Four situations where the financial background does the work"
-        intro="Some purchases are won on the numbers. A self-employed borrower. An appraisal that comes in short. A seller who needs certainty more than price. Those are the ones I am built for."
+        intro="Some purchases are won on the numbers, a self-employed borrower, an appraisal that comes in short, a seller who needs certainty more than price: those are the ones I am built for."
         items={BUILT_FOR}
       />
 
