@@ -1,6 +1,6 @@
 ---
 title: "Winning a bidding war on the strength of the contract: a Porter pool home in time for summer"
-date: "2026-07-16"
+date: "2024-06"
 city: "Porter"
 county: "Montgomery County"
 area: "porter"
