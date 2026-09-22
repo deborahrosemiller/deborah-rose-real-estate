@@ -7,7 +7,7 @@ area: "porter"
 role: "Sale and purchase"
 summary: "Clients in Porter wanted a home with a pool in time for summer. Their existing home sold over list, the pool home drew multiple offers, and a clean, tight contract with a fast close made their offer the one the seller chose. I ran the whole thing on a broken foot."
 image: "/stories/porter-pool-home-bidding-war.webp"
-alt: "Front exterior of a two story brick home in the Azalea District, Porter, Texas"
+alt: "Backyard pool and spa with a covered patio behind a two story home in the Azalea District, Porter, Texas"
 facts:
   - label: "Existing home"
     value: "Sold over list price"
