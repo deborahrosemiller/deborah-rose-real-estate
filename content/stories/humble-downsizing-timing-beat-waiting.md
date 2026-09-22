@@ -1,6 +1,6 @@
 ---
 title: "Why timing beat waiting: a Humble couple listed in spring instead of December and cleared their goal by $5,000"
-date: "2026-06-11"
+date: "2022-05"
 city: "Humble"
 county: "Harris County"
 area: "humble"
