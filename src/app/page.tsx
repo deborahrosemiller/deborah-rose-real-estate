@@ -28,7 +28,7 @@ export const metadata: Metadata = {
  */
 const HOW = [
   {
-    name: 'The numbers first.',
+    name: 'The numbers first',
     description:
       'I spent thirty-six years in the financial industry, first as a banker and then as the owner of Rose Financial Group, before I held a real estate license. I read loan products the way other people read listings. I know which lenders can close in ten days to three weeks, and which ones understand a self-employed borrower, and that conversation happens before we look at a single house.',
     href: '/buyers/',
@@ -36,7 +36,7 @@ const HOW = [
     icon: BanknotesIcon,
   },
   {
-    name: 'City hall, from the inside.',
+    name: 'City hall, from the inside',
     description:
       'I spent two years as Economic Development Coordinator for the City of Magnolia and helped write its first comprehensive plan. I served nine years on the Magnolia ISD school board, two of them as president. When you ask about zoning, an HOA or a school district, the answer comes from someone who has sat on the other side of that table.',
     href: '/about/',
@@ -44,7 +44,7 @@ const HOW = [
     icon: BuildingLibraryIcon,
   },
   {
-    name: 'Built through the community.',
+    name: 'Built through the community',
     description:
       // Deborah's rewrite, 2026-09-21. The em dash after "served" is split into two sentences (site rule).
       'Community involvement has always been at the heart of how I do business. I built my financial planning firm through relationships formed in the Chamber of Commerce and the communities I served. And I’ve built my real estate business the same way. Today, much of my business comes from referrals and long-standing relationships. In fact, many of the stories shared on this site began with something very simple: someone I had served introducing me to someone they cared about.',

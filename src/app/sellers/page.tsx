@@ -68,25 +68,25 @@ const STEPS = [
 
 const SOLD_THROUGH = [
   {
-    name: 'Selling from another state.',
+    name: 'Selling from another state',
     description:
       'I have listed and closed homes for owners who were hundreds of miles away for the entire transaction, in a heavy buyer’s market, under contract in under a week at their asking price.',
     icon: GlobeAmericasIcon,
   },
   {
-    name: 'Downsizing and retirement timing.',
+    name: 'Downsizing and retirement timing',
     description:
       'Timing is everything. One couple wanted to wait until December to list. I told them to list in the spring instead, and it put five thousand dollars more in their pocket. By December the market had turned.',
     icon: CalendarDaysIcon,
   },
   {
-    name: 'Selling new construction you just bought.',
+    name: 'Selling new construction you just bought',
     description:
       'A thin equity window and a builder still selling the same plan down the street. Pricing this correctly is arithmetic, and I have gotten sellers out even on homes they had owned for a year.',
     icon: HomeIcon,
   },
   {
-    name: 'Selling and buying at the same time.',
+    name: 'Selling and buying at the same time',
     description:
       'Two contracts, one closing date. I have run both sides for the same clients more than once, and the sequencing is the whole job: the sale funds the purchase, and nobody spends a night between homes.',
     icon: ArrowsRightLeftIcon,
@@ -119,7 +119,7 @@ export default async function SellersPage() {
           <Container>
             <div className="mx-auto max-w-2xl lg:mx-0">
               <h2 className="text-base/7 font-semibold text-rose">Seller stories</h2>
-              <p className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Successful seller stories</p>
+              <p className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Sales I have handled</p>
             </div>
             <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {stories.map((story) => (

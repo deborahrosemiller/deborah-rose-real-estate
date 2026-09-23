@@ -71,25 +71,25 @@ const STEPS = [
 
 const BUILT_FOR = [
   {
-    name: 'Self-employed and business owners.',
+    name: 'Self-employed and business owners',
     description:
       'A tax return that shows every deduction you are entitled to can look thin to the wrong underwriter. I know which lenders read it correctly, because for thirty-six years in banking and financial planning I sat on the other side of that conversation.',
     icon: ScaleIcon,
   },
   {
-    name: 'Relocating from out of state.',
+    name: 'Relocating from out of state',
     description:
       'Video walkthroughs of what the listing photos leave out, same-day answers across time zones, and an inspection I attend in person and report room by room. I have closed homes for buyers who first walked in on closing day.',
     icon: ClockIcon,
   },
   {
-    name: 'Corporate relocation and new construction.',
+    name: 'Corporate relocation and new construction',
     description:
       'I work with relocation companies and with builders, and I treat a new build the way I treat a resale: a full inspection before closing, a punch list the builder fixes, and a price checked against what the same plan sold for nearby.',
     icon: DocumentMagnifyingGlassIcon,
   },
   {
-    name: 'Buying and selling at the same time.',
+    name: 'Buying and selling at the same time',
     description:
       'One project with two closings, sequenced so you are never between homes. If you owe more than your current home is worth, we talk about that first. I have brought in an investor so a client could break even and still buy the home they wanted.',
     icon: HomeModernIcon,
@@ -123,7 +123,7 @@ export default async function BuyersPage() {
           <Container>
             <div className="mx-auto max-w-2xl lg:mx-0">
               <h2 className="text-base/7 font-semibold text-rose">Buyer stories</h2>
-              <p className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Successful buyer stories</p>
+              <p className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">Purchases I have handled</p>
             </div>
             <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {stories.map((story) => (

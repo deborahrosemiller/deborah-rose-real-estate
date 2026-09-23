@@ -35,7 +35,7 @@ export function AreaGrid({ tone = 'field', className = 'py-24 sm:py-32' }: { ton
                 <Link href={`/areas/${a.slug}/`} className="tap underline decoration-ink/25 underline-offset-4 hover:decoration-ink">
                   {a.name}
                 </Link>
-                <span className="font-normal text-ink-faint">, {a.county}.</span>
+                <span className="font-normal text-ink-faint">, {a.county}</span>
               </dt>{' '}
               <dd className="inline">{areaContent[a.slug].intro.split('. ')[0]}.</dd>
             </div>
