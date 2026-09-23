@@ -75,22 +75,32 @@ export default async function Home() {
        * text on plain white. It now carries the band tone (white at both
        * edges, so the paper "How I work" section below still reads as a
        * change of tone), the rose label, the mission in the display serif,
-       * and her own rose mark set large and faint behind the copy. The mark
-       * is the one in public/brand, the same rose as the logo and the same
-       * red as the accent; at 9 percent it is texture rather than an image
-       * with something to say, so it carries no alt text and nothing reads
-       * over it at less than 15:1. The alternative she asked about, a grey
-       * home photograph behind this copy, is in the session report.
+       * and her own rose mark as the background of the whole section. The
+       * mark is the one in public/brand, the same rose as the logo and the
+       * same red as the accent; it is texture rather than an image with
+       * something to say, so it carries no alt text and nothing reads over
+       * it at less than 15:1. Three treatments of this section, including
+       * the house-and-rose motif from her own graphic, are at
+       * /design-preview/ for the review on 2026-09-23.
        */}
       <section aria-label="Introduction from Deborah" className="band relative isolate overflow-hidden py-20 sm:py-28">
-        <Image
-          src="/brand/deborah-rose-mark.png"
-          alt=""
-          aria-hidden="true"
-          width={512}
-          height={512}
-          className="pointer-events-none absolute -right-10 top-1/2 -z-10 w-44 -translate-y-1/2 opacity-[0.09] sm:-right-6 sm:w-60 lg:right-12 lg:w-80"
-        />
+        {/*
+          * Deborah, 2026-09-23: the rose is the background of the section
+          * now, not an ornament at its edge. It is centred and taller than
+          * the band so it fills the height and crops at the stem and the
+          * bud, the way a watermark does. 6 percent, because the copy reads
+          * over it here: her red on the paper tone at that strength leaves
+          * ink type above 15:1.
+          */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center overflow-hidden">
+          <Image
+            src="/brand/deborah-rose-mark.png"
+            alt=""
+            width={512}
+            height={512}
+            className="h-[118%] w-auto max-w-none opacity-[0.06]"
+          />
+        </div>
         <Container>
           <div className="max-w-3xl">
             <Eyebrow>My approach</Eyebrow>
