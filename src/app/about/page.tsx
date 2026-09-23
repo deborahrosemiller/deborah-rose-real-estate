@@ -24,7 +24,8 @@ const SERVICE = [
   { name: 'Humble ISD Education Foundation', detail: 'Past chair and current director' },
   { name: 'Magnolia ISD Board of Trustees', detail: 'Nine years, two as president' },
   { name: 'City of Magnolia', detail: 'Economic Development Coordinator, two years' },
-  { name: 'Lake Houston Area Chamber of Commerce', detail: 'Director' },
+  // Deborah, 2026-09-23: the chamber became Partnership Lake Houston in the 2020 merger, and she is a past director.
+  { name: 'Partnership Lake Houston', detail: 'Past director' },
   { name: 'Greater East Montgomery County Chamber of Commerce', detail: 'Member' },
   // Deborah, 2026-09-21: never president of this chamber; she was a board member.
   { name: 'Greater Magnolia Chamber of Commerce', detail: 'Board member' },
@@ -69,11 +70,10 @@ function Rows({ rows }: { rows: { name: string; detail: string }[] }) {
  * portrait sits to the right of the H1. The H1 is her name, plainly;
  * "I am Deborah Rose Miller" read like a bot to Brett (2026-09-18).
  * The biography is her own HAR bio, adapted and sent by Brett on
- * 2026-09-22, in the first person. Two numbers in it are open: "more than
- * 45 years of business leadership" (the site states fifty plus years in
- * the figures below) and "25 years as owner of Rose Financial Group"
- * (CLAUDE.md had the firm's duration unstated pending her resume). Both
- * came from her, both are flagged for her confirmation.
+ * 2026-09-22, in the first person. Deborah settled both of its numbers on
+ * 2026-09-23: the career claim is fifty plus years, not forty-five, and
+ * twenty-five years as owner of Rose Financial Group is correct, which
+ * closes the question CLAUDE.md had left open pending her resume.
  * Brett, 2026-09-18: no photo panel, no split; "if anything, a small circle photo of Deborah on the
  * right side of the H1." The portrait is a square crop of her profile
  * photo, rendered at 120px, which is well inside the source's resolution.
@@ -120,7 +120,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-x-16 gap-y-6 text-lg/8 text-ink-soft lg:grid-cols-2">
             <div className="space-y-6">
             <p>
-              With more than 45 years of business leadership and over a decade of real estate experience, including 25
+              With 50+ years of business leadership and over a decade of real estate experience, including 25
               years as owner of Rose Financial Group, I offer a rare combination of financial insight, strategic
               negotiation, and personalized service. My clients benefit from thoughtful guidance, data-driven
               decision-making, and a relationship-first approach that extends well beyond the closing table.
