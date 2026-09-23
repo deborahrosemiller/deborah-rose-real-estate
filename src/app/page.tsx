@@ -141,12 +141,14 @@ export default async function Home() {
             {/*
               * Deborah's heading and subtext, 2026-09-21. The subtext's em dash is
               * split into two sentences (site rule). The heading was three
-              * sentences until 2026-09-23, when she sent a screenshot of it: the
-              * two periods come out and the three phrases run on commas. Sentence
-              * case follows, as it does on every other heading here.
+              * sentences until 2026-09-23, when she sent a screenshot of it and
+              * asked twice: first for the periods out, then for all of the
+              * punctuation out. It carries none now, and it is the one heading on
+              * the site in title case, which is how she asked for it. Hers beats
+              * the house style.
               */}
             <p className="mt-2 font-display text-[2.25rem]/[1.1] text-balance text-ink sm:text-5xl/[1.05]">
-              Real deals, real neighborhoods, real results
+              Real Deals Real Neighborhoods Real Results
             </p>
             <p className="mt-6 text-lg/8 text-ink-soft">
               A look inside actual transactions I&rsquo;ve handled. The challenges, the decisions, and what made the
