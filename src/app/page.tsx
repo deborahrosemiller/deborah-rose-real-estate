@@ -138,9 +138,15 @@ export default async function Home() {
             <h2 id="stories-heading" className="text-base/7 font-semibold text-rose">
               Stories from the field
             </h2>
-            {/* Deborah's heading and subtext, 2026-09-21. The subtext's em dash is split into two sentences (site rule). */}
+            {/*
+              * Deborah's heading and subtext, 2026-09-21. The subtext's em dash is
+              * split into two sentences (site rule). The heading was three
+              * sentences until 2026-09-23, when she sent a screenshot of it: the
+              * two periods come out and the three phrases run on commas. Sentence
+              * case follows, as it does on every other heading here.
+              */}
             <p className="mt-2 font-display text-[2.25rem]/[1.1] text-balance text-ink sm:text-5xl/[1.05]">
-              Real deals. Real neighborhoods. Real results
+              Real deals, real neighborhoods, real results
             </p>
             <p className="mt-6 text-lg/8 text-ink-soft">
               A look inside actual transactions I&rsquo;ve handled. The challenges, the decisions, and what made the
