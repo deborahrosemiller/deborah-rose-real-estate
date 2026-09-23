@@ -17,96 +17,121 @@ So the form has never delivered a note. It did not pretend to: the page
 told the visitor it was not connected and gave them the phone number and
 the email address. Nothing was silently dropped, and nothing arrived.
 
-## What it does now
+## How it works now
 
-The endpoint delivers to every channel that is configured and reports
-success if any one of them accepted the note.
+Brett, 2026-09-23: no third-party service and nothing new to pay for.
+The note is emailed by a Google Apps Script web app running in Deborah's
+own Google account.
 
-| Variable | What it does |
+    the form
+      -> POST /api/contact/            (the site)
+      -> POST the Apps Script /exec    (her Google account)
+      -> GmailApp.sendEmail            (her Gmail, to herself)
+
+`scripts/contact-webhook.gs` in this repository is the copy of record
+for the script. It does not run from here; it is pasted into
+script.google.com. Two variables on Vercel point at it:
+
+| Variable | What it is |
 | --- | --- |
-| `RESEND_API_KEY` | Emails the note to `CONTACT_TO` through Resend's HTTPS API. One fetch, no package to install. |
-| `CONTACT_TO` | Who the email goes to. Defaults to the address in `src/lib/site.ts`. |
-| `CONTACT_FROM` | Who it comes from. Defaults to `onboarding@resend.dev`. |
-| `CONTACT_WEBHOOK_URL` | Posts the same fields as JSON to any endpoint that accepts it. Unchanged, and still optional. |
+| `CONTACT_WEBHOOK_URL` | The web app's URL. It ends in `/exec`. |
+| `CONTACT_WEBHOOK_SECRET` | A long random string, the same one in the script. |
 
-With neither `RESEND_API_KEY` nor `CONTACT_WEBHOOK_URL` set, the form
-still says it is not connected. The endpoint never accepts a note it
-cannot deliver.
+The secret travels in the body rather than a header, because Apps Script
+cannot read custom request headers and a deployed web app answers anyone
+who finds its URL. The script drops anything that does not carry it.
+
+With `CONTACT_WEBHOOK_URL` unset the form still says it is not
+connected. The endpoint never accepts a note it cannot deliver.
 
 The email arrives as name, email, phone, what they are thinking about
-and when it was sent, then their message, with `Reply-To` set to their
-address so hitting reply in Gmail answers the visitor.
+and when it was sent, then their message, with the subject "Website note
+from [name]" and a reply-to set to the visitor, so replying in Gmail
+answers them rather than her.
 
-## To turn on email delivery
+## To turn it on
 
-Three steps, about ten minutes, and the first one needs an account, so
-it is Deborah's or Brett's to do rather than something a session can do
+Steps 1 to 4 happen in Deborah's Google account and step 5 on Vercel, so
+they are hers and Brett's to do rather than something a session can do
 on their behalf.
 
-1. Create a Resend account at resend.com, signing up as
-   `deborahroserealtor@gmail.com`. The free tier is 3,000 emails a month
-   and 100 a day, which is far more than a contact form will ever use.
-2. Create an API key and add it to the Vercel project as
-   `RESEND_API_KEY` (Settings, Environment Variables, all environments).
-   Redeploy, or push anything, so the new value is picked up.
-3. Send a note through the form and confirm it lands.
+1. Sign in to Google as **deborahroserealtor@gmail.com** and open
+   script.google.com. New project. Name it "Contact form".
+2. Replace everything in `Code.gs` with the contents of
+   `scripts/contact-webhook.gs` from this repository.
+3. Replace `PASTE_THE_SECRET_HERE` with a long random string. Keep it:
+   it goes into Vercel in step 5, and it never goes into this
+   repository, which is on GitHub.
+4. Deploy, New deployment, type **Web app**. Execute as **Me**. Who has
+   access: **Anyone**. Deploy, then authorize when Google asks, which it
+   will, because the script sends mail as her. Copy the web app URL; it
+   ends in `/exec`.
 
-With no other setup, Resend sends from `onboarding@resend.dev` and will
-only deliver to the account's own signup address. That is exactly the
-case here, which is why this works without touching DNS.
+   "Anyone" is what lets the site's server post to it without signing
+   in. The secret is what makes that safe.
+5. In the Vercel project, Settings, Environment Variables, add
+   `CONTACT_WEBHOOK_URL` (the `/exec` URL) and `CONTACT_WEBHOOK_SECRET`
+   (the same string), for all environments. Redeploy, or push anything.
+6. Send a note through the form at deborahroserealestate.com/contact/
+   and confirm it lands in her inbox.
 
-When there is time, verify `deborahroserealestate.com` in Resend, which
-is three DNS records on the domain, and set `CONTACT_FROM` to something
-like `Deborah Rose Real Estate Group <notes@deborahroserealestate.com>`.
-That makes the notification come from her own domain and lets the form
-mail anyone, not only her.
+Free Gmail sends 100 recipients a day from Apps Script. A contact form
+will not come near it. There is no account to create, no card, and
+nothing to renew.
+
+If the script is ever edited, deploy again as a **new version** of the
+same deployment, or the URL keeps serving the old code.
 
 ## A text alert, if they want one
 
-Email is the thing that had to work and now does. A text is a separate
-decision with a recurring cost, so nothing has been signed up for.
+Email is the thing that had to work. A text is a separate decision with
+a recurring cost, so nothing has been signed up for.
 
-**Twilio, the direct route.** The webhook already carries every field,
-so the endpoint could send an SMS in the same handler. The obstacle is
-not the code, it is US carrier registration: any business sending
-application-to-person SMS to US numbers must register through A2P 10DLC
-before messages deliver reliably. That means a brand registration and a
-campaign, a few dollars a month on top of roughly a dollar a month for
-the number and under a cent per message, and a review that takes days,
-not minutes. Real cost is small. Real friction is the registration.
+**A phone notification instead of a text.** Free, and worth trying
+first. Every one of these emails has a subject starting "Website note
+from". A Gmail filter on that, set to notify on her phone, puts the
+alert in front of her in seconds.
+
+**The same Apps Script.** It can also text, after a fashion, through a
+carrier email-to-SMS gateway. Free, one more line in the script, and
+genuinely unreliable: carriers filter these and have been retiring the
+gateways. Worth knowing, not worth depending on.
 
 **A CRM she already pays for.** If the CRM Brett mentioned can text her
-on a new lead, that is the cheapest path by far: point
-`CONTACT_WEBHOOK_URL` at its inbound webhook and nothing else changes,
-no new vendor and no registration, because the CRM has already done it.
-This is the one to check first.
+on a new lead, point a second webhook at it and nothing else changes. No
+new vendor, no registration, because the CRM has already done it.
 
-**Zapier or Make, in between.** Point the webhook at a catch hook and
-let the scenario send the text. Costs a plan rather than a per-message
-rate, and no code ships.
+**Twilio.** The obstacle is not the code, it is US carrier
+registration: application-to-person SMS to US numbers must go through
+A2P 10DLC first. A brand and a campaign, a few dollars a month on top of
+roughly a dollar for the number and under a cent a message, and a review
+measured in days. Small money, real friction.
 
-**A phone notification instead of a text.** A Gmail filter on the
-subject line, which always starts "Website note from", set to notify on
-her phone gets the alert to her in seconds for nothing. This is worth
-trying before paying for SMS, because it may simply be enough.
-
-The recommendation, in order: check the CRM first, try the Gmail filter
-alongside it, and only reach for Twilio if she wants a real text from a
-number that is hers.
+The order to try them: the Gmail filter, then the CRM, then Twilio only
+if she wants a real text from a number that is hers.
 
 ## How this was tested
 
-Against a production build on 2026-09-23, with the email API and the
-webhook pointed at a local receiver, submitted through the real form in
-a browser rather than by curl:
+On 2026-09-23, against a production build, with the webhook pointed at a
+local stand-in that answers exactly as an Apps Script web app does,
+including the redirect to googleusercontent that Apps Script performs on
+the way to its response:
 
-- A full submission returned "Sent. I will be in touch." on the page,
-  and the receiver logged both the email payload and the webhook payload
-  with every field intact and `Reply-To` set to the visitor.
+- A full submission returned `{"ok":true}` and the stand-in received
+  every field, the secret, the source and the timestamp.
+- A submission whose secret did not match was refused by the stand-in,
+  and the site answered 502, so the visitor sees the error and the phone
+  number rather than a false "Sent".
 - A name with no email and no phone was refused with the message the
   form shows.
-- A name and phone with no email was delivered, with no `Reply-To`.
-- A filled honeypot returned success and delivered nothing.
+- A filled honeypot returned success and posted nothing.
 
-Resend's own servers were not in the loop, since that needs the key.
-The request that would go to them was captured and read field by field.
+The script itself was run outside Google, with `ContentService`,
+`Utilities` and `GmailApp` stubbed, to check its behaviour before anyone
+pastes it: a good note sends one email with the right subject, reply-to
+and body; a wrong or missing secret sends nothing; a name with no way to
+reach them back is refused; a name and phone with no email sends with no
+reply-to; unreadable JSON is refused.
+
+What has not been tested is Google's own delivery, which needs the
+script deployed in her account. That is step 6 above.

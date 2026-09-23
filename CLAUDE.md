@@ -81,7 +81,7 @@ These override her Brand and Website Copywriting Brief and her HAR bio where the
 - The Google Business Profile's website field still points at har.com. At launch it changes to deborahroserealestate.com. That is a direct Map Pack signal currently handed to HAR.
 - `HIDE_FROM_SEARCH_ENGINES` in `src/lib/site.ts` is `true`. Flip it to `false` at launch.
 - Every host except deborahroserealestate.com answers `X-Robots-Tag: noindex, nofollow` (next.config.mjs, keyed on the request host). Review links on *.vercel.app stay out of Google without anything to undo at launch.
-- `RESEND_API_KEY` must be set on Vercel before the contact form delivers anything. The code is written and tested; it needs the key, which needs a Resend account. `CONTACT_WEBHOOK_URL` is the optional second channel for a CRM or an SMS automation. See `docs/contact-form.md`.
+- `CONTACT_WEBHOOK_URL` and `CONTACT_WEBHOOK_SECRET` must be set on Vercel before the contact form delivers anything. Brett, 2026-09-23: no third-party service and nothing new to pay for, so the note is mailed by a Google Apps Script web app in her own Google account. `scripts/contact-webhook.gs` is the copy of record for that script and `docs/contact-form.md` has the steps. The secret never goes in this repository.
 - Deploy is push to `main`; Vercel builds. Nothing else.
 
 <!-- BEGIN:nextjs-agent-rules -->

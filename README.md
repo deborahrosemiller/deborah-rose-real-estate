@@ -70,12 +70,9 @@ What was stripped from every block, on purpose: rounded corners on photos and pa
 
 ## The contact form
 
-`/api/contact` delivers every submission to each channel that is configured, and reports success if any one of them accepted it:
+`/api/contact` posts the submission to `CONTACT_WEBHOOK_URL`, a Google Apps Script web app running in Deborah's own Google account, which mails the note to her with GmailApp. `CONTACT_WEBHOOK_SECRET` travels in the body and is what makes a stray post to that public URL inert. `scripts/contact-webhook.gs` is the copy of record for the script.
 
-- `RESEND_API_KEY` emails the note to `CONTACT_TO`, which defaults to the address in `src/lib/site.ts`. One fetch to Resend's API, no package to install.
-- `CONTACT_WEBHOOK_URL` posts the same fields as JSON to any endpoint that accepts it: a CRM inbound webhook, a Zapier catch hook, a Make scenario.
-
-With neither set, the form tells the visitor it is not connected and shows the phone number and email instead. It never accepts a note it cannot deliver. `docs/contact-form.md` has the setup steps and what a text alert would take.
+With no webhook set, the form tells the visitor it is not connected and shows the phone number and email instead. It never accepts a note it cannot deliver. `docs/contact-form.md` has the setup steps and what a text alert would take.
 
 ## Adding a story
 
