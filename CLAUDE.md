@@ -81,5 +81,15 @@ These override her Brand and Website Copywriting Brief and her HAR bio where the
 - The Google Business Profile's website field still points at har.com. At launch it changes to deborahroserealestate.com. That is a direct Map Pack signal currently handed to HAR.
 - `HIDE_FROM_SEARCH_ENGINES` in `src/lib/site.ts` is `true`. Flip it to `false` at launch.
 - Every host except deborahroserealestate.com answers `X-Robots-Tag: noindex, nofollow` (next.config.mjs, keyed on the request host). Review links on *.vercel.app stay out of Google without anything to undo at launch.
-- `CONTACT_WEBHOOK_URL` must be set on Vercel before the contact form delivers anything.
+- `RESEND_API_KEY` must be set on Vercel before the contact form delivers anything. The code is written and tested; it needs the key, which needs a Resend account. `CONTACT_WEBHOOK_URL` is the optional second channel for a CRM or an SMS automation. See `docs/contact-form.md`.
 - Deploy is push to `main`; Vercel builds. Nothing else.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

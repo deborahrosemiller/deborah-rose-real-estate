@@ -25,7 +25,9 @@ export function ContactForm() {
     const data = Object.fromEntries(new FormData(form).entries())
     setState({ status: 'sending' })
     try {
-      const res = await fetch('/api/contact', {
+      // The trailing slash matches next.config's trailingSlash, so the post
+      // is not answered with a 308 and repeated.
+      const res = await fetch('/api/contact/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),

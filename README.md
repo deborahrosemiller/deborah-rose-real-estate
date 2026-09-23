@@ -70,7 +70,12 @@ What was stripped from every block, on purpose: rounded corners on photos and pa
 
 ## The contact form
 
-`/api/contact` forwards submissions as JSON to `CONTACT_WEBHOOK_URL` (a GoHighLevel inbound webhook). Until that environment variable is set on Vercel, the form tells the visitor it is not connected and shows the phone number and email instead.
+`/api/contact` delivers every submission to each channel that is configured, and reports success if any one of them accepted it:
+
+- `RESEND_API_KEY` emails the note to `CONTACT_TO`, which defaults to the address in `src/lib/site.ts`. One fetch to Resend's API, no package to install.
+- `CONTACT_WEBHOOK_URL` posts the same fields as JSON to any endpoint that accepts it: a CRM inbound webhook, a Zapier catch hook, a Make scenario.
+
+With neither set, the form tells the visitor it is not connected and shows the phone number and email instead. It never accepts a note it cannot deliver. `docs/contact-form.md` has the setup steps and what a text alert would take.
 
 ## Adding a story
 
