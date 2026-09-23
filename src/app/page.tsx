@@ -65,17 +65,32 @@ export default async function Home() {
       <Hero />
 
       {/*
-       * Her own introduction, sent by Deborah on 2026-09-21 with the intro
-       * line that heads the hero and revised by her on 2026-09-22 (the first
-       * paragraph now runs through banking, the planning firm and what that
-       * perspective gives a client). Her words as she wrote them, except the
-       * em dash in the second sentence, split into two sentences per the
-       * site's standing rule. She cut the "Today, I bring that experience"
-       * paragraph on 2026-09-22, so the section is two paragraphs and closes
-       * on the mission. The mission sentence is bold, as she set it. White
-       * tone, so the paper "How I work" band below still alternates.
+       * Her own introduction. She sent it on 2026-09-21 with the intro line
+       * that heads the hero, revised the first paragraph on 2026-09-22 to
+       * run through banking and the planning firm, and cut the "Today, I
+       * bring that experience" paragraph the same day. Her words, except the
+       * em dash in the second sentence, split in two per the site's rule.
+       *
+       * The shape is from 2026-09-22 as well: she said it read as a wall of
+       * text on plain white. It now carries the band tone (white at both
+       * edges, so the paper "How I work" section below still reads as a
+       * change of tone), the rose label, the mission in the display serif,
+       * and her own rose mark set large and faint behind the copy. The mark
+       * is the one in public/brand, the same rose as the logo and the same
+       * red as the accent; at 9 percent it is texture rather than an image
+       * with something to say, so it carries no alt text and nothing reads
+       * over it at less than 15:1. The alternative she asked about, a grey
+       * home photograph behind this copy, is in the session report.
        */}
-      <section aria-label="Introduction from Deborah" className="band py-20 sm:py-28">
+      <section aria-label="Introduction from Deborah" className="band relative isolate overflow-hidden py-20 sm:py-28">
+        <Image
+          src="/brand/deborah-rose-mark.png"
+          alt=""
+          aria-hidden="true"
+          width={512}
+          height={512}
+          className="pointer-events-none absolute -right-10 top-1/2 -z-10 w-44 -translate-y-1/2 opacity-[0.09] sm:-right-6 sm:w-60 lg:right-12 lg:w-80"
+        />
         <Container>
           <div className="max-w-3xl">
             <Eyebrow>My approach</Eyebrow>

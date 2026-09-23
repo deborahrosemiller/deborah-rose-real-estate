@@ -317,6 +317,26 @@
  * visible viewport and it does not jump when the address bar retracts.
  * Brett, 2026-09-18, twice: full screen, and the header stays white.
  */
+.hero-media {
+  /* Phones: a band at the top of the page, in the flow, with the copy under it. */
+  height: 44vh;
+  height: 44svh;
+  min-height: 14rem;
+  max-height: 26rem;
+}
+
+@media (min-width: 1024px) {
+  /* From lg it is Brett's full-screen hero again: absolute, behind the copy. */
+  .hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: -20;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+}
+
 .hero-full {
   height: calc(100vh - var(--nav-h));
   height: calc(100dvh - var(--nav-h));
@@ -442,11 +462,13 @@
  * live review of 2026-09-18 after the overlay was cut by half; the order
  * of remedies is in Hero.tsx.
  */
-.hero-copy h1,
-.hero-copy p {
-  text-shadow:
-    0 1px 2px rgb(0 0 0 / 0.6),
-    0 0 28px rgb(0 0 0 / 0.5);
+@media (min-width: 1024px) {
+  .hero-copy h1,
+  .hero-copy p {
+    text-shadow:
+      0 1px 2px rgb(0 0 0 / 0.6),
+      0 0 28px rgb(0 0 0 / 0.5);
+  }
 }
 
 
