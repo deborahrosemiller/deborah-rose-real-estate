@@ -47,7 +47,7 @@ const CREDENTIALS = [
   { name: 'Houston Association of REALTORS', detail: production.harTier },
   { name: 'Real Estate Negotiation Expert', detail: 'RENE' },
   { name: 'Certified Luxury Home Marketing Specialist', detail: 'CLHMS' },
-  { name: 'Five Star Professional award', detail: 'Eleven consecutive years' },
+  { name: 'Five Star Real Estate Agent award', detail: 'Twelve consecutive years, through 2026' },
 ]
 
 /** A definition list on the full plate width, 40/60, hairlines between rows. */
@@ -199,6 +199,23 @@ export default function AboutPage() {
             <p className="text-base/7 font-semibold text-rose">Credentials</p>
             <h2 className="mt-2 font-display text-[2.25rem]/[1.1] text-ink sm:text-5xl/[1.05]">License, brokerage and designations</h2>
           </div>
+          {/*
+           * The award as she was given it, sent 2026-09-24. Five Star
+           * issues the badge; it is not a rating and carries no review
+           * markup, which the site does not use anywhere. It sits between
+           * the header and the rows, the way every section on this page
+           * stacks, at a size well inside its own 1,098 pixels. Square
+           * corners, no border and no shadow: it is a graphic, not a card,
+           * and nothing about it is clickable.
+           */}
+          <Image
+            src="/about/five-star-real-estate-agent-2026.webp"
+            alt="Five Star Real Estate Agent award for 2026, naming Deborah Rose Miller a twelve year winner"
+            width={1098}
+            height={596}
+            sizes="(min-width: 640px) 288px, 256px"
+            className="mt-12 h-auto w-64 sm:w-72"
+          />
           <Rows rows={CREDENTIALS} />
         </Container>
       </section>

@@ -103,8 +103,12 @@ export const agent = {
   headshot: '/about/deborah-rose-miller.webp',
   headshotAlt: 'Deborah Rose Miller, real estate broker serving Kingwood, Humble, Porter, Conroe and Magnolia, Texas',
   designations: ['CLHMS', 'RENE'],
-  /** Deborah, 2026-09-21: an eleven-year consecutive winner. Replaced the single-year "Houston, 2023" entry. */
-  awards: ['Five Star Professional award, eleven consecutive years'],
+  /**
+   * Deborah, 2026-09-21: a consecutive winner, which replaced the
+   * single-year "Houston, 2023" entry. Twelve years as of the 2026 award,
+   * from the badge she sent on 2026-09-24, which reads "12-Year Winner".
+   */
+  awards: ['Five Star Real Estate Agent award, twelve consecutive years through 2026'],
 } as const
 
 /** Google Business Profile. Everything here was read from the live profile. */
