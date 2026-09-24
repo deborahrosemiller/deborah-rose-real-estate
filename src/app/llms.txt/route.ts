@@ -34,6 +34,7 @@ export async function GET() {
     `- [Buying a home](${siteUrl}/buyers/)`,
     `- [Selling a home](${siteUrl}/sellers/)`,
     `- [Areas served](${siteUrl}/areas/)`,
+    `- [What clients have written](${siteUrl}/testimonials/)`,
     ...areas.map((a) => `- [${a.name}, ${a.county}, Texas](${siteUrl}/areas/${a.slug}/)`),
     `- [Contact](${siteUrl}/contact/)`,
     '',

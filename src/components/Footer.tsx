@@ -75,6 +75,7 @@ const columns = [
     title: 'Learn more',
     items: [
       { title: 'About Deborah', href: '/about/' },
+      { title: 'What clients have written', href: '/testimonials/' },
       { title: 'Questions people ask', href: '/#questions' },
       ...areas.map((a) => ({ title: a.name, href: `/areas/${a.slug}/` })),
     ],
