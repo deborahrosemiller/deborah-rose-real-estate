@@ -191,14 +191,30 @@ export default async function Home() {
       <section aria-labelledby="about-heading" className="bg-field py-24 sm:py-32">
         <Container>
           <div className="mx-auto max-w-4xl lg:mx-0 lg:flex lg:items-start lg:gap-x-16">
-            <Image
-              src={agent.headshot}
-              alt={agent.headshotAlt}
-              width={400}
-              height={500}
-              sizes="(min-width: 640px) 224px, 192px"
-              className="h-auto w-48 shrink-0 object-cover sm:w-56 lg:mt-2"
-            />
+            <div className="shrink-0">
+              <Image
+                src={agent.headshot}
+                alt={agent.headshotAlt}
+                width={400}
+                height={500}
+                sizes="(min-width: 640px) 224px, 192px"
+                className="h-auto w-48 object-cover sm:w-56 lg:mt-2"
+              />
+              {/*
+               * The Five Star badge, brought up from the About page so the
+               * award is visible on the homepage too, not just on /about/.
+               * Same restrained treatment as there: small, square corners,
+               * no border, no shadow, not a card and not clickable.
+               */}
+              <Image
+                src="/about/five-star-real-estate-agent-2026.webp"
+                alt="Five Star Real Estate Agent award for 2026, naming Deborah Rose Miller a twelve year winner"
+                width={1098}
+                height={596}
+                sizes="(min-width: 640px) 224px, 192px"
+                className="mt-4 h-auto w-48 sm:w-56"
+              />
+            </div>
             <div className="mt-10 max-w-3xl lg:mt-0">
               <p id="about-heading" className="text-base/7 font-semibold text-rose">
                 About

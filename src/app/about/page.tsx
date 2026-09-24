@@ -216,6 +216,22 @@ export default function AboutPage() {
             sizes="(min-width: 640px) 288px, 256px"
             className="mt-12 h-auto w-64 sm:w-72"
           />
+          {/*
+           * The Five Star Professional announcement video, sent 2026-09-24
+           * alongside the updated badge. Same treatment as the badge above:
+           * square corners, no border, no shadow, modest width. Native
+           * controls, no autoplay, so it never competes with the hero.
+           */}
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            poster="/about/five-star-real-estate-agent-2026-announcement-poster.webp"
+            aria-label="Five Star Professional 2026 award announcement for Deborah Rose Miller"
+            className="mt-6 h-auto w-80 max-w-full sm:w-96"
+          >
+            <source src="/about/five-star-real-estate-agent-2026-announcement.mp4" type="video/mp4" />
+          </video>
           <Rows rows={CREDENTIALS} />
         </Container>
       </section>
