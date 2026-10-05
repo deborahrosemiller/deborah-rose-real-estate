@@ -152,12 +152,12 @@ export const areaContent: Record<string, AreaContent> = {
       'Conroe is where county business gets done, and my two years inside Magnolia city government taught me how that works. When a Conroe purchase turns on zoning, a septic system or a county permit, I know who to call.',
   },
   /*
-   * Her words run as written, including the Magnolia Community
-   * Foundation. Worth her eye before this merges: everywhere else in this
-   * repository, including the About page and her own corrections of
-   * 2026-09-21, the organization she co-founded in 2001 and was founding
-   * president of is the Magnolia Education Foundation. Both may be true
-   * and she would know. It is the first question in the pull request.
+   * The Magnolia Community Foundation here is correct and is NOT the
+   * Magnolia Education Foundation on the About page. Deborah settled it
+   * on 2026-10-05: two separate organizations, and she served both. She
+   * was president of the Community Foundation, and she did not found it.
+   * She was the charter president of the Education Foundation, which
+   * started in 2001. Do not reconcile one into the other.
    */
   magnolia: {
     slug: 'magnolia',
