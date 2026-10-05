@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const c = areaContent[slug]
   if (!c) return {}
-  return pageMetadata({ title: c.title, description: c.metaDescription, path: `/areas/${slug}/` })
+  return pageMetadata({ title: c.metaTitle ?? c.title, description: c.metaDescription, path: `/areas/${slug}/` })
 }
 
 export default async function AreaPage({ params }: { params: Promise<{ slug: string }> }) {
