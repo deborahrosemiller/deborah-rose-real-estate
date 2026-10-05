@@ -43,6 +43,15 @@ export function brokerageNode(): SchemaNode {
  * answer engine) asking about "Montgomery County" or "Lake Houston" should
  * find the entity without having to know which towns sit inside them.
  */
+/**
+ * Every city one area covers: the town itself, then anything folded into
+ * it. Conroe has no page of its own since 2026-10-05 and is still a city
+ * she serves, so it stays in areaServed.
+ */
+export function cityNodesFor(a: { name: string; county: 'Harris County' | 'Montgomery County'; alsoServes?: readonly string[] }): SchemaNode[] {
+  return [cityNode(a.name, a.county), ...(a.alsoServes ?? []).map((n) => cityNode(n, a.county))]
+}
+
 export function regionNodes(): SchemaNode[] {
   return [
     { '@type': 'AdministrativeArea', name: 'Montgomery County, Texas' },
@@ -75,7 +84,7 @@ export function agentNode(): SchemaNode {
     logo: absolute('/brand/deborah-rose-real-estate-group-logo.png'),
     description: business.description,
     priceRange: '$$',
-    areaServed: [...areas.map((a) => cityNode(a.name, a.county)), ...regionNodes()],
+    areaServed: [...areas.flatMap(cityNodesFor), ...regionNodes()],
     hasMap: gbp.mapsUrl,
     openingHoursSpecification: openingHours(),
     contactPoint: {

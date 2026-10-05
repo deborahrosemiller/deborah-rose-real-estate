@@ -9,7 +9,7 @@ import { StoryCard } from '@/components/StoryCard'
 import { ClosingAsk } from '@/components/ClosingAsk'
 import { SchemaGraph } from '@/components/SchemaGraph'
 import { pageMetadata } from '@/lib/metadata'
-import { absolute, AGENT_ID, BROKERAGE_ID, breadcrumb, cityNode } from '@/lib/schema'
+import { absolute, AGENT_ID, BROKERAGE_ID, breadcrumb, cityNodesFor } from '@/lib/schema'
 import { areaContent, neighborhoodNote } from '@/content/areas'
 import { agent, areas, business } from '@/lib/site'
 import { getStoriesForArea } from '@/lib/stories'
@@ -54,7 +54,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             telephone: business.phoneE164,
             email: business.email,
             description: c.metaDescription,
-            areaServed: cityNode(area.name, area.county),
+            areaServed: cityNodesFor(area),
             parentOrganization: { '@id': AGENT_ID },
             memberOf: { '@id': BROKERAGE_ID },
           },

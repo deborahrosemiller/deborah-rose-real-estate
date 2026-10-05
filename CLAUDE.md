@@ -43,7 +43,7 @@ Every sentence in her first person is derived from her own dictated case study a
 - **Never show eXp's office address (One Riverway, Houston).** Deborah, 2026-09-21: she does not want the business tied to that part of Houston. Name eXp Realty LLC wherever the rules require the brokerage; never its address, on a page or in the schema. eXp has approved "Deborah Rose Real Estate Group" (2026-09-21).
 - **Rose Realty LLC is never public.** It is her LLC's legal name from when she was her own broker, kept for tax purposes. She does not use it publicly because it conflicts with eXp's rules now that eXp is her broker. No page, no alternateName, no legalName, even though TREC and her old Facebook Page name carry it.
 - Phone: (281) 380-0332. Email: deborahroserealtor@gmail.com.
-- Service area: Kingwood and Humble (the Lake Houston area), Porter, Conroe and Magnolia (Montgomery County). Five area pages, one each.
+- Service area: Kingwood and Humble (the Lake Houston area), Porter, Conroe and Magnolia (Montgomery County). **Four area pages, not five.** Deborah, 2026-10-05: Conroe is no longer a section of its own. The Magnolia page covers it and is labelled "Magnolia and Surrounding Communities" in the listings; `/areas/conroe/` redirects there; Conroe keeps its zip codes on the Magnolia entry, stays in `areaSentence` and stays in the schema's `areaServed` through `alsoServes`, because she still serves it. The Porter page is labelled "New Caney/Porter" in the listings and keeps its route and its canonical town name.
 - Texas Real Estate Commission license 622917. Deborah confirmed it out loud on the live review of 2026-09-18.
 
 ## Facts Deborah corrected in person, live review 2026-09-18

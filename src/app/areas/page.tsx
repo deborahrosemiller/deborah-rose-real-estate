@@ -11,9 +11,9 @@ import { areaContent, neighborhoodNote } from '@/content/areas'
 import { areas, regionSentence } from '@/lib/site'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Areas served: Kingwood, Humble, New Caney and Porter, Conroe and Magnolia',
+  title: 'Areas served: Kingwood, Humble, New Caney, Porter and Magnolia',
   description:
-    'The communities Deborah Rose Miller serves across the Lake Houston area and Montgomery County, Texas: Kingwood, Humble with Atascocita, New Caney and Porter, Conroe, and Magnolia.',
+    'The communities Deborah Rose Miller serves across the Lake Houston area and Montgomery County, Texas: Kingwood, Humble with Atascocita, New Caney and Porter, and Magnolia with Conroe and the communities around it.',
   path: '/areas/',
 })
 
@@ -42,7 +42,7 @@ export default async function AreasPage() {
           <div className="max-w-2xl">
             <p className="text-base/7 font-semibold text-rose">The communities</p>
             <h2 className="mt-2 font-display text-[2.25rem]/[1.1] text-pretty text-ink sm:text-5xl/[1.05]">
-              Kingwood and Humble in the Lake Houston area. New Caney, Porter, Conroe and Magnolia in Montgomery County
+              Kingwood and Humble in the Lake Houston area. New Caney, Porter, Magnolia and the communities around them in Montgomery County
             </h2>
             <p className="mt-6 text-lg/8 text-ink-soft">
               I have lived, worked or served in most of these places. Each page carries the neighborhoods I have closed
