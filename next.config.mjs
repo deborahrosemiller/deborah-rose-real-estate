@@ -43,6 +43,9 @@ const nextConfig = {
       { source: '/blog/:slug*', destination: '/stories/:slug*', permanent: true },
       { source: '/case-studies', destination: '/stories/', permanent: true },
       { source: '/neighborhoods', destination: '/areas/', permanent: true },
+      /* Conroe folded into the Magnolia page, Deborah 2026-10-05. She still serves it. */
+      { source: '/areas/conroe', destination: '/areas/magnolia/', permanent: true },
+      { source: '/areas/conroe/', destination: '/areas/magnolia/', permanent: true },
       /* Tomball was removed from the service area by Deborah on 2026-09-18. */
       { source: '/areas/tomball', destination: '/areas/', permanent: true },
       { source: '/areas/tomball/', destination: '/areas/', permanent: true },

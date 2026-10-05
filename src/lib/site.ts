@@ -218,6 +218,12 @@ export type Area = {
   county: 'Harris County' | 'Montgomery County'
   region: 'Lake Houston area' | 'Montgomery County'
   zip: string[]
+  /**
+   * Other towns this area's page covers. They are still served and still
+   * named in the schema as cities; they just do not have a page of their
+   * own. Deborah, 2026-10-05: Conroe folds into Magnolia.
+   */
+  alsoServes?: string[]
 }
 
 /**
@@ -231,8 +237,20 @@ export const areas: Area[] = [
   { slug: 'kingwood', name: 'Kingwood', county: 'Harris County', region: 'Lake Houston area', zip: ['77339', '77345', '77346', '77365'] },
   { slug: 'humble', name: 'Humble', county: 'Harris County', region: 'Lake Houston area', zip: ['77338', '77346', '77396'] },
   { slug: 'porter', name: 'Porter', county: 'Montgomery County', region: 'Montgomery County', zip: ['77365'] },
-  { slug: 'conroe', name: 'Conroe', county: 'Montgomery County', region: 'Montgomery County', zip: ['77301', '77302', '77303', '77304', '77384', '77385'] },
-  { slug: 'magnolia', name: 'Magnolia', county: 'Montgomery County', region: 'Montgomery County', zip: ['77354', '77355'] },
+  /*
+   * Deborah, 2026-10-05: Conroe is no longer a section of its own. It is
+   * covered by the Magnolia page, which is why its zip codes are here and
+   * why it is still named in areaSentence and in the schema. The page it
+   * used to have redirects (next.config.mjs).
+   */
+  {
+    slug: 'magnolia',
+    name: 'Magnolia',
+    county: 'Montgomery County',
+    region: 'Montgomery County',
+    zip: ['77354', '77355', '77301', '77302', '77303', '77304', '77384', '77385'],
+    alsoServes: ['Conroe'],
+  },
 ]
 
 export const areaNames = areas.map((a) => a.name)

@@ -141,7 +141,7 @@ export const areaContent: Record<string, AreaContent> = {
   porter: {
     slug: 'porter',
     title: 'What New Caney/Porter Is Really Like',
-    label: 'New Caney and Porter',
+    label: 'New Caney/Porter',
     teaser:
       'Southeast Montgomery County on US 59, where new construction, river communities and acreage sit minutes apart, and the Grand Parkway keeps opening more of it.',
     metaTitle: 'New Caney and Porter, Texas real estate',
@@ -160,23 +160,6 @@ export const areaContent: Record<string, AreaContent> = {
     deborah:
       'If you’re curious whether Porter makes sense for your next move, whether that’s new construction, a river-community lot, or something with more acreage than you’d find closer to the city, I’d be glad to walk you through what’s out there right now. This is a part of Montgomery County I know well, deal by deal, street by street.',
   },
-  conroe: {
-    slug: 'conroe',
-    title: 'Real estate in Conroe, Texas',
-    teaser:
-      'The county seat of Montgomery County, forty miles north of Houston on I-45, with Lake Conroe to its west and acreage on its southeast side.',
-    metaDescription:
-      `Deborah Rose Miller buys and sells homes in Conroe, Texas, the Montgomery County seat on I-45 and Lake Conroe. Call ${business.phone}.`,
-    intro:
-      'Conroe is the county seat of Montgomery County, forty miles north of downtown Houston on I-45. Lake Conroe lies to its west, Sam Houston National Forest to its north, and the city has grown quickly in the last decade as the corridor between The Woodlands and Willis filled in.',
-    paragraphs: [
-      'Housing in Conroe ranges from downtown bungalows to lakefront homes to new subdivisions along FM 3083 and FM 1314. The 77302 zip code on the southeast side holds acreage properties with older homes, carports and outbuildings, where a buyer trades a short commute for land.',
-      'Conroe purchases often involve a sale somewhere else first. The story below is one where the clients owed more on their existing home than it was worth, and the move still happened.',
-    ],
-    neighborhoods: ['Southeast Conroe acreage, 77302', 'Lake Conroe', 'Downtown Conroe'],
-    deborah:
-      'Conroe is where county business gets done, and my two years inside Magnolia city government taught me how that works. When a Conroe purchase turns on zoning, a septic system or a county permit, I know who to call.',
-  },
   /*
    * The Magnolia Community Foundation here is correct and is NOT the
    * Magnolia Education Foundation on the About page. Deborah settled it
@@ -188,21 +171,34 @@ export const areaContent: Record<string, AreaContent> = {
   magnolia: {
     slug: 'magnolia',
     title: 'Magnolia Is Home',
-    label: 'Magnolia and the surrounding Montgomery County areas',
+    label: 'Magnolia and Surrounding Communities',
     teaser:
-      'Where she lived for more than 16 years and served nine years as a school board trustee, and where a farm-road town has become one of the fastest-growing parts of the county.',
-    metaTitle: 'Magnolia, Texas real estate',
+      'Magnolia, where she lived for more than 16 years and served nine years as a school board trustee, and the communities around it, including Conroe, the county seat on I-45 and Lake Conroe.',
+    metaTitle: 'Magnolia and Conroe, Texas real estate',
     metaDescription:
-      `Magnolia, Texas, where Deborah Rose Miller lived for more than 16 years, served nine years as a school board trustee and helped write the city’s first comprehensive plan. Call ${business.phone}.`,
+      `Magnolia, Conroe and the communities around them in Montgomery County, Texas, where Deborah Rose Miller lived for more than 16 years and served nine years as a school board trustee. Call ${business.phone}.`,
     intro:
       'I’ve sold real estate in a lot of communities, but Magnolia is different for me. I spent more than 16 years here with my family before I was ever showing anyone else a house in this town. This is where I actually built a life.',
     paragraphs: [
       'I served as president of the Magnolia Community Foundation, and I spent nine years as a school board trustee here. However you want to measure it, Magnolia is where I put down roots, and it’s still the place that feels like home to me, even with everything I do now across Kingwood, Humble, and the rest of Montgomery County.',
       'That kind of history means something practical for anyone I work with in Magnolia, not just something sentimental. Nine years on the school board means I know how these schools actually work, not just what a ratings site says about them. Leading the Community Foundation meant sitting in rooms where decisions about this town’s growth got made, long before most residents ever heard about them. When a client asks me a question about Magnolia ISD, or about how a piece of land near them might get developed next, I’m not guessing. I lived through the planning conversations that shaped it.',
       'And Magnolia has grown. The expansion over the last ten years has brought double-digit growth to Magnolia ISD alone, which tells you how fast families have been moving into this area. New development is really the word that defines Magnolia right now: new neighborhoods, new schools, new everything, built to keep up with a town that’s no longer the sleepy farm-road community it was when I first got here. I’ve watched that growth happen up close, not read about it after the fact.',
+      'I work the communities around Magnolia on the same terms, and Conroe is the biggest of them. The county seat sits forty miles north of Houston on I-45, with Lake Conroe to its west and Sam Houston National Forest to its north, and it has filled in quickly as the corridor between The Woodlands and Willis closed up. Housing there runs from downtown bungalows to lakefront homes to new subdivisions along FM 3083 and FM 1314, and the 77302 zip code on the southeast side holds acreage with older homes, carports and outbuildings, where a buyer trades a short commute for land.',
+      'Conroe is also where county business gets done, and my two years inside Magnolia city government taught me how that works. When a purchase out there turns on zoning, a septic system or a county permit, I know who to call. A Conroe purchase often involves a sale somewhere else first, and one of the stories below is a couple who owed more on their existing home than it was worth and made the move anyway.',
     ],
     // Indigo Lake Estates, High Meadow and Clear Creek Forest added by Deborah, 2026-09-22.
-    neighborhoods: ['NorthGrove', 'Stagecoach Farms', 'Indigo Lake Estates', 'High Meadow', 'Clear Creek Forest', 'FM 1488 corridor'],
+    // Conroe's three came over on 2026-10-05, when its page folded into this one.
+    neighborhoods: [
+      'NorthGrove',
+      'Stagecoach Farms',
+      'Indigo Lake Estates',
+      'High Meadow',
+      'Clear Creek Forest',
+      'FM 1488 corridor',
+      'Southeast Conroe acreage, 77302',
+      'Lake Conroe',
+      'Downtown Conroe',
+    ],
     deborah:
       'If you’re thinking about Magnolia, whether you grew up out here like so many of the families I meet, or you’re moving in because you’ve heard what’s happening in this corner of Montgomery County, I’d love to talk it through with you. This isn’t just a market I work in. It’s the place I call home, and I take that personally when I’m helping someone else find theirs here.',
   },

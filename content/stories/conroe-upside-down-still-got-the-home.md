@@ -3,7 +3,9 @@ title: "Upside down on the old house and still getting the new one: a Conroe buy
 date: "2026-04"
 city: "Conroe"
 county: "Montgomery County"
-area: "conroe"
+# Deborah, 2026-10-05: Conroe folded into the Magnolia page, so the story
+# groups there. The city stays Conroe, which is what the card shows.
+area: "magnolia"
 role: "Sale and purchase"
 summary: "A young couple with three children found their home on acreage in the Conroe area but owed more on their current house than it was worth. An investor purchase got them out even, and with family help they closed on the home they wanted."
 image: "/stories/conroe-upside-down-still-got-the-home.webp"
