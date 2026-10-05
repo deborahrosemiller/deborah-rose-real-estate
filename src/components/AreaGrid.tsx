@@ -8,8 +8,20 @@ import { areas } from '@/lib/site'
 /**
  * Tailwind Plus, Marketing, Feature sections, "Simple 3x2 grid" (React,
  * v4.3), from Brett's account 2026-09-17. Five towns, one item each. Each
- * name is a link to its area page; the description is the first sentence
- * of that page. The icon is the same pin on every item, in the rose.
+ * name is a link to its area page. The icon is the same pin on every
+ * item, in the rose.
+ *
+ * The description is the area's teaser. It used to be the first sentence
+ * of the page's intro, which worked while those intros opened on
+ * geography; Deborah's October copy opens in her own voice, and this grid
+ * started reading "I ask almost every buyer the same question" under
+ * Kingwood. Same for the index at /areas/.
+ *
+ * The name here is the town, not the area's longer listing label. This
+ * grid sets the name inline and follows it with the county, so "Humble,
+ * with Atascocita, Fall Creek and Summerwood, Harris County" collapses
+ * into a row of commas. The cover page at /areas/ sets the name on its
+ * own line and carries the full label there.
  */
 export function AreaGrid({ tone = 'field', className = 'py-24 sm:py-32' }: { tone?: 'field' | 'paper'; className?: string }) {
   return (
@@ -37,7 +49,7 @@ export function AreaGrid({ tone = 'field', className = 'py-24 sm:py-32' }: { ton
                 </Link>
                 <span className="font-normal text-ink-faint">, {a.county}</span>
               </dt>{' '}
-              <dd className="inline">{areaContent[a.slug].intro.split('. ')[0]}.</dd>
+              <dd className="inline">{areaContent[a.slug].teaser}</dd>
             </div>
           ))}
         </dl>
