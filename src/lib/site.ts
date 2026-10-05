@@ -38,10 +38,18 @@
 export const siteUrl = 'https://deborahroserealestate.com'
 
 /**
- * Review build. While true, robots.txt turns crawlers away and every
- * page carries noindex. Flip to false at launch and nothing else changes.
+ * Review build. While true, robots.txt turns crawlers away, every page
+ * carries noindex, and every host answers X-Robots-Tag: noindex.
+ *
+ * Deborah, 2026-10-05: turned off. The site is open to search engines.
+ * robots.txt now answers "Allow: /" and names the sitemap, and the
+ * noindex meta tag is gone from every page. The separate rule in
+ * next.config.mjs still keeps every host other than
+ * deborahroserealestate.com out of search, so review links on
+ * *.vercel.app stay noindexed; that one keys on the request host and is
+ * not affected by this flag.
  */
-export const HIDE_FROM_SEARCH_ENGINES = true
+export const HIDE_FROM_SEARCH_ENGINES = false
 
 export const business = {
   /**

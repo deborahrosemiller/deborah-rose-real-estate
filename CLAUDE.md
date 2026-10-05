@@ -81,7 +81,7 @@ These override her Brand and Website Copywriting Brief and her HAR bio where the
 ## Launch checklist, not yet done
 
 - The Google Business Profile's website field still points at har.com. At launch it changes to deborahroserealestate.com. That is a direct Map Pack signal currently handed to HAR.
-- `HIDE_FROM_SEARCH_ENGINES` in `src/lib/site.ts` is `true`. Flip it to `false` at launch.
+- ~~`HIDE_FROM_SEARCH_ENGINES` in `src/lib/site.ts` is `true`. Flip it to `false` at launch.~~ **Done 2026-10-05**, at Deborah's instruction: the site is open to search engines. This also retires the earlier standing rule that robots.txt must read `Disallow: /`; it now reads `Allow: /`. Do not put it back without her.
 - Every host except deborahroserealestate.com answers `X-Robots-Tag: noindex, nofollow` (next.config.mjs, keyed on the request host). Review links on *.vercel.app stay out of Google without anything to undo at launch.
 - `CONTACT_WEBHOOK_URL` and `CONTACT_WEBHOOK_SECRET` must be set on Vercel before the contact form delivers anything. Brett, 2026-09-23: no third-party service and nothing new to pay for, so the note is mailed by a Google Apps Script web app in her own Google account. `scripts/contact-webhook.gs` is the copy of record for that script and `docs/contact-form.md` has the steps. The secret never goes in this repository.
 - Deploy is push to `main`; Vercel builds. Nothing else.
