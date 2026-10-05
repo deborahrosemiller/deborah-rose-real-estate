@@ -45,7 +45,23 @@ export type AreaContent = {
    * the town, the state and the subject in the tab. Falls back to title.
    */
   metaTitle?: string
+  /**
+   * What the listings call this area, where that differs from the town
+   * name in site.ts. The index at /areas/ and the "Where I work" grid on
+   * the homepage use it; the breadcrumb, the per-city schema node and the
+   * service area sentence keep the single canonical town name.
+   */
+  label?: string
   metaDescription: string
+  /**
+   * One sentence for the listings. The index and the homepage grid used
+   * to show the intro, or its first sentence, which worked while the
+   * intros opened on geography. Deborah's October copy opens in her own
+   * voice instead, so "I ask almost every buyer the same question" became
+   * the homepage blurb for Kingwood. This is written for a reader
+   * scanning a list of places.
+   */
+  teaser: string
   intro: string
   paragraphs: string[]
   neighborhoods: string[]
@@ -56,6 +72,8 @@ export const areaContent: Record<string, AreaContent> = {
   kingwood: {
     slug: 'kingwood',
     title: 'Why Buyers Fall for Kingwood',
+    teaser:
+      'The Livable Forest: villages under mature pines, a greenbelt trail system threading through all of them, and streets people grow up on and come back to.',
     metaTitle: 'Why buyers fall for Kingwood, Texas',
     metaDescription:
       `Kingwood, Texas, the Livable Forest: villages under mature pines, the greenbelt trails, the schools, and what buyers tell Deborah Rose Miller. Call ${business.phone}.`,
@@ -86,6 +104,9 @@ export const areaContent: Record<string, AreaContent> = {
   humble: {
     slug: 'humble',
     title: 'Why Buyers Choose Humble',
+    label: 'Humble, with Atascocita, Fall Creek and Summerwood',
+    teaser:
+      'Dozens of communities rather than one, from golf course living to the lake, minutes from Bush Intercontinental and an easier run into Houston than most of this side of town.',
     metaTitle: 'Why buyers choose Humble, Texas, with Atascocita, Fall Creek and Summerwood',
     metaDescription:
       `Humble, Texas with Atascocita, Fall Creek and Summerwood: golf course and lake communities, minutes from Bush Intercontinental. Deborah Rose Miller, ${business.phone}.`,
@@ -120,6 +141,9 @@ export const areaContent: Record<string, AreaContent> = {
   porter: {
     slug: 'porter',
     title: 'What New Caney/Porter Is Really Like',
+    label: 'New Caney and Porter',
+    teaser:
+      'Southeast Montgomery County on US 59, where new construction, river communities and acreage sit minutes apart, and the Grand Parkway keeps opening more of it.',
     metaTitle: 'New Caney and Porter, Texas real estate',
     metaDescription:
       `New Caney and Porter, Texas, in southeast Montgomery County: new construction, river communities and acreage along US 59 and the Grand Parkway. Call ${business.phone}.`,
@@ -139,6 +163,8 @@ export const areaContent: Record<string, AreaContent> = {
   conroe: {
     slug: 'conroe',
     title: 'Real estate in Conroe, Texas',
+    teaser:
+      'The county seat of Montgomery County, forty miles north of Houston on I-45, with Lake Conroe to its west and acreage on its southeast side.',
     metaDescription:
       `Deborah Rose Miller buys and sells homes in Conroe, Texas, the Montgomery County seat on I-45 and Lake Conroe. Call ${business.phone}.`,
     intro:
@@ -162,6 +188,9 @@ export const areaContent: Record<string, AreaContent> = {
   magnolia: {
     slug: 'magnolia',
     title: 'Magnolia Is Home',
+    label: 'Magnolia and the surrounding Montgomery County areas',
+    teaser:
+      'Where she lived for more than 16 years and served nine years as a school board trustee, and where a farm-road town has become one of the fastest-growing parts of the county.',
     metaTitle: 'Magnolia, Texas real estate',
     metaDescription:
       `Magnolia, Texas, where Deborah Rose Miller lived for more than 16 years, served nine years as a school board trustee and helped write the city’s first comprehensive plan. Call ${business.phone}.`,
