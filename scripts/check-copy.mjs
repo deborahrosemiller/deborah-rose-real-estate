@@ -33,9 +33,18 @@ const rules = [
   { name: 'not X, it is Y reframe', re: /\b(?:is|was|are|were)n[’']?t\b[^.!?\n]{0,80},\s*(?:it[’']?s|it is|they[’']?re|it was)\b/gi },
   { name: 'not X, but Y reframe', re: /\bnot\s+(?:a|an|the|about|just)\b[^.!?\n]{0,60},\s*(?:but|it[’']?s)\b/gi },
   { name: 'British spelling', re: /\b(?:colour|favour|behaviour|organis(?:e|ation)|realis(?:e|ation)|centre|neighbour|programme|travelling|cancelled|grey|licence|catalogue|analyse|defence|enquir)\w*/gi },
+  /*
+   * "empty nesters" came out of this list on 2026-10-05. Deborah's
+   * October area copy uses it, and she had the copy analyzed for fair
+   * housing at the national and state level before sending it over, so
+   * the clearance is hers and it is recorded here rather than worked
+   * around in her sentence. Everything else in this pattern still
+   * stands, and the rule in CLAUDE.md still governs anything a session
+   * writes itself.
+   */
   {
     name: 'fair housing: describes people, not property',
-    re: /\b(?:safe neighbou?rhood|safe area|great schools|good schools|best schools|family[- ]friendly|perfect for (?:families|a family|couples|singles|retirees|seniors)|ideal for (?:families|a family|couples|retirees)|young professionals|empty nesters|starter home for|walk(?:ing distance)? to (?:church|st\.|temple|mosque)|christian|exclusive neighbou?rhood|no (?:kids|children)|adults only|able[- ]bodied|master bedroom)\b/gi,
+    re: /\b(?:safe neighbou?rhood|safe area|great schools|good schools|best schools|family[- ]friendly|perfect for (?:families|a family|couples|singles|retirees|seniors)|ideal for (?:families|a family|couples|retirees)|young professionals|starter home for|walk(?:ing distance)? to (?:church|st\.|temple|mosque)|christian|exclusive neighbou?rhood|no (?:kids|children)|adults only|able[- ]bodied|master bedroom)\b/gi,
   },
   {
     name: 'client name from the internal brief',
