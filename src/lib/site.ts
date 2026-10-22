@@ -51,6 +51,17 @@ export const siteUrl = 'https://deborahroserealestate.com'
  */
 export const HIDE_FROM_SEARCH_ENGINES = false
 
+/**
+ * Measurement and verification. The GA4 property was created by Brett and
+ * the ID sent on 2026-10-22. Search Console is verified for the domain by
+ * a DNS TXT record on GoDaddy, which covers every host and needs nothing
+ * in the code; it is noted here so nobody adds a verification meta tag
+ * thinking it is missing.
+ */
+export const analytics = {
+  ga4: 'G-2BEQB19Y4G',
+} as const
+
 export const business = {
   /**
    * The official name, everywhere. Brett and Deborah, 2026-09-21: "that's

@@ -6,6 +6,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { SchemaGraph } from '@/components/SchemaGraph'
+import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 import { agentNode, brokerageNode, personNode, websiteNode } from '@/lib/schema'
 import { DEFAULT_OG_IMAGE } from '@/lib/metadata'
 import { agent, business, siteUrl, HIDE_FROM_SEARCH_ENGINES } from '@/lib/site'
@@ -69,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <Analytics />
         <SpeedInsights />
+        <GoogleAnalytics />
       </body>
     </html>
   )
