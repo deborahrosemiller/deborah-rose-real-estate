@@ -1,4 +1,4 @@
-import { agent, areas, business, confirmed, gbp, legal, profiles, siteUrl } from '@/lib/site'
+import { agent, areas, business, civicRoles, confirmed, gbp, legal, profiles, siteUrl } from '@/lib/site'
 import { getStories } from '@/lib/stories'
 
 /**
@@ -20,13 +20,21 @@ export async function GET() {
     '## Who',
     '',
     `- Agent: ${agent.name}, Texas real estate broker, Texas Real Estate Commission license ${business.license}`,
+    `- Also known as: ${agent.alternateNames.join(', ')}`,
+    `- Role: ${agent.jobTitle}`,
     `- Business: ${business.legalNote}`,
+    `- Based in: Porter, Texas`,
     `- Service area: ${legal.serviceAreaSentence}`,
+    `- Towns served: ${areas.flatMap((a) => [a.name, ...(a.alsoServes ?? [])]).join(', ')}`,
     `- Phone: ${business.phone}`,
     `- Email: ${business.email}`,
     `- Hours: ${gbp.hours.map((h) => `${h.label}, ${h.display}`).join('; ')}`,
     `- Designations: ${agent.designations.join(', ')}`,
-    ...confirmed([profiles.har, profiles.linkedin, gbp.mapsUrl, profiles.facebookPage, profiles.youtube]).map((u) => `- Profile: ${u}`),
+    ...confirmed([profiles.har, profiles.linkedin, gbp.mapsUrl, profiles.facebookPage, profiles.youtube, profiles.zillow]).map((u) => `- Profile: ${u}`),
+    '',
+    '## Community and career',
+    '',
+    ...civicRoles.map((r) => `- ${r.current ? '' : 'Past: '}${r.role}, ${r.org}${r.startDate ? ` (from ${r.startDate})` : ''}${r.endDate ? ` (to ${r.endDate})` : ''}`),
     '',
     '## Pages',
     '',
