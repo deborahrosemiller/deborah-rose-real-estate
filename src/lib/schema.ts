@@ -1,4 +1,4 @@
-import { agent, areas, areaSentence, business, confirmed, gbp, profiles, siteUrl } from '@/lib/site'
+import { agent, areas, areaSentence, business, civicRoles, confirmed, gbp, profiles, siteUrl } from '@/lib/site'
 
 export type SchemaNode = Record<string, unknown>
 
@@ -111,9 +111,25 @@ export function agentNode(): SchemaNode {
      * forms), HAR, and the business Facebook Page once its URL is on file.
      * Her personal profiles belong to the Person node below.
      */
-    sameAs: confirmed([gbp.cidUrl, gbp.mapsUrl, profiles.har, profiles.facebookPage, profiles.zillow, profiles.realtorDotCom]),
+    sameAs: confirmed([gbp.cidUrl, gbp.mapsUrl, profiles.har, profiles.facebookPage, profiles.realtorDotCom, profiles.gemccDirectory]),
     knowsLanguage: ['en-US'],
   }
+}
+
+/**
+ * Her civic record as OrganizationRole nodes, the schema.org pattern for
+ * "member of X, with this title, current or past". An answer engine asked
+ * who she is reads her boards and offices from here as well as the page.
+ */
+export function civicRoleNodes(): SchemaNode[] {
+  return civicRoles.map((r) => ({
+    '@type': 'OrganizationRole',
+    roleName: r.role,
+    ...(r.startDate ? { startDate: r.startDate } : {}),
+    ...(r.endDate ? { endDate: r.endDate } : {}),
+    description: r.current ? `Current ${r.role.toLowerCase()}` : (r.note ?? 'Former role'),
+    memberOf: { '@type': 'Organization', name: r.org, ...(r.url ? { url: r.url } : {}) },
+  }))
 }
 
 export function personNode(): SchemaNode {
@@ -121,23 +137,35 @@ export function personNode(): SchemaNode {
     '@type': 'Person',
     '@id': PERSON_ID,
     name: agent.name,
+    alternateName: agent.alternateNames,
     givenName: 'Deborah',
+    additionalName: 'Rose',
     familyName: 'Miller',
-    jobTitle: agent.jobTitle,
+    jobTitle: [agent.jobTitle, 'Texas real estate broker', 'REALTOR'],
     description: `${agent.name} is a Texas real estate broker (TREC license ${business.license}) serving ${areaSentence}, Texas, with ${business.name}, powered by ${business.brokerage.name}.`,
-    image: absolute(agent.headshot),
+    image: {
+      '@type': 'ImageObject',
+      '@id': `${siteUrl}/about/#headshot`,
+      url: absolute(agent.headshot),
+      contentUrl: absolute(agent.headshot),
+      caption: agent.headshotAlt,
+      creditText: business.name,
+    },
     url: `${siteUrl}/about/`,
     telephone: business.phoneE164,
     email: business.email,
-    worksFor: { '@id': AGENT_ID },
+    worksFor: [{ '@id': AGENT_ID }, { '@id': BROKERAGE_ID }],
+    owns: { '@id': AGENT_ID },
     memberOf: [
       { '@id': BROKERAGE_ID },
       { '@type': 'Organization', name: 'Houston Association of REALTORS', url: 'https://www.har.com' },
+      { '@type': 'Organization', name: 'National Association of REALTORS', url: 'https://www.nar.realtor' },
+      ...civicRoleNodes(),
     ],
     hasOccupation: {
       '@type': 'Occupation',
       name: 'Real estate broker',
-      occupationLocation: [...areas.map((a) => cityNode(a.name, a.county)), ...regionNodes()],
+      occupationLocation: [...areas.flatMap(cityNodesFor), ...regionNodes()],
     },
     hasCredential: [
       {
@@ -160,13 +188,16 @@ export function personNode(): SchemaNode {
     ],
     award: agent.awards,
     knowsAbout: [
-      'Residential real estate in Kingwood, Humble, Porter, Conroe and Magnolia, Texas',
+      'Residential real estate in Kingwood, Humble, Atascocita, Porter, New Caney, Conroe, Magnolia and Stagecoach, Texas',
+      'Lake Houston area real estate',
+      'Montgomery County, Texas real estate',
+      'Acreage and lakefront property',
       'Financial planning',
       'Banking and mortgage lending',
       'Municipal planning and zoning',
       'School district governance',
     ],
-    sameAs: confirmed([profiles.har, profiles.linkedin, profiles.facebook, profiles.youtube, profiles.expAgentPage]),
+    sameAs: confirmed([profiles.har, profiles.linkedin, profiles.facebook, profiles.youtube, profiles.zillow, profiles.expAgentPage]),
     mainEntityOfPage: `${siteUrl}/about/`,
   }
 }

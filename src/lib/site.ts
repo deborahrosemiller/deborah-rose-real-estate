@@ -118,6 +118,13 @@ export const business = {
 export const agent = {
   name: 'Deborah Rose Miller',
   firstName: 'Deborah',
+  /**
+   * Names she is published under. Deborah and Brett, 2026-11-02: in print,
+   * and in Community Impact and chamber coverage, she is "Deborah Rose";
+   * Zillow lists her as "Deborah Miller". Rose is her maiden name. Schema
+   * only (Person alternateName), so every mention resolves to one person.
+   */
+  alternateNames: ['Deborah Rose', 'Deborah Miller'],
   jobTitle: 'Owner and Broker, Deborah Rose Real Estate Group',
   headshot: '/about/deborah-rose-miller.webp',
   headshotAlt: 'Deborah Rose Miller, real estate broker serving Kingwood, Humble, Porter, Conroe and Magnolia, Texas',
@@ -160,11 +167,13 @@ export const profiles = {
   /** Her personal Facebook profile, as HAR links it. */
   facebook: 'https://www.facebook.com/deborahrose.miller.9',
   /**
-   * TODO(Deborah): the business Facebook Page, "Rose Realty - Deborah Rose
-   * Miller". The Page URL (facebook.com/<page-handle> or
-   * facebook.com/profile.php?id=<number>) is not on file.
+   * The business Facebook Page (page ID 1507712149551089, the Page connected
+   * in her GoHighLevel social planner). Its vanity URL was confirmed on
+   * 2026-11-02 by following the page ID; the Greater East Montgomery County
+   * Chamber directory links the same URL. The Page's display name still
+   * reads "Rose Realty - Deborah Rose Miller" and is due to be renamed.
    */
-  facebookPage: null as string | null,
+  facebookPage: 'https://www.facebook.com/deborahroserealestategroup/' as string | null,
   /**
    * Her canonical YouTube channel, @Deborahroserealtor (9 videos), named by
    * Deborah on 2026-09-21. Linked by channel ID so a handle or name change
@@ -174,12 +183,17 @@ export const profiles = {
    * the Person sameAs to the business sameAs in schema.ts.
    */
   youtube: 'https://www.youtube.com/channel/UCRtq39RkmqcwJykYrvg2xcw' as string | null,
-  /** TODO(Deborah): her Zillow agent profile URL, if claimed. */
-  zillow: null as string | null,
+  /**
+   * Her Zillow agent profile (Humble, TX), found on Google and Bing on
+   * 2026-11-02. Zillow displays the name as "Deborah Miller".
+   */
+  zillow: 'https://www.zillow.com/profile/Deborah%20Rose%20Miller' as string | null,
   /** TODO(Deborah): her Realtor.com agent profile URL, if claimed. */
   realtorDotCom: null as string | null,
   /** TODO(Deborah): her eXp Realty agent page URL, if eXp publishes one. */
   expAgentPage: null as string | null,
+  /** Her member listing in the Greater East Montgomery County Chamber directory (read 2026-11-02). */
+  gemccDirectory: 'https://business.gemcchamber.com/list/member/deborah-rose-real-estate-group-powered-by-exp-5921',
   googleMaps: gbp.mapsUrl,
 }
 
@@ -254,8 +268,14 @@ export type Area = {
  */
 export const areas: Area[] = [
   { slug: 'kingwood', name: 'Kingwood', county: 'Harris County', region: 'Lake Houston area', zip: ['77339', '77345', '77346', '77365'] },
-  { slug: 'humble', name: 'Humble', county: 'Harris County', region: 'Lake Houston area', zip: ['77338', '77346', '77396'] },
-  { slug: 'porter', name: 'Porter', county: 'Montgomery County', region: 'Montgomery County', zip: ['77365'] },
+  /*
+   * alsoServes on Humble and Porter (2026-11-02): Atascocita and New Caney
+   * are on her Google Business Profile's service area, so the schema's
+   * areaServed carries them too and every listing names the same towns.
+   * Schema only; no page and no copy changes.
+   */
+  { slug: 'humble', name: 'Humble', county: 'Harris County', region: 'Lake Houston area', zip: ['77338', '77346', '77396'], alsoServes: ['Atascocita'] },
+  { slug: 'porter', name: 'Porter', county: 'Montgomery County', region: 'Montgomery County', zip: ['77365'], alsoServes: ['New Caney'] },
   /*
    * Deborah, 2026-10-05: Conroe is no longer a section of its own. It is
    * covered by the Magnolia page, which is why its zip codes are here and
@@ -268,7 +288,7 @@ export const areas: Area[] = [
     county: 'Montgomery County',
     region: 'Montgomery County',
     zip: ['77354', '77355', '77301', '77302', '77303', '77304', '77384', '77385'],
-    alsoServes: ['Conroe'],
+    alsoServes: ['Conroe', 'Stagecoach'],
   },
 ]
 
@@ -328,3 +348,36 @@ export const legal = {
    */
   iabsUrl: 'https://www.har.com/mhf/terms/dispBrokerInfo?sitetype=aws&cid=622917' as string | null,
 }
+
+/**
+ * Her community and civic record, for the Person schema (memberOf, as
+ * OrganizationRole). The same facts as the About page's "Where I have
+ * served" list, plus the Magnolia Community Foundation (CLAUDE.md, Deborah
+ * 2026-10-05) and Rose Financial Group. Dates only where she has confirmed
+ * them. Never Rose Realty LLC.
+ */
+export type CivicRole = {
+  org: string
+  url?: string
+  role: string
+  current: boolean
+  startDate?: string
+  endDate?: string
+  note?: string
+}
+
+export const civicRoles: CivicRole[] = [
+  { org: 'Humble ISD Education Foundation', role: 'Director', current: true },
+  { org: 'Humble ISD Education Foundation', role: 'Chair', current: false, note: 'Past chair' },
+  { org: 'Greater Magnolia Chamber of Commerce', role: 'Board member', current: true },
+  { org: 'Greater East Montgomery County Chamber of Commerce', role: 'Member', current: true },
+  { org: 'Summer Creek Rotary Club', role: 'Member', current: true },
+  { org: 'Magnolia Rotary Club', role: 'Founding member', current: false },
+  { org: 'Magnolia Education Foundation', role: 'Co-founder and founding president', current: false, startDate: '2001' },
+  { org: 'Magnolia Community Foundation', role: 'President', current: false },
+  { org: 'Partnership Lake Houston', role: 'Director', current: false },
+  { org: 'Magnolia-Tomball YMCA', role: 'Director and past chairman', current: false },
+  { org: 'Magnolia ISD Board of Trustees', role: 'Trustee (nine years, two as president)', current: false },
+  { org: 'City of Magnolia', role: 'Economic Development Coordinator (two years)', current: false },
+  { org: 'Rose Financial Group', role: 'Owner (twenty-five years)', current: false, endDate: '2008' },
+]
