@@ -1,4 +1,4 @@
-import { agent, areas, areaSentence, business, civicRoles, confirmed, gbp, profiles, siteUrl } from '@/lib/site'
+import { agent, areas, areaSentence, business, civicRoles, confirmed, copyrightNotice, gbp, imageRights, profiles, siteUrl } from '@/lib/site'
 
 export type SchemaNode = Record<string, unknown>
 
@@ -6,9 +6,50 @@ export const AGENT_ID = `${siteUrl}/#agent`
 export const PERSON_ID = `${siteUrl}/about/#person`
 export const WEBSITE_ID = `${siteUrl}/#website`
 export const BROKERAGE_ID = `${siteUrl}/#brokerage`
+export const HEADSHOT_ID = `${siteUrl}/about/#headshot`
+export const LOGO_ID = `${siteUrl}/#logo`
 
 export function absolute(path: string) {
   return path.startsWith('http') ? path : `${siteUrl}${path}`
+}
+
+/**
+ * The rights fields Google's image metadata report asks for on an
+ * ImageObject. Search Console flagged all four as missing on 2026-11-11:
+ * creator, copyrightNotice, license and acquireLicensePage.
+ *
+ * One helper, so every ImageObject on the site carries the same set and no
+ * single node can drift back to being half filled. Anything that is not
+ * Deborah's work gets no ImageObject at all rather than a wrong claim; see
+ * imageRights in site.ts.
+ *
+ * creator is written out in full rather than referenced by @id alone,
+ * because a story page's graph does not carry the Person node and a bare
+ * reference would resolve to nothing there.
+ */
+export function imageRightsFields(): SchemaNode {
+  return {
+    creator: { '@type': 'Person', '@id': PERSON_ID, name: imageRights.creator, url: `${siteUrl}/about/` },
+    copyrightHolder: { '@id': AGENT_ID },
+    copyrightNotice: copyrightNotice(),
+    copyrightYear: new Date().getFullYear(),
+    creditText: business.name,
+    license: absolute(imageRights.licensePath),
+    acquireLicensePage: absolute(imageRights.acquireLicensePath),
+  }
+}
+
+/** An ImageObject of Deborah's own work, with the rights fields on it. */
+export function imageObject(opts: { path: string; caption: string; id?: string }): SchemaNode {
+  return {
+    '@type': 'ImageObject',
+    ...(opts.id ? { '@id': opts.id } : {}),
+    url: absolute(opts.path),
+    contentUrl: absolute(opts.path),
+    caption: opts.caption,
+    description: opts.caption,
+    ...imageRightsFields(),
+  }
 }
 
 export function cityNode(name: string, county: string) {
@@ -80,8 +121,8 @@ export function agentNode(): SchemaNode {
     url: siteUrl,
     telephone: business.phoneE164,
     email: business.email,
-    image: absolute(agent.headshot),
-    logo: absolute('/brand/deborah-rose-real-estate-group-logo.png'),
+    image: { '@id': HEADSHOT_ID },
+    logo: imageObject({ path: '/brand/deborah-rose-real-estate-group-logo.png', caption: `${business.name} logo`, id: LOGO_ID }),
     description: business.description,
     priceRange: '$$',
     areaServed: [...areas.flatMap(cityNodesFor), ...regionNodes()],
@@ -143,14 +184,7 @@ export function personNode(): SchemaNode {
     familyName: 'Miller',
     jobTitle: [agent.jobTitle, 'Texas real estate broker', 'REALTOR'],
     description: `${agent.name} is a Texas real estate broker (TREC license ${business.license}) serving ${areaSentence}, Texas, with ${business.name}, powered by ${business.brokerage.name}.`,
-    image: {
-      '@type': 'ImageObject',
-      '@id': `${siteUrl}/about/#headshot`,
-      url: absolute(agent.headshot),
-      contentUrl: absolute(agent.headshot),
-      caption: agent.headshotAlt,
-      creditText: business.name,
-    },
+    image: imageObject({ path: agent.headshot, caption: agent.headshotAlt, id: HEADSHOT_ID }),
     url: `${siteUrl}/about/`,
     telephone: business.phoneE164,
     email: business.email,
@@ -292,7 +326,6 @@ export function imageNode(opts: { path: string; caption: string; city: string; i
     caption: opts.caption,
     description: opts.caption,
     contentLocation: { '@type': 'Place', name: `${opts.city}, Texas`, address: { '@type': 'PostalAddress', addressLocality: opts.city, addressRegion: 'TX', addressCountry: 'US' } },
-    creditText: business.name,
-    copyrightNotice: business.name,
+    ...imageRightsFields(),
   }
 }

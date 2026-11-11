@@ -209,6 +209,16 @@ export function Footer() {
               <p>{legal.opinions}</p>
               <p>{legal.realtorMark}</p>
               <p>{legal.serviceAreaSentence}</p>
+              {/*
+                * The image licence. imageRights.licensePath in site.ts points
+                * at #image-licensing on the contact page, and the schema's
+                * license field points there, so this paragraph is what a
+                * crawler or a licensee lands on. Moving or renaming the id
+                * breaks that link.
+                */}
+              <p id="image-licensing" className="scroll-mt-28">
+                {legal.imageLicense}
+              </p>
               <p>
                 {year} {business.name}. All rights reserved.
               </p>

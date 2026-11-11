@@ -138,6 +138,34 @@ export const agent = {
 } as const
 
 /** Google Business Profile. Everything here was read from the live profile. */
+/**
+ * Image rights, for the ImageObject metadata Google reads.
+ *
+ * Deborah, 2026-11-11, after Search Console flagged four missing fields on
+ * the site's ImageObject markup: she is the creator and the copyright
+ * holder of the photographs published here, and the schema says so.
+ *
+ * Two things on the site are NOT hers and carry no claim: the Five Star
+ * award badge, which is Five Star Professional's artwork, and any photo a
+ * seller, a builder or a hired photographer supplied without a release.
+ * Neither has ImageObject markup, which is how it stays true. Before
+ * adding a photograph that did not come from her, check who took it rather
+ * than letting this block speak for it.
+ *
+ * The licence statement is in the footer, which is on every page, so the
+ * anchor below resolves on the contact page named as the licensing page.
+ */
+export const imageRights = {
+  creator: 'Deborah Rose Miller',
+  licensePath: '/contact/#image-licensing',
+  acquireLicensePath: '/contact/',
+} as const
+
+/** The notice, carrying the year of the build, as the footer line does. */
+export function copyrightNotice(year: number = new Date().getFullYear()) {
+  return `© ${year} ${imageRights.creator} / ${business.name}. All rights reserved.`
+}
+
 export const gbp = {
   placeId: 'ChIJ4bMfCd4dPiQRh-vX6v6e4vU',
   cid: '17717898701727853447',
@@ -338,6 +366,13 @@ export const legal = {
     'Serving Kingwood, Humble and the greater Lake Houston area, along with Montgomery County communities including Porter, Conroe and Magnolia, and beyond. I work with buyers and sellers across relocations, new construction, acreage and lakefront properties, and can seamlessly coordinate the sale of your current home with the purchase of your next.',
   serviceAreaSentence:
     'Serving the Lake Houston area of Kingwood and Humble, and Montgomery County including Porter, Conroe and Magnolia, and the surrounding communities.',
+  /**
+   * The licence the ImageObject markup points at (imageRights.licensePath).
+   * It names the exception as well as the claim, so the badge and anything
+   * else a third party owns is not swept up by it.
+   */
+  imageLicense:
+    'All photographs and original graphics on this site are the copyrighted work of Deborah Rose Miller and Deborah Rose Real Estate Group. All rights reserved. Third party marks, logos and award badges remain the property of their owners. To request permission to use an image, call or email using the contact details above.',
   trecConsumerProtectionNotice: 'https://www.trec.texas.gov/forms/consumer-protection-notice',
   /**
    * Her Information About Brokerage Services form, as HAR generates it for
